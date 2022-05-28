@@ -3,10 +3,8 @@
 
 #include <vector>
 
-#include "Ursidae.hpp"
+#include "Ursidae.hpp"		//Famílias de animais do zoológico
 #include "Herpestidae.hpp"
-
-using AnimPair = std::pair<std::string, Animal*>;
 
 class Cuidador {
 	private:

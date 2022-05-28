@@ -1,7 +1,7 @@
 #ifndef URSIDAE_H
 #define URSIDAE_H
 
-#define PESO_PORCAO_URSIDAE 5.0f
+#define PESO_PORCAO_URSIDAE 5.0f    //Atributos da família Ursidae
 #define TIPO_COMIDA_URSIDAE "Peixe"
 #define FAMILIA_URSIDAE "Ursidae"
 

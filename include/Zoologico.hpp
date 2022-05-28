@@ -5,7 +5,7 @@
 
 #include "Cuidador.hpp"
 
-using ComidaPair = std::pair<std::string, float>;
+using ComidaPair = std::pair<std::string, float>;   //Tipo de par do map _comida_gasta
 
 class Zoologico {
     private:

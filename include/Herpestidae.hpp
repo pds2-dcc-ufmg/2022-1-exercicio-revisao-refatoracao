@@ -1,7 +1,7 @@
 #ifndef HERPESTIDAE_H
 #define HERPESTIDAE_H
 
-#define PESO_PORCAO_HERPESTIDAE 1.0f
+#define PESO_PORCAO_HERPESTIDAE 1.0f    //Atributos da família Herpestidae
 #define TIPO_COMIDA_HERPESTIDAE "Ração"
 #define FAMILIA_HERPESTIDAE "Herpestidae"
 
