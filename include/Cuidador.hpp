@@ -1,21 +1,25 @@
-#ifndef Cuidador_H
-#define Cuidador_H
+#ifndef CUIDADOR_H
+#define CUIDADOR_H
 
-#include <string>
-using namespace std;
+#include <vector>
 
-class Cuidador{
+#include "Ursidae.hpp"
+#include "Herpestidae.hpp"
+
+using AnimPair = std::pair<std::string, Animal*>;
+
+class Cuidador {
+	private:
+		std::string _nome;
+		std::vector<Animal*> _animais;
 
 	public:
-
-    string salario;
-		string NOME;
-		string cpf;
-		string Telefone;
-		string BIRTH;
-
-		void print(); // imprime na tela os dados de um cliente cadastrado
-
+		~Cuidador();
+		Cuidador(std::string nome);
+		void adicionar_animal(Animal* animal);
+		void imprimir_info_geral();
+		void imprimir_relatorio_alimentacao();
+		std::vector<Animal*> get_todos_animais();
 };
 
 #endif
