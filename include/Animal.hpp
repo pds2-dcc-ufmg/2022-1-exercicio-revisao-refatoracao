@@ -11,7 +11,7 @@ class Animal {
 
     public:
         virtual ~Animal();
-        Animal(std::string nome, int idade, float peso_porcao, std::string tipo_comida);
+        Animal(std::string& nome, int& idade, float peso_porcao, std::string tipo_comida);
         void set_qtde_ingerida(float qtde_ingerida);
         void set_descricao(std::string descricao);
         std::string get_nome();

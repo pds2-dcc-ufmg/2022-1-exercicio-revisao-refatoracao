@@ -21,7 +21,7 @@ Cuidador::Cuidador(std::string nome) {
  * @brief Adiciona um animal sobre os cuidados do cuidador
  * @param animal Animal a ser adicionado
  */
-void Cuidador::adicionar_animal(Animal* animal) {
+void Cuidador::adicionar_animal(Animal* &animal) {
 	_animais.push_back(animal);
 }
 

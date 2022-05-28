@@ -16,7 +16,7 @@ class Zoologico {
 
     public:
         ~Zoologico();
-        void adicionar_cuidador(Cuidador* cuidador);
+        void adicionar_cuidador(Cuidador* &cuidador);
         void imprimir_animais();
         void imprimir_relatorio_alimentacao();
         void imprimir_relatorio_comida_gasta();

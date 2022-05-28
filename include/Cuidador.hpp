@@ -14,7 +14,7 @@ class Cuidador {
 	public:
 		~Cuidador();
 		Cuidador(std::string nome);
-		void adicionar_animal(Animal* animal);
+		void adicionar_animal(Animal* &animal);
 		void imprimir_info_geral();
 		void imprimir_relatorio_alimentacao();
 		std::vector<Animal*> get_todos_animais();

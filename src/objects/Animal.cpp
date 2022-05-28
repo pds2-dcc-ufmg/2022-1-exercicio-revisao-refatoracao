@@ -12,7 +12,7 @@ Animal::~Animal() {}
  * @param peso_porcao Peso por porção ingerida
  * @param tipo_comida Tipo de comida
  */
-Animal::Animal(std::string nome, int idade, float peso_porcao, std::string tipo_comida) {
+Animal::Animal(std::string& nome, int& idade, float peso_porcao, std::string tipo_comida) {
     _nome = nome;
     _idade = idade;
     _alimentacao = Alimentacao(peso_porcao, tipo_comida, nome);

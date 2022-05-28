@@ -13,7 +13,7 @@ Zoologico::~Zoologico() {
  * @brief Adiciona um cuidador ao zoológico
  * @param cuidador Cuidador a ser adicionado
  */
-void Zoologico::adicionar_cuidador(Cuidador* cuidador) {
+void Zoologico::adicionar_cuidador(Cuidador* &cuidador) {
     _cuidadores.push_back(cuidador);
 }
 

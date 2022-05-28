@@ -12,8 +12,8 @@ class Alimentacao {
 
     public:
         Alimentacao(float peso_porcao = 0, std::string tipo_comida = "", std::string nome = "");
-        void set_qtde_ingerida(float qtde_ingerida);
-        void set_descricao(std::string descricao, std::string nome);
+        void set_qtde_ingerida(float& qtde_ingerida);
+        void set_descricao(std::string& descricao, std::string& nome);
         std::string get_descricao();
         std::string get_tipo();
         float get_kg_gastos();

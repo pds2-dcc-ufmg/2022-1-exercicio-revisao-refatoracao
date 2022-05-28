@@ -18,7 +18,7 @@ Alimentacao::Alimentacao(float peso_porcao, std::string tipo_comida, std::string
  * @brief Salva a quantidade ingerida pelo animal
  * @param qtde_ingerida Qtde. ingerida (em porções)
  */
-void Alimentacao::set_qtde_ingerida(float qtde_ingerida) {
+void Alimentacao::set_qtde_ingerida(float& qtde_ingerida) {
     _qtde_porcao = qtde_ingerida;
 }
 
@@ -27,7 +27,7 @@ void Alimentacao::set_qtde_ingerida(float qtde_ingerida) {
  * @param descricao Descrição desejada
  * @param nome Nome do animal
  */
-void Alimentacao::set_descricao(std::string descricao, std::string nome) {
+void Alimentacao::set_descricao(std::string& descricao, std::string& nome) {
     _descricao = nome += " ";
     _descricao += descricao;
 }
