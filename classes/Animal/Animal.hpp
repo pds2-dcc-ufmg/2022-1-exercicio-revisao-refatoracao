@@ -5,13 +5,13 @@
 
 class Animal {
     private:
-        std::string age;
+        std::string age; // TODO: Fix - Transformar em unsigned int?
         std::string name;
         std::string family;
 
     public:
         virtual void print() const;
-        void print_oi() const;
+        void print_oi() const; // TODO: Fix - Nome errado????
 
         void setAge(const std::string age);
         std::string getAge() const;
