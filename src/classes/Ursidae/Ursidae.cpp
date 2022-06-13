@@ -15,15 +15,6 @@ double Ursidae::consumedPortionsInKg(const unsigned int amountConsumedPortions){
     return PORTIONS_SIZE * amountConsumedPortions;
 }
 
-void Ursidae::setSpecies(const std::string species) {
-    this->species = species;
-    return;
-}
-
-std::string Ursidae::getSpecies() const {
-    return species;
-}
-
 void Ursidae::setAmountFishPerDayInKg(const double amountFishPerDayInKg) {
     this->amountFishPerDayInKg = amountFishPerDayInKg;
     return;

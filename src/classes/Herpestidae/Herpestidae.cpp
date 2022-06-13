@@ -12,12 +12,3 @@ void Herpestidae::print() const {
 double Herpestidae::consumedPortionsInKg(const unsigned int amountConsumedPortions) {
     return PORTIONS_SIZE * amountConsumedPortions;
 }
-
-void Herpestidae::setSpecies(const std::string species) {
-    this->species = species;
-    return;
-}
-
-std::string Herpestidae::getSpecies() const {
-    return species;
-}

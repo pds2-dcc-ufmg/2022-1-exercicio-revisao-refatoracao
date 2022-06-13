@@ -41,3 +41,12 @@ void Animal::setFamily(const std::string family) {
 std::string Animal::getFamily() const {
     return family;
 }
+
+void Animal::setSpecies(const std::string species) {
+    this->species = species;
+    return;
+}
+
+std::string Animal::getSpecies() const {
+    return species;
+}

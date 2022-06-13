@@ -8,6 +8,7 @@ class Animal {
         std::string age; // TODO: Fix - Transformar em unsigned int?
         std::string name;
         std::string family;
+        std::string species;
 
     public:
         virtual void print() const;
@@ -21,6 +22,9 @@ class Animal {
 
         void setFamily(const std::string family);
         std::string getFamily() const;
+
+        void setSpecies(const std::string species);
+        std::string getSpecies() const;
 };
 
 #endif

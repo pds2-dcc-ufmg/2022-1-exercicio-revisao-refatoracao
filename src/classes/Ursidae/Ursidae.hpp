@@ -10,15 +10,11 @@ class Ursidae : public Animal {
         static const unsigned int PORTIONS_SIZE = 5;
 
     private:
-        std::string species; // TODO: Fix - Levar para classe genérica
         double amountFishPerDayInKg;
 
     public:
         virtual void print() const override;
         double consumedPortionsInKg(const unsigned int amountConsumedPortions); // TODO: Fix - Levar para classe genérica
-
-        void setSpecies(const std::string species);
-        std::string getSpecies() const;
 
         void setAmountFishPerDayInKg(const double amountFishPerDayInKg);
         double getAmountFishPerDayInKg() const;
