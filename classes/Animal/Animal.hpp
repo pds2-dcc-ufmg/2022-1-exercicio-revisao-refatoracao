@@ -10,8 +10,8 @@ class Animal {
         std::string family;
 
     public:
-        virtual void print();
-        void print_oi();
+        virtual void print() const;
+        void print_oi() const;
 
         void setAge(const std::string age);
         std::string getAge() const;

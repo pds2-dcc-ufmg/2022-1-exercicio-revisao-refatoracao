@@ -2,7 +2,7 @@
 
 #include "./Animal.hpp"
 
-void Animal::print() {
+void Animal::print() const {
     std::cout << "\n[Animal]" << std::endl
               << "  Nome: " << getName() << std::endl
               << "  Idade: " << getAge() << std::endl
@@ -10,7 +10,7 @@ void Animal::print() {
     return;
 }
 
-void Animal::print_oi(){
+void Animal::print_oi() const {
     std::cout << "Tchau" << std::endl;
     return;
 }
