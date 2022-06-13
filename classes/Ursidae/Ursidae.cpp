@@ -2,15 +2,33 @@
 
 #include "./Ursidae.hpp"
 
-void Ursidae::print() {
+void Ursidae::print() const {
     std::cout << "\n[Animal]" << std::endl
-              << "  Nome: " << nome << std::endl
-              << "  Idade: " << IDADE << std::endl
-              << "  Família: Ursidae" << std::endl
-              << "  Especie: " << especie << std::endl;
+              << "  Nome: " << getName() << std::endl
+              << "  Idade: " << getAge() << std::endl
+              << "  Família: Ursidae" << std::endl // TODO: Fix - setar familia e usar o get
+              << "  Especie: " << getSpecies() << std::endl;
     return;
 }
 
-double Ursidae::calcula_PEIXES_CONSUMIDOS(const unsigned int porcaoPeixes){
-    return peixesPorPORCAO*porcaoPeixes;
+double Ursidae::consumedPortionsInKg(const unsigned int amountConsumedPortions){
+    return PORTIONS_SIZE * amountConsumedPortions;
+}
+
+void Ursidae::setSpecies(const std::string species) {
+    this->species = species;
+    return;
+}
+
+std::string Ursidae::getSpecies() const {
+    return species;
+}
+
+void Ursidae::setAmountFishPerDayInKg(const double amountFishPerDayInKg) {
+    this->amountFishPerDayInKg = amountFishPerDayInKg;
+    return;
+}
+
+double Ursidae::getAmountFishPerDayInKg() const {
+    return amountFishPerDayInKg;
 }

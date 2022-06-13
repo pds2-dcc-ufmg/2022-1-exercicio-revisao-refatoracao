@@ -1,25 +1,27 @@
 #ifndef URSIDAE_HPP
 #define URSIDAE_HPP
 
-#include <iostream>
-#include <iomanip>
+#include <string.h>
 
 #include "../Animal/Animal.hpp"
 
-using namespace std;
-
-int peixesPorPORCAO = 5;
-
 class Ursidae : public Animal {
     public:
+        static const unsigned int PORTIONS_SIZE = 5;
 
-        int IDADE;
-        string nome;
-        string especie;
-        double kgPeixePorDIA;
+    private:
+        std::string species; // TODO: Fix - Levar para classe genérica
+        double amountFishPerDayInKg;
 
-        void print();
-        double calcula_PEIXES_CONSUMIDOS(const unsigned int porcaoPeixes);
+    public:
+        virtual void print() const override;
+        double consumedPortionsInKg(const unsigned int amountConsumedPortions); // TODO: Fix - Levar para classe genérica
+
+        void setSpecies(const std::string species);
+        std::string getSpecies() const;
+
+        void setAmountFishPerDayInKg(const double amountFishPerDayInKg);
+        double getAmountFishPerDayInKg() const;
 };
 
 #endif
