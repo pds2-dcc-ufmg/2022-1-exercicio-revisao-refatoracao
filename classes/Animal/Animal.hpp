@@ -10,7 +10,7 @@ class Animal {
         std::string family;
 
     public:
-        void print();
+        virtual void print();
         void print_oi();
 
         void setAge(const std::string age);
