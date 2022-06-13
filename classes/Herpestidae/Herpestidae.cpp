@@ -2,13 +2,22 @@
 
 #include "./Herpestidae.hpp"
 
+void Herpestidae::print() const {
+    Animal::print();
+    std::cout << "  Especie: " << getSpecies() << std::endl;
+
+    return;
+}
+
 double Herpestidae::consumedPortionsInKg(const unsigned int amountConsumedPortions) {
     return PORTIONS_SIZE * amountConsumedPortions;
 }
 
-void Herpestidae::print() {
-    Animal::print();
-    std::cout << "  Especie: " << species << std::endl;
-
+void Herpestidae::setSpecies(const std::string species) {
+    this->species = species;
     return;
+}
+
+std::string Herpestidae::getSpecies() const {
+    return species;
 }

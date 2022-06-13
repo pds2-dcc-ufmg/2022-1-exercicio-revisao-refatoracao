@@ -13,8 +13,11 @@ class Herpestidae : public Animal {
         std::string species;
 
     public:
-        virtual void print() override;
+        virtual void print() const override;
         double consumedPortionsInKg(const unsigned int amountConsumedPortions);
+
+        void setSpecies(const std::string species);
+        std::string getSpecies() const;
 };
 
 #endif
