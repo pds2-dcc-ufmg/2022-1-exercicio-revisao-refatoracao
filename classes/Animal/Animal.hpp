@@ -4,13 +4,23 @@
 #include <string>
 
 class Animal {
-    public:
-        std::string IDADE;
+    private:
+        std::string age;
+        std::string name;
         std::string family;
-        std::string nome;
 
+    public:
         void print();
         void print_oi();
+
+        void setAge(const std::string age);
+        std::string getAge() const;
+
+        void setName(const std::string name);
+        std::string getName() const;
+
+        void setFamily(const std::string family);
+        std::string getFamily() const;
 };
 
 #endif

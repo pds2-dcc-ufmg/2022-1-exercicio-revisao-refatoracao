@@ -4,13 +4,40 @@
 
 void Animal::print() {
     std::cout << "\n[Animal]" << std::endl
-              << "  Nome: " << nome << std::endl
-              << "  Idade: " << IDADE << endl
-              << "  Familia: " << family << endl;
+              << "  Nome: " << getName() << std::endl
+              << "  Idade: " << getAge() << std::endl
+              << "  Familia: " << getFamily() << std::endl;
     return;
 }
 
 void Animal::print_oi(){
-    std::cout << "Tchau" << endl;
+    std::cout << "Tchau" << std::endl;
     return;
+}
+
+void Animal::setAge(const std::string age) {
+    this->age = age;
+    return;
+}
+
+std::string Animal::getAge() const {
+    return age;
+}
+
+void Animal::setName(const std::string name) {
+    this->name = name;
+    return;
+}
+
+std::string Animal::getName() const {
+    return name;
+}
+
+void Animal::setFamily(const std::string family) {
+    this->family = family;
+    return;
+}
+
+std::string Animal::getFamily() const {
+    return family;
 }
