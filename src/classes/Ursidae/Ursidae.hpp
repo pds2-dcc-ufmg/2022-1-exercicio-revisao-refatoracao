@@ -1,7 +1,7 @@
 #ifndef URSIDAE_HPP
 #define URSIDAE_HPP
 
-#include <string.h>
+#include <string>
 
 #include "../Animal/Animal.hpp"
 
@@ -13,7 +13,9 @@ class Ursidae : public Animal {
         double amountFishPerDayInKg;
 
     public:
-        virtual void print() const override;
+        Ursidae();
+        ~Ursidae();
+
         double consumedPortionsInKg(const unsigned int amountConsumedPortions); // TODO: Fix - Levar para classe genérica
 
         void setAmountFishPerDayInKg(const double amountFishPerDayInKg);

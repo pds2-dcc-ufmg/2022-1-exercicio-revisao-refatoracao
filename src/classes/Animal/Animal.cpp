@@ -6,7 +6,8 @@ void Animal::print() const {
     std::cout << "\n[Animal]" << std::endl
               << "  Nome: " << getName() << std::endl
               << "  Idade: " << getAge() << std::endl
-              << "  Familia: " << getFamily() << std::endl;
+              << "  Família: " << getFamily() << std::endl
+              << "  Especie: " << getSpecies() << std::endl;
     return;
 }
 

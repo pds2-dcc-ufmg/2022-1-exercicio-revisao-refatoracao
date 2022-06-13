@@ -10,6 +10,9 @@ class Animal {
         std::string family;
         std::string species;
 
+    protected:
+        void setFamily(const std::string family);
+
     public:
         virtual void print() const;
         void print_oi() const; // TODO: Fix - Nome errado????
@@ -20,7 +23,6 @@ class Animal {
         void setName(const std::string name);
         std::string getName() const;
 
-        void setFamily(const std::string family);
         std::string getFamily() const;
 
         void setSpecies(const std::string species);

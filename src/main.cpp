@@ -7,30 +7,26 @@
 #include "./classes/Alimentacao/Alimentacao.hpp"
 
 int main() {
-  Animal animal1;
-  animal1.setFamily("Ursidae");
-  animal1.setName("Bobby");
-  animal1.setAge("13");
-  animal1.print();
+  Animal* animal1 = new Ursidae();
+  animal1->setName("Bobby");
+  animal1->setAge("13");
+  animal1->print();
 
   double kgPeixeConsumidos01 = 0;
-  Animal animal2;
-  animal2.setFamily("Ursidae");
-  animal2.setName("Jorge");
-  animal2.setAge("1");
-  animal2.print();
+  Animal* animal2 = new Ursidae();
+  animal2->setName("Jorge");
+  animal2->setAge("1");
+  animal2->print();
 
-  Animal animal3;
-  animal3.setFamily("Herpestidae");
-  animal3.setName("Bonina");
-  animal3.setAge("7");
-  animal3.print();
+  Animal* animal3 = new Herpestidae();
+  animal3->setName("Bonina");
+  animal3->setAge("7");
+  animal3->print();
 
-  Animal animal4;
-  animal4.setFamily("Ursidae");
-  animal4.setName("Felício");
-  animal4.setAge("3");
-  animal4.print();
+  Animal* animal4 = new Ursidae();
+  animal4->setName("Felício");
+  animal4->setAge("3");
+  animal4->print();
 
   Ursidae ursidae1;
   int numAtendimentos02 = 0;
@@ -41,7 +37,6 @@ int main() {
   ursidae1.setAmountFishPerDayInKg(10.5);
   ursidae1.print();
 
-
   Ursidae ursidae2;
   int numAtendimentos03 = 0;
   double comissao03 = 0;
@@ -51,9 +46,7 @@ int main() {
   ursidae2.setAmountFishPerDayInKg(7);
   ursidae2.print();
 
-
   Herpestidae herpestidae1;
-  herpestidae1.setFamily("Herpestidae");
   herpestidae1.setName("Catita");
   herpestidae1.setAge("2");
   herpestidae1.setSpecies("Suricato");
@@ -61,7 +54,6 @@ int main() {
 
   Herpestidae herpestidae2;
   double bonificacao01 = 0;
-  herpestidae2.setFamily("Herpestidae");
   herpestidae2.setName("Carolina");
   herpestidae2.setAge("2");
   herpestidae2.setSpecies("Suricato");
@@ -124,7 +116,6 @@ int main() {
   alimentacao3.setFoodType("Ração");
 
   kgPeixeConsumidos03 = ursidae2.consumedPortionsInKg(10);
-
 
   std::cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << std::endl;
 
