@@ -15,6 +15,11 @@ class Cuidador : public IPrintable {
 
 	public:
 		Cuidador();
+		Cuidador(const std::string name);
+		Cuidador(const std::string name, const std::string cpf);
+		Cuidador(const std::string name, const std::string cpf, const std::string phone);
+		Cuidador(const std::string name, const std::string cpf, const std::string phone, const std::string birthday);
+		Cuidador(const std::string name, const std::string cpf, const std::string phone, const std::string birthday, const double wage);
 		virtual ~Cuidador();
 		
 		virtual void print() const override;

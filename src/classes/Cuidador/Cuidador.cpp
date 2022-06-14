@@ -6,6 +6,36 @@
 
 Cuidador::Cuidador() {}
 
+Cuidador::Cuidador(const std::string name) {
+	setName(name);
+}
+
+Cuidador::Cuidador(const std::string name, const std::string cpf) {
+	setName(name);
+	setCpf(cpf);
+}
+
+Cuidador::Cuidador(const std::string name, const std::string cpf, const std::string phone) {
+	setName(name);
+	setCpf(cpf);
+	setPhone(phone);
+}
+
+Cuidador::Cuidador(const std::string name, const std::string cpf, const std::string phone, const std::string birthday) {
+	setName(name);
+	setCpf(cpf);
+	setPhone(phone);
+	setBirthday(birthday);
+}
+
+Cuidador::Cuidador(const std::string name, const std::string cpf, const std::string phone, const std::string birthday, const double wage) {
+	setName(name);
+	setCpf(cpf);
+	setPhone(phone);
+	setBirthday(birthday);
+	setWage(wage);
+}
+
 Cuidador::~Cuidador() {}
 
 void Cuidador::print() const{
