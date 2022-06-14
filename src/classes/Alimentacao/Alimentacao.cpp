@@ -2,13 +2,11 @@
 
 #include "./Alimentacao.hpp"
 
-Alimentacao::Alimentacao(const Cuidador responsable, const Comida food, const std::string animalName) : food(food) {
-    setResponsable(responsable);
+Alimentacao::Alimentacao(const Cuidador responsable, const Comida food, const std::string animalName) : responsable(new Cuidador(responsable)), food(new Comida(food)) {
     setAnimalName(animalName);
 }
 
-Alimentacao::Alimentacao(const Cuidador responsable, const Comida food, const std::string animalName, const std::string description) : food(food) {
-    setResponsable(responsable);
+Alimentacao::Alimentacao(const Cuidador responsable, const Comida food, const std::string animalName, const std::string description) : responsable(new Cuidador(responsable)), food(new Comida(food)) {
     setAnimalName(animalName);
     setDescription(description);
 }
@@ -17,36 +15,27 @@ Alimentacao::~Alimentacao() {}
 
 void Alimentacao::print() const {
     std::cout << "Animal: " << getAnimalName() << std::endl;
-    std::cout << " Cuidador: " << getResponsable().getName() << std::endl;
+    std::cout << " Cuidador: " << getResponsable()->getName() << std::endl;
     std::cout << " Descricao: " << getDescription() << std::endl << std::endl;
     return;
 }
 
 void Alimentacao::setResponsable(const Cuidador responsable) {
-    this->responsable = responsable;
+    *this->responsable = responsable;
     return;
 }
 
-Cuidador Alimentacao::getResponsable() const {
+std::shared_ptr<Cuidador> Alimentacao::getResponsable() const {
     return responsable;
 }
 
-void Alimentacao::setFoodType(const std::string foodType) {
-    food.setFoodType(foodType);
+void Alimentacao::setFood(const Comida food) {
+    *this->food = food;
     return;
 }
 
-std::string Alimentacao::getFoodType() const {
-    return food.getFoodType();
-}
-
-void Alimentacao::setAmount(const unsigned int amount) {
-    food.setConsumedAmount(amount);
-    return;
-}
-
-unsigned int Alimentacao::getAmount() const {
-    return food.getConsumedAmount();
+std::shared_ptr<Comida> Alimentacao::getFood() const {
+    return food;
 }
 
 void Alimentacao::setDescription(const std::string description) {

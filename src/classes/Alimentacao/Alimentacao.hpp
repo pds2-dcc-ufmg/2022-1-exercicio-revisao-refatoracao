@@ -2,6 +2,7 @@
 #define ALIMENTACAO_HPP
 
 #include <string>
+#include <memory>
 
 #include "../Cuidador/Cuidador.hpp"
 #include "../IPrintable/IPrintable.hpp"
@@ -9,8 +10,8 @@
 
 class Alimentacao : public IPrintable {
     private:
-        Cuidador responsable;
-        Comida food;
+        std::shared_ptr<Cuidador> responsable;
+        std::shared_ptr<Comida> food;
         std::string description;
         std::string animalName;
 
@@ -22,16 +23,10 @@ class Alimentacao : public IPrintable {
         virtual void print() const override;
 
         void setResponsable(const Cuidador responsable);
-        Cuidador getResponsable() const;
+        std::shared_ptr<Cuidador> getResponsable() const;
 
-        void setFood(const Comida comida);
-        Comida getFood() const;
-
-        void setFoodType(const std::string foodType);
-        std::string getFoodType() const;
-
-        void setAmount(const unsigned int amount);
-        unsigned int getAmount() const;
+        void setFood(const Comida food);
+        std::shared_ptr<Comida> getFood() const;
 
         void setDescription(const std::string description);
         std::string getDescription() const;

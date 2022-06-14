@@ -68,42 +68,26 @@ int main() {
   careTaker2.setBirthday("08/02/1995");
   careTaker2.setWage(4000);
 
-  Alimentacao alimentacao1;
-  alimentacao1.setAmount(2);
-  alimentacao1.setFoodType("Peixes");
-  alimentacao1.setDescription("Bobby só quis comer 2 porções de peixes hoje");
-  alimentacao1.setResponsable(careTaker1);
-  alimentacao1.setAnimalName("Bobby");
+  Comida comida1("Peixes", 2);
+  Alimentacao alimentacao1(careTaker1, comida1, "Bobby", "Bobby só quis comer 2 porções de peixes hoje");
   
   double kgPeixeConsumidos01 = 0;
   kgPeixeConsumidos01 = 5 * 2;
 
-  Alimentacao alimentacao2;
-  alimentacao2.setAmount(2);
-  alimentacao2.setFoodType("Ração especial");
-  alimentacao2.setDescription("Catita comeu direitinho");
-  alimentacao2.setResponsable(careTaker2);
-  alimentacao2.setAnimalName("Catita");
+  Comida comida2("Ração especial", 2);
+  Alimentacao alimentacao2(careTaker2, comida2, "Catita", "Catita comeu direitinho");
 
   double kgRacaoConsumidos01 = 0;
-  kgRacaoConsumidos01 += herpestidae1.getDeit().calcConsumedPortionsInKg(alimentacao1.getAmount());
+  kgRacaoConsumidos01 += herpestidae1.getDeit().calcConsumedPortionsInKg(alimentacao1.getFood()->getConsumedAmount());
 
-  Alimentacao alimentacao3;
-  alimentacao3.setAmount(3);
-  alimentacao3.setFoodType("Ração");
-  alimentacao3.setDescription("Carolina estava com um apetite e tanto");
-  alimentacao3.setResponsable(careTaker2);
-  alimentacao3.setAnimalName("Carolina");
+  Comida comida3("Ração", 3);
+  Alimentacao alimentacao3(careTaker2, comida3, "Carolina", "Carolina estava com um apetite e tanto");
 
   double kgRacaoConsumidos02 = 0;
-  kgRacaoConsumidos02 += herpestidae2.getDeit().calcConsumedPortionsInKg(alimentacao3.getAmount());
+  kgRacaoConsumidos02 += herpestidae2.getDeit().calcConsumedPortionsInKg(alimentacao3.getFood()->getConsumedAmount());
 
-  Alimentacao alimentacao4;
-  alimentacao4.setAmount(10);
-  alimentacao4.setFoodType("Peixes");
-  alimentacao4.setDescription("Tony comeu um pouco da comida do Bobby");
-  alimentacao4.setResponsable(careTaker1);
-  alimentacao4.setAnimalName("Tony");
+  Comida comida4("Peixes", 10);
+  Alimentacao alimentacao4(careTaker1, comida4, "Tony", "Tony comeu um pouco da comida do Bobby");
 
   double kgPeixeConsumidos03 = 0;
   kgPeixeConsumidos03 = ursidae2.getDeit().calcConsumedPortionsInKg(10);
