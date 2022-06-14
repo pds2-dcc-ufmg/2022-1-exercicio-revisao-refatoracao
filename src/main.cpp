@@ -12,7 +12,6 @@ int main() {
   animal1->setAge(13);
   animal1->print();
 
-  double kgPeixeConsumidos01 = 0;
   Animal* animal2 = new Ursidae();
   animal2->setName("Jorge");
   animal2->setAge(1);
@@ -29,8 +28,6 @@ int main() {
   animal4->print();
 
   Ursidae ursidae1;
-  int numAtendimentos02 = 0;
-  double comissao02 = 0;
   ursidae1.setName("Tony");
   ursidae1.setAge(9);
   ursidae1.setSpecies("Urso Pardo");
@@ -38,8 +35,6 @@ int main() {
   ursidae1.print();
 
   Ursidae ursidae2;
-  int numAtendimentos03 = 0;
-  double comissao03 = 0;
   ursidae2.setName("Wanda");
   ursidae2.setAge(10);
   ursidae2.setSpecies("Urso Polar");
@@ -53,19 +48,9 @@ int main() {
   herpestidae1.print();
 
   Herpestidae herpestidae2;
-  double bonificacao01 = 0;
   herpestidae2.setName("Carolina");
   herpestidae2.setAge(2);
   herpestidae2.setSpecies("Suricato");
-
-  double kgPeixeConsumidos02 = 0;
-  double kgPeixeConsumidos03 = 0;
-  double kgPeixeConsumidos04 = 0;
-  double kgPeixeConsumidos05 = 0;
-
-  double kgRacaoConsumidos01 = 0;
-  double kgRacaoConsumidos02 = 0;
-  double kgRacaoConsumidos03 = 0;
 
   Cuidador careTaker1;
   careTaker1.setName("Ana Maria Rodrigues Lopes");
@@ -87,14 +72,18 @@ int main() {
   alimentacao1.setDescription("Bobby só quis comer 2 porções de peixes hoje");
   alimentacao1.setResponsable(careTaker1);
   alimentacao1.setAnimalName("Bobby");
+  
+  double kgPeixeConsumidos01 = 0;
   kgPeixeConsumidos01 = 5 * 2;
 
   Alimentacao alimentacao2;
-  alimentacao2.setAmount(1);
+  alimentacao2.setAmount(2);
   alimentacao2.setFoodType("Ração especial");
   alimentacao2.setDescription("Catita comeu direitinho");
   alimentacao2.setResponsable(careTaker2);
   alimentacao2.setAnimalName("Catita");
+
+  double kgRacaoConsumidos01 = 0;
   kgRacaoConsumidos01 += herpestidae1.consumedPortionsInKg(alimentacao1.getAmount());
 
   Alimentacao alimentacao3;
@@ -103,6 +92,8 @@ int main() {
   alimentacao3.setDescription("Carolina estava com um apetite e tanto");
   alimentacao3.setResponsable(careTaker2);
   alimentacao3.setAnimalName("Carolina");
+
+  double kgRacaoConsumidos02 = 0;
   kgRacaoConsumidos02 += herpestidae2.consumedPortionsInKg(alimentacao3.getAmount());
 
   Alimentacao alimentacao4;
@@ -112,9 +103,7 @@ int main() {
   alimentacao4.setResponsable(careTaker1);
   alimentacao4.setAnimalName("Tony");
 
-  alimentacao2.setAmount(2);
-  alimentacao3.setFoodType("Ração");
-
+  double kgPeixeConsumidos03 = 0;
   kgPeixeConsumidos03 = ursidae2.consumedPortionsInKg(10);
 
   std::cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << std::endl;
