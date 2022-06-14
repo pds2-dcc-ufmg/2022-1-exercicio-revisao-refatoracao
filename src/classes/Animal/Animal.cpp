@@ -16,12 +16,12 @@ void Animal::print_oi() const {
     return;
 }
 
-void Animal::setAge(const std::string age) {
+void Animal::setAge(const unsigned int age) {
     this->age = age;
     return;
 }
 
-std::string Animal::getAge() const {
+unsigned int Animal::getAge() const {
     return age;
 }
 

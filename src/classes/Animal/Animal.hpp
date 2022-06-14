@@ -7,7 +7,7 @@
 
 class Animal : public IPrintable {
     private:
-        std::string age; // TODO: Fix - Transformar em unsigned int?
+        unsigned int age; // TODO: Fix - Transformar em unsigned int?
         std::string name;
         std::string family;
         std::string species;
@@ -19,8 +19,8 @@ class Animal : public IPrintable {
         virtual void print() const override;
         void print_oi() const; // TODO: Fix - Nome errado????
 
-        void setAge(const std::string age);
-        std::string getAge() const;
+        void setAge(const unsigned int age);
+        unsigned int getAge() const;
 
         void setName(const std::string name);
         std::string getName() const;

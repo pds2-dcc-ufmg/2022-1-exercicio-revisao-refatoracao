@@ -9,30 +9,30 @@
 int main() {
   Animal* animal1 = new Ursidae();
   animal1->setName("Bobby");
-  animal1->setAge("13");
+  animal1->setAge(13);
   animal1->print();
 
   double kgPeixeConsumidos01 = 0;
   Animal* animal2 = new Ursidae();
   animal2->setName("Jorge");
-  animal2->setAge("1");
+  animal2->setAge(1);
   animal2->print();
 
   Animal* animal3 = new Herpestidae();
   animal3->setName("Bonina");
-  animal3->setAge("7");
+  animal3->setAge(7);
   animal3->print();
 
   Animal* animal4 = new Ursidae();
   animal4->setName("Felício");
-  animal4->setAge("3");
+  animal4->setAge(3);
   animal4->print();
 
   Ursidae ursidae1;
   int numAtendimentos02 = 0;
   double comissao02 = 0;
   ursidae1.setName("Tony");
-  ursidae1.setAge("9");
+  ursidae1.setAge(9);
   ursidae1.setSpecies("Urso Pardo");
   ursidae1.setAmountFishPerDayInKg(10.5);
   ursidae1.print();
@@ -41,21 +41,21 @@ int main() {
   int numAtendimentos03 = 0;
   double comissao03 = 0;
   ursidae2.setName("Wanda");
-  ursidae2.setAge("10");
+  ursidae2.setAge(10);
   ursidae2.setSpecies("Urso Polar");
   ursidae2.setAmountFishPerDayInKg(7);
   ursidae2.print();
 
   Herpestidae herpestidae1;
   herpestidae1.setName("Catita");
-  herpestidae1.setAge("2");
+  herpestidae1.setAge(2);
   herpestidae1.setSpecies("Suricato");
   herpestidae1.print();
 
   Herpestidae herpestidae2;
   double bonificacao01 = 0;
   herpestidae2.setName("Carolina");
-  herpestidae2.setAge("2");
+  herpestidae2.setAge(2);
   herpestidae2.setSpecies("Suricato");
 
   double kgPeixeConsumidos02 = 0;
