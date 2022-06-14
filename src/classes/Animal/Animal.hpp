@@ -17,7 +17,6 @@ class Animal : public IPrintable {
 
     public:
         virtual void print() const override;
-        void print_oi() const; // TODO: Fix - Nome errado????
 
         void setAge(const unsigned int age);
         unsigned int getAge() const;

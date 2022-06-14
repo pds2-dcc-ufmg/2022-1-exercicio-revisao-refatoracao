@@ -11,11 +11,6 @@ void Animal::print() const {
     return;
 }
 
-void Animal::print_oi() const {
-    std::cout << "Tchau" << std::endl;
-    return;
-}
-
 void Animal::setAge(const unsigned int age) {
     this->age = age;
     return;
