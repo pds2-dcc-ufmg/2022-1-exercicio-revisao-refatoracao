@@ -11,7 +11,7 @@ class Cuidador : public IPrintable {
 		std::string cpf;
 		std::string phone;
 		std::string birthday; // TODO: Fix - Transformar em date?
-		double wage; // TODO: Fix - Transformar em double
+		double wage;
 
 	public:
 		virtual void print() const override;

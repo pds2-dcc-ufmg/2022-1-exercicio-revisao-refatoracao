@@ -3,26 +3,10 @@
 #include "./Alimentacao.hpp"
 
 void Alimentacao::print() const {
-    std::cout << "Animal: ";
-    std::cout << getAnimalName() << "\n";
-
-    std::cout << " Cuidador: ";
-    std::cout << getResponsable().getName() << "\n";
-
+    std::cout << "Animal: " << getAnimalName() << std::endl;
+    std::cout << " Cuidador: " << getResponsable().getName() << std::endl;
     return;
-    // TODO: Deletar?
-    //std::cout << " : ";
-    //cout << ursidae;
 }
-
-// TODO: Deletar???
-/*void print() {
-    std::cout << "Cuidador: ";
-    cout << cuida;
-
-    std::cout << " Animal: ";
-    cout << alimentado;
-}*/
 
 void Alimentacao::setResponsable(const Cuidador responsable) {
     this->responsable = responsable;

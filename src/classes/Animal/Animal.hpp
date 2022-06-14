@@ -7,7 +7,7 @@
 
 class Animal : public IPrintable {
     private:
-        unsigned int age; // TODO: Fix - Transformar em unsigned int?
+        unsigned int age;
         std::string name;
         std::string family;
         std::string species;
