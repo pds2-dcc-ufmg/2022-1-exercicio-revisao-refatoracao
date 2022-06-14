@@ -2,6 +2,10 @@
 
 #include "./Alimentacao.hpp"
 
+Alimentacao::Alimentacao() {}
+
+Alimentacao::~Alimentacao() {}
+
 void Alimentacao::print() const {
     std::cout << "Animal: " << getAnimalName() << std::endl;
     std::cout << " Cuidador: " << getResponsable().getName() << std::endl;

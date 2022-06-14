@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 
 #include "./classes/Animal/Animal.hpp"
 #include "./classes/Herpestidae/Herpestidae.hpp"
@@ -7,22 +8,22 @@
 #include "./classes/Alimentacao/Alimentacao.hpp"
 
 int main() {
-  Animal* animal1 = new Ursidae();
+  std::unique_ptr<Animal> animal1(new Ursidae());
   animal1->setName("Bobby");
   animal1->setAge(13);
   animal1->print();
 
-  Animal* animal2 = new Ursidae();
+  std::unique_ptr<Animal> animal2(new Ursidae());
   animal2->setName("Jorge");
   animal2->setAge(1);
   animal2->print();
 
-  Animal* animal3 = new Herpestidae();
+  std::unique_ptr<Animal> animal3(new Herpestidae());
   animal3->setName("Bonina");
   animal3->setAge(7);
   animal3->print();
 
-  Animal* animal4 = new Ursidae();
+  std::unique_ptr<Animal> animal4(new Ursidae());
   animal4->setName("Felício");
   animal4->setAge(3);
   animal4->print();
@@ -51,6 +52,7 @@ int main() {
   herpestidae2.setName("Carolina");
   herpestidae2.setAge(2);
   herpestidae2.setSpecies("Suricato");
+  herpestidae2.print();
 
   Cuidador careTaker1;
   careTaker1.setName("Ana Maria Rodrigues Lopes");

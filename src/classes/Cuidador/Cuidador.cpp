@@ -4,6 +4,10 @@
 
 #include "./Cuidador.hpp"
 
+Cuidador::Cuidador() {}
+
+Cuidador::~Cuidador() {}
+
 void Cuidador::print() const{
 	std::cout << "[Cuidador]" << std::endl
         	  << "  Nome: " << getName() << std::endl

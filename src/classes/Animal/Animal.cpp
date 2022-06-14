@@ -2,6 +2,10 @@
 
 #include "./Animal.hpp"
 
+Animal::Animal() {}
+
+Animal::~Animal() {}
+
 void Animal::print() const {
     std::cout << "\n[Animal]" << std::endl
               << "  Nome: " << getName() << std::endl

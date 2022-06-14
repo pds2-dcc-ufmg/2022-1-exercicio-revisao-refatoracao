@@ -14,6 +14,9 @@ class Cuidador : public IPrintable {
 		double wage;
 
 	public:
+		Cuidador();
+		virtual ~Cuidador();
+		
 		virtual void print() const override;
 
 		void setName(const std::string name);

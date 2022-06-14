@@ -16,6 +16,9 @@ class Animal : public IPrintable {
         void setFamily(const std::string family);
 
     public:
+        Animal();
+        virtual ~Animal();
+
         virtual void print() const override;
 
         void setAge(const unsigned int age);

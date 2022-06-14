@@ -15,6 +15,9 @@ class Alimentacao : public IPrintable {
         std::string animalName;
 
     public:
+        Alimentacao();
+        virtual ~Alimentacao();
+        
         virtual void print() const override;
 
         void setResponsable(const Cuidador responsable);
