@@ -1,8 +1,9 @@
 #include <iostream>
 
 #include "./Animal.hpp"
+#include "../Dieta/Dieta.hpp"
 
-Animal::Animal() {}
+Animal::Animal() : deit(Dieta::DEFAULT_PORTION_SIZE) {}
 
 Animal::~Animal() {}
 
@@ -49,4 +50,8 @@ void Animal::setSpecies(const std::string species) {
 
 std::string Animal::getSpecies() const {
     return species;
+}
+
+Dieta Animal::getDeit() const {
+    return deit;
 }

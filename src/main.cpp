@@ -86,7 +86,7 @@ int main() {
   alimentacao2.setAnimalName("Catita");
 
   double kgRacaoConsumidos01 = 0;
-  kgRacaoConsumidos01 += herpestidae1.consumedPortionsInKg(alimentacao1.getAmount());
+  kgRacaoConsumidos01 += herpestidae1.getDeit().calcConsumedPortionsInKg(alimentacao1.getAmount());
 
   Alimentacao alimentacao3;
   alimentacao3.setAmount(3);
@@ -96,7 +96,7 @@ int main() {
   alimentacao3.setAnimalName("Carolina");
 
   double kgRacaoConsumidos02 = 0;
-  kgRacaoConsumidos02 += herpestidae2.consumedPortionsInKg(alimentacao3.getAmount());
+  kgRacaoConsumidos02 += herpestidae2.getDeit().calcConsumedPortionsInKg(alimentacao3.getAmount());
 
   Alimentacao alimentacao4;
   alimentacao4.setAmount(10);
@@ -106,7 +106,7 @@ int main() {
   alimentacao4.setAnimalName("Tony");
 
   double kgPeixeConsumidos03 = 0;
-  kgPeixeConsumidos03 = ursidae2.consumedPortionsInKg(10);
+  kgPeixeConsumidos03 = ursidae2.getDeit().calcConsumedPortionsInKg(10);
 
   std::cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << std::endl;
 

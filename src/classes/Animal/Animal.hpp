@@ -4,6 +4,7 @@
 #include <string>
 
 #include "../IPrintable/IPrintable.hpp"
+#include "../Dieta/Dieta.hpp"
 
 class Animal : public IPrintable {
     private:
@@ -11,6 +12,9 @@ class Animal : public IPrintable {
         std::string name;
         std::string family;
         std::string species;
+    
+    protected:
+        Dieta deit;
 
     protected:
         void setFamily(const std::string family);
@@ -31,6 +35,8 @@ class Animal : public IPrintable {
 
         void setSpecies(const std::string species);
         std::string getSpecies() const;
+
+        Dieta getDeit() const;
 };
 
 #endif

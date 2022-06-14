@@ -4,10 +4,7 @@
 
 Herpestidae::Herpestidae() {
     setFamily("Herpestidae");
+    deit.setPortionsSize(PORTIONS_SIZE);
 }
 
 Herpestidae::~Herpestidae() {}
-
-double Herpestidae::consumedPortionsInKg(const unsigned int amountConsumedPortions) {
-    return PORTIONS_SIZE * amountConsumedPortions;
-}

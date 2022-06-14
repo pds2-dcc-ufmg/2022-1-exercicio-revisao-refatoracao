@@ -4,13 +4,10 @@
 
 Ursidae::Ursidae() {
     setFamily("Ursidae");
+    deit.setPortionsSize(PORTIONS_SIZE);
 }
 
 Ursidae::~Ursidae() {}
-
-double Ursidae::consumedPortionsInKg(const unsigned int amountConsumedPortions){
-    return PORTIONS_SIZE * amountConsumedPortions;
-}
 
 void Ursidae::setAmountFishPerDayInKg(const double amountFishPerDayInKg) {
     this->amountFishPerDayInKg = amountFishPerDayInKg;

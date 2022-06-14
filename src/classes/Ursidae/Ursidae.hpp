@@ -16,8 +16,6 @@ class Ursidae : public Animal {
         Ursidae();
         virtual ~Ursidae();
 
-        double consumedPortionsInKg(const unsigned int amountConsumedPortions); // TODO: Fix - Levar para classe genérica
-
         void setAmountFishPerDayInKg(const double amountFishPerDayInKg);
         double getAmountFishPerDayInKg() const;
 };

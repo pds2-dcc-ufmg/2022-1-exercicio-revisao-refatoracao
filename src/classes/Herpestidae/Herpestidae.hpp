@@ -7,11 +7,10 @@
 
 class Herpestidae : public Animal {
     public:
+        static const unsigned int PORTIONS_SIZE = 1;
+
         Herpestidae();
         virtual ~Herpestidae();
-
-        static const unsigned int PORTIONS_SIZE = 1; // TODO: Fix levar para classe genérica?
-        double consumedPortionsInKg(const unsigned int amountConsumedPortions); // TODO: Fix levar para classe genérica?
 };
 
 #endif
