@@ -1,9 +1,25 @@
 #include <iostream>
+#include <string>
 
 #include "./Animal.hpp"
 #include "../Dieta/Dieta.hpp"
 
 Animal::Animal() : deit(Dieta::DEFAULT_PORTION_SIZE) {}
+
+Animal::Animal(const std::string name) : deit(Dieta::DEFAULT_PORTION_SIZE) {
+    setName(name);
+}
+
+Animal::Animal(const std::string name, const unsigned int age) : deit(Dieta::DEFAULT_PORTION_SIZE) {
+    setName(name);
+    setAge(age);
+}
+
+Animal::Animal(const std::string name, const unsigned int age, const std::string species) : deit(Dieta::DEFAULT_PORTION_SIZE) {
+    setName(name);
+    setAge(age);
+    setSpecies(species);
+}
 
 Animal::~Animal() {}
 

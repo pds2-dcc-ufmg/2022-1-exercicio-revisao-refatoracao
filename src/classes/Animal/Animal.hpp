@@ -21,6 +21,9 @@ class Animal : public IPrintable {
 
     public:
         Animal();
+        Animal(const std::string name);
+        Animal(const std::string name, const unsigned int age);
+        Animal(const std::string name, const unsigned int age, const std::string species);
         virtual ~Animal();
 
         virtual void print() const override;
