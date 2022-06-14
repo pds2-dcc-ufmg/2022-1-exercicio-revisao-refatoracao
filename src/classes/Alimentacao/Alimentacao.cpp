@@ -5,6 +5,7 @@
 void Alimentacao::print() const {
     std::cout << "Animal: " << getAnimalName() << std::endl;
     std::cout << " Cuidador: " << getResponsable().getName() << std::endl;
+    std::cout << " Descricao: " << getDescription() << std::endl << std::endl;
     return;
 }
 

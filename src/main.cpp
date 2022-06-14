@@ -120,16 +120,9 @@ int main() {
   std::cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << std::endl;
 
   alimentacao1.print();
-  std::cout << " Descricao: " << alimentacao1.getDescription() << std::endl << std::endl;
-
   alimentacao2.print();
-  std::cout << " Descricao: " << alimentacao2.getDescription() << std::endl << std::endl;
-
   alimentacao3.print();
-  std::cout << " Descricao: " << alimentacao3.getDescription() << std::endl << std::endl;
-
   alimentacao4.print();
-  std::cout << " Descricao: " << alimentacao4.getDescription() << std::endl << "\n";
 
   std::cout <<" \n \n--------------------------------\n\nRelatorio de kg de comida gastos \n" << std::endl;
   std::cout << "Tipo de comida: " << "Ração" << std::endl;
