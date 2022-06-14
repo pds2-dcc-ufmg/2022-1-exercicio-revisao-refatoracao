@@ -72,14 +72,14 @@ int main() {
   careTaker1.setCpf("1234567799");
   careTaker1.setPhone("(31) 99876-6923");
   careTaker1.setBirthday("10/10/2000");
-  careTaker1.setWage("R$ 3000");
+  careTaker1.setWage(3000);
 
   Cuidador careTaker2;
   careTaker2.setName("Fernanda Silva Santos");
   careTaker2.setCpf("9472567121");
   careTaker2.setPhone("(31) 99123-8970");
   careTaker2.setBirthday("08/02/1995");
-  careTaker2.setWage("R$ 4000");
+  careTaker2.setWage(4000);
 
   Alimentacao alimentacao1;
   alimentacao1.setAmount(2);

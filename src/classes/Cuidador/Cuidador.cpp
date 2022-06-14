@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <sstream>
 
 #include "./Cuidador.hpp"
 
@@ -48,11 +49,19 @@ std::string Cuidador::getBirthday() const {
 	return birthday;
 }
 
-void Cuidador::setWage(const std::string name) {
+void Cuidador::setWage(const double name) {
 	this->wage = wage;
 	return;
 }
 
-std::string Cuidador::getWage() const {
+double Cuidador::getWage() const {
 	return wage;
+}
+
+std::string Cuidador::getFormattedWage() const {
+	std::stringstream formattedWage;
+    formattedWage.clear();
+	formattedWage << "R$ " << std::to_string(getWage()) << std::endl;
+	
+	return formattedWage.str();
 }
