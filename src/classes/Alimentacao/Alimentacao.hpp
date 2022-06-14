@@ -5,23 +5,27 @@
 
 #include "../Cuidador/Cuidador.hpp"
 #include "../IPrintable/IPrintable.hpp"
+#include "../Comida/Comida.hpp"
 
 class Alimentacao : public IPrintable {
     private:
         Cuidador responsable;
-        std::string foodType;
-        unsigned int amount;
+        Comida food;
         std::string description;
         std::string animalName;
 
     public:
-        Alimentacao();
+        Alimentacao(const Cuidador responsable, const Comida food, const std::string animalName);
+        Alimentacao(const Cuidador responsable, const Comida food, const std::string animalName, const std::string description);
         virtual ~Alimentacao();
         
         virtual void print() const override;
 
         void setResponsable(const Cuidador responsable);
         Cuidador getResponsable() const;
+
+        void setFood(const Comida comida);
+        Comida getFood() const;
 
         void setFoodType(const std::string foodType);
         std::string getFoodType() const;

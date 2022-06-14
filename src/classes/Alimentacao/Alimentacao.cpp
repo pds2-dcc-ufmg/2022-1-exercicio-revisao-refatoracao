@@ -2,7 +2,16 @@
 
 #include "./Alimentacao.hpp"
 
-Alimentacao::Alimentacao() {}
+Alimentacao::Alimentacao(const Cuidador responsable, const Comida food, const std::string animalName) : food(food) {
+    setResponsable(responsable);
+    setAnimalName(animalName);
+}
+
+Alimentacao::Alimentacao(const Cuidador responsable, const Comida food, const std::string animalName, const std::string description) : food(food) {
+    setResponsable(responsable);
+    setAnimalName(animalName);
+    setDescription(description);
+}
 
 Alimentacao::~Alimentacao() {}
 
@@ -23,21 +32,21 @@ Cuidador Alimentacao::getResponsable() const {
 }
 
 void Alimentacao::setFoodType(const std::string foodType) {
-    this->foodType = foodType;
+    food.setFoodType(foodType);
     return;
 }
 
 std::string Alimentacao::getFoodType() const {
-    return foodType;
+    return food.getFoodType();
 }
 
 void Alimentacao::setAmount(const unsigned int amount) {
-    this->amount = amount;
+    food.setConsumedAmount(amount);
     return;
 }
 
 unsigned int Alimentacao::getAmount() const {
-    return amount;
+    return food.getConsumedAmount();
 }
 
 void Alimentacao::setDescription(const std::string description) {
