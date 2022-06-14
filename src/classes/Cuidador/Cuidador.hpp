@@ -3,7 +3,9 @@
 
 #include <string>
 
-class Cuidador {
+#include "../IPrintable/IPrintable.hpp"
+
+class Cuidador : public IPrintable {
 	private:
 		std::string name;
 		std::string cpf;
@@ -12,7 +14,7 @@ class Cuidador {
 		std::string wage; // TODO: Fix - Transformar em double
 
 	public:
-		void print() const;
+		virtual void print() const override;
 
 		void setName(const std::string name);
 		std::string getName() const;

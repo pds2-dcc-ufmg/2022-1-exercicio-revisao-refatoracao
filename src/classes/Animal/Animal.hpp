@@ -3,7 +3,9 @@
 
 #include <string>
 
-class Animal {
+#include "../IPrintable/IPrintable.hpp"
+
+class Animal : public IPrintable {
     private:
         std::string age; // TODO: Fix - Transformar em unsigned int?
         std::string name;
@@ -14,7 +16,7 @@ class Animal {
         void setFamily(const std::string family);
 
     public:
-        virtual void print() const;
+        virtual void print() const override;
         void print_oi() const; // TODO: Fix - Nome errado????
 
         void setAge(const std::string age);

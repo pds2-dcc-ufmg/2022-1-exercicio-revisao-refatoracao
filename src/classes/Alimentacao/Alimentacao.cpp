@@ -2,7 +2,7 @@
 
 #include "./Alimentacao.hpp"
 
-void Alimentacao::print() {
+void Alimentacao::print() const {
     std::cout << "Animal: ";
     std::cout << getAnimalName() << "\n";
 

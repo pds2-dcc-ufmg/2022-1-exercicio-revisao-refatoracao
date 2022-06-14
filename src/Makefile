@@ -8,6 +8,9 @@ BUILD_FLAGS = -std=c++11 -lstdc++
 
 BUILD_FILES = ${BUILD_FOLDER}/main.o ${BUILD_FOLDER}/Ursidae.o ${BUILD_FOLDER}/Herpestidae.o ${BUILD_FOLDER}/Cuidador.o ${BUILD_FOLDER}/Animal.o ${BUILD_FOLDER}/Alimentacao.o
 
+IPRINTABLE_FOLDER = ${SRC_FOLDER}/classes/IPrintable
+IPRINTABLE_FILE = ${SRC_FOLDER}/classes/IPrintable/IPrintable.hpp
+
 all: ${PROJECT_NAME}
 
 ${PROJECT_NAME}: ${BUILD_FILES}
@@ -25,19 +28,15 @@ ${BUILD_FOLDER}/Herpestidae.o: ${HERPESTIDAE_FOLDER}/Herpestidae.hpp ${HERPESTID
 	${COMPILER} -c ${HERPESTIDAE_FOLDER}/Herpestidae.cpp -o ${BUILD_FOLDER}/Herpestidae.o
 
 CUIDADOR_FOLDER = ${SRC_FOLDER}/classes/Cuidador
-${BUILD_FOLDER}/Cuidador.o: ${CUIDADOR_FOLDER}/Cuidador.hpp ${CUIDADOR_FOLDER}/Cuidador.cpp
+${BUILD_FOLDER}/Cuidador.o: ${IPRINTABLE_FILE} ${CUIDADOR_FOLDER}/Cuidador.hpp ${CUIDADOR_FOLDER}/Cuidador.cpp
 	${COMPILER} -c ${CUIDADOR_FOLDER}/Cuidador.cpp -o ${BUILD_FOLDER}/Cuidador.o
 
 ANIMAL_FOLDER = ${SRC_FOLDER}/classes/Animal
-${BUILD_FOLDER}/Animal.o: ${ANIMAL_FOLDER}/Animal.hpp ${ANIMAL_FOLDER}/Animal.cpp
-	${COMPILER} -c ${ANIMAL_FOLDER}/Animal.cpp -o ${BUILD_FOLDER}/Animal.o
-
-ANIMAL_FOLDER = ${SRC_FOLDER}/classes/Animal
-${BUILD_FOLDER}/Animal.o: ${ANIMAL_FOLDER}/Animal.hpp ${ANIMAL_FOLDER}/Animal.cpp
+${BUILD_FOLDER}/Animal.o: ${IPRINTABLE_FILE} ${ANIMAL_FOLDER}/Animal.hpp ${ANIMAL_FOLDER}/Animal.cpp
 	${COMPILER} -c ${ANIMAL_FOLDER}/Animal.cpp -o ${BUILD_FOLDER}/Animal.o
 
 ALIMENTACAO_FOLDER = ${SRC_FOLDER}/classes/Alimentacao
-${BUILD_FOLDER}/Alimentacao.o: ${ALIMENTACAO_FOLDER}/Alimentacao.hpp ${ALIMENTACAO_FOLDER}/Alimentacao.cpp
+${BUILD_FOLDER}/Alimentacao.o: ${IPRINTABLE_FILE} ${ALIMENTACAO_FOLDER}/Alimentacao.hpp ${ALIMENTACAO_FOLDER}/Alimentacao.cpp
 	${COMPILER} -c ${ALIMENTACAO_FOLDER}/Alimentacao.cpp -o ${BUILD_FOLDER}/Alimentacao.o
 
 clean:

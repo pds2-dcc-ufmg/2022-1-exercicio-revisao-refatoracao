@@ -4,8 +4,9 @@
 #include <string>
 
 #include "../Cuidador/Cuidador.hpp"
+#include "../IPrintable/IPrintable.hpp"
 
-class Alimentacao {
+class Alimentacao : public IPrintable {
     private:
         Cuidador responsable;
         std::string foodType;
@@ -14,7 +15,7 @@ class Alimentacao {
         std::string animalName;
 
     public:
-        void print();
+        virtual void print() const override;
 
         void setResponsable(const Cuidador responsable);
         Cuidador getResponsable() const;
