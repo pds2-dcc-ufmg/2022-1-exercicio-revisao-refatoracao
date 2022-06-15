@@ -6,7 +6,7 @@ BUILD_FOLDER = ../build
 COMPILER = gcc
 BUILD_FLAGS = -std=c++11 -lstdc++
 
-BUILD_FILES = ${BUILD_FOLDER}/main.o ${BUILD_FOLDER}/Ursidae.o ${BUILD_FOLDER}/Herpestidae.o ${BUILD_FOLDER}/Cuidador.o ${BUILD_FOLDER}/Animal.o ${BUILD_FOLDER}/Alimentacao.o ${BUILD_FOLDER}/Dieta.o ${BUILD_FOLDER}/Comida.o
+BUILD_FILES = ${BUILD_FOLDER}/main.o ${BUILD_FOLDER}/Ursidae.o ${BUILD_FOLDER}/Herpestidae.o ${BUILD_FOLDER}/Cuidador.o ${BUILD_FOLDER}/Animal.o ${BUILD_FOLDER}/Alimentacao.o ${BUILD_FOLDER}/Dieta.o ${BUILD_FOLDER}/Comida.o ${BUILD_FOLDER}/DietaUrsidae.o
 
 IPRINTABLE_FOLDER = ${SRC_FOLDER}/classes/IPrintable
 IPRINTABLE_FILE = ${SRC_FOLDER}/classes/IPrintable/IPrintable.hpp
@@ -42,6 +42,10 @@ ${BUILD_FOLDER}/Alimentacao.o: ${IPRINTABLE_FILE} ${ALIMENTACAO_FOLDER}/Alimenta
 DIETA_FOLDER = ${SRC_FOLDER}/classes/Dieta
 ${BUILD_FOLDER}/Dieta.o: ${DIETA_FOLDER}/Dieta.hpp ${DIETA_FOLDER}/Dieta.cpp
 	${COMPILER} -c ${DIETA_FOLDER}/Dieta.cpp -o ${BUILD_FOLDER}/Dieta.o
+
+DIETA_URSIDAE_FOLDER = ${SRC_FOLDER}/classes/DietaUrsidae
+${BUILD_FOLDER}/DietaUrsidae.o: ${DIETA_URSIDAE_FOLDER}/DietaUrsidae.hpp ${DIETA_URSIDAE_FOLDER}/DietaUrsidae.cpp
+	${COMPILER} -c ${DIETA_URSIDAE_FOLDER}/DietaUrsidae.cpp -o ${BUILD_FOLDER}/DietaUrsidae.o
 
 COMIDA_FOLDER = ${SRC_FOLDER}/classes/Comida
 ${BUILD_FOLDER}/Comida.o: ${COMIDA_FOLDER}/Comida.hpp ${COMIDA_FOLDER}/Comida.cpp
