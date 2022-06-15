@@ -2,6 +2,7 @@
 #define ANIMAL_HPP
 
 #include <string>
+#include <memory>
 
 #include "../IPrintable/IPrintable.hpp"
 #include "../Dieta/Dieta.hpp"
@@ -14,10 +15,11 @@ class Animal : public IPrintable {
         std::string species;
     
     protected:
-        Dieta deit;
+        std::shared_ptr<Dieta> deit;
 
     protected:
         void setFamily(const std::string family);
+        virtual std::shared_ptr<Dieta> getDeitType() const;
 
     public:
         Animal();
@@ -39,7 +41,7 @@ class Animal : public IPrintable {
         void setSpecies(const std::string species);
         std::string getSpecies() const;
 
-        Dieta getDeit() const;
+        std::shared_ptr<Dieta> getDeit() const;
 };
 
 #endif

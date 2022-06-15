@@ -23,5 +23,5 @@ Herpestidae::~Herpestidae() {}
 
 void Herpestidae::setDefaultInfo() {
     setFamily("Herpestidae");
-    deit.setPortionsSize(PORTIONS_SIZE);
+    getDeit()->setPortionsSize(PORTIONS_SIZE);
 }

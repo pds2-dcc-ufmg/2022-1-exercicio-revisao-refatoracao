@@ -32,14 +32,14 @@ int main() {
   ursidae1.setName("Tony");
   ursidae1.setAge(9);
   ursidae1.setSpecies("Urso Pardo");
-  ursidae1.setAmountFishPerDayInKg(10.5);
+  ursidae1.getUrsidaeDeit()->setAmountFishPerDayInKg(10.5);
   ursidae1.print();
 
   Ursidae ursidae2;
   ursidae2.setName("Wanda");
   ursidae2.setAge(10);
   ursidae2.setSpecies("Urso Polar");
-  ursidae2.setAmountFishPerDayInKg(7);
+  ursidae2.getUrsidaeDeit()->setAmountFishPerDayInKg(7);
   ursidae2.print();
 
   Herpestidae herpestidae1;
@@ -78,19 +78,19 @@ int main() {
   Alimentacao alimentacao2(careTaker2, comida2, "Catita", "Catita comeu direitinho");
 
   double kgRacaoConsumidos01 = 0;
-  kgRacaoConsumidos01 += herpestidae1.getDeit().calcConsumedPortionsInKg(alimentacao1.getFood()->getConsumedAmount());
+  kgRacaoConsumidos01 += herpestidae1.getDeit()->calcConsumedPortionsInKg(alimentacao1.getFood()->getConsumedAmount());
 
   Comida comida3("Ração", 3);
   Alimentacao alimentacao3(careTaker2, comida3, "Carolina", "Carolina estava com um apetite e tanto");
 
   double kgRacaoConsumidos02 = 0;
-  kgRacaoConsumidos02 += herpestidae2.getDeit().calcConsumedPortionsInKg(alimentacao3.getFood()->getConsumedAmount());
+  kgRacaoConsumidos02 += herpestidae2.getDeit()->calcConsumedPortionsInKg(alimentacao3.getFood()->getConsumedAmount());
 
   Comida comida4("Peixes", 10);
   Alimentacao alimentacao4(careTaker1, comida4, "Tony", "Tony comeu um pouco da comida do Bobby");
 
   double kgPeixeConsumidos03 = 0;
-  kgPeixeConsumidos03 = ursidae2.getDeit().calcConsumedPortionsInKg(10);
+  kgPeixeConsumidos03 = ursidae2.getDeit()->calcConsumedPortionsInKg(10);
 
   std::cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << std::endl;
 

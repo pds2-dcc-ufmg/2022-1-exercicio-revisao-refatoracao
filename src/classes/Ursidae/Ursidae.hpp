@@ -2,17 +2,18 @@
 #define URSIDAE_HPP
 
 #include <string>
+#include <memory>
 
 #include "../Animal/Animal.hpp"
+#include "../DietaUrsidae/DietaUrsidae.hpp"
 
 class Ursidae : public Animal {
+    protected:
+        virtual std::shared_ptr<Dieta> getDeitType() const override;
+
     public:
         static const unsigned int PORTIONS_SIZE = 5;
 
-    private:
-        double amountFishPerDayInKg;
-
-    public:
         Ursidae();
         Ursidae(const std::string name);
         Ursidae(const std::string name, const unsigned int age);
@@ -21,8 +22,7 @@ class Ursidae : public Animal {
         Ursidae(const std::string name, const unsigned int age, const std::string species, const double amountFishPerDayInKg);
         virtual ~Ursidae();
 
-        void setAmountFishPerDayInKg(const double amountFishPerDayInKg);
-        double getAmountFishPerDayInKg() const;
+        std::shared_ptr<DietaUrsidae> getUrsidaeDeit() const;
     
     private:
         void setDefaultInfo();

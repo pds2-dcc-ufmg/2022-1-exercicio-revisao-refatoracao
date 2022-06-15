@@ -2,6 +2,7 @@
 
 #include "./Ursidae.hpp"
 #include "../Animal/Animal.hpp"
+#include "../DietaUrsidae/DietaUrsidae.hpp"
 
 Ursidae::Ursidae() {
     setDefaultInfo();
@@ -17,7 +18,7 @@ Ursidae::Ursidae(const std::string name, const unsigned int age) : Animal(name, 
 
 Ursidae::Ursidae(const std::string name, const unsigned int age, const double amountFishPerDayInKg) : Animal(name, age) {
     setDefaultInfo();
-    setAmountFishPerDayInKg(amountFishPerDayInKg);
+    getUrsidaeDeit()->setAmountFishPerDayInKg(amountFishPerDayInKg);
 }
 
 Ursidae::Ursidae(const std::string name, const unsigned int age, const std::string species) : Animal(name, age, species) {
@@ -26,21 +27,19 @@ Ursidae::Ursidae(const std::string name, const unsigned int age, const std::stri
 
 Ursidae::Ursidae(const std::string name, const unsigned int age, const std::string species, const double amountFishPerDayInKg) : Animal(name, age, species) {
     setDefaultInfo();
-    setAmountFishPerDayInKg(amountFishPerDayInKg);
+    getUrsidaeDeit()->setAmountFishPerDayInKg(amountFishPerDayInKg);
 }
 
 Ursidae::~Ursidae() {}
 
-void Ursidae::setAmountFishPerDayInKg(const double amountFishPerDayInKg) {
-    this->amountFishPerDayInKg = amountFishPerDayInKg;
-    return;
+std::shared_ptr<Dieta> Ursidae::getDeitType() const {
+    return std::shared_ptr<DietaUrsidae>(new DietaUrsidae(PORTIONS_SIZE));
 }
 
-double Ursidae::getAmountFishPerDayInKg() const {
-    return amountFishPerDayInKg;
+std::shared_ptr<DietaUrsidae> Ursidae::getUrsidaeDeit() const {
+    return std::static_pointer_cast<DietaUrsidae>(getDeit());
 }
 
 void Ursidae::setDefaultInfo() {
     setFamily("Ursidae");
-    deit.setPortionsSize(PORTIONS_SIZE);
 }

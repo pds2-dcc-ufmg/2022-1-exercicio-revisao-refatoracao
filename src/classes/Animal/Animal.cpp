@@ -4,24 +4,28 @@
 #include "./Animal.hpp"
 #include "../Dieta/Dieta.hpp"
 
-Animal::Animal() : deit(Dieta::DEFAULT_PORTION_SIZE) {}
+Animal::Animal() : deit(getDeitType()) {}
 
-Animal::Animal(const std::string name) : deit(Dieta::DEFAULT_PORTION_SIZE) {
+Animal::Animal(const std::string name) : deit(getDeitType()) {
     setName(name);
 }
 
-Animal::Animal(const std::string name, const unsigned int age) : deit(Dieta::DEFAULT_PORTION_SIZE) {
+Animal::Animal(const std::string name, const unsigned int age) : deit(getDeitType()) {
     setName(name);
     setAge(age);
 }
 
-Animal::Animal(const std::string name, const unsigned int age, const std::string species) : deit(Dieta::DEFAULT_PORTION_SIZE) {
+Animal::Animal(const std::string name, const unsigned int age, const std::string species) : deit(getDeitType()) {
     setName(name);
     setAge(age);
     setSpecies(species);
 }
 
 Animal::~Animal() {}
+
+std::shared_ptr<Dieta> Animal::getDeitType() const {
+    return std::shared_ptr<Dieta>(new Dieta(Dieta::DEFAULT_PORTION_SIZE));
+}
 
 void Animal::print() const {
     std::cout << "\n[Animal]" << std::endl
@@ -68,6 +72,6 @@ std::string Animal::getSpecies() const {
     return species;
 }
 
-Dieta Animal::getDeit() const {
+std::shared_ptr<Dieta> Animal::getDeit() const {
     return deit;
 }
