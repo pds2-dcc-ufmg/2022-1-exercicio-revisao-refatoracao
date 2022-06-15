@@ -7,7 +7,7 @@
 
 class Herpestidae : public Animal {
     public:
-        static const unsigned int PORTIONS_SIZE = 1;
+        static const unsigned int PORTIONS_SIZE;
 
         Herpestidae();
         Herpestidae(const std::string name);

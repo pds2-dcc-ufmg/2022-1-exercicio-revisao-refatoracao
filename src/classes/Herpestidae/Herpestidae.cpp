@@ -3,6 +3,8 @@
 #include "./Herpestidae.hpp"
 #include "../Animal/Animal.hpp"
 
+const unsigned int Herpestidae::PORTIONS_SIZE = 1;
+
 Herpestidae::Herpestidae() {
     setDefaultInfo();
 }

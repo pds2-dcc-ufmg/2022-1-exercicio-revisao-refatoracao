@@ -4,6 +4,8 @@
 #include "../Animal/Animal.hpp"
 #include "../DietaUrsidae/DietaUrsidae.hpp"
 
+const unsigned int Ursidae::PORTIONS_SIZE = 5;
+
 Ursidae::Ursidae() {
     setDefaultInfo();
 }

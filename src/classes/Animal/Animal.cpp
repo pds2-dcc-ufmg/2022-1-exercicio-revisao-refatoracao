@@ -31,8 +31,11 @@ void Animal::print() const {
     std::cout << "\n[Animal]" << std::endl
               << "  Nome: " << getName() << std::endl
               << "  Idade: " << getAge() << std::endl
-              << "  Família: " << getFamily() << std::endl
-              << "  Especie: " << getSpecies() << std::endl;
+              << "  Família: " << getFamily() << std::endl;
+              
+    if(getSpecies() != "") {
+        std::cout << "  Especie: " << getSpecies() << std::endl;
+    }
     return;
 }
 

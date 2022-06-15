@@ -12,7 +12,7 @@ class Ursidae : public Animal {
         virtual std::shared_ptr<Dieta> getDeitType() const override;
 
     public:
-        static const unsigned int PORTIONS_SIZE = 5;
+        static const unsigned int PORTIONS_SIZE;
 
         Ursidae();
         Ursidae(const std::string name);
