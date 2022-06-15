@@ -42,4 +42,5 @@ std::shared_ptr<DietaUrsidae> Ursidae::getUrsidaeDeit() const {
 
 void Ursidae::setDefaultInfo() {
     setFamily("Ursidae");
+    getUrsidaeDeit()->setPortionsSize(PORTIONS_SIZE);
 }
