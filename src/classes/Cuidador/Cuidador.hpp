@@ -10,7 +10,7 @@ class Cuidador : public IPrintable {
 		std::string name;
 		std::string cpf;
 		std::string phone;
-		std::string birthday; // TODO: Fix - Transformar em date?
+		std::string birthday;
 		double wage;
 
 	public:
