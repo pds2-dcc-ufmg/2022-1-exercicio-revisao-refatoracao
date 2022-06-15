@@ -1,5 +1,7 @@
 #include <iostream>
 #include <memory>
+#include <vector>
+#include <string>
 
 #include "./classes/Animal/Animal.hpp"
 #include "./classes/Herpestidae/Herpestidae.hpp"
@@ -7,104 +9,110 @@
 #include "./classes/Cuidador/Cuidador.hpp"
 #include "./classes/Alimentacao/Alimentacao.hpp"
 
+void printAnimalList(const std::vector<std::shared_ptr<Animal>>& animals);
+void printRelatorioAlimentacoes(const std::vector<Alimentacao>& feedings);
+void printFeedingsList(const std::vector<Alimentacao>& feedings);
+void printRelatrioComidaGastos(const std::vector<std::pair<std::string, double>>& consumedFoods);
+void printConsumedFood(const std::string foodType, const double consumedAmount);
+
 int main() {
-  std::unique_ptr<Animal> animal1(new Ursidae());
-  animal1->setName("Bobby");
-  animal1->setAge(13);
-  animal1->print();
+    std::shared_ptr<Animal> animalBobby(new Ursidae("Bobby", 13));
+    std::shared_ptr<Animal> animalJorge(new Ursidae("Jorge", 1));
+    std::shared_ptr<Animal> animalBonina(new Herpestidae("Bonina", 7));
+    std::shared_ptr<Animal> animalFelicio(new Ursidae("Felício", 3));
+    std::shared_ptr<Animal> animalTony(new Ursidae("Tony", 9, "Urso Pardo", 10.5));
+    std::shared_ptr<Animal> animalWanda(new Ursidae("Wanda", 10, "Urso Polar", 7));
+    std::shared_ptr<Animal> animalCatita(new Herpestidae("Catita", 2, "Suricato"));
+    std::shared_ptr<Animal> animalCarolina(new Herpestidae("Carolina", 2, "Suricato"));
 
-  std::unique_ptr<Animal> animal2(new Ursidae());
-  animal2->setName("Jorge");
-  animal2->setAge(1);
-  animal2->print();
+    std::vector<std::shared_ptr<Animal>> animals;
+    animals.push_back(animalBobby);
+    animals.push_back(animalJorge);
+    animals.push_back(animalBonina);
+    animals.push_back(animalFelicio);
+    animals.push_back(animalTony);
+    animals.push_back(animalWanda);
+    animals.push_back(animalCatita);
+    animals.push_back(animalCarolina);
+    printAnimalList(animals);
 
-  std::unique_ptr<Animal> animal3(new Herpestidae());
-  animal3->setName("Bonina");
-  animal3->setAge(7);
-  animal3->print();
+    std::shared_ptr<Cuidador> caretakerAna(new Cuidador("Ana Maria Rodrigues Lopes", "1234567799", "(31) 99876-6923", "10/10/2000", 3000));
+    std::shared_ptr<Cuidador> caretakerFernanda(new Cuidador("Fernanda Silva Santos", "9472567121", "(31) 99123-8970", "08/02/1995", 4000));
 
-  std::unique_ptr<Animal> animal4(new Ursidae());
-  animal4->setName("Felício");
-  animal4->setAge(3);
-  animal4->print();
+    std::vector<std::shared_ptr<Cuidador>> caretakers;
+    caretakers.push_back(caretakerAna);
+    caretakers.push_back(caretakerFernanda);
 
-  Ursidae ursidae1;
-  ursidae1.setName("Tony");
-  ursidae1.setAge(9);
-  ursidae1.setSpecies("Urso Pardo");
-  ursidae1.getUrsidaeDeit()->setAmountFishPerDayInKg(10.5);
-  ursidae1.print();
+    std::vector<Alimentacao> feedings;
 
-  Ursidae ursidae2;
-  ursidae2.setName("Wanda");
-  ursidae2.setAge(10);
-  ursidae2.setSpecies("Urso Polar");
-  ursidae2.getUrsidaeDeit()->setAmountFishPerDayInKg(7);
-  ursidae2.print();
+    Comida food1("Peixes", 2);
+    Alimentacao feeding1(*caretakerAna, food1, animalBobby->getName(), "Bobby só quis comer 2 porções de peixes hoje");
+    feedings.push_back(feeding1);
 
-  Herpestidae herpestidae1;
-  herpestidae1.setName("Catita");
-  herpestidae1.setAge(2);
-  herpestidae1.setSpecies("Suricato");
-  herpestidae1.print();
+    double amountFishConsumedInKg = 0;
+    amountFishConsumedInKg += animalBobby->getDeit()->calcConsumedPortionsInKg(feeding1.getFood()->getConsumedAmount());
 
-  Herpestidae herpestidae2;
-  herpestidae2.setName("Carolina");
-  herpestidae2.setAge(2);
-  herpestidae2.setSpecies("Suricato");
-  herpestidae2.print();
+    Comida food2("Ração especial", 2);
+    Alimentacao feeding2(*caretakerFernanda, food2, animalCatita->getName(), "Catita comeu direitinho");
+    feedings.push_back(feeding2);
+    double amountRationConsumedInKg = 0;
+    amountRationConsumedInKg += animalCatita->getDeit()->calcConsumedPortionsInKg(feeding2.getFood()->getConsumedAmount());
 
-  Cuidador careTaker1;
-  careTaker1.setName("Ana Maria Rodrigues Lopes");
-  careTaker1.setCpf("1234567799");
-  careTaker1.setPhone("(31) 99876-6923");
-  careTaker1.setBirthday("10/10/2000");
-  careTaker1.setWage(3000);
+    Comida food3("Ração", 3);
+    Alimentacao feeding3(*caretakerFernanda, food3, animalCarolina->getName(), "Carolina estava com um apetite e tanto");
+    feedings.push_back(feeding3);
+    amountRationConsumedInKg += animalCarolina->getDeit()->calcConsumedPortionsInKg(feeding3.getFood()->getConsumedAmount());
 
-  Cuidador careTaker2;
-  careTaker2.setName("Fernanda Silva Santos");
-  careTaker2.setCpf("9472567121");
-  careTaker2.setPhone("(31) 99123-8970");
-  careTaker2.setBirthday("08/02/1995");
-  careTaker2.setWage(4000);
+    Comida food4("Peixes", 10);
+    Alimentacao feeding4(*caretakerAna, food4, animalTony->getName(), "Tony comeu um pouco da comida do Bobby");
+    feedings.push_back(feeding4);
+    amountFishConsumedInKg += animalTony->getDeit()->calcConsumedPortionsInKg(feeding4.getFood()->getConsumedAmount());
 
-  Comida comida1("Peixes", 2);
-  Alimentacao alimentacao1(careTaker1, comida1, "Bobby", "Bobby só quis comer 2 porções de peixes hoje");
-  
-  double kgPeixeConsumidos01 = 0;
-  kgPeixeConsumidos01 = 5 * 2;
+    printRelatorioAlimentacoes(feedings);
 
-  Comida comida2("Ração especial", 2);
-  Alimentacao alimentacao2(careTaker2, comida2, "Catita", "Catita comeu direitinho");
+    std::vector<std::pair<std::string, double>> consumedFoods;
+    consumedFoods.push_back(std::pair<std::string, double>("Ração", amountRationConsumedInKg));
+    consumedFoods.push_back(std::pair<std::string, double>("Peixe", amountFishConsumedInKg));
+    printRelatrioComidaGastos(consumedFoods);
 
-  double kgRacaoConsumidos01 = 0;
-  kgRacaoConsumidos01 += herpestidae1.getDeit()->calcConsumedPortionsInKg(alimentacao1.getFood()->getConsumedAmount());
+    return 0;
+}
 
-  Comida comida3("Ração", 3);
-  Alimentacao alimentacao3(careTaker2, comida3, "Carolina", "Carolina estava com um apetite e tanto");
+void printAnimalList(const std::vector<std::shared_ptr<Animal>>& animals) {
+    for(auto&& animal : animals) {
+        animal->print();
+    }
 
-  double kgRacaoConsumidos02 = 0;
-  kgRacaoConsumidos02 += herpestidae2.getDeit()->calcConsumedPortionsInKg(alimentacao3.getFood()->getConsumedAmount());
+    return;
+}
 
-  Comida comida4("Peixes", 10);
-  Alimentacao alimentacao4(careTaker1, comida4, "Tony", "Tony comeu um pouco da comida do Bobby");
+void printRelatorioAlimentacoes(const std::vector<Alimentacao>& feedings) {
+    std::cout <<"\n\n--------------------------------\n\nRelatorio das alimentações" << std::endl << std::endl;
+    printFeedingsList(feedings);
+    
+    return;
+}
 
-  double kgPeixeConsumidos03 = 0;
-  kgPeixeConsumidos03 = ursidae2.getDeit()->calcConsumedPortionsInKg(10);
+void printFeedingsList(const std::vector<Alimentacao>& feedings) {
+    for(Alimentacao feeding : feedings) {
+        feeding.print();
+    }
 
-  std::cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << std::endl;
+    return;
+}
 
-  alimentacao1.print();
-  alimentacao2.print();
-  alimentacao3.print();
-  alimentacao4.print();
+void printRelatrioComidaGastos(const std::vector<std::pair<std::string, double>>& consumedFoods) {
+    std::cout <<"\n\n--------------------------------\n\nRelatorio de kg de comida gastos" << std::endl << std::endl;
+    for(std::pair<std::string, double> pair : consumedFoods) {
+        printConsumedFood(pair.first, pair.second);
+    }
 
-  std::cout <<" \n \n--------------------------------\n\nRelatorio de kg de comida gastos \n" << std::endl;
-  std::cout << "Tipo de comida: " << "Ração" << std::endl;
-  std::cout << "Kg consumidos: " << kgRacaoConsumidos01 + kgRacaoConsumidos02<< std::endl;
+    return;
+}
 
-  std::cout << "\nTipo de comida: " << "Peixe" << std::endl;
-  std::cout << "Kg consumidos: " << kgPeixeConsumidos01 + kgPeixeConsumidos03<< std::endl;
+void printConsumedFood(const std::string foodType, const double consumedAmount) {
+    std::cout << "Tipo de comida: " << foodType << std::endl;
+    std::cout << "Kg consumidos: " << consumedAmount << std::endl;
 
-  return 0;
+    return;
 }
