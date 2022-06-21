@@ -1,5 +1,5 @@
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef ANIMAL_H
+#define ANIMAL_H
 
 #include <iostream>
 #include <iomanip>
@@ -7,22 +7,15 @@
 using namespace std;
 
 class Animal {
-    public:
-        string IDADE;
-        string family;
+    protected:
         string nome;
-
-        void print() {
-            cout << "\n[Animal]" << endl
-            << "  Nome: " << nome << endl
-
-              << "  Idade: " << IDADE << endl
-            << "  Familia: " << family << endl;
-        }
-
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+        int idade;
+        string family;
+        string especie;
+    
+    public:
+        Animal(string nome, int idade, string family);
+        void print();
 };
 
 #endif
