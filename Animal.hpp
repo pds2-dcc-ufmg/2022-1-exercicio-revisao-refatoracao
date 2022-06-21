@@ -14,8 +14,9 @@ class Animal {
         string especie;
     
     public:
+        Animal();
         Animal(string nome, int idade, string family);
-        void print();
+        virtual void print();
 };
 
 #endif

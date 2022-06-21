@@ -11,10 +11,11 @@ using namespace std;
 
 class Ursidae : public Animal{
     private:
-        double kgPeixePorDIA;
+        double kgPeixePorDia;
     
     public:
-        void print();
+        Ursidae(string nome, int idade, string especie, double kgPeixePorDia);
+        void print() override;
         double calculaPeixesConsumidos(int porcaoPeixes);
 };
 
