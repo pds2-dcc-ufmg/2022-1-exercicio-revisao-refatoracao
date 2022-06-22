@@ -8,8 +8,8 @@ class Alimentacao{
     private:
         int porcao;
         std::string comida, descricao;
-        Cuidador cuidador;
         Animal *animal;
+        Cuidador cuidador;
 
     public:
         Alimentacao(int _porcao, std::string _comida, std::string _descricao, Animal* _animal, Cuidador &_cuidador);
