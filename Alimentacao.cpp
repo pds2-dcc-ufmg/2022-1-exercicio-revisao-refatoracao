@@ -1,11 +1,23 @@
 #include "Alimentacao.hpp"
 
-Alimentacao::Alimentacao(int porcao, string comida, Cuidador& cuid, string nomeAnimal){
+Alimentacao::Alimentacao(int porcao, string comida, Cuidador cuid, Animal animal){
 	this->porcao = porcao;
 	this->comida = comida;
 	this->descricao = descricao;
-	this->cuid = cuid;
-	this->nomeAnimal = nomeAnimal;
+	this->cuid = Cuidador(cuid);
+	this->animal = Animal(animal);
+}
+
+int Alimentacao::getPorcao(){
+	return this->porcao;
+}
+
+void Alimentacao::setPorcao(int porcao){
+	this->porcao = porcao;
+}
+
+void Alimentacao::setComida(string comida){
+	this->comida = comida;
 }
 
 string Alimentacao::getDescricao(){
@@ -17,9 +29,9 @@ void Alimentacao::setDescricao(string desc){
 }
 
 void Alimentacao::print() {
-    std::cout << "Animal: ";
-    cout << nomeAnimal << "\n";
+    cout << "Animal: ";
+    cout << animal.getNome() << "\n";
 
-    std::cout << " Cuidador: ";
+    cout << " Cuidador: ";
     cout << cuid.getNome() << "\n";
 }

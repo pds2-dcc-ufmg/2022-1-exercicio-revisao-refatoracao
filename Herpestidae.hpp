@@ -5,11 +5,11 @@
 
 using namespace std;
 
-double quantPORCAO = 1;
-
+double const kgPorPorcao = 1;
 
 class Herpestidae : public Animal {    
     public:
+        Herpestidae(string nome, int idade);
         Herpestidae(string nome, int idade, string especie);
         double kgConsumidosDeRacao(int porcoesConsumidas);
         void print() override;

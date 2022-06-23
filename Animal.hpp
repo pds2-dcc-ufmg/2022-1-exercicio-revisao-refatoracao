@@ -16,6 +16,7 @@ class Animal {
     public:
         Animal();
         Animal(string nome, int idade, string family);
+        string getNome();
         virtual void print();
 };
 

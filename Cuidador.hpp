@@ -17,8 +17,10 @@ class Cuidador{
 		string nascimento;
 	
 	public:
+		Cuidador();
 		Cuidador(string nome, long int cpf, double salario, string telefone, string nascimento);
 		string getNome();
+		void setNome(string nome);
 		void print(); // imprime na tela os dados de um cliente cadastrado
 
 };

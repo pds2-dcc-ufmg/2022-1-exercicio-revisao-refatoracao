@@ -1,15 +1,17 @@
 #include "Animal.hpp"
 
 Animal::Animal(){
-	this->nome = "vazio";
-	this->idade = -1;
-	this->family = "vazio";
+
 }
 
 Animal::Animal(string nome, int idade, string family){
 	this->nome = nome;
 	this->idade = idade;
 	this->family = family;
+}
+
+string Animal::getNome(){
+	return this->nome;
 }
 
 void Animal::print() {

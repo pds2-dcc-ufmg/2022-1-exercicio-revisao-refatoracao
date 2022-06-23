@@ -1,5 +1,13 @@
 #include "Ursidae.hpp"
 
+Ursidae::Ursidae(string nome, int idade){
+	this->nome = nome;
+	this->idade = idade;
+	this->especie = "indefinido";
+	this->kgPeixePorDia = 0;
+	this->family = "Ursidae";
+}
+
 Ursidae::Ursidae(string nome, int idade, string especie, double kgPeixePorDia){
 	this->nome = nome;
 	this->idade = idade;
@@ -9,10 +17,7 @@ Ursidae::Ursidae(string nome, int idade, string especie, double kgPeixePorDia){
 }
 
 void Ursidae::print() {
-	cout << "\n[Animal]" << endl;
-	cout << "  Nome: " << this->nome << endl;
-	cout << "  Idade: " << this->idade << endl;
-	cout << "  Família: Ursidae" << endl;
+	Animal::print();
 	cout << "  Especie: " << this->especie << endl;
 }
 
