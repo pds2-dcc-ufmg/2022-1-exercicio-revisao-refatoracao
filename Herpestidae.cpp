@@ -7,5 +7,5 @@ double Herpestidae::kgConsumidos(int porcoesConsumidas){
 
 void Herpestidae::print(){
     Animal::print();
-    cout << "Especie: " << this->species <<endl;
+    cout << "Especie: " << this->especie <<endl;
 }

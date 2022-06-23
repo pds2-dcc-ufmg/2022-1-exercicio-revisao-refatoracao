@@ -28,14 +28,14 @@ int main() {
   suricato_1.familia = "Herpestidae";
   suricato_1.nome ="Catita";
 	suricato_1.idade = "2";
-  suricato_1.species = "Suricato";
+  suricato_1.especie = "Suricato";
   suricato_1.print();
 
   Herpestidae suricato_2;
   suricato_2.familia = "Herpestidae";
   suricato_2.nome ="Carolina";
 	suricato_2.idade = "2";
-  suricato_2.species = "Suricato";
+  suricato_2.especie = "Suricato";
   suricato_2.print();
 
   Cuidador cuidador_1;

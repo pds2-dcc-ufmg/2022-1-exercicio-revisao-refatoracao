@@ -8,7 +8,7 @@ using namespace std;
 class Herpestidae : public Animal {
     public:
         double qnt_porcao = 1;
-        string species;
+        string especie;
     public:
     
         double kgConsumidos(int porcoesConsumidas);
