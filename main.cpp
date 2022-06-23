@@ -9,64 +9,13 @@ using namespace std;
 
 int main()
 {
-  Animal animal1;
-  animal1.family = "Ursidae";
-  animal1.nome ="Bobby";
-	animal1.IDADE = "13";
-  animal1.print();
+  //variaveis perdidas
   double kgPeixeConsumidos01 = 0;
-  Animal animal2;
-  animal2.family = "Ursidae";
-  animal2.nome ="Jorge";
-	animal2.IDADE = "1";
-  animal2.print();
-
-  Animal animal3;
-  animal3.family = "Herpestidae";
-  animal3.nome ="Bonina";
-	animal3.IDADE = "7";
-  animal3.print();
-
-  Animal animal4;
-  animal4.family = "Ursidae";
-  animal4.nome ="Felício";
-	animal4.IDADE = "3";
-  animal4.print();
-
-
-
-  Ursidae e02;
   int numAtendimentos02 = 0;
   double comissao02 = 0;
-  e02.nome = "Tony";
-  e02.IDADE = 9;
-  e02.especie = "Urso Pardo";
-  e02.kgPeixePorDIA = 10.5;
-  e02.print();
-
-
-  Ursidae e03;
   int numAtendimentos03 = 0;
   double comissao03 = 0;
-  e03.nome = "Wanda";
-  e03.IDADE = 10;
-  e03.especie = "Urso Polar";
-  e03.kgPeixePorDIA = 7;
-  e03.print();
-
-
-  Herpestidae g01;
-  g01.family = "Herpestidae";
-  g01.nome ="Catita";
-	g01.IDADE = "2";
-  g01.species = "Suricato";
-  g01.print();
-  Herpestidae g02;
   double bonificacao01 = 0;
-  g02.family = "Herpestidae";
-  g02.nome ="Carolina";
-	g02.IDADE = "2";
-  g02.species = "Suricato";
 
   double kgPeixeConsumidos02 = 0;
   double kgPeixeConsumidos03 = 0;
@@ -76,6 +25,32 @@ int main()
   double kgRacaoConsumidos01 = 0;
   double kgRacaoConsumidos02 = 0;
   double kgRacaoConsumidos03 = 0;
+
+
+  Animal ursidaeBobbyAnimal(13, "Ursidae", "Bobby");
+  ursidaeBobbyAnimal.print();
+
+  Animal ursidaeJorgeAnimal(1, "Ursidae", "Jorge");
+  ursidaeJorgeAnimal.print();
+
+  Animal harpestidaeBoninaAnimal(7, "Herpestidae", "Bonina");
+  harpestidaeBoninaAnimal.print();
+
+  Animal ursidaeFelicioAnimal(3, "Ursidae", "Felício");
+  ursidaeFelicioAnimal.print();
+
+  Ursidae ursidaeTony(9, "Tony", "Urso Pardo", 10.5);
+  ursidaeTony.print();
+
+
+  Ursidae ursidaeWanda(10, "Wanda", "Urso Polar", 7);
+  ursidaeWanda.print();
+
+  Herpestidae herpestidaeCatita(2, "Catita", "Suricato");
+  herpestidaeCatita.print();
+
+  Herpestidae herpestidaeCarolina(2, "Carolina", "Suricato");
+
   
   Cuidador cuid01;
   cuid01.NOME = "Ana Maria Rodrigues Lopes";

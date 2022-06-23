@@ -8,3 +8,11 @@ void Animal :: print() {
     << "  Idade: " << to_string(this->_idade) << endl
     << "  Familia: " << this->_familia << endl;
 }
+
+string Animal :: getNome() {
+    return this->_nome;
+}
+
+int Animal:: getIdade() {
+    return this->_idade;
+}
