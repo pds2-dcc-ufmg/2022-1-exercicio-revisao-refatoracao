@@ -5,154 +5,117 @@
 #include "Ursidae.hpp"
 #include "Cuidador.hpp"
 #include "Alimentacao.hpp"
+
 using namespace std;
 
-int main()
-{
+int main() {
 
-    Animal animal1;
-    animal1.family = "Ursidae";
-    animal1.nome ="Bobby";
-	animal1.IDADE = "13";
-    animal1.print();
-double kgPeixeConsumidos01 = 0;
-    Animal animal2;
-    animal2.family = "Ursidae";
-    animal2.nome ="Jorge";
-	animal2.IDADE = "1";
-    animal2.print();
+  Ursidae urso_1;
+  urso_1.nome = "Tony";
+  urso_1.idade = 9;
+  urso_1.especie = "Urso Pardo";
+  urso_1.kg_peixe_diario = 10.5;
+  urso_1.print();
 
-    Animal animal3;
-    animal3.family = "Herpestidae";
-    animal3.nome ="Bonina";
-	animal3.IDADE = "7";
-    animal3.print();
+  Ursidae urso_2;
+  urso_2.nome = "Wanda";
+  urso_2.idade = 10;
+  urso_2.especie = "Urso Polar";
+  urso_2.kg_peixe_diario= 7;
+  urso_2.print();
 
-    Animal animal4;
-    animal4.family = "Ursidae";
-    animal4.nome ="Felício";
-	animal4.IDADE = "3";
-    animal4.print();
+  Herpestidae suricato_1;
+  suricato_1.familia = "Herpestidae";
+  suricato_1.nome ="Catita";
+	suricato_1.idade = "2";
+  suricato_1.species = "Suricato";
+  suricato_1.print();
 
+  Herpestidae suricato_2;
+  suricato_2.familia = "Herpestidae";
+  suricato_2.nome ="Carolina";
+	suricato_2.idade = "2";
+  suricato_2.species = "Suricato";
+  suricato_2.print();
 
+  Cuidador cuidador_1;
+  cuidador_1.nome = "Ana Maria Rodrigues Lopes";
+	cuidador_1.cpf = "1234567799";
+	cuidador_1.telefone = "(31) 99876-6923";
+	cuidador_1.data_nascimento = "10/10/2000";
+  cuidador_1.salario = "R$ 3000";
 
-    Ursidae e02;
-    int numAtendimentos02 = 0;
-    double comissao02 = 0;
-    e02.nome = "Tony";
-    e02.IDADE = 9;
-    e02.especie = "Urso Pardo";
-    e02.kgPeixePorDIA = 10.5;
-  e02.print();
+  Cuidador cuidador_2;
+  cuidador_2.nome = "Fernanda Silva Santos";
+	cuidador_2.cpf = "9472567121";
+	cuidador_2.telefone = "(31) 99123-8970";
+	cuidador_2.data_nascimento= "08/02/1995";
+  cuidador_2.salario = "R$ 4000";
 
-
-    Ursidae e03;
-    int numAtendimentos03 = 0;
-    double comissao03 = 0;
-    e03.nome = "Wanda";
-    e03.IDADE = 10;
-    e03.especie = "Urso Polar";
-    e03.kgPeixePorDIA = 7;
-  e03.print();
-
-
-    Herpestidae g01;
-    g01.family = "Herpestidae";
-    g01.nome ="Catita";
-	g01.IDADE = "2";
-  g01.species = "Suricato";
-g01.print();
-    Herpestidae g02;
-    double bonificacao01 = 0;
-    g02.family = "Herpestidae";
-    g02.nome ="Carolina";
-	g02.IDADE = "2";
-  g02.species = "Suricato";
-
-double kgPeixeConsumidos02 = 0;
-double kgPeixeConsumidos03 = 0;
-double kgPeixeConsumidos04 = 0;
-double kgPeixeConsumidos05 = 0;
-
-double kgRacaoConsumidos01 = 0;
-double kgRacaoConsumidos02 = 0;
-double kgRacaoConsumidos03 = 0;
+  Alimentacao alimentacao_1;
+  alimentacao_1.porcao = 2;
+  alimentacao_1.comida = "Peixes";
+  alimentacao_1.descricao = "Bobby só quis comer 2 porções de peixes hoje";
+  alimentacao_1.cuidador = cuidador_1;
+  alimentacao_1.nome_animal = "Bobby";
+    
+  Alimentacao alimentacao_2;
+  alimentacao_2.porcao = 1;
+  alimentacao_2.comida = "Ração especial";
+  alimentacao_2.descricao = "Catita comeu direitinho";
+  alimentacao_2.cuidador = cuidador_2;
+  alimentacao_2.nome_animal = "Catita";
   
-  Cuidador cuid01;
-  cuid01.NOME = "Ana Maria Rodrigues Lopes";
-	cuid01.cpf = "1234567799";
-	cuid01.Telefone = "(31) 99876-6923";
-	cuid01.BIRTH = "10/10/2000";
-  cuid01.salario = "R$ 3000";
+  Alimentacao alimentacao_3;
+  alimentacao_3.porcao= 3;
+  alimentacao_3.comida = "Ração";
+  alimentacao_3.descricao = "Carolina estava com um apetite e tanto";
+  alimentacao_3.cuidador = cuidador_2;
+  alimentacao_3.nome_animal = "Carolina";
+ 
+  Alimentacao alimentacao_4;
+  alimentacao_4.porcao= 10;
+  alimentacao_4.comida = "Peixes";
+  alimentacao_4.descricao = "Tony comeu um pouco da comida do Bobby";
+  alimentacao_4.cuidador = cuidador_1;
+  alimentacao_4.nome_animal = "Tony";
+  alimentacao_2.porcao = 2;
+  alimentacao_3.comida = "Ração";
 
-  Cuidador cuid2;
-  cuid2.NOME = "Fernanda Silva Santos";
-	cuid2.cpf = "9472567121";
-	cuid2.Telefone = "(31) 99123-8970";
-	cuid2.BIRTH = "08/02/1995";
+  double kg_Peixe_Consumidos_01 = 0; //urso_1
+  kg_Peixe_Consumidos_01 = 5*2;
 
-cuid2.salario = "R$ 4000";
-    Alimentacao v01;
-    v01.porcao= 2;
-    v01.comida = "Peixes";
-    v01.descricao = "Bobby só quis comer 2 porções de peixes hoje";
-    v01.cuid = cuid01;
-    v01.nomeAnimal = "Bobby";
-    kgPeixeConsumidos01 = 5*2;
-    Alimentacao v02;
-    v02.porcao= 1;
-    v02.comida = "Ração especial";
-    v02.descricao = "Catita comeu direitinho";
-    v02.cuid = cuid2;
-    v02.nomeAnimal = "Catita";
-  kgRacaoConsumidos01 += g01.kgConsumidosDeRacao(v02.porcao);
+  double kg_Peixe_Consumidos_02 = 0; //urso_2
+  kg_Peixe_Consumidos_02 = urso_1.peixesConsumidos(10);
 
- Alimentacao v03;
-    v03.porcao= 3;
-    v03.comida = "Ração";
-    v03.descricao = "Carolina estava com um apetite e tanto";
-    v03.cuid = cuid2;
-    v03.nomeAnimal = "Carolina";
-  kgRacaoConsumidos02 += g02.kgConsumidosDeRacao(v03.porcao);
+  double kg_Racao_Consumidos_01 = 0;  //suricato_1
+  kg_Racao_Consumidos_01 += suricato_1.kgConsumidos(alimentacao_2.porcao);
 
-  Alimentacao v04;
-    v04.porcao= 10;
-    v04.comida = "Peixes";
-    v04.descricao = "Tony comeu um pouco da comida do Bobby";
-    v04.cuid = cuid01;
-    v04.nomeAnimal = "Tony";
-    v02.porcao = 2;
-    v03.comida = "Ração";
-kgPeixeConsumidos03 = 
-  e02.calcula_PEIXES_CONSUMIDOS(10);
+  double kg_Racao_Consumidos_02 = 0;  //suricato_2
+  kg_Racao_Consumidos_02 += suricato_2.kgConsumidos(alimentacao_3.porcao);
 
+  
+  cout <<" \n \n--------------------------------\n\nRelatório das alimentações \n" << endl;
 
+  alimentacao_1.print();
+  cout << "Descricao: " << alimentacao_1.descricao << endl << endl;
 
-    cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << endl;
+  alimentacao_2.print();
+  cout << "Descricao: " << alimentacao_2.descricao << endl<<endl;
 
-    v01.print();
-    cout << " Descricao: " << v01.descricao << endl << endl;
+  alimentacao_3.print();
+  cout << "Descricao: " << alimentacao_3.descricao << endl<< endl;
 
-    v02.print();
-    cout << " Descricao: " << v02.descricao << endl<<endl;
+  alimentacao_4.print();
+  cout << "Descricao: " << alimentacao_4.descricao << endl << "\n";
 
-    v03.print();
-    cout << " Descricao: " << v03.descricao << endl<< endl;
+  cout << "\n \n--------------------------------\n\nRelatorio de kg de comida gastos \n" << endl;
+  cout << "Tipo de comida: " << "Ração" << endl;
+  cout << "Kg consumidos: " << kg_Racao_Consumidos_01 + kg_Racao_Consumidos_02 <<endl;
 
-    v04.print();
-    cout << " Descricao: " << v04.descricao << endl << "\n";
+  cout << "\nTipo de comida: " << "Peixe" << endl;
+  cout << "Kg consumidos: " << kg_Peixe_Consumidos_01 + kg_Peixe_Consumidos_02 <<endl;
 
+  return 0;
 
-
-
-
-
-    cout <<" \n \n--------------------------------\n\nRelatorio de kg de comida gastos \n" << endl;
-    cout << "Tipo de comida: " << "Ração" << endl;
-    cout << "Kg consumidos: " << kgRacaoConsumidos01+kgRacaoConsumidos02<<endl;
-
-    cout << "\nTipo de comida: " << "Peixe" << endl;
-    cout << "Kg consumidos: " << kgPeixeConsumidos01+kgPeixeConsumidos03<<endl;
-
-    return 0;
 }

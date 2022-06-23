@@ -5,31 +5,14 @@
 
 using namespace std;
 
-double quantPORCAO = 1;
-
-
 class Herpestidae : public Animal {
-
     public:
-
+        double qnt_porcao = 1;
+        string species;
     public:
-  string species;
-
-    double kgConsumidosDeRacao(int porcoesConsumidas) {
-        double c = quantPORCAO*porcoesConsumidas;
-                  return c;
-    }
-
-
-    void print() {
-
-        Animal::print();
-
-
-
-        std::cout << "  Especie: " << species <<endl;
-
-    }
+    
+        double kgConsumidos(int porcoesConsumidas);
+        void print();
 };
 
 #endif

@@ -7,12 +7,11 @@ using namespace std;
 class Cuidador{
 
 	public:
-
-    string salario;
-		string NOME;
+   		string salario;
+		string nome;
 		string cpf;
-		string Telefone;
-		string BIRTH;
+		string telefone;
+		string data_nascimento;
 
 		void print(); // imprime na tela os dados de um cliente cadastrado
 

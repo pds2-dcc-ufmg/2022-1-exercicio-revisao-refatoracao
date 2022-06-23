@@ -3,12 +3,11 @@
 #include "Cuidador.hpp"
 
 void Cuidador::print(){
-
-	std::cout << "[Cuidador]" << endl
-         << "  Nome: " << NOME << endl
-		 << "  CPF: " << cpf << endl
-		<< "  Telefone: " << Telefone << endl
-		 << "  Nascimento: " << BIRTH << endl;
+	cout << "[Cuidador]" << endl
+        << "Nome: " << this->nome << endl
+		<< "CPF: " << this->cpf << endl
+		<< "Telefone: " << this->telefone << endl
+		<< "Nascimento: " << this->data_nascimento << endl;
 
 }
 
