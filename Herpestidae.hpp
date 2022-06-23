@@ -9,12 +9,14 @@ class Herpestidae : public Animal {
     private:
         string _familia = "Herpestidae";
         string _especie;
+        int _kgDeRacaoPorDia;
         const int QUANT_PORCAO = 1;
 
     public:
         Herpestidae (int idade, string nome, string especie);
         void print() override;
-        double kgConsumidosDeRacao(int porcoesConsumidas);
+        void kgConsumidosDeRacao(int porcoesConsumidas);
+        int getRacaoConsumida();
 };
 
 #endif

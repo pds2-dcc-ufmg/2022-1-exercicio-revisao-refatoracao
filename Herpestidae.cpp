@@ -9,6 +9,10 @@ void Herpestidae :: print() {
     std::cout << "  Especie: " << this->_especie <<endl;
 }
 
-double Herpestidae :: kgConsumidosDeRacao(int porcoesConsumidas) {
-    return QUANT_PORCAO*porcoesConsumidas;
+void Herpestidae :: kgConsumidosDeRacao(int porcoesConsumidas) {
+    this->_kgDeRacaoPorDia = QUANT_PORCAO*porcoesConsumidas;
+}
+
+int Herpestidae :: getRacaoConsumida() {
+    return this->_kgDeRacaoPorDia;
 }

@@ -1,5 +1,7 @@
 #include "Ursidae.hpp"
 
+int const Ursidae :: PEIXES_POR_PORCAO = 5;
+
 Ursidae :: Ursidae (int idade, string nome, string especie, double kgPeixePorDia) : Animal(idade, this->_familia, nome) {
     this->_especie = especie;
     this->_kgPeixePorDia = kgPeixePorDia;
@@ -13,6 +15,14 @@ void Ursidae :: print() {
     << "  Especie: " << this->_especie << endl;
 }
 
-double Ursidae :: calcula_peixes_consumidos(int porcaoPeixes) {
-    return PEIXES_POR_PORCAO*porcaoPeixes;
+void Ursidae :: calcula_peixes_consumidos(int porcaoPeixes) {
+    this->_kgPeixePorDia = PEIXES_POR_PORCAO*porcaoPeixes;
+}
+
+int Ursidae :: getKgPeixePorDia() {
+    return this->_kgPeixePorDia;
+}
+
+int Ursidae :: getPeixesPorPorcao() {
+    return this->PEIXES_POR_PORCAO;
 }
