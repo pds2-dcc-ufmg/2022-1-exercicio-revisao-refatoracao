@@ -3,8 +3,6 @@
 Ursidae::Ursidae(string nome, int idade){
 	this->nome = nome;
 	this->idade = idade;
-	this->especie = "indefinido";
-	this->kgPeixePorDia = 0;
 	this->family = "Ursidae";
 }
 
