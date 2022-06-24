@@ -5,13 +5,10 @@
 #include "Ursidae.hpp"
 #include "Cuidador.hpp"
 #include "Alimentacao.hpp"
-using namespace std;
 
 int main(){
 
-  double kgPeixeConsumidos = 0;
-  double kgRacaoConsumidos = 0;
-  
+  // Criação de Animais
   Ursidae bobbyU = Ursidae("Bobby", 13);
   bobbyU.Animal::print();
 
@@ -34,30 +31,33 @@ int main(){
   catitaH.print();
 
   Herpestidae carolinaH = Herpestidae("Carolina", 2, "Suricato");
-
-
+  
+  // Criação de Cuidadores
   Cuidador anaC = Cuidador("Ana Maria Rodrigues Lopes", 1234567799, 3000, "(31) 99876-6923", "10/10/2000");
 
   Cuidador fernandaC = Cuidador("Fernanda Silva Santos", 9472567121, 4000, "(31) 99123-8970", "08/02/1995");
   
-  Alimentacao alim1 = Alimentacao(2, "Peixes", anaC, bobbyU);
+  // Criação de dietas (Alimentação)
+  double kgPeixeConsumidos = 0;
+  double kgRacaoConsumidos = 0;
+  
+  Alimentacao alim1 = Alimentacao(2, "Peixes", &anaC, &bobbyU);
   alim1.setDescricao("Bobby só quis comer 2 porções de peixes hoje");
   kgPeixeConsumidos += bobbyU.calculaPeixesConsumidos(alim1.getPorcao());
   
-  Alimentacao alim2 = Alimentacao(1, "Ração especial", fernandaC, catitaH);
+  Alimentacao alim2 = Alimentacao(1, "Ração especial", &fernandaC, &catitaH);
   alim2.setDescricao("Catita comeu direitinho");
   kgRacaoConsumidos += catitaH.kgConsumidosDeRacao(alim2.getPorcao());
+  alim2.setPorcao(2);
 
-  Alimentacao alim3 = Alimentacao(3, "Ração", fernandaC, carolinaH);
+  Alimentacao alim3 = Alimentacao(3, "Ração", &fernandaC, &carolinaH);
   alim3.setDescricao("Carolina estava com um apetite e tanto");
   kgRacaoConsumidos += carolinaH.kgConsumidosDeRacao(alim3.getPorcao());
 
-  Alimentacao alim4 = Alimentacao(10, "Peixes", anaC, tonyU);
+  Alimentacao alim4 = Alimentacao(10, "Peixes", &anaC, &tonyU);
   alim4.setDescricao("Tony comeu um pouco da comida do Bobby");
-
-  alim2.setPorcao(2);
-  alim3.setComida("Ração");
   kgPeixeConsumidos += tonyU.calculaPeixesConsumidos(10);
+
 
   cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << endl;
 
@@ -75,10 +75,10 @@ int main(){
 
   cout <<" \n \n--------------------------------\n\nRelatorio de kg de comida gastos \n" << endl;
   cout << "Tipo de comida: " << "Ração" << endl;
-  cout << "Kg consumidos: " << kgRacaoConsumidos <<endl;
+  cout << "Kg consumidos: " << kgRacaoConsumidos << endl;
 
   cout << "\nTipo de comida: " << "Peixe" << endl;
-  cout << "Kg consumidos: " << kgPeixeConsumidos <<endl;
+  cout << "Kg consumidos: " << kgPeixeConsumidos << endl;
 
   return 0;
 }

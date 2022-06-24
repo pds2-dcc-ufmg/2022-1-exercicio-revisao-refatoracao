@@ -3,7 +3,6 @@
 Herpestidae::Herpestidae(string nome, int idade){
 	this->nome = nome;
 	this->idade = idade;
-	this->especie = "indefinido";
 	this->family = "Herpestidae";
 }
 

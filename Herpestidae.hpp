@@ -3,8 +3,6 @@
 
 #include "Animal.hpp"
 
-using namespace std;
-
 double const kgPorPorcao = 1;
 
 class Herpestidae : public Animal {    

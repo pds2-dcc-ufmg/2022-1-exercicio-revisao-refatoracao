@@ -5,18 +5,20 @@
 #include "Herpestidae.hpp"
 #include "Ursidae.hpp"
 
-using namespace std;
+using std::cout;
+using std::endl;
+using std::string;
 
 class Alimentacao{
     private:
         int porcao;
         string comida;
         string descricao;
-        Cuidador cuid;
-        Animal animal;
+        Cuidador* cuid;
+        Animal* animal;
         
     public:
-        Alimentacao(int porcao, string comida, Cuidador cuid, Animal animal);
+        Alimentacao(int porcao, string comida, Cuidador* cuid, Animal* animal);
         int getPorcao();
         void setPorcao(int porcao);
         void setComida(string comida);

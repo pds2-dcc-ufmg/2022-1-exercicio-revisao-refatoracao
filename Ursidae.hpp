@@ -6,8 +6,6 @@
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
-
 double const peixesPorPorcao = 5;
 
 class Ursidae : public Animal{

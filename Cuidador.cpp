@@ -1,13 +1,5 @@
 #include "Cuidador.hpp"
 
-Cuidador::Cuidador(){
-	this->nome = "vazio";
-	this->cpf = -1;
-	this->salario = 0;
-	this->telefone = "(00) 0000-0000";
-	this->nascimento = "00/00/0000";
-}
-
 Cuidador::Cuidador(string nome, long int cpf, double salario, string telefone, string nascimento){
 	this->nome = nome;
 	this->cpf = cpf;
