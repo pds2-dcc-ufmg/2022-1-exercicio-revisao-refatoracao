@@ -145,7 +145,7 @@ int main()
     cout << "Kg consumidos: " << kgRacaoConsumidos01+kgRacaoConsumidos02<<endl;
 
     cout << "\nTipo de comida: " << "Peixe" << endl;
-    cout << "Kg consumidos: " << kgPeixeConsumidos01+kgPeixeConsumidos03<<endl;
+    //cout << "Kg consumidos: " << kgPeixeConsumidos01+kgPeixeConsumidos03<<endl;
 
     return 0;
 }
