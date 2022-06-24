@@ -1,8 +1,7 @@
 #include "Herpestidae.hpp"
 
 double Herpestidae::kgConsumidosDeRacao(int porcoesConsumidas) {
-    double c = quantPORCAO*porcoesConsumidas;
-    return c;
+    return quantPorcao*porcoesConsumidas;
 }
 
 void Herpestidae::print() {
@@ -10,4 +9,4 @@ void Herpestidae::print() {
     cout << "  Especie: " << species <<endl;
 }
 
-double Herpestidae::quantPORCAO = 1;
+double Herpestidae::quantPorcao = 1;

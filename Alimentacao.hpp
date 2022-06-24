@@ -12,7 +12,7 @@ class Alimentacao{
         int porcao;
         string comida;
         string descricao;
-        Cuidador cuid;
+        Cuidador cuidador;
         string nomeAnimal;
 
     public:

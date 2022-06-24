@@ -5,5 +5,5 @@ void Alimentacao::print() {
     cout << nomeAnimal << "\n";
 
     cout << " Cuidador: ";
-    cout << cuid.NOME << "\n";
+    cout << cuidador.NOME << "\n";
 }

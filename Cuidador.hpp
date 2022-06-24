@@ -13,7 +13,7 @@ class Cuidador{
     	string salario;
 		string NOME;
 		string cpf;
-		string Telefone;
+		string telefone;
 		string BIRTH;
 
 	public:

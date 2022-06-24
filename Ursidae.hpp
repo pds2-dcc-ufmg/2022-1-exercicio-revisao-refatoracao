@@ -10,11 +10,11 @@ using namespace std;
 class Ursidae {
     
     public:
-        static int peixesPorPORCAO;
-        int IDADE;
+        static int peixesPorPorcao;
+        int idade;
         string nome;
         string especie;
-        double kgPeixePorDIA;
+        double kgPeixePorDia;
 
     public:
         void print();

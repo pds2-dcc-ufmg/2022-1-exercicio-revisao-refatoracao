@@ -9,13 +9,12 @@ using namespace std;
 class Animal {
 
     public:
-        string IDADE;
-        string family;
+        string idade;
+        string familia;
         string nome;
 
     public:
         void print();
-        void print_oi();
 };
 
 #endif

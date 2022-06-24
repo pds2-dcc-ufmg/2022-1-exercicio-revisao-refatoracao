@@ -6,7 +6,7 @@
 class Herpestidae : public Animal {
 
     public:
-        static double quantPORCAO;
+        static double quantPorcao;
         string species;
 
     public:
