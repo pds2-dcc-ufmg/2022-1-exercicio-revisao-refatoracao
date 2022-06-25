@@ -1,0 +1,7 @@
+main
+*.exe
+*.txt
+*.o
+*.vscode
+*.idea
+*.out
