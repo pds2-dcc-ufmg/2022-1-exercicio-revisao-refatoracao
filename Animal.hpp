@@ -14,10 +14,9 @@ class Animal {
 
         void print() {
             cout << "\n[Animal]" << endl
-            << "  Nome: " << nome << endl
-
-              << "  Idade: " << idade << endl
-            << "  Familia: " << familia << endl;
+                 << "  Nome: " << nome << endl
+                 << "  Idade: " << idade << endl
+                 << "  Familia: " << familia << endl;
         }
 
         void print_oi(){

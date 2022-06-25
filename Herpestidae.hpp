@@ -13,23 +13,17 @@ class Herpestidae : public Animal {
     public:
 
     public:
-  string especies;
+        string especies;
 
-    double kgConsumidosDeRacao(int porcoesConsumidas) {
-        double c = quantPorcao*porcoesConsumidas;
-                  return c;
-    }
+        double kgConsumidosDeRacao(int porcoesConsumidas) {
+            double c = quantPorcao*porcoesConsumidas;
+            return c;
+        }
 
-
-    void print() {
-
-        Animal::print();
-
-
-
-        std::cout << "  Especie: " << especies <<endl;
-
-    }
+        void print() {
+            Animal::print();
+            std::cout << "  Especie: " << especies <<endl;
+        }
 };
 
 #endif

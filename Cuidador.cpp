@@ -5,10 +5,10 @@
 void Cuidador::print(){
 
 	std::cout << "[Cuidador]" << endl
-         << "  Nome: " << nome << endl
-		 << "  CPF: " << cpf << endl
-		<< "  Telefone: " << telefone << endl
-		 << "  Nascimento: " << birth << endl;
+        	  << "  Nome: " << nome << endl
+		 	  << "  CPF: " << cpf << endl
+		  	  << "  Telefone: " << telefone << endl
+		 	  << "  Nascimento: " << birth << endl;
 
 }
 
