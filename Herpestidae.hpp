@@ -1,17 +1,15 @@
 #ifndef HERPESTIDAE_H
 #define HERPESTIDAE_H
 
-#include "Animal.hpp"
+#include <string>
 
-using namespace std;
+#include "Animal.hpp"
 
 class Herpestidae : public Animal {
 
     public:
-        double kgConsumidosDeRacao(int totalPorcoes, double kgPorPorcao) {
-            double totalConsumido = (double) totalPorcoes * kgPorPorcao;
-            return totalConsumido;
-        }
+        Herpestidae(int _idade, std::string _nome, std::string _especie);
+        double kgConsumidosDeRacao(int totalPorcoes, double kgPorPorcao);
 };
 
 #endif

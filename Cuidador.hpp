@@ -2,16 +2,15 @@
 #define CUIDADOR_H
 
 #include <string>
-using namespace std;
 
 class Cuidador{
 
 	private:
-		string nome;
-		string telefone;
+		std::string nome;
+		std::string telefone;
 
 	public:
-		Cuidador(string _nome, string _telefone);
+		Cuidador(std::string _nome, std::string _telefone);
 		void print(); 
 
 };

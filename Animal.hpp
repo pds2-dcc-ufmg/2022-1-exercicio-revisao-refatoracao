@@ -2,24 +2,17 @@
 #define ANIMAL_H
 
 #include <iostream>
-#include <iomanip>
-
-using namespace std;
+#include <string>
 
 class Animal {
     private:
         int idade;
-        string nome;
-        string especie;
+        std::string nome;
+        std::string especie;
 
     public:
-        void print() {
-            std::cout << "[Animal]" << std::endl;
-            std::cout << "Nome: " << this->nome << std::endl;
-            std::cout << "Idade: " << this->idade << std::endl;
-            std::cout << "Especie: " << this->especie << std::endl;
-        }
-
+        Animal(int _idade, std::string _nome, std::string _especie);
+        void print();
 };
 
 #endif

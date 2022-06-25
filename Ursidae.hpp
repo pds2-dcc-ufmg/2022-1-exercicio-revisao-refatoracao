@@ -2,17 +2,15 @@
 #define URSIDAE_H
 
 #include <iostream>
-#include <iomanip>
+#include <string>
 
-using namespace std;
+#include "Animal.hpp"
 
 class Ursidae : public Animal{
 
     public:
-        int calculaPeixesConsumidos(int totalPorcoes, int peixesPorPorcao){
-            int totalConsumido = peixesPorPorcao * totalPorcoes;
-            return totalConsumido;
-        }
+        Ursidae(int _idade, std::string _nome, std::string _especie);
+        int calculaPeixesConsumidos(int totalPorcoes, int peixesPorPorcao);
 };
 
 #endif

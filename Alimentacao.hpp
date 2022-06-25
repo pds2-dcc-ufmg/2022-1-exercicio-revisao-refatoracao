@@ -5,23 +5,23 @@
 #include "Cuidador.hpp"
 #include "Animal.hpp"
 
-using namespace std;
+#include <string>
 
 class Alimentacao{
 
     private:
         int porcao;
-        string comida;
-        string descricao;
+        std::string comida;
+        std::string descricao;
         Cuidador cuidador;
         Animal animal;
 
     public:
-        Alimentacao(int _porcao, string _comida, string _descricao, Cuidador _cuidador, Animal _animal);
+        Alimentacao(int _porcao, std::string _comida, std::string _descricao, Cuidador _cuidador, Animal _animal);
         
         void print();
 
-        string getDescricao(){
+        std::string getDescricao(){
             return this->descricao;
         }
 

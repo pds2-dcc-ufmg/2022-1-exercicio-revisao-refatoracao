@@ -5,7 +5,6 @@
 #include "Ursidae.hpp"
 #include "Cuidador.hpp"
 #include "Alimentacao.hpp"
-using namespace std;
 
 int main(){
 
