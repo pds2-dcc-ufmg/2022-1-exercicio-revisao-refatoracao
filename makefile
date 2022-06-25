@@ -16,8 +16,9 @@ ${TARGET}:
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR} ${SOURCES} -o ${TARGET}
 
 
-# only compiles everything with flag -s to supress the output
-build all:
+# only compiles everything with flag -s and @ to supress the output
+build:
+	@mkdir build -p; \
 	for file in ${FILES_NAMES}; do\
 		make $$file.o -s; \
 	done
