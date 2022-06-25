@@ -4,7 +4,7 @@
 #include "Herpestidae.hpp"
 #include "Ursidae.hpp"
 #include "Cuidador.hpp"
-#include "Alimentação.hpp"
+#include "Alimentacao.hpp"
 #include <vector>
 
 using std::cout;
