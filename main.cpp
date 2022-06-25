@@ -79,7 +79,6 @@ int main() {
   alimentacao_4.descricao = "Tony comeu um pouco da comida do Bobby";
   alimentacao_4.cuidador = cuidador_1;
   alimentacao_4.nome_animal = "Tony";
-  alimentacao_2.porcao = 2;
   alimentacao_3.comida = "Ração";
 
   double kg_Peixe_Consumidos_01 = 0; //urso_1
