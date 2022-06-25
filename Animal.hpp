@@ -3,26 +3,20 @@
 
 #include <iostream>
 #include <iomanip>
+#include <string>
 
 using namespace std;
 
 class Animal {
+    
+    private:
+    string idade;
+    string familia;
+    string nome;
+
     public:
-        string IDADE;
-        string family;
-        string nome;
-
-        void print() {
-            cout << "\n[Animal]" << endl
-            << "  Nome: " << nome << endl
-
-              << "  Idade: " << IDADE << endl
-            << "  Familia: " << family << endl;
-        }
-
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+    Animal(string _idade, string _nome, string _familia);
+    void print();
 };
 
 #endif
