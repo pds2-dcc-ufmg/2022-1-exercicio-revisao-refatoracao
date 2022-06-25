@@ -1,6 +1,6 @@
 
-#ifndef VENDA_HPP
-#define VENDA_HPP
+#ifndef ALIMENTACAO_H
+#define ALIMENTACAO_H
 
 #include "Cuidador.hpp"
 
@@ -12,7 +12,7 @@ class Alimentacao{
     int porcao;
     string comida;
     string descricao;
-    Cuidador cuid;
+    Cuidador cuidador;
     string nomeAnimal;
 
 
@@ -22,7 +22,7 @@ class Alimentacao{
         cout << nomeAnimal << "\n";
 
         std::cout << " Cuidador: ";
-        cout << cuid.NOME << "\n";
+        cout << cuidador.nome<< "\n";
 
         //std::cout << " : ";
         //cout << ursidae;
