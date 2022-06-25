@@ -6,14 +6,12 @@ using namespace std;
 
 class Cuidador{
 
-	public:
-
-    	string salario;
+	private:
 		string nome;
-		string cpf;
 		string telefone;
-		string birth;
 
+	public:
+		Cuidador(string _nome, string _telefone);
 		void print(); 
 
 };

@@ -3,26 +3,26 @@
 #define ALIMENTACAO_H
 
 #include "Cuidador.hpp"
+#include "Animal.hpp"
 
 using namespace std;
 
 class Alimentacao{
 
-    public:
+    private:
         int porcao;
         string comida;
         string descricao;
         Cuidador cuidador;
-        string nomeAnimal;
+        Animal animal;
 
-        void print() {
+    public:
+        Alimentacao(int _porcao, string _comida, string _descricao, Cuidador _cuidador, Animal _animal);
+        
+        void print();
 
-            std::cout << "Animal: ";
-            cout << nomeAnimal << "\n";
-
-            std::cout << " Cuidador: ";
-            cout << cuidador.nome<< "\n";
-
+        string getDescricao(){
+            return this->descricao;
         }
 
 };

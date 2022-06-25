@@ -7,21 +7,19 @@
 using namespace std;
 
 class Animal {
-    public:
-        string idade;
-        string familia;
+    private:
+        int idade;
         string nome;
+        string especie;
 
+    public:
         void print() {
-            cout << "\n[Animal]" << endl
-                 << "  Nome: " << nome << endl
-                 << "  Idade: " << idade << endl
-                 << "  Familia: " << familia << endl;
+            std::cout << "[Animal]" << std::endl;
+            std::cout << "Nome: " << this->nome << std::endl;
+            std::cout << "Idade: " << this->idade << std::endl;
+            std::cout << "Especie: " << this->especie << std::endl;
         }
 
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
 };
 
 #endif

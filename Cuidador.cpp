@@ -2,13 +2,13 @@
 #include <string>
 #include "Cuidador.hpp"
 
+Cuidador::Cuidador(string _nome, string _telefone) : nome(_nome), telefone(_telefone)
+{}
+
 void Cuidador::print(){
 
 	std::cout << "[Cuidador]" << endl
         	  << "  Nome: " << nome << endl
-		 	  << "  CPF: " << cpf << endl
-		  	  << "  Telefone: " << telefone << endl
-		 	  << "  Nascimento: " << birth << endl;
+		  	  << "  Telefone: " << telefone << endl;
 
 }
-
