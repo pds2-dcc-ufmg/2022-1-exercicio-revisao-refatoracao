@@ -1,15 +1,19 @@
 #include "Ursidae.hpp"
 
+Ursidae::Ursidae() {}
+
+Ursidae::Ursidae(string _nome, int _idade, string _especie) {
+    nome = _nome;
+    idade = _idade;
+    familia = "Ursidae";
+    especie = _especie;
+    ALIMENTO = "Peixe";
+}
+
 void Ursidae::print() {
     cout << "\n[Animal]" << endl;
     cout << "  Nome: " << nome << endl;
     cout << "  Idade: " << idade << endl;
-    cout << "  Família: Ursidae" << endl;
+    cout << "  Família: " << familia << endl;
     cout << "  Especie: " << especie << endl;
 }
-
-double Ursidae::calcula_PEIXES_CONSUMIDOS(int porcaoPeixes){
-    return peixesPorPorcao*porcaoPeixes;
-}
-
-int Ursidae::peixesPorPorcao = 5;

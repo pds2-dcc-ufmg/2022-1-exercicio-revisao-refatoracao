@@ -1,4 +1,5 @@
-#include <iostream>
+#include <vector>
+#include <map>
 
 #include "Animal.hpp"
 #include "Herpestidae.hpp"
@@ -6,146 +7,112 @@
 #include "Cuidador.hpp"
 #include "Alimentacao.hpp"
 
-using namespace std;
+// Libera memória alocada para os animais
+void liberarMemoria(vector<Animal*>& animais) {
+    for(auto animal : animais){
+        delete animal;
+    }
+}
+
+// Calcula e retorna a quantidade utilizada de um certo alimento em kg
+double calcularAlimentoGasto(vector<Animal*>& animais, string tipoAlimento) {
+    double quantidadeKg = 0;
+    for(auto animal: animais){
+        if(animal->getALIMENTO() == tipoAlimento){
+            quantidadeKg += animal->getKgAlimentoConsumido();
+        }
+    }
+    return quantidadeKg;
+}
+
+// Printa o relatório das alimentações no terminal
+void printarRelatorioAlimentacao(vector<Alimentacao*>& alimentacao) {
+    cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << endl;
+    for(auto alimenta : alimentacao){
+        alimenta->print();
+        cout << " Descricao: " << alimenta->getDescricao() << endl << endl;
+    }
+}
+
+// Printa o relatório de comida gasta em kg no terminal
+void printarRelatorioGastos(vector<Animal*>& animais, map<string, double>& tipoAlimento){
+    cout <<" \n \n--------------------------------\n\nRelatorio de kg de comida gastos " << endl;
+    map<string, double>::iterator it = tipoAlimento.end();
+    do{
+        it--;
+        cout << "\nTipo de comida: " << it->first << endl;
+        cout << "Kg consumidos: " << calcularAlimentoGasto(animais, it->first) <<endl;
+    } while(it != tipoAlimento.begin());
+}
+
+// Printa as informações dos animais no terminal
+void printarAnimais(vector<Animal*>& animais){
+    for(int i = 0; i < animais.size() - 1; i++){
+        animais[i]->print();
+    }
+}
+
+// Alimenta os animais
+void alimentarAnimais(vector<Alimentacao*>& alimentacao, map<string, double>& tipoAlimento) {
+    for(auto aliment : alimentacao){
+        aliment->alimentar(tipoAlimento);
+    }
+}
 
 int main()
 {
+    vector<Animal*> animais;
+    vector<Alimentacao*> alimentacao;
 
-    Animal animal1;
-    animal1.familia = "Ursidae";
-    animal1.nome ="Bobby";
-	animal1.idade = "13";
-    animal1.print();
-	double kgPeixeConsumidos01 = 0;
+    // Variável map que armazena os tipos de alimentos e a massa em kg por porção
+    map<string, double> tipoAlimento;
+    tipoAlimento.insert(pair<string, double>("Ração", 1));
+    tipoAlimento.insert(pair<string, double>("Peixe", 5));
 
-    Animal animal2;
-    animal2.familia = "Ursidae";
-    animal2.nome ="Jorge";
-	animal2.idade = "1";
-    animal2.print();
+    Animal* bobby = new Animal("Bobby", 13, "Ursidae");
+    animais.push_back(bobby);
 
-    Animal animal3;
-    animal3.familia = "Herpestidae";
-    animal3.nome ="Bonina";
-	animal3.idade = "7";
-    animal3.print();
+    Animal* jorge = new Animal("Jorge", 1, "Ursidae");
+    animais.push_back(jorge);
 
-    Animal animal4;
-    animal4.familia = "Ursidae";
-    animal4.nome ="Felício";
-	animal4.idade = "3";
-    animal4.print();
+    Animal* bonina = new Animal("Bonina", 7, "Herpestidae");
+    animais.push_back(bonina);
 
-    Ursidae e02;
-    int numAtendimentos02 = 0;
-    double comissao02 = 0;
-    e02.nome = "Tony";
-    e02.idade = 9;
-    e02.especie = "Urso Pardo";
-    e02.kgPeixePorDia = 10.5;
-  	e02.print();
+    Animal* felicio = new Animal("felicio", 3, "Ursidae");
+    animais.push_back(felicio);
 
-    Ursidae e03;
-    int numAtendimentos03 = 0;
-    double comissao03 = 0;
-    e03.nome = "Wanda";
-    e03.idade = 10;
-    e03.especie = "Urso Polar";
-    e03.kgPeixePorDia = 7;
-  	e03.print();
+    Ursidae* tony = new Ursidae("Tony", 9, "Urso Pardo");
+    animais.push_back(tony);
 
-    Herpestidae g01;
-    g01.familia = "Herpestidae";
-    g01.nome ="Catita";
-	g01.idade = "2";
-  	g01.species = "Suricato";
-	g01.print();
+    Ursidae* wanda = new Ursidae("Wanda", 10, "Urso Polar");
+    animais.push_back(wanda);
 
-    Herpestidae g02;
-    double bonificacao01 = 0;
-    g02.familia = "Herpestidae";
-    g02.nome ="Carolina";
-	g02.idade = "2";
-  	g02.species = "Suricato";
+    Herpestidae* catita = new Herpestidae("Catita", 2, "Suricato");
+    animais.push_back(catita);
 
-	double kgPeixeConsumidos02 = 0;
-	double kgPeixeConsumidos03 = 0;
-	double kgPeixeConsumidos04 = 0;
-	double kgPeixeConsumidos05 = 0;
-
-	double kgRacaoConsumidos01 = 0;
-	double kgRacaoConsumidos02 = 0;
-	double kgRacaoConsumidos03 = 0;
+    Herpestidae* carolina = new Herpestidae("Carolina", 2, "Suricato");
+    animais.push_back(carolina);
   
-	Cuidador cuid01;
-	cuid01.NOME = "Ana Maria Rodrigues Lopes";
-	cuid01.cpf = "1234567799";
-	cuid01.telefone = "(31) 99876-6923";
-	cuid01.BIRTH = "10/10/2000";
-	cuid01.salario = "R$ 3000";
+	Cuidador cuidadoraAna("Ana Maria Rodrigues Lopes", 1234567799, "(31) 99876-6923", "10/10/2000", 3000);
+	Cuidador cuidadoraFer("Fernanda Silva Santos", 9472567121, "(31) 99123-8970", "08/02/1995", 4000);
 
-	Cuidador cuid2;
-	cuid2.NOME = "Fernanda Silva Santos";
-	cuid2.cpf = "9472567121";
-	cuid2.telefone = "(31) 99123-8970";
-	cuid2.BIRTH = "08/02/1995";
-	cuid2.salario = "R$ 4000";
+	Alimentacao alimentacaoBobby(bobby, cuidadoraAna, "Peixes", 2, "Bobby só quis comer 2 porções de peixes hoje");
+	alimentacao.push_back(&alimentacaoBobby);
 
-	Alimentacao v01;
-	v01.porcao= 2;
-	v01.comida = "Peixes";
-	v01.descricao = "Bobby só quis comer 2 porções de peixes hoje";
-	v01.cuidador = cuid01;
-	v01.nomeAnimal = "Bobby";
-	kgPeixeConsumidos01 = 5*2;
+    Alimentacao alimentacaoCatita(catita, cuidadoraFer, "Ração especial", 1, "Catita comeu direitinho");
+	alimentacao.push_back(&alimentacaoCatita);
 
-    Alimentacao v02;
-    v02.porcao= 1;
-    v02.comida = "Ração especial";
-    v02.descricao = "Catita comeu direitinho";
-    v02.cuidador = cuid2;
-    v02.nomeAnimal = "Catita";
-  	kgRacaoConsumidos01 += g01.kgConsumidosDeRacao(v02.porcao);
+	Alimentacao alimentacaoCarol(carolina, cuidadoraFer, "Ração", 3, "Carolina estava com um apetite e tanto");
+	alimentacao.push_back(&alimentacaoCarol);
 
-	Alimentacao v03;
-    v03.porcao= 3;
-    v03.comida = "Ração";
-    v03.descricao = "Carolina estava com um apetite e tanto";
-    v03.cuidador = cuid2;
-    v03.nomeAnimal = "Carolina";
-	kgRacaoConsumidos02 += g02.kgConsumidosDeRacao(v03.porcao);
+	Alimentacao alimentacaoTony(tony, cuidadoraAna, "Peixes", 10, "Tony comeu um pouco da comida do Bobby");
+	alimentacao.push_back(&alimentacaoTony);
 
-	Alimentacao v04;
-    v04.porcao= 10;
-    v04.comida = "Peixes";
-    v04.descricao = "Tony comeu um pouco da comida do Bobby";
-    v04.cuidador = cuid01;
-    v04.nomeAnimal = "Tony";
-    v02.porcao = 2;
-    v03.comida = "Ração";
-	kgPeixeConsumidos03 = 
-	e02.calcula_PEIXES_CONSUMIDOS(10);
-
-    cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << endl;
-
-    v01.print();
-    cout << " Descricao: " << v01.descricao << endl << endl;
-
-    v02.print();
-    cout << " Descricao: " << v02.descricao << endl<<endl;
-
-    v03.print();
-    cout << " Descricao: " << v03.descricao << endl<< endl;
-
-    v04.print();
-    cout << " Descricao: " << v04.descricao << endl << "\n";
-
-    cout <<" \n \n--------------------------------\n\nRelatorio de kg de comida gastos \n" << endl;
-    cout << "Tipo de comida: " << "Ração" << endl;
-    cout << "Kg consumidos: " << kgRacaoConsumidos01+kgRacaoConsumidos02<<endl;
-
-    cout << "\nTipo de comida: " << "Peixe" << endl;
-    cout << "Kg consumidos: " << kgPeixeConsumidos01+kgPeixeConsumidos03<<endl;
+    alimentarAnimais(alimentacao, tipoAlimento);
+    printarAnimais(animais);
+    printarRelatorioAlimentacao(alimentacao);
+    printarRelatorioGastos(animais, tipoAlimento);
+    liberarMemoria(animais);
 
     return 0;
 }

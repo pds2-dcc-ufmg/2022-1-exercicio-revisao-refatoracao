@@ -1,5 +1,5 @@
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef ANIMAL_H
+#define ANIMAL_H
 
 #include <iostream>
 #include <iomanip>
@@ -8,13 +8,21 @@ using namespace std;
 
 class Animal {
 
-    public:
-        string idade;
+    protected:
+        string ALIMENTO;
+        int idade;
         string familia;
         string nome;
+        double kgAlimentoConsumido = 0;
 
     public:
-        void print();
+        Animal();
+        Animal(string _nome, int _idade, string _familia);
+        virtual void print();
+        void setKgAlimentoConsumido(double kg);
+        double getKgAlimentoConsumido();
+        string getNome();
+        string getALIMENTO();
 };
 
 #endif

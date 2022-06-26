@@ -1,12 +1,16 @@
 #include "Herpestidae.hpp"
 
-double Herpestidae::kgConsumidosDeRacao(int porcoesConsumidas) {
-    return quantPorcao*porcoesConsumidas;
+Herpestidae::Herpestidae() {}
+
+Herpestidae::Herpestidae(string _nome, int _idade, string _especie) {
+    nome = _nome;
+    idade = _idade;
+    especie = _especie;
+    familia = "Herpestidae";
+    ALIMENTO = "Ração";
 }
 
 void Herpestidae::print() {
     Animal::print();
-    cout << "  Especie: " << species <<endl;
+    cout << "  Especie: " << especie <<endl;
 }
-
-double Herpestidae::quantPorcao = 1;
