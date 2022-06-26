@@ -16,7 +16,7 @@ private:
     double quantidadeConsumida;
 
 public:
-    Alimentacao(int porcao, std::string comida, std::string descricao, Cuidador cuidador, std::string animal, double quantidadeConsumida);
+    Alimentacao(int porcao, std::string comida, std::string descricao, Cuidador cuidador, std::string animal, double quantidadeConsumida); //Metodo construtor de uma Alimentação
     Alimentacao()=default;
     double getquantidadeConsumida();
     void print(); // imprime na tela os dados de um cliente cadastrado

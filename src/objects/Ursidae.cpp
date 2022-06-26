@@ -13,8 +13,9 @@ Ursidae::Ursidae(std::string nome, std::string idade, std::string especie, doubl
 }
 
 double Ursidae::peixesConsumidos(int porcaoPeixes){
-    return 5*porcaoPeixes;
+    return 5*porcaoPeixes; //Calculo de peixes consumidos com base na porção de peixes consumida
 }
+
 void Ursidae::print() {
     Animal::print();
     std::cout<< "  Especie: "<< especie<<std::endl;

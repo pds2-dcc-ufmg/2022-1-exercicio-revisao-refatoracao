@@ -12,7 +12,7 @@ Herpestidae::Herpestidae(std::string nome, std::string idade, std::string especi
 }
 
 double Herpestidae::racaoConsumida(int porcoesConsumidas){
-    return porcoesConsumidas;
+    return porcoesConsumidas; //número de porções consumidas de ração
 }
 
 void Herpestidae::print() {

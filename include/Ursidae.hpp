@@ -11,7 +11,7 @@ private:
     
 public:
     Ursidae();
-    Ursidae(std::string nome, std::string idade, std::string especie, double qtdePeixe);
+    Ursidae(std::string nome, std::string idade, std::string especie, double qtdePeixe);//Metodo construtor de um ursidae
     double peixesConsumidos(int porcaoPeixes); //calcula a quantidade de peixes consumidos pelo animal
     virtual void print() override;
 

@@ -9,6 +9,8 @@ using namespace std;
 
 int main()
 {
+
+    //Criação de animais, Ursidae, Herpestidae, e Alimentos, respectivamente
     Animal animal_01("13", "Ursidae", "Bobby");
     animal_01.print();
 
@@ -44,6 +46,7 @@ int main()
 
 	Alimentacao refeicao_04(10, "Peixes", "Tony comeu um pouco da comida do Bobby", cuidador_01, "Tony", ursidae_01.peixesConsumidos(10));
 
+    //Variáveis para armanezar os valores consumidos de cada alimento
 	double qtdeRacao=refeicao_02.getquantidadeConsumida()+refeicao_03.getquantidadeConsumida();
 	double qtdePeixe=refeicao_01.getquantidadeConsumida()+refeicao_04.getquantidadeConsumida();
 
