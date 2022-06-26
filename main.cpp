@@ -25,61 +25,62 @@ int main() {
   urso_2.print();
 
   Herpestidae suricato_1;
-  suricato_1.familia = "Herpestidae";
-  suricato_1.nome ="Catita";
-	suricato_1.idade = "2";
-  suricato_1.especie = "Suricato";
+  suricato_1.setFamilia("Herpestidae");
+  suricato_1.setNome("Catita");
+	suricato_1.setIdade("2");
+  suricato_1.setEspecie("Suricato");
   suricato_1.print();
 
   Herpestidae suricato_2;
-  suricato_2.familia = "Herpestidae";
-  suricato_2.nome ="Carolina";
-	suricato_2.idade = "2";
-  suricato_2.especie = "Suricato";
+  suricato_2.setFamilia("Herpestidae");
+  suricato_2.setNome("Carolina");
+	suricato_2.setIdade("2");
+  suricato_2.setEspecie("Suricato");
   suricato_2.print();
 
   Cuidador cuidador_1;
-  cuidador_1.nome = "Ana Maria Rodrigues Lopes";
-	cuidador_1.cpf = "1234567799";
-	cuidador_1.telefone = "(31) 99876-6923";
-	cuidador_1.data_nascimento = "10/10/2000";
-  cuidador_1.salario = "R$ 3000";
+  cuidador_1.setNome("Ana Maria Rodrigues Lopes");
+	cuidador_1.setCpf("1234567799");
+	cuidador_1.setTelefone("(31) 99876-6923");
+	cuidador_1.setData_nascimento("10/10/2000");
+  cuidador_1.setSalario("R$ 3000");
 
   Cuidador cuidador_2;
-  cuidador_2.nome = "Fernanda Silva Santos";
-	cuidador_2.cpf = "9472567121";
-	cuidador_2.telefone = "(31) 99123-8970";
-	cuidador_2.data_nascimento= "08/02/1995";
-  cuidador_2.salario = "R$ 4000";
+  cuidador_2.setNome("Fernanda Silva Santos");
+	cuidador_2.setCpf("9472567121");
+	cuidador_2.setTelefone("(31) 99123-8970");
+	cuidador_2.setData_nascimento("08/02/1995");
+  cuidador_2.setSalario("R$ 4000");
 
   Alimentacao alimentacao_1;
-  alimentacao_1.porcao = 2;
-  alimentacao_1.comida = "Peixes";
-  alimentacao_1.descricao = "Bobby só quis comer 2 porções de peixes hoje";
-  alimentacao_1.cuidador = cuidador_1;
-  alimentacao_1.nome_animal = "Bobby";
+  alimentacao_1.setPorcao(2) ;
+  alimentacao_1.setComida("Peixes");
+  alimentacao_1.setDescricao("Bobby só quis comer 2 porções de peixes hoje");
+  alimentacao_1.setCuidador(cuidador_1);
+  alimentacao_1.setNome_animal("Bobby");
     
   Alimentacao alimentacao_2;
-  alimentacao_2.porcao = 1;
-  alimentacao_2.comida = "Ração especial";
-  alimentacao_2.descricao = "Catita comeu direitinho";
-  alimentacao_2.cuidador = cuidador_2;
-  alimentacao_2.nome_animal = "Catita";
+  alimentacao_2.setPorcao(1);
+  alimentacao_2.setComida("Ração especial");
+  alimentacao_2.setDescricao("Catita comeu direitinho");
+  alimentacao_2.setCuidador(cuidador_2);
+  alimentacao_2.setNome_animal("Catita");
   
   Alimentacao alimentacao_3;
-  alimentacao_3.porcao= 3;
-  alimentacao_3.comida = "Ração";
-  alimentacao_3.descricao = "Carolina estava com um apetite e tanto";
-  alimentacao_3.cuidador = cuidador_2;
-  alimentacao_3.nome_animal = "Carolina";
+  alimentacao_3.setPorcao(3);
+  alimentacao_3.setComida("Ração");
+  alimentacao_3.setDescricao("Carolina estava com um apetite e tanto");
+  alimentacao_3.setCuidador(cuidador_2);
+  alimentacao_3.setNome_animal("Carolina");
+  alimentacao_3.setComida("Ração");
  
   Alimentacao alimentacao_4;
-  alimentacao_4.porcao= 10;
-  alimentacao_4.comida = "Peixes";
-  alimentacao_4.descricao = "Tony comeu um pouco da comida do Bobby";
-  alimentacao_4.cuidador = cuidador_1;
-  alimentacao_4.nome_animal = "Tony";
-  alimentacao_3.comida = "Ração";
+  alimentacao_4.setPorcao(10);
+  alimentacao_4.setComida("Peixes");
+  alimentacao_4.setDescricao("Tony comeu um pouco da comida do Bobby");
+  alimentacao_4.setCuidador(cuidador_1);
+  alimentacao_4.setNome_animal("Tony");
+  
 
   double kg_Peixe_Consumidos_01 = 0; //urso_1
   kg_Peixe_Consumidos_01 = 5*2;
@@ -88,25 +89,25 @@ int main() {
   kg_Peixe_Consumidos_02 = urso_1.peixesConsumidos(10);
 
   double kg_Racao_Consumidos_01 = 0;  //suricato_1
-  kg_Racao_Consumidos_01 += suricato_1.kgConsumidos(alimentacao_2.porcao);
+  kg_Racao_Consumidos_01 += suricato_1.kgConsumidos(alimentacao_2.getPorcao());
 
   double kg_Racao_Consumidos_02 = 0;  //suricato_2
-  kg_Racao_Consumidos_02 += suricato_2.kgConsumidos(alimentacao_3.porcao);
+  kg_Racao_Consumidos_02 += suricato_2.kgConsumidos(alimentacao_3.getPorcao());
 
   
   cout <<" \n \n--------------------------------\n\nRelatório das alimentações \n" << endl;
 
   alimentacao_1.print();
-  cout << "Descricao: " << alimentacao_1.descricao << endl << endl;
+  cout << "Descricao: " << alimentacao_1.getDescricao() << endl << endl;
 
   alimentacao_2.print();
-  cout << "Descricao: " << alimentacao_2.descricao << endl<<endl;
+  cout << "Descricao: " << alimentacao_2.getDescricao() << endl<<endl;
 
   alimentacao_3.print();
-  cout << "Descricao: " << alimentacao_3.descricao << endl<< endl;
+  cout << "Descricao: " << alimentacao_3.getDescricao()<< endl<< endl;
 
   alimentacao_4.print();
-  cout << "Descricao: " << alimentacao_4.descricao << endl << "\n";
+  cout << "Descricao: " << alimentacao_4.getDescricao() << endl << "\n";
 
   cout << "\n \n--------------------------------\n\nRelatorio de kg de comida gastos \n" << endl;
   cout << "Tipo de comida: " << "Ração" << endl;

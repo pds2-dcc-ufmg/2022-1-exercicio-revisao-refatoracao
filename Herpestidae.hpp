@@ -6,13 +6,15 @@
 using namespace std;
 
 class Herpestidae : public Animal {
-    public:
+    protected:
         double qnt_porcao = 1;
         string especie;
     public:
     
         double kgConsumidos(int porcoesConsumidas);
         void print();
+        double getQntPorcao();
+        void setEspecie(string _especie);
 };
 
 #endif

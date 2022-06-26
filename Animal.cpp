@@ -10,6 +10,16 @@ void Animal::print(){
 void Animal::print_oi(){
     cout << "Tchau" << endl;
 }
+
+void Animal::setIdade(string _idade){
+    this->idade = _idade;
+}
+void Animal::setFamilia(string _familia){
+    this->familia = _familia;
+}
+void Animal::setNome(string _nome){
+    this->nome = _nome;
+}
     
 
     

@@ -7,13 +7,16 @@
 using namespace std;
 
 class Animal {
-    public:
+    protected:
         string idade;
         string familia;
         string nome;
-
+    public:
         void print() ;
         void print_oi();
+        void setIdade(string _idade) ;
+        void setFamilia(string _familia) ;
+        void setNome(string _nome) ;
 };
 
 #endif
