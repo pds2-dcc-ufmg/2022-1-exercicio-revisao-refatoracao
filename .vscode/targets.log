@@ -1,0 +1,518 @@
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-pc-mingw32
+ 
+
+# Make data base, printed on Sun Jun 26 17:41:00 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# makefile (from `makefile', line 18)
+OBJ = $(addprefix $(BUILD_DIR)/,$(notdir $(SRC:.cpp=.o)))
+# makefile (from `makefile', line 17)
+SRC = $(wildcard $(OBJECTS_DIR)/*.cpp $(MAIN_DIR)/*.cpp)
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+HOMEDRIV 
+E = C:
+# automatic
+@F = $(notdir $@)
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# makefile
+CURDIR := h:/Cpp/2022-1-exercicio-revisao-refatoracao
+# default
+SHELL := sh.exe
+# environment
+WINDIR = C:\WINDOWS
+# environment
+VSCODE_NLS_CONFIG = {"locale":"pt-br","availableLanguages":{"*":"pt-br"},"_languagePackId":"195456cb6bc5e7dd989215cd334fb359.pt-br","_translationsConfigFile":"C:\\Users\\henri\\AppData\\Roaming\\Code\\clp\\195456cb6bc5e7dd989215cd334fb359.pt-br\\tcf.json","_cacheRoot":"C:\\Users\\henri\\AppData\\Roaming\\Code\\clp\\195456cb6bc5e7dd989215cd334fb359.pt-br","_resolvedLanguagePackCoreLocation":"C:\\Users\\henri\\AppData\\Roaming\\Code\\clp\\195456cb6bc5e7dd989215cd334fb359.pt-br\\30d9c6cd9483b2cc586687151bcbcd635f373630","_corruptedFile":"C:\\Users\\henri\\AppData\\Roaming\\Code\\clp\\195456cb6bc5e7dd989215cd334fb359.pt-br\\corrupted.info","_languagePackSupport":true}
+# makefile (from `makefile', line 11)
+CFLAGS = -I $(HEADERS_DIR) -Wall -pedantic -std=c++11
+# environment
+ONEDRIVE = C:\Users\henri\OneDrive
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+# makefile (from `makefile', line 1)
+MAKEFILE_LIST :=  makefile
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
+# environment
+TMP = C:\Users\henri\AppData\Local\Temp
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+PROGRAMW6432 = C:\Program Files
+# environment
+PROGRAMDATA = C:\ProgramData
+# environment
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-734bf085-2e46-41a7-9000-aa66bd210f01-sock
+# environment
+VSCODE_CWD = H:\Games\Microsoft VS Code
+# environment
+PATH = C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\henri\AppData\Local\Microsoft\WindowsApps;H:\Games\Microsoft VS Code\bin;C:\MinGW\bin;C:\Users\henri\AppData\Roaming\npm;H:\Games\Anaconda3;C:\Windows\System32;C:\GnuWin32\bin;;C:\Users\henri\AppData\Local\Programs\oh-my-posh\bin
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# makefile (from `makefile', line 5)
+HEADERS_DIR = ./include
+# environment
+PROCESSOR_ARCHITECTURE = x86
+# environment
+USERPROFILE = C:\Users\henri
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# environment
+VSCODE_LOG_STACK = false
+# environment
+NUMBER_OF_PROCESSORS = 8
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives
+# automatic
+%F = $(notdir $%)
+# environment
+POSH_THEMES_PATH  
+= C:\Users\henri\AppData\Local\Programs\oh-my-posh\themes
+# environment
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_17348_GPITSGJNGUXDUGTP
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+COMPUTERNAME = NITRO5
+# environment
+PROGRAMFILES = C:\Program Files (x86)
+# environment
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+USERNAME = henri
+# environment
+PUBLIC = C:\Users\Public
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/ 
+api/node/extensionHostProcess
+# environment
+VSCODE_CODE_CACHE_PATH = C:\Users\henri\AppData\Roaming\Code\CachedData\30d9c6cd9483b2cc586687151bcbcd635f373630
+# makefile (from `makefile', line 2)
+MAIN_DIR = ./src
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
+# environment
+LOGONSERVER = \\NITRO5
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+USERDOMAIN = NITRO5
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAK 
+ECMDGOALS := all
+# makefile (from `makefile', line 8)
+CC = g++
+# makefile (from `makefile', line 4)
+BUILD_DIR = ./build
+# makefile (from `makefile', line 14)
+EXEC = vpl06_refactor
+# default
+MAKE_VERSION := 3.81
+# makefile
+.DEFAULT_GOAL := compile
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+LOCALAPPDATA = C:\Users\henri\AppData\Local
+# environment
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerSh 
+ell\v1.0\Modules
+# default
+MAKE_COMMAND := make.exe
+# environment
+PROCESSOR_ARCHITEW6432 = AMD64
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
+# environment
+OS = Windows_NT
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\4f624dc5b82751e980695e64eaa7d9a3-1.68.1-main-sock
+# makefile (from `makefile', line 3)
+OBJECTS_DIR = $(MAIN_DIR)/objects
+# environment
+HOMEPATH = \Users\henri
+# environment
+COMMONPROGRAMFILES(X86) = C 
+:\Program Files (x86)\Common Files
+# environment
+PROMPT = $P$G
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+SYSTEMROOT = C:\WINDOWS
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# environment
+APPDATA = C:\Users\henri\AppData\Roaming
+# environment
+TEMP = C:\Users\henri\AppData\Local\Temp
+# environment
+COMSPEC = C:\WINDOWS\system32\cmd.exe
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+LC_ALL = C
+# automatic
+^F = $(notd 
+ir $^)
+# default
+SUFFIXES := 
+# environment
+SYSTEMDRIVE = C:
+# environment
+SESSIONNAME = Console
+# environment
+PROCESSOR_REVISION = a502
+# environment
+MAKELEVEL := 0
+# environment
+LANG = C
+# environment
+PROCESSOR_LEVEL = 6
+# environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
+# environment
+VSCODE_PID = 17348
+# environment
+USERDOMAIN_ROAMINGPROFILE = NITRO5
+# variable set hash-table stats:
+# Load=98/1024=10%, Rehash=0, Collisions=11/134=8%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific 
+ variable values.
+
+# Directories
+
+# : could not be stat'd.
+# H:\Games\Anaconda3 (key H:/Games/Anaconda3, mtime 1649068431): 88 files, no impossibilities.
+# C:\Users\henri\AppData\Local\Microsoft\WindowsApps (key C:/Users/henri/AppData/Local/Microsoft/WindowsApps, mtime 1656068219): 30 files, no impossibilities.
+# C:\WINDOWS\System32\WindowsPowerShell\v1.0\ (key C:/WINDOWS/System32/WindowsPowerShell/v1.0/, mtime 1652373234): 30 files, no impossibilities.
+# C:\WINDOWS\System32\Wbem (key C:/WINDOWS/System32/Wb 
+em, mtime 1652373240): 154 files, no impossibilities.
+# . (key h:/Cpp/2022-1-exercicio-revisao-refatoracao, mtime 1656262751): 12 files, no impossibilities.
+# C:\Program Files\nodejs\ (key C:/Program Files/nodejs/, mtime 1650798922): 13 files, no impossibilities.
+# ./src (key h:/Cpp/2022-1-exercicio-revisao-refatoracao/src, mtime 1656248629): 4 files, no impossibilities.
+# ./src/objects (key h:/Cpp/2022-1-exercicio-revisao-refatoracao/src/objects, mtime 1656248637): 7 files, no impossibilities.
+# C:\Program 
+ Files\dotnet\ (key C:/Program Files/dotnet/, mtime 1650043102): 8 files, no impossibilities.
+# C:\GnuWin32\bin (key C:/GnuWin32/bin, mtime 1653683450): 5 files, no impossibilities.
+# C:\MinGW\bin (key C:/MinGW/bin, mtime 1648597004): 60 files, no impossibilities.
+# C:\WINDOWS\System32\OpenSSH\: could not be stat'd.
+# C:\WINDOWS (key C:/WINDOWS, mtime 1652374644): 111 files, no impossibilities.
+# src (key h:/Cpp/2022-1-exercicio-revisao-refatoracao/src, mtime 1656248629): 4 files, no impossibilities.
+# src/ 
+objects (key h:/Cpp/2022-1-exercicio-revisao-refatoracao/src/objects, mtime 1656248637): 7 files, no impossibilities.
+# C:\Users\henri\AppData\Roaming\npm (key C:/Users/henri/AppData/Roaming/npm, mtime 1650798917): 2 files, no impossibilities.
+# C:\Program Files\Git\cmd (key C:/Program Files/Git/cmd, mtime 1648558942): 8 files, no impossibilities.
+# C:\WINDOWS\system32 (key C:/WINDOWS/system32, mtime 1656026440): 2929 files, no impossibilities.
+# H:\Games\Microsoft VS Code\bin (key H:/Games/Microsoft VS Cod 
+e/bin, mtime 1655382489): 4 files, no impossibilities.
+# C:\Users\henri\AppData\Local\Programs\oh-my-posh\bin: could not be stat'd.
+
+# 3476 files, no impossibilities in 21 directories.
+
+# Implicit Rules
+
+build/%.o: ./src/objects/%.cpp
+#  commands to execute (from `makefile', line 24):
+	$(CC) -c $(CFLAGS) $< -o $@
+	
+
+build/%.o: ./src/%.cpp
+#  commands to execute (from `makefile', line 27):
+	$(CC) -c $(CFLAGS) $< -o $@
+	
+
+# 2 implicit rules, 0 (0,0%) terminal.
+
+# Files
+
+build/main.o: src/main.cpp
+#  Implicit  
+rule search has been done.
+#  Implicit/static pattern stem: `main'
+#  Last modified 2022-06-26 13:59:11
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `makefile', line 27):
+	$(CC) -c $(CFLAGS) $< -o $@
+	
+
+link: compile
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: `'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := 
+ link
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := compile
+# automatic
+# | := 
+# automatic
+# < := compile
+# automatic
+# ^ := compile
+# automatic
+# ? := compile
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=3/13=23%
+#  commands to execute (from `makefile', line 31):
+	$(CC) -o $(EXEC) $(BUILD_DIR)/*.o
+	
+
+all: link run
+#  Command-line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# vari 
+able set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+
+build/Cuidador.o: src/objects/Cuidador.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `Cuidador'
+#  Last modified 2022-06-26 13:54:18
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `makefile', line 24):
+	$(CC) -c $(CFLAGS) $< -o $@
+	
+
+# Not a target:
+src/objects/Ursidae.cpp:
+#  Implicit rule search h 
+as been done.
+#  Last modified 2022-06-26 13:48:47
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+debug: compile
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 35):
+	$(CC) -g $(BUILD_DIR 
+)/*.o
+	
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-26 13:40:28
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+src/objects/Alimentacao.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-26 13:59:09
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+src/ob 
+jects/Animal.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-26 11:14:57
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+src/objects/Herpestidae.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-26 13:48:13
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+.SUFFIXES:
+#  Implicit  
+rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+compile: build/Alimentacao.o build/Animal.o build/Cuidador.o build/Herpestidae.o build/Ursidae.o build/main.o
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+build/Animal.o: src/objects/Animal.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: ` 
+Animal'
+#  Last modified 2022-06-26 13:54:19
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `makefile', line 24):
+	$(CC) -c $(CFLAGS) $< -o $@
+	
+
+run:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 39):
+	./$(EXEC)
+	
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never  
+checked.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 46):
+	rm -f $(EXEC)
+	rm -f $(EXEC).exe
+	rm -f $(BUILD_DIR)/*.o
+	
+
+# Not a target:
+src/main.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-26 13:58:57
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+build/Ursidae.o: src/objects/Ursidae.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `Ursidae'
+#   
+Last modified 2022-06-26 13:54:19
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `makefile', line 24):
+	$(CC) -c $(CFLAGS) $< -o $@
+	
+
+# Not a target:
+src/objects/Cuidador.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-26 12:17:29
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+build/Alimentacao.o: 
+ src/objects/Alimentacao.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `Alimentacao'
+#  Last modified 2022-06-26 13:59:10
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `makefile', line 24):
+	$(CC) -c $(CFLAGS) $< -o $@
+	
+
+build/Herpestidae.o: src/objects/Herpestidae.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `Herpestidae'
+#  Last modifi 
+ed 2022-06-26 13:54:20
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `makefile', line 24):
+	$(CC) -c $(CFLAGS) $< -o $@
+	
+
+# files hash-table stats:
+# Load=21/1024=2%, Rehash=0, Collisions=7/63=11%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 
+ 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+
+# Finished Make data base on Sun Jun 26 17:41:00 2022
+
+ 

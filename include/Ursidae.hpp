@@ -5,10 +5,13 @@
 
 class Ursidae: public Animal {
 
-public:
-    string especie;
+private:
+    std::string especie;
     double qtdePeixe; //quantidade de peixes consumidos diariamente em kg
     
+public:
+    Ursidae();
+    Ursidae(std::string nome, std::string idade, std::string especie, double qtdePeixe);
     double peixesConsumidos(int porcaoPeixes); //calcula a quantidade de peixes consumidos pelo animal
     virtual void print() override;
 
