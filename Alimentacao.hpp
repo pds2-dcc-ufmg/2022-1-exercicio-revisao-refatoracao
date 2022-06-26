@@ -1,41 +1,30 @@
-
-#ifndef VENDA_HPP
-#define VENDA_HPP
-
+#ifndef ALIMENTACAO_H
+#define ALIMENTACAO_H
 #include "Cuidador.hpp"
+#include "Animal.hpp"
 
 using namespace std;
 
 class Alimentacao{
 
-    public:
+private:
     int porcao;
     string comida;
     string descricao;
-    Cuidador cuid;
-    string nomeAnimal;
+    Cuidador cuidador;
+    Animal animal;
+    int kgConsumidos;
 
+public:
+    //Inicializa as variaveis da classe alimentacao
+    Alimentacao(int _porcao, string _comida, string _descricao, Cuidador _cuidador, Animal _animal);
 
-    void print() {
+    //Informa detalhes sobre a alimentação no zoológico
+    void print();
 
-        std::cout << "Animal: ";
-        cout << nomeAnimal << "\n";
-
-        std::cout << " Cuidador: ";
-        cout << cuid.NOME << "\n";
-
-        //std::cout << " : ";
-        //cout << ursidae;
-    }
-
-    /*void print() {
-
-        std::cout << "Cuidador: ";
-        cout << cuida;
-
-        std::cout << " Animal: ";
-        cout << alimentado;
-    }*/
+    //Permite o acesso as variaveis privadas da classe fora dela
+    int getPorcao();
+    string getDescricao();
 };
 
 #endif

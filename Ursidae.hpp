@@ -1,35 +1,32 @@
-#ifndef ursidae_HPP
-#define ursidae_HPP
+#ifndef URSIDAE_H
+#define URSIDAE_H
 
 #include <iostream>
 #include <iomanip>
+#include "Animal.hpp"
 
 using namespace std;
 
-int peixesPorPORCAO = 5;
+class Ursidae : public Animal{
+    private:
 
-class Ursidae {
+        double kgPeixePorDia;
+
     public:
+    
+        //Inicializa os valores do animal e fornece uma especie a ele
+        Ursidae(string _nome, int _idade);
 
-        int IDADE;
-        string nome;
-        string especie;
-        double kgPeixePorDIA;
+        //A função calcula a quantidade de alimento consumida por um Ursidae
+        double quantidadeDeAlimentoConsumida(int porcaoPeixes);
 
-        void print() {
-            cout << "\n[Animal]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  Família: Ursidae" << endl
-              << "  Especie: " << especie << endl;
-        }
+        //Permite que valores privados da classe sejam acessados fora dela
+        double getKgPeixe();
+        string getEspecie();
 
-        double calcula_PEIXES_CONSUMIDOS(int porcaoPeixes){
-            double x;
-            return peixesPorPORCAO*porcaoPeixes;
-        }
+        //Permite modificar os atributos private fora da classe
+        void setkgPeixePorDia(int _kgPeixePorDia);
 
 };
-
 #endif
 
