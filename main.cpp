@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "Animal.hpp"
 #include "Herpestidae.hpp"
 #include "Ursidae.hpp"
@@ -7,152 +5,137 @@
 #include "Alimentacao.hpp"
 using namespace std;
 
+
+
 int main()
 {
 
-    Animal animal1;
-    animal1.family = "Ursidae";
-    animal1.nome ="Bobby";
-	animal1.IDADE = "13";
-    animal1.print();
-double kgPeixeConsumidos01 = 0;
-    Animal animal2;
-    animal2.family = "Ursidae";
-    animal2.nome ="Jorge";
-	animal2.IDADE = "1";
-    animal2.print();
+	Animal animal_01;
+    animal_01.familia = "Ursidae";
+    animal_01.nome ="Bobby";
+	animal_01.idade = "13";
+    animal_01.print();
 
-    Animal animal3;
-    animal3.family = "Herpestidae";
-    animal3.nome ="Bonina";
-	animal3.IDADE = "7";
-    animal3.print();
+    Animal animal_02;
+    animal_02.familia = "Ursidae";
+    animal_02.nome ="Jorge";
+	animal_02.idade = "1";
+    animal_02.print();
 
-    Animal animal4;
-    animal4.family = "Ursidae";
-    animal4.nome ="Felício";
-	animal4.IDADE = "3";
-    animal4.print();
+    Animal animal_03;
+    animal_03.familia = "Herpestidae";
+    animal_03.nome ="Bonina";
+	animal_03.idade = "7";
+    animal_03.print();
 
+    Animal animal_04;
+    animal_04.familia = "Ursidae";
+    animal_04.nome ="Felício";
+	animal_04.idade = "3";
+    animal_04.print();
 
+    Ursidae ursidae_01;
+	ursidae_01.familia = "Ursidae";
+    ursidae_01.nome = "Tony";
+    ursidae_01.idade = "9";
+    ursidae_01.especie = "Urso Pardo";
+    ursidae_01.qtdePeixe = 10.5;
+    ursidae_01.print();
 
-    Ursidae e02;
-    int numAtendimentos02 = 0;
-    double comissao02 = 0;
-    e02.nome = "Tony";
-    e02.IDADE = 9;
-    e02.especie = "Urso Pardo";
-    e02.kgPeixePorDIA = 10.5;
-  e02.print();
+    Ursidae ursidae_02;
+	ursidae_02.familia = "Ursidae";
+    ursidae_02.nome = "Wanda";
+    ursidae_02.idade = "10";
+    ursidae_02.especie = "Urso Polar";
+    ursidae_02.qtdePeixe = 7;
+	ursidae_02.print();
 
+    Herpestidae herpestidae_01;
+    herpestidae_01.familia = "Herpestidae";
+    herpestidae_01.nome ="Catita";
+	herpestidae_01.idade = "2";
+  	herpestidae_01.especie = "Suricato";
+	herpestidae_01.print();
 
-    Ursidae e03;
-    int numAtendimentos03 = 0;
-    double comissao03 = 0;
-    e03.nome = "Wanda";
-    e03.IDADE = 10;
-    e03.especie = "Urso Polar";
-    e03.kgPeixePorDIA = 7;
-  e03.print();
+    Herpestidae herpestidae_02;
+    herpestidae_02.familia = "Herpestidae";
+    herpestidae_02.nome ="Carolina";
+	herpestidae_02.idade = "2";
+	herpestidae_02.especie = "Suricato";
 
+	Cuidador cuidador_01;
+	cuidador_01.nome = "Ana Maria Rodrigues Lopes";
+	cuidador_01.cpf = "1234567799";
+	cuidador_01.telefone = "(31) 99876-6923";
+	cuidador_01.dataNascimento = "10/10/2000";
+	cuidador_01.salario = "R$ 3000";
 
-    Herpestidae g01;
-    g01.family = "Herpestidae";
-    g01.nome ="Catita";
-	g01.IDADE = "2";
-  g01.species = "Suricato";
-g01.print();
-    Herpestidae g02;
-    double bonificacao01 = 0;
-    g02.family = "Herpestidae";
-    g02.nome ="Carolina";
-	g02.IDADE = "2";
-  g02.species = "Suricato";
+	Cuidador cuidador_02;
+	cuidador_02.nome = "Fernanda Silva Santos";
+	cuidador_02.cpf = "9472567121";
+	cuidador_02.telefone = "(31) 99123-8970";
+	cuidador_02.dataNascimento = "08/02/1995";
+	cuidador_02.salario = "R$ 4000";
 
-double kgPeixeConsumidos02 = 0;
-double kgPeixeConsumidos03 = 0;
-double kgPeixeConsumidos04 = 0;
-double kgPeixeConsumidos05 = 0;
+    Alimentacao refeicao_01;
+    refeicao_01.porcao= 2;
+    refeicao_01.comida = "Peixes";
+    refeicao_01.descricao = "Bobby só quis comer 2 porções de peixes hoje";
+    refeicao_01.cuidador = cuidador_01;
+    refeicao_01.nomeAnimal = "Bobby";
+    refeicao_01.quantidadeConsumida+=5*2;
 
-double kgRacaoConsumidos01 = 0;
-double kgRacaoConsumidos02 = 0;
-double kgRacaoConsumidos03 = 0;
-  
-  Cuidador cuid01;
-  cuid01.NOME = "Ana Maria Rodrigues Lopes";
-	cuid01.cpf = "1234567799";
-	cuid01.Telefone = "(31) 99876-6923";
-	cuid01.BIRTH = "10/10/2000";
-  cuid01.salario = "R$ 3000";
+    Alimentacao refeicao_02;
+    refeicao_02.porcao= 1;
+    refeicao_02.comida = "Ração especial";
+    refeicao_02.descricao = "Catita comeu direitinho";
+    refeicao_02.cuidador = cuidador_02;
+    refeicao_02.nomeAnimal = "Catita";
+	refeicao_02.quantidadeConsumida+=herpestidae_01.racaoConsumida(refeicao_02.porcao);
 
-  Cuidador cuid2;
-  cuid2.NOME = "Fernanda Silva Santos";
-	cuid2.cpf = "9472567121";
-	cuid2.Telefone = "(31) 99123-8970";
-	cuid2.BIRTH = "08/02/1995";
+	Alimentacao refeicao_03;
+    refeicao_03.porcao= 3;
+    refeicao_03.comida = "Ração";
+    refeicao_03.descricao = "Carolina estava com um apetite e tanto";
+    refeicao_03.cuidador = cuidador_02;
+    refeicao_03.nomeAnimal = "Carolina";
+  	refeicao_03.quantidadeConsumida+= herpestidae_02.racaoConsumida(refeicao_03.porcao);
 
-cuid2.salario = "R$ 4000";
-    Alimentacao v01;
-    v01.porcao= 2;
-    v01.comida = "Peixes";
-    v01.descricao = "Bobby só quis comer 2 porções de peixes hoje";
-    v01.cuid = cuid01;
-    v01.nomeAnimal = "Bobby";
-    kgPeixeConsumidos01 = 5*2;
-    Alimentacao v02;
-    v02.porcao= 1;
-    v02.comida = "Ração especial";
-    v02.descricao = "Catita comeu direitinho";
-    v02.cuid = cuid2;
-    v02.nomeAnimal = "Catita";
-  kgRacaoConsumidos01 += g01.kgConsumidosDeRacao(v02.porcao);
+	Alimentacao refeicao_04;
+    refeicao_04.porcao=10;
+    refeicao_04.comida = "Peixes";
+    refeicao_04.descricao = "Tony comeu um pouco da comida do Bobby";
+    refeicao_04.cuidador = cuidador_01;
+    refeicao_04.nomeAnimal = "Tony";
+	refeicao_04.quantidadeConsumida+=ursidae_01.peixesConsumidos(refeicao_04.porcao);
 
- Alimentacao v03;
-    v03.porcao= 3;
-    v03.comida = "Ração";
-    v03.descricao = "Carolina estava com um apetite e tanto";
-    v03.cuid = cuid2;
-    v03.nomeAnimal = "Carolina";
-  kgRacaoConsumidos02 += g02.kgConsumidosDeRacao(v03.porcao);
-
-  Alimentacao v04;
-    v04.porcao= 10;
-    v04.comida = "Peixes";
-    v04.descricao = "Tony comeu um pouco da comida do Bobby";
-    v04.cuid = cuid01;
-    v04.nomeAnimal = "Tony";
-    v02.porcao = 2;
-    v03.comida = "Ração";
-kgPeixeConsumidos03 = 
-  e02.calcula_PEIXES_CONSUMIDOS(10);
+	double qtdeRacao=refeicao_02.quantidadeConsumida+refeicao_03.quantidadeConsumida;
+	double qtdePeixe=refeicao_01.quantidadeConsumida+refeicao_04.quantidadeConsumida;
 
 
+    cout<<"\n\n--------------------------------\n\n"
+		<<"Relatorio das alimentações \n" << endl;
 
-    cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << endl;
+    refeicao_01.print();
+    cout<<" Descricao: "<< refeicao_01.descricao << endl << endl;
 
-    v01.print();
-    cout << " Descricao: " << v01.descricao << endl << endl;
+    refeicao_02.print();
+    cout<<" Descricao: "<< refeicao_02.descricao << endl<<endl;
 
-    v02.print();
-    cout << " Descricao: " << v02.descricao << endl<<endl;
+    refeicao_03.print();
+    cout<<" Descricao: "<< refeicao_03.descricao << endl<< endl;
 
-    v03.print();
-    cout << " Descricao: " << v03.descricao << endl<< endl;
+    refeicao_04.print();
+    cout<<" Descricao: "<< refeicao_04.descricao << endl << "\n";
 
-    v04.print();
-    cout << " Descricao: " << v04.descricao << endl << "\n";
-
-
-
-
-
-
-    cout <<" \n \n--------------------------------\n\nRelatorio de kg de comida gastos \n" << endl;
+	cout<<"\n\n--------------------------------\n\n";
+	cout <<"Relatorio de kg de comida gastos \n" <<endl;
+	
     cout << "Tipo de comida: " << "Ração" << endl;
-    cout << "Kg consumidos: " << kgRacaoConsumidos01+kgRacaoConsumidos02<<endl;
+    cout << "Kg consumidos: " <<qtdeRacao<<endl;
 
     cout << "\nTipo de comida: " << "Peixe" << endl;
-    cout << "Kg consumidos: " << kgPeixeConsumidos01+kgPeixeConsumidos03<<endl;
+    cout << "Kg consumidos: " <<qtdePeixe<<endl;
 
     return 0;
 }

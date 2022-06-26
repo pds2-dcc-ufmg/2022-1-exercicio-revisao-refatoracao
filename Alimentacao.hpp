@@ -1,41 +1,22 @@
 
-#ifndef VENDA_HPP
-#define VENDA_HPP
+#ifndef ALIMENTACAO_HPP
+#define ALIMENTACAO_HPP
 
-#include "Cuidador.hpp"
+#include"Cuidador.hpp"
 
 using namespace std;
 
 class Alimentacao{
 
-    public:
+public:
     int porcao;
     string comida;
     string descricao;
-    Cuidador cuid;
+    Cuidador cuidador;
     string nomeAnimal;
+    double quantidadeConsumida;
 
-
-    void print() {
-
-        std::cout << "Animal: ";
-        cout << nomeAnimal << "\n";
-
-        std::cout << " Cuidador: ";
-        cout << cuid.NOME << "\n";
-
-        //std::cout << " : ";
-        //cout << ursidae;
-    }
-
-    /*void print() {
-
-        std::cout << "Cuidador: ";
-        cout << cuida;
-
-        std::cout << " Animal: ";
-        cout << alimentado;
-    }*/
+    void print(); // imprime na tela os dados de um cliente cadastrado
 };
 
 #endif
