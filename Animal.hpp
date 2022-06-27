@@ -19,7 +19,7 @@ class Animal {
         Animal();
         Animal(string _nome, int _idade, string _familia);
         virtual void print();
-        void setKgAlimentoConsumido(double kg);
+        void comer(double kg);
         double getKgAlimentoConsumido();
         string getNome();
         string getALIMENTO();

@@ -18,7 +18,7 @@ void Animal::print() {
     cout << "  Familia: " << familia << endl;
 }
 
-void Animal::setKgAlimentoConsumido(double kg) {
+void Animal::comer(double kg) {
     kgAlimentoConsumido = kg;
 }
 

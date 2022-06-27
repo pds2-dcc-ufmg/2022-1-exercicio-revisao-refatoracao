@@ -17,7 +17,7 @@ void Alimentacao::print() {
 
 void Alimentacao::alimentar(map<string, double>& tipoAlimento) {
     double kg = calcularKgConsumidos(tipoAlimento);
-    animal->setKgAlimentoConsumido(kg);
+    animal->comer(kg);
 }
 
 double Alimentacao::calcularKgConsumidos(map<string, double>& tipoAlimento) {

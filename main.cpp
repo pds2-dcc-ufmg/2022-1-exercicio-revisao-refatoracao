@@ -41,7 +41,7 @@ void printarRelatorioGastos(vector<Animal*>& animais, map<string, double>& tipoA
     do{
         it--;
         cout << "\nTipo de comida: " << it->first << endl;
-        cout << "Kg consumidos: " << calcularAlimentoGasto(animais, it->first) <<endl;
+        cout << "Kg consumidos: " << calcularAlimentoGasto(animais, it->first) << endl;
     } while(it != tipoAlimento.begin());
 }
 
