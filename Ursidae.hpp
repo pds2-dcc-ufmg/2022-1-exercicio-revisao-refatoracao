@@ -1,5 +1,5 @@
-#ifndef ursidae_HPP
-#define ursidae_HPP
+#ifndef URSIDAE_H
+#define URSIDAE_H
 
 #define NUMEROPEIXES 5
 
@@ -8,7 +8,8 @@
 #include "Animal.hpp"
 
 class Ursidae :public Animal{
-    protected:
+    
+    private:
 
     std::string especie;
     double quantidadePeixe;
@@ -19,6 +20,7 @@ class Ursidae :public Animal{
     Ursidae(std::string _nome, std::string _idade, std::string _especie, double _quantidadePeixe);
     void print() override;
     double calculaPeixesConsumidos(int porcaoPeixes);
+    ~Ursidae();
 };
 
 #endif

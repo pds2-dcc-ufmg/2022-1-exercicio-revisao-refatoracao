@@ -5,7 +5,7 @@
 
 class Cuidador{
 
-	protected:
+	private:
 
     	std::string salario;
 		std::string nome;
@@ -19,6 +19,7 @@ class Cuidador{
 		Cuidador() = default;
 		Cuidador(std::string _nome, std::string _cpf, std::string _telefone, std::string _aniversario, std::string _salario);
 		std::string getNome();
+		~Cuidador();
 };
 
 #endif

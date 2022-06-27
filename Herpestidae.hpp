@@ -6,7 +6,7 @@
 
 class Herpestidae : public Animal {
 
-    protected:
+    private:
 
     std::string especie;
 
@@ -16,6 +16,7 @@ class Herpestidae : public Animal {
     Herpestidae(std::string _nome, std::string _idade, std::string _especie);
     double consumoRacao(int numeroPorcoes);
     void print() override;
+    ~Herpestidae();
 };
 
 #endif

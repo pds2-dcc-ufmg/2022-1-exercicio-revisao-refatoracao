@@ -1,5 +1,5 @@
-#ifndef VENDA_HPP
-#define VENDA_HPP
+#ifndef ALIMENTACAO_H
+#define ALIMENTACAO_H
 
 #include "Cuidador.hpp"
 #include <iostream>
@@ -20,6 +20,7 @@ class Alimentacao{
 
         Alimentacao(int _porcao, std::string _comida, std::string _descricao, Cuidador _cuid, std::string _nomeAnimal, double _kgConsumidos);
         Alimentacao();
+        ~Alimentacao();
         void print();
         std::string getComida();
         double getKg();
