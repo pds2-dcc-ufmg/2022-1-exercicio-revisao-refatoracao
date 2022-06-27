@@ -44,14 +44,13 @@ int main()
 
   //Alimentacao
   Alimentacao peixesBobby(2, "Peixes", "Bobby só quis comer 2 porções de peixes hoje", &cuidAna, "Bobby");
-  Alimentacao racaoCatita(2, "Ração especial", "Catita comeu direitinho", &cuidFernanda, "Catita");
+  Alimentacao racaoCatita(1, "Ração especial", "Catita comeu direitinho", &cuidFernanda, "Catita");
   Alimentacao racaoCarolina(3, "Ração", "Carolina estava com um apetite e tanto", &cuidFernanda, "Carolina");
   Alimentacao peixesTony(10, "Peixes", "Tony comeu um pouco da comida do Bobby", &cuidAna, "Tony");
 
   //Comida
   //Bobby
-  Ursidae* ursidaeBobby = dynamic_cast<Ursidae*>(ursidaeBobbyAnimal);
-  ursidaeBobby->calcula_peixes_consumidos(peixesBobby.getPorcao());
+  int kgPeixeBobby = peixesBobby.getPorcao() * ursidaeTony.getPeixesPorPorcao();
   //Outros
   herpestidaeCatita.kgConsumidosDeRacao(racaoCatita.getPorcao());
   herpestidaeCarolina.kgConsumidosDeRacao(racaoCarolina.getPorcao());
@@ -69,7 +68,7 @@ int main()
   cout << "Kg consumidos: " << to_string(herpestidaeCatita.getRacaoConsumida() + herpestidaeCarolina.getRacaoConsumida()) <<endl;
 
   cout << "\nTipo de comida: " << "Peixe" << endl;
-  cout << "Kg consumidos: " << to_string(ursidaeBobby->getKgPeixePorDia() + ursidaeTony.getKgPeixePorDia()) <<endl;
+  cout << "Kg consumidos: " << to_string(kgPeixeBobby + ursidaeTony.getKgPeixePorDia()) <<endl;
 
   delete ursidaeBobbyAnimal;
 

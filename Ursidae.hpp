@@ -9,15 +9,15 @@ using namespace std;
 
 class Ursidae : public Animal {
     private:
-        string _familia = "Ursidae";
+        const string _FAMILIA = "Ursidae";
         string _especie;
-        int _kgPeixePorDia;
-        static int const PEIXES_POR_PORCAO;
+        double _kgPeixePorDia = 0;
+        static double const PEIXES_POR_PORCAO;
 
     public:
         Ursidae (int idade, string nome, string especie, double kgPeixePorDia);
         void print() override;
-        void calcula_peixes_consumidos(int porcaoPeixes);
+        void calcula_peixes_consumidos(double porcaoPeixes);
         int getKgPeixePorDia();
         int getPeixesPorPorcao();
 };

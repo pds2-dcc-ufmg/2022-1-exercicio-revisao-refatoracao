@@ -17,7 +17,8 @@ ANIMAL
         - Atributos colocados como privado
         - Transformação do atributo "idade" em int
     Métodos
-        - Criação de um construtor
+        - Criação de um construtor com somente "idade" e "nome" (inicializar nas classes filha)
+        - Criação de um construtor padrão
         - Remoção do método "print_oi"
         - Método "print" virtual
         - Criação de getters para "nome" e "idade"

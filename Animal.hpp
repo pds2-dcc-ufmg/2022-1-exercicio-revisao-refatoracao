@@ -13,6 +13,7 @@ class Animal {
         string _nome;
 
     public:
+        Animal(int idade, string nome);
         Animal(int idade, string familia, string nome);
         virtual void print();
         string getNome();
