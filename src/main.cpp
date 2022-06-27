@@ -10,8 +10,8 @@ using namespace std;
 int main()
 {
   //Animais
-  Animal* ursidaeBobbyAnimal = new Animal(13, "Ursidae", "Bobby");
-  ursidaeBobbyAnimal->print();
+  Animal ursidaeBobbyAnimal(13, "Ursidae", "Bobby");
+  ursidaeBobbyAnimal.print();
 
   Animal ursidaeJorgeAnimal(1, "Ursidae", "Jorge");
   ursidaeJorgeAnimal.print();
@@ -69,8 +69,6 @@ int main()
 
   cout << "\nTipo de comida: " << "Peixe" << endl;
   cout << "Kg consumidos: " << to_string(kgPeixeBobby + ursidaeTony.getKgPeixePorDia()) <<endl;
-
-  delete ursidaeBobbyAnimal;
 
   return 0;
 }

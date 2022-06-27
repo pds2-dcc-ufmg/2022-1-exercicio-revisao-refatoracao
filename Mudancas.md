@@ -1,3 +1,5 @@
+Criado um arquivo Makefile e separados os arquivos em suas respectivas pastas
+
 MAIN
     Organização
         - Identação
@@ -5,8 +7,6 @@ MAIN
         - Alteração do nome dos objetos tipo "Ursidae" e "Herpestidae" para o padrão "espécie""Nome" + instanciação por construtores
         - Alteração do nome dos objetos tipo "Cuidador" para o padrão cuid"Nome" + instanciação por construtores
         - Alteração do nome dos objetos tipo "Alimentacao" para o padrão "comida""NomeAnimal" + instanciação por construtores
-    Lógica
-        - Tipo Animal com nome "Bobby" será administrado dinamicamente, e haverá um cast para Ursidae
 
 ANIMAL
     Organização
