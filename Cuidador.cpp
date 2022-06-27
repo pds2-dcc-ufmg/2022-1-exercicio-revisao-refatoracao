@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Cuidador::Cuidador(string _nome, int _cpf, string _telefone, string _nascimento, string _salario){
+Cuidador::Cuidador(string _nome, long int _cpf, string _telefone, string _nascimento, string _salario){
 	this->nome = _nome;
 	this->cpf = _cpf;
 	this->telefone = _telefone;
@@ -13,7 +13,7 @@ Cuidador::Cuidador(string _nome, int _cpf, string _telefone, string _nascimento,
 }
 
 void Cuidador::print(){
-	cout << "[Cuidador]" << endl
+	cout << "\n[Cuidador]" << endl
     << "  Nome: " << nome << endl
 	<< "  CPF: " << cpf << endl
 	<< "  Telefone: " << telefone << endl

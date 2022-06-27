@@ -17,7 +17,7 @@ class Cuidador{
 
 		//Inicializa um cuidador atribuindo os valores a ele
 		Cuidador();
-		Cuidador(string _nome, int _cpf, string _telefone, string _nascimento, string _salario);
+		Cuidador(string _nome, long int _cpf, string _telefone, string _nascimento, string _salario);
 
 		//Imprime na tela os dados de um cuidador cadastrado
 		void print();

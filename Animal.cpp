@@ -1,6 +1,15 @@
 #include "Animal.hpp"
 #include <iostream>
 
+Animal::Animal(){
+    this->nome = "NULL";
+    this->idade = -1;
+}
+
+Animal::Animal(string _nome, int _idade){
+    this->nome = nome;
+    this->idade = idade;
+}
 
 void Animal::print() {
     cout << "\n[Animal]" << endl
