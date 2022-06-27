@@ -2,19 +2,22 @@
 #define Cuidador_H
 
 #include <string>
-using namespace std;
+#include <iostream>
 
 class Cuidador{
 
-	public:
+	private:
 
-    string salario;
-		string NOME;
-		string cpf;
-		string Telefone;
-		string BIRTH;
+    std::string _salario ;
+		std::string _nome ;
+		std::string _cpf ;
+		std::string _telefone ;
+		std::string _dataNascimento ;
 
-		void print(); // imprime na tela os dados de um cliente cadastrado
+  public:
+
+    void SetAtributos ( std::string chave, std::string valor ) ;
+    std::string GetNome () ;
 
 };
 

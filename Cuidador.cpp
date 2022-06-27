@@ -1,14 +1,27 @@
-#include <iostream>
-#include <string>
 #include "Cuidador.hpp"
 
-void Cuidador::print(){
+void Cuidador::SetAtributos ( std::string chave, std::string valor ) {
 
-	std::cout << "[Cuidador]" << endl
-         << "  Nome: " << NOME << endl
-		 << "  CPF: " << cpf << endl
-		<< "  Telefone: " << Telefone << endl
-		 << "  Nascimento: " << BIRTH << endl;
-
+  if( chave == "salario" ){
+      this->_salario = valor ;
+    
+  }else if( chave == "nome"){
+      this->_nome = valor ;
+    
+  }else if( chave == "cpf"){
+      this->_cpf = valor ;
+    
+  }else if( chave == "telefone" ){
+      this->_telefone = valor ;
+     
+  }else if( chave == "dataNascimento"){
+      this->_dataNascimento = valor ;
+    
+  }
+  
 }
 
+std::string Cuidador::GetNome () {
+   return this->_nome;
+  
+}

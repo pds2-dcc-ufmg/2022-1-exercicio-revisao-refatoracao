@@ -3,31 +3,20 @@
 
 #include <iostream>
 #include <iomanip>
+#include "Animal.hpp"
 
-using namespace std;
+class Ursidae : public Animal { 
 
-int peixesPorPORCAO = 5;
+    private:
 
-class Ursidae {
+        std::string _especie;
+        double _KgPeixePorDiA;
+
     public:
 
-        int IDADE;
-        string nome;
-        string especie;
-        double kgPeixePorDIA;
-
-        void print() {
-            cout << "\n[Animal]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  Família: Ursidae" << endl
-              << "  Especie: " << especie << endl;
-        }
-
-        double calcula_PEIXES_CONSUMIDOS(int porcaoPeixes){
-            double x;
-            return peixesPorPORCAO*porcaoPeixes;
-        }
+        Ursidae( Animal Ursidae, std::string especie, double KgPeixePorDiA) ;
+        virtual void print() override ;
+        virtual double PorcaoConsumida ( double porcao ) override ;
 
 };
 
