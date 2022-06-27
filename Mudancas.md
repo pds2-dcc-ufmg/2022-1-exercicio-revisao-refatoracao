@@ -64,6 +64,7 @@ CUIDADOR
 
 ALIMENTACAO
     Organização
+        - Alteração do nome do ifndef/define
         - Identação/melhor separação de atributos e métodos
         - Inclusão da biblioteca <iostream>
     Atributos

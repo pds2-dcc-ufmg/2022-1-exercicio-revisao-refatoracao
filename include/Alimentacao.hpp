@@ -1,5 +1,5 @@
-#ifndef VENDA_HPP
-#define VENDA_HPP
+#ifndef ALIMENTACAO_HPP
+#define ALIMENTACAO_HPP
 
 #include <iostream>
 #include "Cuidador.hpp"
