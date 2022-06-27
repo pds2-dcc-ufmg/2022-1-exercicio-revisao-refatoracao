@@ -19,6 +19,7 @@ class Animal {
         virtual void SetAtributos ( std::string chave, std::string valor ) ;
         virtual double PorcaoConsumida ( double porcao ) ;
 
+
 };
 
 #endif
