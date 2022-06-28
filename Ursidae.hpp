@@ -6,30 +6,30 @@
 
 using namespace std;
 
-int peixesPorPORCAO = 5;
+int peixesPorPorcao = 5;
 
-class Ursidae {
-    public:
+class Ursidae
+{
+public:
+    int idade;
+    string nome;
+    string especie;
+    double kgPeixePorDia;
 
-        int IDADE;
-        string nome;
-        string especie;
-        double kgPeixePorDIA;
+    void print()
+    {
+        cout << "\n[Animal]" << endl
+             << "  Nome: " << nome << endl
+             << "  Idade: " << idade << endl
+             << "  Família: Ursidae" << endl
+             << "  Especie: " << especie << endl;
+    }
 
-        void print() {
-            cout << "\n[Animal]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  Família: Ursidae" << endl
-              << "  Especie: " << especie << endl;
-        }
-
-        double calcula_PEIXES_CONSUMIDOS(int porcaoPeixes){
-            double x;
-            return peixesPorPORCAO*porcaoPeixes;
-        }
-
+    double calculaPeixesConsumidos(int porcaoPeixes)
+    {
+        double x;
+        return peixesPorPorcao * porcaoPeixes;
+    }
 };
 
 #endif
-
