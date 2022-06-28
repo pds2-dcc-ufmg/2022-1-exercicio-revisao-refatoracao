@@ -1,7 +1,7 @@
 #ifndef CUIDADOR_H
 #define CUIDADOR_H
 
-#include <string>
+#include <iostream>
 
 class Cuidador {
  private:
