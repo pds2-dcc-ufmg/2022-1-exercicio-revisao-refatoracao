@@ -1,28 +1,26 @@
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef ANIMAL_H
+#define ANIMAL_H
 
 #include <iostream>
-#include <iomanip>
 
-using namespace std;
+#include "Cuidador.hpp"
 
 class Animal {
-    public:
-        string IDADE;
-        string family;
-        string nome;
+ private:
+  std::string idade, familia, nome, comida, descricao, nomeCuidador;
+  int porcao;
 
-        void print() {
-            cout << "\n[Animal]" << endl
-            << "  Nome: " << nome << endl
+ public:
+  Animal(std::string _idade, std::string _familia, std::string _nome);
+  void setAlimentacaoInfo(std::string _comida, std::string _descricao,
+                          std::string _nomeCuidador, int _porcao);
+  int getPorcao();
+  std::string getNome();
+  std::string getNomeCuidador();
+  std::string getDescricao();
 
-              << "  Idade: " << IDADE << endl
-            << "  Familia: " << family << endl;
-        }
-
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+  // Printa informações de determinado animal, não determinando sua espécie.
+  virtual void infoAnimal();
 };
 
 #endif
