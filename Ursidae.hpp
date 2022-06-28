@@ -21,7 +21,7 @@ public:
         cout << "\n[Animal]" << endl
              << "  Nome: " << nome << endl
              << "  Idade: " << idade << endl
-             << "  Família: Ursidae" << endl
+             << "  Familia: Ursidae" << endl
              << "  Especie: " << especie << endl;
     }
 

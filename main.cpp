@@ -30,7 +30,7 @@ int main()
 
   Animal animal4;
   animal4.familia = "Ursidae";
-  animal4.nome = "Felício";
+  animal4.nome = "Felicio";
   animal4.idade = "3";
   animal4.print();
 
@@ -92,7 +92,7 @@ int main()
   Alimentacao alimentacao1;
   alimentacao1.porcao = 2;
   alimentacao1.comida = "Peixes";
-  alimentacao1.descricao = "Bobby só quis comer 2 porções de peixes hoje";
+  alimentacao1.descricao = "Bobby so quis comer 2 porcoes de peixes hoje";
   alimentacao1.cuid = cuidador1;
   alimentacao1.nomeAnimal = "Bobby";
   kgPeixeConsumidos01 = 5 * 2;
@@ -124,7 +124,7 @@ int main()
   kgPeixeConsumidos03 =
       tony.calculaPeixesConsumidos(10);
 
-  cout << " \n \n--------------------------------\n\nRelatorio das alimentações \n"
+  cout << " \n \n--------------------------------\n\nRelatorio das alimentacoes \n"
        << endl;
 
   alimentacao1.print();
@@ -146,7 +146,7 @@ int main()
   cout << " \n \n--------------------------------\n\nRelatorio de kg de comida gastos \n"
        << endl;
   cout << "Tipo de comida: "
-       << "Ração" << endl;
+       << "Racao" << endl;
   cout << "Kg consumidos: " << kgRacaoConsumidos01 + kgRacaoConsumidos02 << endl;
 
   cout << "\nTipo de comida: "
