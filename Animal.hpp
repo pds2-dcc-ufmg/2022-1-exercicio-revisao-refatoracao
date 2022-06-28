@@ -6,23 +6,17 @@
 
 using namespace std;
 
-class Animal {
+class Animal{
+    private:
+    int idade;
+    string familia;
+    string nome;
+    
     public:
-        string IDADE;
-        string family;
-        string nome;
-
-        void print() {
-            cout << "\n[Animal]" << endl
-            << "  Nome: " << nome << endl
-
-              << "  Idade: " << IDADE << endl
-            << "  Familia: " << family << endl;
-        }
-
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+    Animal(int _idade, string _familia, string _nome);
+    virtual void print() = 0;
+    int getIdade();
+    string getFamilia();
+    string getNome();
 };
-
 #endif
