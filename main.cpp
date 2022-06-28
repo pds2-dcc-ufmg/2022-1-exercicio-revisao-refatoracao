@@ -1,17 +1,35 @@
-#include <iostream>
-
-#include "Animal.hpp"
 #include "Herpestidae.hpp"
 #include "Ursidae.hpp"
-#include "Cuidador.hpp"
-#include "Alimentacao.hpp"
+
 using namespace std;
 
-int main()
-{
+int main(){
 
-    Animal animal1;
-    animal1.family = "Ursidae";
+    Cuidador* cuid01 = new Cuidador("Ana Maria Rodrigues Lopes", 1234567799, "10/10/2000", "(31) 99876-6923", "R$ 3000");
+    Cuidador* cuid02 = new Cuidador("Fernanda Silva Santos", 9472567121, "08/02/1995", "(31) 99123-8970", "R$ 4000");
+    Alimentacao* alimentacao01 = new Alimentacao(2, "Peixes", "Bobby só quis comer 2 porções de peixes hoje");
+    Alimentacao* alimentacao02 = new Alimentacao(1, "Ração especial", "Catita comeu direitinho");
+    Alimentacao* alimentacao03 = new Alimentacao(3, "Ração", "Carolina estava com um apetite e tanto");
+    Alimentacao* alimentacao04 = new Alimentacao(10, "Peixes", "Tony comeu um pouco da comida do Bobby");
+
+    Ursidae animal01("Bobby", 13, "", *alimentacao01, *cuid01); //conferir deferencia!!!
+    Ursidae animal02("Jorge", 1, "", *alimentacao02, *cuid02); //jorge nao tem cuidador nem alimentacao!!
+    Herpestidae animal03("Bonina", 7, "", *alimentacao01, *cuid01); //tambem nao tem cuidador nem alimentacao!!
+    Ursidae animal04("Felício", 3, "", *alimentacao01, *cuid01); // tambem nao tem cuidador nem alimentacao!!
+    Ursidae animal05("Tony", 9, "Urso Pardo", *alimentacao04, *cuid01);
+
+Herpestidae(string nome, int idade, string especie, Alimentacao& alimentacao, Cuidador& cuidador)
+Ursidae(string nome, int idade, string especie, Alimentacao& alimentacao, Cuidador& cuidador)
+
+  
+string _nome;
+        int _idade;
+        string _familia;
+        string _especie;
+        Alimentacao* _alimentacao;
+        Cuidador* _cuidador;
+
+ /*   animal1.family = "Ursidae";
     animal1.nome ="Bobby";
 	animal1.IDADE = "13";
     animal1.print();
@@ -32,7 +50,7 @@ double kgPeixeConsumidos01 = 0;
     animal4.family = "Ursidae";
     animal4.nome ="Felício";
 	animal4.IDADE = "3";
-    animal4.print();
+    animal4.print();*/
 
 
 
@@ -77,7 +95,7 @@ double kgPeixeConsumidos05 = 0;
 double kgRacaoConsumidos01 = 0;
 double kgRacaoConsumidos02 = 0;
 double kgRacaoConsumidos03 = 0;
-  
+/*  
   Cuidador cuid01;
   cuid01.NOME = "Ana Maria Rodrigues Lopes";
 	cuid01.cpf = "1234567799";
@@ -92,13 +110,15 @@ double kgRacaoConsumidos03 = 0;
 	cuid2.BIRTH = "08/02/1995";
 
 cuid2.salario = "R$ 4000";
+
     Alimentacao v01;
     v01.porcao= 2;
     v01.comida = "Peixes";
     v01.descricao = "Bobby só quis comer 2 porções de peixes hoje";
     v01.cuid = cuid01;
     v01.nomeAnimal = "Bobby";
-    kgPeixeConsumidos01 = 5*2;
+    kgPeixeConsumidos01 = 5*2;p
+
     Alimentacao v02;
     v02.porcao= 1;
     v02.comida = "Ração especial";
@@ -125,8 +145,7 @@ cuid2.salario = "R$ 4000";
     v03.comida = "Ração";
 kgPeixeConsumidos03 = 
   e02.calcula_PEIXES_CONSUMIDOS(10);
-
-
+*/
 
     cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << endl;
 

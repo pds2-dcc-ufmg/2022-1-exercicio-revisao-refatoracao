@@ -1,10 +1,12 @@
 #include "Animal.hpp"
 
-Animal::Animal(string nome, string familia, string especie, int idade){
+Animal::Animal(string nome, int idade, string familia, string especie, Alimentacao& alimentacao, Cuidador& cuidador){
     this->_nome = nome;
     this->_familia = familia;
     this->_especie = especie;
     this->_idade = idade;
+    this->_alimentacao = alimentacao;
+    this->_cuidador = cuidador;
 }
 
 void Animal::printInformacoesAnimal(){
@@ -15,4 +17,8 @@ void Animal::printInformacoesAnimal(){
     if(this->_especie != ""){
         cout<<"  Especie: "<<this->_especie<<endl;
     }
+}
+
+void Animal::printAlimentacao(){
+    cout<<"Animal: "<<this->_nome<<"\n Cuidador: "<<this->_cuidador->getNome()<<"\n Descricao: "<<this->_alimentacao->getDescricao()<<endl<<"\n";
 }

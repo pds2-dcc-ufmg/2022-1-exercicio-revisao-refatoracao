@@ -7,17 +7,15 @@
 
 using namespace std;
 
-int peixesPorPORCAO = 5;
 
 class Ursidae : public Animal {
     private:
-        double kgPeixePorDIA;
-        
+        double _consumoDePeixe;
+        const int _PEIXESPORPORCAO = 5;
     public:
-        double calcula_PEIXES_CONSUMIDOS(int porcaoPeixes){
-            double x;
-            return peixesPorPORCAO*porcaoPeixes;
-        }
+        Ursidae(string nome, int idade, string especie, Alimentacao& alimentacao, Cuidador& cuidador);
+
+        virtual void calculaConsumo() override;
 };
 
 #endif

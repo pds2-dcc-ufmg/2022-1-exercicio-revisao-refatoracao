@@ -5,15 +5,13 @@
 
 using namespace std;
 
-double quantPORCAO = 1;
-
-
 class Herpestidae : public Animal {
+    private:
+        const int _RACAOPORPORCAO = 1;
+        int _consumoDeRacao;
     public:
-        double kgConsumidosDeRacao(int porcoesConsumidas) {
-            double c = quantPORCAO*porcoesConsumidas;
-                    return c;
-        }
+        Herpestidae(string nome, int idade, string especie, Alimentacao& alimentacao, Cuidador& cuidador);
+        virtual void calculaConsumo() override;
 };
 
 #endif
