@@ -4,25 +4,20 @@
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
 
 class Animal {
-    public:
-        string IDADE;
-        string family;
-        string nome;
+    privite:
+        int idade;
+        std::string familia;
+       std:: string nome;
 
         void print() {
-            cout << "\n[Animal]" << endl
-            << "  Nome: " << nome << endl
-
-              << "  Idade: " << IDADE << endl
-            << "  Familia: " << family << endl;
+         std::cout << "\n[Animal]" << std::endl
+         << "  Nome: " << nome << std::endl
+         << "  Idade: " << IDADE << std::endl
+         << "  Familia: " << family << std::endl;
         }
 
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
 };
 
 #endif
