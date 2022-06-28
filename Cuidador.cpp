@@ -1,14 +1,13 @@
-#include <iostream>
-#include <string>
 #include "Cuidador.hpp"
 
-void Cuidador::print(){
+#include <iostream>
 
-	std::cout << "[Cuidador]" << endl
-         << "  Nome: " << NOME << endl
-		 << "  CPF: " << cpf << endl
-		<< "  Telefone: " << Telefone << endl
-		 << "  Nascimento: " << BIRTH << endl;
+Cuidador::Cuidador(std::string _salario, std::string _nome, std::string _cpf,
+                   std::string _telefone, std::string _aniversario)
+    : salario(_salario),
+      nome(_nome),
+      cpf(_cpf),
+      telefone(_telefone),
+      aniversario(_aniversario) {}
 
-}
-
+std::string Cuidador::getNome() { return this->nome; }
