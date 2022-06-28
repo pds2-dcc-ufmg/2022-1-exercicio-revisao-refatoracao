@@ -1,41 +1,30 @@
+#ifndef ALIMENTACAO_H
+#define ALIMENTACAO_H
 
-#ifndef VENDA_HPP
-#define VENDA_HPP
+#include <vector>
 
-#include "Cuidador.hpp"
+#include "Animal.hpp"
 
-using namespace std;
+class Alimentacao {
+ private:
+  std::vector<Animal> listaAnimais;
+  int kgPeixeConsumidos, kgRacaoConsumidos, peixesPorPorcao, racaoPorPorcao;
 
-class Alimentacao{
+ public:
+  Alimentacao();
 
-    public:
-    int porcao;
-    string comida;
-    string descricao;
-    Cuidador cuid;
-    string nomeAnimal;
+  // Printa informações sobre a alimentação dos animais, incluindo nome do
+  // animal, cuidador do animal e uma descrição sobre sua alimentação.
+  virtual void infoAlimentacao();
 
+  // Durante o calculo de consumo, os animais que consumiram algum tipo de
+  // alimento são inseridos na lista de alimentação automaticamente.
+  void calculoRacaoConsumida(Animal animal);
+  void calculoPeixesConsumidos(Animal animal);
 
-    void print() {
-
-        std::cout << "Animal: ";
-        cout << nomeAnimal << "\n";
-
-        std::cout << " Cuidador: ";
-        cout << cuid.NOME << "\n";
-
-        //std::cout << " : ";
-        //cout << ursidae;
-    }
-
-    /*void print() {
-
-        std::cout << "Cuidador: ";
-        cout << cuida;
-
-        std::cout << " Animal: ";
-        cout << alimentado;
-    }*/
+  // Produz um relatório sobre as quantidades consumidas de peixe e ração em um
+  // dia pelos animais.
+  void relatorioFinal();
 };
 
 #endif
