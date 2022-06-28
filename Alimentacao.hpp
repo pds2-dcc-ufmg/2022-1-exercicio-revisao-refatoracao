@@ -6,36 +6,25 @@
 
 using namespace std;
 
-class Alimentacao{
+class Alimentacao
+{
 
-    public:
+public:
     int porcao;
     string comida;
     string descricao;
     Cuidador cuid;
     string nomeAnimal;
 
+    void print()
+    {
 
-    void print() {
-
-        std::cout << "Animal: ";
+        cout << "Animal: ";
         cout << nomeAnimal << "\n";
 
-        std::cout << " Cuidador: ";
-        cout << cuid.NOME << "\n";
-
-        //std::cout << " : ";
-        //cout << ursidae;
+        cout << " Cuidador: ";
+        cout << cuid.nome << "\n";
     }
-
-    /*void print() {
-
-        std::cout << "Cuidador: ";
-        cout << cuida;
-
-        std::cout << " Animal: ";
-        cout << alimentado;
-    }*/
 };
 
 #endif
