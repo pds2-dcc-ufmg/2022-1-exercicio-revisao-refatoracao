@@ -7,7 +7,7 @@
 
 class Animal {
 
-    private:
+    protected:
         int idade;
         std::string familia;
         std::string nome;

@@ -4,19 +4,22 @@
 #include <iostream>
 #include <iomanip>
 
+#include "Animal.hpp"
+
 int peixesPorPorcao = 5;
 
-class Ursidae {
+class Ursidae : public Animal {
 
     private:
-        int idade;
-        std::string nome;
         std::string especie;
-        double kgPeixePorDia;
+        double kg_peixe_por_dia;
+        int peixes_por_porcao;
 
     
     public:
-        void print();
+        Ursidae(std::string _especie, double _kg_peixe_por_dia, int _idade, std::string _familia, std::string _nome);
+
+        virtual void print() override;
         double peixes_consumidos(int porcaoPeixes);
 
 };
