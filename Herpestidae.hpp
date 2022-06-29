@@ -1,35 +1,30 @@
-#ifndef Herpestidae_HPP
-#define Herpestidae_HPP
+#ifndef HERPESTIDAE_HPP
+#define HERPESTIDAE_HPP
 
-#include "Animal.hpp"
+#include<iomanip>
+#include<sstream>
+#include<string>
+#include<sstream>
+#include"Animal.hpp"
 
-using namespace std;
-
-double quantPORCAO = 1;
-
+using std::string;
 
 class Herpestidae : public Animal {
 
-    public:
+    private:
+    double kgPorPorcao;
+    string especie;
 
     public:
-  string species;
 
-    double kgConsumidosDeRacao(int porcoesConsumidas) {
-        double c = quantPORCAO*porcoesConsumidas;
-                  return c;
-    }
+    Herpestidae(int _idade, string _familia, string _nome, string _especie, double _kgPorPorcao);
 
+    Herpestidae();
 
-    void print() {
+    ~Herpestidae();
+    
+    double kgConsumidosDeRacao(int porcoesConsumidas);
 
-        Animal::print();
-
-
-
-        std::cout << "  Especie: " << species <<endl;
-
-    }
 };
 
 #endif
