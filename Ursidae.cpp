@@ -11,5 +11,5 @@ void Ursidae::print()
 
 double Ursidae::peixes_consumidos(int porcaoPeixes)
 {
-    return peixesPorPorcao * porcaoPeixes;
+    return peixes_por_porcao * porcaoPeixes;
 }

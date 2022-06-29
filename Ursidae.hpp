@@ -6,7 +6,6 @@
 
 #include "Animal.hpp"
 
-int peixesPorPorcao = 5;
 
 class Ursidae : public Animal {
 
