@@ -1,5 +1,5 @@
-#ifndef ursidae_HPP
-#define ursidae_HPP
+#ifndef URSIDAE_H
+#define URSIDAE_H
 
 #include <iostream>
 #include <iomanip>
@@ -16,19 +16,8 @@ class Ursidae {
 
     
     public:
-
-        void print() {
-            std::cout << "\n[Animal]" << std::endl
-                    << "  Nome: " << nome << std::endl
-                    << "  Idade: " << idade << std::endl
-                    << "  Família: Ursidae" << std::endl
-                    << "  Especie: " << especie << std::endl;
-        }
-
-        double peixesConsumidos(int porcaoPeixes){
-            double x;
-            return peixesPorPorcao * porcaoPeixes;
-        }
+        void print();
+        double peixesConsumidos(int porcaoPeixes);
 
 };
 
