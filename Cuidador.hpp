@@ -7,15 +7,25 @@ using namespace std;
 
 class Cuidador
 {
-
 public:
-	string salario;
-	string NOME;
-	string cpf;
-	string Telefone;
-	string BIRTH;
+	void setSalario(std::string);
+	float setSalario();
+	void setNome(std::string);
+	std::string getNome();
+	void setCpf(std::string);
+	std::string getCpf();
+	void setTelefone(std::string);
+	std::string getTelefone();
+	void setBirth(std::string);
+	std::string getBirth();
+	void print();
 
-	void print(); // imprime na tela os dados de um cliente cadastrado
+private:
+	float salario;
+	std::string NOME;
+	std::string cpf;
+	std::string Telefone;
+	std::string BIRTH;
 };
 
 #endif
