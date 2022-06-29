@@ -1,15 +1,8 @@
-#ifndef Herpestidae_HPP
-#define Herpestidae_HPP
+#ifndef HERPESTIDAE_HPP
+#define HERPESTIDAE_HPP
 
 #include "Animal.hpp"
-
-#include <iostream>
-#include <iomanip>
-
-using namespace std;
-
-double quantPORCAO = 1;
-
+#define QTD_PORCAO 1
 class Herpestidae : public Animal
 {
 

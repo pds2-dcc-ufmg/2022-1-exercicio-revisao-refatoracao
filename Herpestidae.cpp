@@ -4,7 +4,7 @@
 
 double Herpestidae::kgConsumidosDeRacao(int porcoesConsumidas)
 {
-  this->kgRacao = quantPORCAO * porcoesConsumidas;
+  this->kgRacao = QTD_PORCAO * porcoesConsumidas;
   return this->kgRacao;
 }
 

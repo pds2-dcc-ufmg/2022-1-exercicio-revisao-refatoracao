@@ -1,11 +1,8 @@
 
-#ifndef VENDA_HPP
-#define VENDA_HPP
+#ifndef ALIMENTACAO_HPP
+#define ALIMENTACAO_HPP
 
 #include "Cuidador.hpp"
-#include <iostream>
-#include <iomanip>
-using namespace std;
 
 class Alimentacao
 {

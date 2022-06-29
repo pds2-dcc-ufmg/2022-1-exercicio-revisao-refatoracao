@@ -1,14 +1,8 @@
-#ifndef ursidae_HPP
-#define ursidae_HPP
-
-#include <iostream>
-#include <iomanip>
+#ifndef URSIDAE_HPP
+#define URSIDAE_HPP
+#define PEIXES_POR_PORCAO 5
 
 #include "Animal.hpp"
-
-using namespace std;
-
-int peixesPorPORCAO = 5;
 
 class Ursidae : public Animal
 {

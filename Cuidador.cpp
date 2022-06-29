@@ -42,14 +42,14 @@ string Cuidador::getTelefone()
 	return this->telefone;
 }
 
-void Cuidador::setBirth(std::string _birth)
+void Cuidador::setAniversario(std::string _aniversario)
 {
-	this->birth = _birth;
+	this->aniversario = _aniversario;
 }
 
-string Cuidador::getBirth()
+string Cuidador::getAniversario()
 {
-	return this->birth;
+	return this->aniversario;
 }
 
 void Cuidador::print()
@@ -60,5 +60,5 @@ void Cuidador::print()
 						<< "  Nome: " << nome << endl
 						<< "  CPF: " << cpf << endl
 						<< "  Telefone: " << telefone << endl
-						<< "  Nascimento: " << birth << endl;
+						<< "  Nascimento: " << aniversario << endl;
 }

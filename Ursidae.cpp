@@ -9,6 +9,6 @@ void Ursidae::print()
 
 double Ursidae::calcula_PEIXES_CONSUMIDOS(int porcaoPeixes)
 {
-  this->kgPeixePorDIA = peixesPorPORCAO * porcaoPeixes;
+  this->kgPeixePorDIA = PEIXES_POR_PORCAO * porcaoPeixes;
   return this->kgPeixePorDIA;
 }

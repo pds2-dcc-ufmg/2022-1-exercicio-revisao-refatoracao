@@ -1,5 +1,5 @@
-#ifndef Cuidador_H
-#define Cuidador_H
+#ifndef CUIDADOR_H
+#define CUIDADOR_H
 
 #include <string>
 #include <iomanip>
@@ -16,8 +16,8 @@ public:
 	std::string getCpf();
 	void setTelefone(std::string);
 	std::string getTelefone();
-	void setBirth(std::string);
-	std::string getBirth();
+	void setAniversario(std::string);
+	std::string getAniversario();
 	void print();
 
 private:
@@ -25,7 +25,7 @@ private:
 	std::string nome;
 	std::string cpf;
 	std::string telefone;
-	std::string birth;
+	std::string aniversario;
 };
 
 #endif
