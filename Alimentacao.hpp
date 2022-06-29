@@ -15,6 +15,8 @@ class Alimentacao {
         Animal animal;
 
     public:
+        Alimentacao(int _porcao, std::string _comida, std::string _descricao, Cuidador _cuidador, Animal _animal);
+
         void print();
 };
 
