@@ -3,16 +3,18 @@
 
 #include "Animal.hpp"
 
-double qtd_porcoes = 1;
 
 class Herpestidae : public Animal 
 {
     private:
         std::string especie;
+        int qtd_porcoes;
 
     public:
+        Herpestidae(std::string _especie, int _idade, std::string _familia, std::string _nome);
+
         double racao_consumida(int porcoes_consumidas);
-        void print();
+        virtual void print() override;
 };
 
 #endif
