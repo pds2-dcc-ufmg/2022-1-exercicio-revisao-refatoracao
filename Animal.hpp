@@ -15,6 +15,7 @@ class Animal {
     public:
         void print();
         void print_tchau();
+        std::string get_nome();
 };
 
 #endif

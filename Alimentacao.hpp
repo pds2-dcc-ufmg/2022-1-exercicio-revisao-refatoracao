@@ -2,6 +2,7 @@
 #define ALIMENTACAO_HPP
 
 #include "Cuidador.hpp"
+#include "Animal.hpp"
 
 
 class Alimentacao {
@@ -11,7 +12,7 @@ class Alimentacao {
         std::string comida;
         std::string descricao;
         Cuidador cuidador;
-        std::string nome_animal;
+        Animal animal;
 
     public:
         void print();

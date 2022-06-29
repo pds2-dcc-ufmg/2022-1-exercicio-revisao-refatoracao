@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 #include "Animal.hpp"
 
@@ -13,4 +14,9 @@ void Animal::print()
 void Animal::print_tchau()
 {
     std::cout << "Tchau" << std::endl;
+}
+
+std::string Animal::get_nome()
+{
+    return nome;
 }
