@@ -2,6 +2,16 @@
 #include <string>
 #include "Cuidador.hpp"
 
+void Cuidador::setSalario(std::string _salario)
+{
+	this->salario = _salario;
+}
+
+string Cuidador::getSalario()
+{
+	return this->salario;
+}
+
 void Cuidador::setNome(std::string _nome)
 {
 	this->NOME = _nome;

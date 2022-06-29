@@ -14,8 +14,8 @@ public:
     virtual void print();
     void setPorcao(int);
     double getPorcao();
-    void setVendedor(Cuidador);
-    Cuidador getVendedor();
+    void setCuidador(Cuidador);
+    Cuidador getCuidador();
     void setComida(std::string);
     std::string getComida();
     void setDescricao(std::string);
@@ -29,8 +29,6 @@ private:
     std::string descricao;
     Cuidador cuid;
     std::string nomeAnimal;
-
-    void print();
 };
 
 #endif

@@ -29,6 +29,16 @@ std::string Alimentacao::getNomeAnimal()
 {
   return this->nomeAnimal;
 }
+
+void Alimentacao::setCuidador(Cuidador _cuid)
+{
+  this->cuid = _cuid;
+}
+
+Cuidador Alimentacao::getCuidador()
+{
+  return this->cuid;
+}
 void Alimentacao::print()
 {
   std::cout << "[Cuidador]" << std::endl;

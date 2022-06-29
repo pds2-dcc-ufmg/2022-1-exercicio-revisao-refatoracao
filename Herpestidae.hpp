@@ -19,10 +19,10 @@ public:
     std::string getEspecie();
     void setkgRacao(double);
     double getkgRacao();
+    double kgConsumidosDeRacao(int porcoesConsumidas);
 
 private:
     std::string species;
-    double kgConsumidosDeRacao(int porcoesConsumidas);
 };
 
 #endif

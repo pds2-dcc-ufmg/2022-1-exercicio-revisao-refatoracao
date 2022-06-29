@@ -9,7 +9,7 @@ class Cuidador
 {
 public:
 	void setSalario(std::string);
-	float setSalario();
+	std::string getSalario();
 	void setNome(std::string);
 	std::string getNome();
 	void setCpf(std::string);
@@ -21,7 +21,7 @@ public:
 	void print();
 
 private:
-	float salario;
+	std::string salario;
 	std::string NOME;
 	std::string cpf;
 	std::string Telefone;
