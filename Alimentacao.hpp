@@ -11,7 +11,7 @@ class Alimentacao
 {
 
 public:
-    virtual void print();
+    void print();
     void setPorcao(int);
     double getPorcao();
     void setCuidador(Cuidador);

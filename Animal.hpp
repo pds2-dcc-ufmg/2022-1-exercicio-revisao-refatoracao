@@ -9,7 +9,7 @@ using namespace std;
 class Animal
 {
 public:
-    virtual void print();
+    void print();
     void setIdade(int);
     int getIdade();
     void setFamily(std::string);
