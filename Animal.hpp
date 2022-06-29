@@ -13,16 +13,8 @@ class Animal {
         std::string nome;
     
     public:
-        void print() {
-            cout << "\n[Animal]" << std::endl
-                << "  Nome: " << nome << std::endl
-                << "  Idade: " << idade << std::endl
-                << "  Familia: " << familia << std::endl;
-        }
-
-        void print_tchau() {
-            cout << "Tchau" << endl;
-        }
+        void print();
+        void print_tchau();
 };
 
 #endif
