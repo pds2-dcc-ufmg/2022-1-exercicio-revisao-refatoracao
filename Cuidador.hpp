@@ -1,6 +1,7 @@
-#ifndef Cuidador_H
-#define Cuidador_H
-
+#ifndef CUIDADOR_H
+#define CUIDADOR_H
+#include <iostream>
+#include <iomanip>
 #include <string>
 using namespace std;
 
@@ -9,12 +10,11 @@ class Cuidador{
 	public:
 
     string salario;
-		string NOME;
+		string nome;
 		string cpf;
 		string Telefone;
-		string BIRTH;
-
-		void print(); // imprime na tela os dados de um cliente cadastrado
+		string aniversario;
+		void print(); 
 
 };
 
