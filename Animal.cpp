@@ -5,8 +5,8 @@ Animal::Animal(string nome, int idade, string familia, string especie, Alimentac
     this->_familia = familia;
     this->_especie = especie;
     this->_idade = idade;
-    this->_alimentacao = alimentacao;
-    this->_cuidador = cuidador;
+    this->_alimentacao = &alimentacao;
+    this->_cuidador = &cuidador;
 }
 
 void Animal::printInformacoesAnimal(){
@@ -21,4 +21,8 @@ void Animal::printInformacoesAnimal(){
 
 void Animal::printAlimentacao(){
     cout<<"Animal: "<<this->_nome<<"\n Cuidador: "<<this->_cuidador->getNome()<<"\n Descricao: "<<this->_alimentacao->getDescricao()<<endl<<"\n";
+}
+
+void Animal::calculaConsumo(){
+    int x = 0;
 }

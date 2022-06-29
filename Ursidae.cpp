@@ -7,3 +7,7 @@ Ursidae::Ursidae(string nome, int idade, string especie, Alimentacao& alimentaca
 void Ursidae::calculaConsumo(){
     this->_consumoDePeixe = this->_PEIXESPORPORCAO * this->_alimentacao->getPorcao();
 }
+
+int Ursidae::getConsumo(){
+    return this->_consumoDePeixe;
+}

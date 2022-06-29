@@ -12,6 +12,7 @@ class Herpestidae : public Animal {
     public:
         Herpestidae(string nome, int idade, string especie, Alimentacao& alimentacao, Cuidador& cuidador);
         virtual void calculaConsumo() override;
+        int getConsumo();
 };
 
 #endif
