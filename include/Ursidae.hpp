@@ -1,7 +1,5 @@
-#ifndef ursidae_HPP
-#define ursidae_HPP
-
-#include <iostream>
+#ifndef URSIDAE_HPP
+#define URSIDAE_HPP
 
 #include "Animal.hpp"
 
