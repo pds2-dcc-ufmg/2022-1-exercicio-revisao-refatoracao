@@ -18,12 +18,12 @@ class Animal {
         
     public:
         Animal(string nome, int idade, string familia, string especie, Alimentacao& alimentacao, Cuidador& cuidador);
+        Animal(string nome, int idade, string familia);
+        Animal(string nome, int idade, string familia, string especie);
 
         void printInformacoesAnimal();
 
         void printAlimentacao();
-
-        virtual void calculaConsumo();
 };
 
 #endif

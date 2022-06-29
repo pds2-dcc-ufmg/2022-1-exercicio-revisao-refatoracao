@@ -1,12 +1,12 @@
 #include "Ursidae.hpp"
 
 Ursidae::Ursidae(string nome, int idade, string especie, Alimentacao& alimentacao, Cuidador& cuidador) : Animal(nome, idade, "Ursidae", especie, alimentacao, cuidador){
-    this->_consumoDePeixe = 0;
+    this->_consumoDePeixe = this->_PEIXESPORPORCAO * alimentacao.getPorcao();
 };
 
-void Ursidae::calculaConsumo(){
-    this->_consumoDePeixe = this->_PEIXESPORPORCAO * this->_alimentacao->getPorcao();
-}
+Ursidae::Ursidae(string nome, int idade) : Animal(nome, idade, "Ursidae"){};
+
+Ursidae::Ursidae(string nome, int idade, string especie) : Animal(nome, idade, "Ursidae", especie){};
 
 int Ursidae::getConsumo(){
     return this->_consumoDePeixe;

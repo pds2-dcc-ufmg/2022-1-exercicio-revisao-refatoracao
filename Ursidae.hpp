@@ -14,8 +14,8 @@ class Ursidae : public Animal {
         const int _PEIXESPORPORCAO = 5;
     public:
         Ursidae(string nome, int idade, string especie, Alimentacao& alimentacao, Cuidador& cuidador);
-
-        virtual void calculaConsumo() override;
+        Ursidae(string nome, int idade);
+        Ursidae(string nome, int idade, string especie);
 
         int getConsumo();
 };

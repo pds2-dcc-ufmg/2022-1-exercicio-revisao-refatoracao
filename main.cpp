@@ -12,40 +12,52 @@ int main(){
     Alimentacao* alimentacao03 = new Alimentacao(3, "Ração", "Carolina estava com um apetite e tanto");
     Alimentacao* alimentacao04 = new Alimentacao(10, "Peixes", "Tony comeu um pouco da comida do Bobby");
 
-    Ursidae animal01("Bobby", 13, "", *alimentacao01, *cuid01); //conferir deferencia!!!
+    Ursidae animal01("Bobby", 13, "", *alimentacao01, *cuid01); 
     animal01.printInformacoesAnimal();
-    animal01.calculaConsumo();
-    cout<<animal01.getConsumo()<<endl;
-    
-    Ursidae animal02("Jorge", 1, "", *alimentacao02, *cuid02); //jorge nao tem cuidador nem alimentacao!!
+
+    Ursidae animal02("Jorge", 1);
     animal02.printInformacoesAnimal();
-    Herpestidae animal03("Bonina", 7, "", *alimentacao01, *cuid01); //tambem nao tem cuidador nem alimentacao!!
+
+    Herpestidae animal03("Bonina", 7);
     animal03.printInformacoesAnimal();
-    Ursidae animal04("Felício", 3, "", *alimentacao01, *cuid01); // tambem nao tem cuidador nem alimentacao!!
+
+    Ursidae animal04("Felício", 3);
     animal04.printInformacoesAnimal();
+
     Ursidae animal05("Tony", 9, "Urso Pardo", *alimentacao04, *cuid01);
     animal05.printInformacoesAnimal();
-    animal05.calculaConsumo();
-    Ursidae animal06("Wanda", 10, "Urso Polar",*alimentacao01, *cuid01);
+
+    Ursidae animal06("Wanda", 10, "Urso Polar");
     animal06.printInformacoesAnimal();
+
     Herpestidae animal07("Catita", 2, "Suricato", *alimentacao02, *cuid02);
     animal07.printInformacoesAnimal();
-    animal07.calculaConsumo();
-    Herpestidae animal08("Carolina", 2, "Suricato", *alimentacao03, *cuid02);
-    animal08.calculaConsumo();
-    cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << endl;
 
+    Herpestidae animal08("Carolina", 2, "Suricato", *alimentacao03, *cuid02);
+
+
+    cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << endl;
     animal01.printAlimentacao();
     animal07.printAlimentacao();
     animal08.printAlimentacao();
     animal05.printAlimentacao();
+
     cout <<" \n \n--------------------------------\n\nRelatorio de kg de comida gastos \n" << endl;
     cout << "Tipo de comida: " << "Ração" << endl;
     int quantidadeRacaoConsumida = animal07.getConsumo() + animal08.getConsumo();
     cout << "Kg consumidos: " <<quantidadeRacaoConsumida<<endl;
+    
     cout << "\nTipo de comida: " << "Peixe" << endl;
     int quantidadePeixeConsumido = animal01.getConsumo() + animal05.getConsumo();
     cout << "Kg consumidos: "<<quantidadePeixeConsumido<<endl;
+
+
+    delete cuid01;
+    delete cuid02;
+    delete alimentacao01;
+    delete alimentacao02;
+    delete alimentacao03;
+    delete alimentacao04;
 
 
     return 0;
