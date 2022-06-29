@@ -20,7 +20,7 @@ public:
     void setkgPeixe(double);
     double getkgPeixe();
 
-protected:
+private:
     std::string especie;
     double kgPeixePorDIA;
 };

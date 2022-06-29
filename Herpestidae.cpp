@@ -2,6 +2,16 @@
 #include <string>
 #include "Herpestidae.hpp"
 
+void Herpestidae::setEspecie(std::string _especie)
+{
+  this->species = _especie;
+}
+
+string Herpestidae::getEspecie()
+{
+  return this->species;
+}
+
 double Herpestidae::kgConsumidosDeRacao(int porcoesConsumidas)
 {
   double c = quantPORCAO * porcoesConsumidas;

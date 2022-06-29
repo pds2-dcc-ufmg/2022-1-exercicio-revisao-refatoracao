@@ -17,7 +17,7 @@ public:
     void setNome(std::string);
     std::string getNome();
 
-protected:
+private:
     int IDADE;
     std::string family;
     std::string nome;

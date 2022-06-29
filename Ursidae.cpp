@@ -2,6 +2,16 @@
 #include <string>
 #include "Ursidae.hpp"
 
+void Ursidae::setEspecie(std::string _especie)
+{
+  this->especie = _especie;
+}
+
+string Ursidae::getEspecie()
+{
+  return this->especie;
+}
+
 void Ursidae::setkgPeixe(double _peixe)
 {
   this->kgPeixePorDIA = _peixe;

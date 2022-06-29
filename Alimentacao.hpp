@@ -23,7 +23,7 @@ public:
     void setNomeAnimal(std::string);
     std::string getNomeAnimal();
 
-protected:
+private:
     int porcao;
     std::string comida;
     std::string descricao;
