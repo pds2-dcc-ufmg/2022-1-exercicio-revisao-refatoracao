@@ -16,7 +16,6 @@ class Animal {
         Animal(int _idade, std::string _familia, std::string _nome);
 
         virtual void print();
-        void print_tchau();
         std::string get_nome();
 };
 

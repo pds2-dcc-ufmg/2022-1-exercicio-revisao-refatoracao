@@ -3,6 +3,9 @@
 
 #include "Animal.hpp"
 
+Animal::Animal(int _idade, std::string _familia, std::string _nome) :
+    idade(_idade), familia(_familia), nome(_nome) {}
+
 void Animal::print()
 {
     std::cout << "\n[Animal]" << std::endl
