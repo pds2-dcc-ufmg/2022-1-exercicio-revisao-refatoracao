@@ -16,6 +16,7 @@ class Cuidador{
 	public:
 
 		void print(); // imprime na tela os dados de um cliente cadastrado
+		std::string get_nome();
 
 };
 

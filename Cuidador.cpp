@@ -12,3 +12,7 @@ void Cuidador::print() {
 		<< "  Nascimento: " << aniversario << std::endl;
 }
 
+std::string Cuidador::get_nome() {
+	return nome;
+}
+
