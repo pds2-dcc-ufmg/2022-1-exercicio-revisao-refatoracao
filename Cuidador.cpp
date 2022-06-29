@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <string>
 #include "Cuidador.hpp"
 
@@ -24,7 +25,7 @@ string Cuidador::getNome()
 
 void Cuidador::setCpf(std::string _cpf)
 {
-	this->cpf = cpf;
+	this->cpf = _cpf;
 }
 
 string Cuidador::getCpf()
