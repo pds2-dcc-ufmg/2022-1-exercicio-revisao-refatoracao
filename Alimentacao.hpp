@@ -23,10 +23,6 @@ class Alimentacao{
         void print();
         int getPorcao();
 
-    
-
-       
-        
-};
+ };
 
 #endif
