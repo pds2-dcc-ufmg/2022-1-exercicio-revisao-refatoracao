@@ -11,7 +11,7 @@ class Herpestidae : public Animal
         int qtd_porcoes;
 
     public:
-        Herpestidae(std::string _especie, int _idade, std::string _familia, std::string _nome);
+        Herpestidae(std::string _especie, int _idade, std::string _nome);
 
         double racao_consumida(int porcoes_consumidas);
         virtual void print() override;
