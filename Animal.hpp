@@ -1,26 +1,26 @@
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef ANIMAL_H
+#define ANIMAL_H
 
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
 
 class Animal {
+
+    private:
+        int idade;
+        std::string familia;
+        std::string nome;
+    
     public:
-        string IDADE;
-        string family;
-        string nome;
-
         void print() {
-            cout << "\n[Animal]" << endl
-            << "  Nome: " << nome << endl
-
-              << "  Idade: " << IDADE << endl
-            << "  Familia: " << family << endl;
+            cout << "\n[Animal]" << std::endl
+                << "  Nome: " << nome << std::endl
+                << "  Idade: " << idade << std::endl
+                << "  Familia: " << familia << std::endl;
         }
 
-        void print_oi(){
+        void print_tchau() {
             cout << "Tchau" << endl;
         }
 };
