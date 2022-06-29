@@ -9,13 +9,18 @@ using namespace std;
 class Animal
 {
 public:
-    string IDADE;
-    string family;
-    string nome;
+    virtual void print();
+    void setIdade(int);
+    int getIdade();
+    void setFamily(std::string);
+    std::string getFamily();
+    void setNome(std::string);
+    std::string getNome();
 
-    void print();
-
-    void print_oi();
+protected:
+    int IDADE;
+    std::string family;
+    std::string nome;
 };
 
 #endif
