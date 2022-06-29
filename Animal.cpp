@@ -11,11 +11,6 @@ void Animal::print()
          << "  Familia: " << familia << std::endl;
 }
 
-void Animal::print_tchau()
-{
-    std::cout << "Tchau" << std::endl;
-}
-
 std::string Animal::get_nome()
 {
     return nome;
