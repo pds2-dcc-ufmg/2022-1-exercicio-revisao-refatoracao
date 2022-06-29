@@ -22,13 +22,13 @@ int Animal::getIdade()
   return this->idade;
 }
 
-void Animal::setFamily(std::string _family)
+void Animal::setFamilia(std::string _familia)
 {
-  this->family = _family;
+  this->familia = _familia;
 }
-std::string Animal::getFamily()
+std::string Animal::getFamilia()
 {
-  return this->family;
+  return this->familia;
 }
 void Animal::setNome(std::string _nome)
 {
@@ -44,6 +44,6 @@ void Animal::print()
   std::cout << "[Animal]" << std::endl;
   std::cout << "  Nome: " << nome << std::endl
             << "  Idade: " << idade << std::endl
-            << "  Família: " << family << std::endl
+            << "  Família: " << familia << std::endl
             << "  Espécie: " << especie << std::endl;
 }

@@ -56,7 +56,7 @@ void Cuidador::print()
 {
 
 	std::cout << "[Cuidador]" << endl
-						<< "  Salário: " << fixed << setprecision(2) << salario
+						<< "  Salário: " << fixed << setprecision(2) << salario << endl
 						<< "  Nome: " << nome << endl
 						<< "  CPF: " << cpf << endl
 						<< "  Telefone: " << telefone << endl
