@@ -18,6 +18,10 @@ class Alimentacao {
         Alimentacao(int _porcao, std::string _comida, std::string _descricao, Cuidador _cuidador, Animal _animal);
 
         void print();
+        std::string get_descricao();
+        void set_porcao(int k);
+        int get_porcao();
+        void set_comida(std::string k);
 };
 
 #endif

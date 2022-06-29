@@ -4,13 +4,11 @@
 #include "Cuidador.hpp"
 
 Cuidador::Cuidador(
-	float _salario, 
-	std::string _nome, 
-	unsigned long _cpf, 
-	unsigned long _telefone, 
-	std::string _aniversario
-) : salario(_salario), nome(_nome), cpf(_cpf), telefone(_telefone), aniversario(_aniversario) {}
-
+	std::string _salario,
+	std::string _nome,
+	unsigned long _cpf,
+	std::string _telefone,
+	std::string _aniversario) : salario(_salario), nome(_nome), cpf(_cpf), telefone(_telefone), aniversario(_aniversario) {}
 
 void Cuidador::print() {
 

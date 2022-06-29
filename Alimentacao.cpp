@@ -18,6 +18,26 @@ void Alimentacao::print()
     // cout << ursidae;
 }
 
+std::string Alimentacao::get_descricao()
+{
+    return descricao;
+}
+
+void Alimentacao::set_porcao(int k)
+{
+    porcao = k;
+}
+
+int Alimentacao::get_porcao()
+{
+    return porcao;
+}
+
+void Alimentacao::set_comida(std::string k)
+{
+    comida = k;
+}
+
 /*void print() {
 
     std::cout << "Cuidador: ";
