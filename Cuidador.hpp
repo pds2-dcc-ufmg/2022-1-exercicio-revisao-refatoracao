@@ -22,10 +22,10 @@ public:
 
 private:
 	std::string salario;
-	std::string NOME;
+	std::string nome;
 	std::string cpf;
-	std::string Telefone;
-	std::string BIRTH;
+	std::string telefone;
+	std::string birth;
 };
 
 #endif

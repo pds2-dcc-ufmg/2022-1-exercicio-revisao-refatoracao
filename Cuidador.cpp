@@ -14,12 +14,12 @@ string Cuidador::getSalario()
 
 void Cuidador::setNome(std::string _nome)
 {
-	this->NOME = _nome;
+	this->nome = _nome;
 }
 
 string Cuidador::getNome()
 {
-	return this->NOME;
+	return this->nome;
 }
 
 void Cuidador::setCpf(std::string _cpf)
@@ -34,22 +34,22 @@ string Cuidador::getCpf()
 
 void Cuidador::setTelefone(std::string _phone)
 {
-	this->Telefone = _phone;
+	this->telefone = _phone;
 }
 
 string Cuidador::getTelefone()
 {
-	return this->Telefone;
+	return this->telefone;
 }
 
-void Cuidador::setBirth(std::string birth)
+void Cuidador::setBirth(std::string _birth)
 {
-	this->BIRTH = birth;
+	this->birth = _birth;
 }
 
 string Cuidador::getBirth()
 {
-	return this->BIRTH;
+	return this->birth;
 }
 
 void Cuidador::print()
@@ -57,8 +57,8 @@ void Cuidador::print()
 
 	std::cout << "[Cuidador]" << endl
 						<< "  Salário: " << fixed << setprecision(2) << salario
-						<< "  Nome: " << NOME << endl
+						<< "  Nome: " << nome << endl
 						<< "  CPF: " << cpf << endl
-						<< "  Telefone: " << Telefone << endl
-						<< "  Nascimento: " << BIRTH << endl;
+						<< "  Telefone: " << telefone << endl
+						<< "  Nascimento: " << birth << endl;
 }

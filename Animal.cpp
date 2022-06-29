@@ -4,12 +4,12 @@
 
 void Animal::setIdade(int _idade)
 {
-  this->IDADE = _idade;
+  this->idade = _idade;
 }
 
 int Animal::getIdade()
 {
-  return this->IDADE;
+  return this->idade;
 }
 
 void Animal::setFamily(std::string _family)
@@ -33,6 +33,6 @@ void Animal::print()
 {
   std::cout << "[Animal]" << std::endl;
   std::cout << "  Nome: " << nome << std::endl
-            << "  Idade: " << IDADE << std::endl
+            << "  Idade: " << idade << std::endl
             << "  Família: " << family << std::endl;
 }

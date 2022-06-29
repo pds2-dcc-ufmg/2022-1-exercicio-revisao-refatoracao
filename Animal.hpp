@@ -18,7 +18,7 @@ public:
     std::string getNome();
 
 private:
-    int IDADE;
+    int idade;
     std::string family;
     std::string nome;
 };
