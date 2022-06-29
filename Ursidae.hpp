@@ -15,13 +15,10 @@ class Ursidae : public Animal
 public:
     void print();
     double calcula_PEIXES_CONSUMIDOS(int porcaoPeixes);
-    void setEspecie(std::string);
-    std::string getEspecie();
     void setkgPeixe(double);
     double getkgPeixe();
 
 private:
-    std::string especie;
     double kgPeixePorDIA;
 };
 

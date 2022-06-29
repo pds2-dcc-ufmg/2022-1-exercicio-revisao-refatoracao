@@ -2,6 +2,16 @@
 #include <string>
 #include "Animal.hpp"
 
+void Animal::setEspecie(std::string _especie)
+{
+  this->especie = _especie;
+}
+
+string Animal::getEspecie()
+{
+  return this->especie;
+}
+
 void Animal::setIdade(int _idade)
 {
   this->idade = _idade;
@@ -34,5 +44,6 @@ void Animal::print()
   std::cout << "[Animal]" << std::endl;
   std::cout << "  Nome: " << nome << std::endl
             << "  Idade: " << idade << std::endl
-            << "  Família: " << family << std::endl;
+            << "  Família: " << family << std::endl
+            << "  Espécie: " << especie << std::endl;
 }
