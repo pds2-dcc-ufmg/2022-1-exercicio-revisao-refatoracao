@@ -2,17 +2,16 @@
 #define CUIDADOR_H
 
 #include <string>
-using namespace std;
 
 class Cuidador{
 
 	private:
 
-    	string salario;
-		string nome;
-		string cpf;
-		string telefone;
-		string aniversario;
+    	float salario;
+		std::string nome;
+		unsigned long cpf;
+		unsigned long telefone;
+		std::string aniversario;
 
 	public:
 
