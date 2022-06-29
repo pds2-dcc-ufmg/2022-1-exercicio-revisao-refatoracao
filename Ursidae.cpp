@@ -9,7 +9,7 @@ void Ursidae::print()
               << "  Especie: " << especie << std::endl;
 }
 
-double Ursidae::peixesConsumidos(int porcaoPeixes)
+double Ursidae::peixes_consumidos(int porcaoPeixes)
 {
     return peixesPorPorcao * porcaoPeixes;
 }

@@ -1,6 +1,6 @@
 #include "Herpestidae.hpp"
 
-double Herpestidae::kgConsumidosDeRacao(int porcoes_consumidas)
+double Herpestidae::racao_consumida(int porcoes_consumidas)
 {
     double c = qtd_porcoes * porcoes_consumidas;
     return c;

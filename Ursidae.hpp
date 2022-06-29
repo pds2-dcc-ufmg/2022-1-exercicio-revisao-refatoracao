@@ -17,7 +17,7 @@ class Ursidae {
     
     public:
         void print();
-        double peixesConsumidos(int porcaoPeixes);
+        double peixes_consumidos(int porcaoPeixes);
 
 };
 

@@ -11,7 +11,7 @@ class Herpestidae : public Animal
         std::string especie;
 
     public:
-        double kgConsumidosDeRacao(int porcoes_consumidas);
+        double racao_consumida(int porcoes_consumidas);
         void print();
 };
 

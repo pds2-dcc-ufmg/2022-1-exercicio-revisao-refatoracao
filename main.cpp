@@ -105,7 +105,7 @@ cuid2.salario = "R$ 4000";
     v02.descricao = "Catita comeu direitinho";
     v02.cuid = cuid2;
     v02.nomeAnimal = "Catita";
-  kgRacaoConsumidos01 += g01.kgConsumidosDeRacao(v02.porcao);
+  kgRacaoConsumidos01 += g01.racao_consumida(v02.porcao);
 
  Alimentacao v03;
     v03.porcao= 3;
@@ -113,7 +113,7 @@ cuid2.salario = "R$ 4000";
     v03.descricao = "Carolina estava com um apetite e tanto";
     v03.cuid = cuid2;
     v03.nomeAnimal = "Carolina";
-  kgRacaoConsumidos02 += g02.kgConsumidosDeRacao(v03.porcao);
+  kgRacaoConsumidos02 += g02.racao_consumida(v03.porcao);
 
   Alimentacao v04;
     v04.porcao= 10;
