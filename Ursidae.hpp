@@ -4,21 +4,25 @@
 #include <iostream>
 #include <iomanip>
 
+#include "Animal.hpp"
+
 using namespace std;
 
 int peixesPorPORCAO = 5;
 
-class Ursidae
+class Ursidae : public Animal
 {
 public:
-    int IDADE;
-    string nome;
-    string especie;
-    double kgPeixePorDIA;
-
     void print();
-
     double calcula_PEIXES_CONSUMIDOS(int porcaoPeixes);
+    void setEspecie(std::string);
+    std::string getEspecie();
+    void setkgPeixe(double);
+    double getkgPeixe();
+
+protected:
+    std::string especie;
+    double kgPeixePorDIA;
 };
 
 #endif
