@@ -5,10 +5,8 @@
 using namespace std;
 
 class Cuidador{
-
 	public:
-
-    string salario;
+	string salario;
 		string NOME;
 		string cpf;
 		string Telefone;
