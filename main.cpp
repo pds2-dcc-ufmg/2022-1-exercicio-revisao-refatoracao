@@ -59,11 +59,11 @@ int main()
   Alimentacao_04.print();
 
   cout <<" \n \n--------------------------------\n\nRelatorio de kg de comida gastos \n" << endl;
-    cout << "Tipo de comida: " << "Ração" << endl;
-    cout << "Kg consumidos: " << Alimentacao_02.kgComidaConsumida + Alimentacao_03.kgComidaConsumida << endl;
+  cout << "Tipo de comida: " << "Ração" << endl;
+  cout << "Kg consumidos: " << Alimentacao_02.kgComidaConsumida + Alimentacao_03.kgComidaConsumida << endl;
 
-    cout << "\nTipo de comida: " << "Peixe" << endl;
-    cout << "Kg consumidos: " << Alimentacao_01.kgComidaConsumida + Alimentacao_04.kgComidaConsumida <<endl;
+  cout << "\nTipo de comida: " << "Peixe" << endl;
+  cout << "Kg consumidos: " << Alimentacao_01.kgComidaConsumida + Alimentacao_04.kgComidaConsumida <<endl;
 
-    return 0;
+  return 0;
 }
