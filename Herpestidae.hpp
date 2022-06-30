@@ -3,15 +3,17 @@
 
 #include "Animal.hpp"
 
+#define KGPORPORCAO 1
+
 class Herpestidae : public Animal {
 
     private:
-        std::string species;
-        double quantPORCAO = 1;
+        std::string especie;
 
     public:
-        double kgConsumidosDeRacao(int porcoesConsumidas);
         void print();
+        double calcularKgConsumidosDeRacao(int porcoesConsumidas);
+        
 };
 
 #endif

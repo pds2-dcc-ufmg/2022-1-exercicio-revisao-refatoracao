@@ -3,8 +3,8 @@
 void Animal::print() {
     std::cout << "\n[Animal]"  << std::endl 
               << "  Nome: "    << nome << std::endl 
-              << "  Idade: "   << IDADE << std::endl 
-              << "  Familia: " << family << std::endl;
+              << "  Idade: "   << idade << std::endl 
+              << "  Familia: " << familia << std::endl;
 }
 
 void Animal::print_oi(){

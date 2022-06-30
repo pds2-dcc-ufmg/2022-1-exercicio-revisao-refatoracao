@@ -7,10 +7,10 @@ class Cuidador{
 
 	private:
     	std::string salario;
-		std::string NOME;
+		std::string nome;
 		std::string cpf;
-		std::string Telefone;
-		std::string BIRTH;
+		std::string telefone;
+		std::string nascimento;
 
 	public:
 		void print(); // imprime na tela os dados de um cliente cadastrado

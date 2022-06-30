@@ -8,17 +8,5 @@ void Alimentacao::print() {
         std::cout << nomeAnimal << "\n";
 
         std::cout << " Cuidador: ";
-        std::cout << cuid.NOME << "\n";
-
-        //std::cout << " : ";
-        //cout << ursidae;
+        std::cout << cuid.nome << "\n";
 }
-
-    /*void print() {
-
-        std::cout << "Cuidador: ";
-        cout << cuida;
-
-        std::cout << " Animal: ";
-        cout << alimentado;
-    }*/
