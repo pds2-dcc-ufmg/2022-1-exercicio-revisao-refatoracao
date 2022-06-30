@@ -13,9 +13,6 @@ void Alimentacao::print()
 
     std::cout << " Cuidador: ";
     std::cout << cuidador.get_nome() << "\n";
-
-    // std::cout << " : ";
-    // cout << ursidae;
 }
 
 std::string Alimentacao::get_descricao()
@@ -37,12 +34,3 @@ void Alimentacao::set_comida(std::string k)
 {
     comida = k;
 }
-
-/*void print() {
-
-    std::cout << "Cuidador: ";
-    cout << cuida;
-
-    std::cout << " Animal: ";
-    cout << alimentado;
-}*/
