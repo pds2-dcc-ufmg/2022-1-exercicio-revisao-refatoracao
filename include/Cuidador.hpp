@@ -16,8 +16,6 @@ class Cuidador{
 
 	public:
 		Cuidador(string nome);
-		~Cuidador();
-		void print(); // imprime na tela os dados de um cliente cadastrado
 
 };
 

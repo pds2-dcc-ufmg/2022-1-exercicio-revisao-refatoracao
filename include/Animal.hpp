@@ -1,21 +1,24 @@
 #ifndef ANIMAL_HPP
 #define ANIMAL_HPP
 
-#include <iostream>
-#include <iomanip>
+#include "Alimentacao.hpp"
 
 using namespace std;
 
 class Animal {
     private:
-        string idade;
-        string family;
-        string nome;
+        string nome, especie, familia;
+        int idade;
+        Alimentacao alimentacao;
 
     public:
-        void print();
-
-        void print_oi();
+        Animal(string nome, string especie, string familia, int idade, float quantidadePorcao, float pesoPorcao, string tipoComida); 
+        
+        string getNome();
+        string getEspecie();
+        string getFamilia();
+        int getIdade();
+        float getQuantidadeConsumida();
 };
 
 #endif

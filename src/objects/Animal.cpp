@@ -1,9 +1,30 @@
 #include "Animal.hpp"
 
-void Animal::print() {
-    cout << "\n[Animal]" << "  Nome: " << this->nome << "  Idade: " << this->idade << "  Familia: " << this->family << endl;
+Animal::Animal(string nome, string especie, string familia, int idade, float quantidadePorcao, float pesoPorcao, string tipoComida){
+    this->nome = nome;
+    this->especie = especie;
+    this->familia = familia;
+    this->idade = idade;
+    this->alimentacao = Alimentacao(quantidadePorcao, pesoPorcao, tipoComida);
+
+} 
+        
+string Animal::getNome(){
+    return this->nome; 
 }
 
-void Animal::print_oi(){
-    cout << "Tchau" << endl;
+string Animal::getEspecie(){
+    return this->especie; 
+}
+
+string Animal::getFamilia(){
+    return this->familia; 
+}
+
+int Animal::getIdade(){
+    return this->idade; 
+}
+
+float Animal::getQuantidadeConsumida(){ 
+    return (this->alimentacao.getQuantPorcao() * this->alimentacao.getPesoPorcao()); 
 }
