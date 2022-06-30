@@ -1,18 +1,28 @@
-#ifndef Cuidador_H
-#define Cuidador_H
+#ifndef CUIDADOR_H
+#define CUIDADOR_H
 
 #include <string>
+#include <vector>
+#include "Animal.hpp"
+
 using namespace std;
 
 class Cuidador{
-	public:
-	string salario;
-		string NOME;
-		string cpf;
-		string Telefone;
-		string BIRTH;
+	private:
+	string nome;
+	vector<Animal> animais;
 
-		void print(); // imprime na tela os dados de um cliente cadastrado
+	public:
+	void add_animal(Animal& _animal);
+
+	// public:
+	// string salario;
+	// string NOME;
+	// string cpf;
+	// string Telefone;
+	// string BIRTH;
+
+	// void print(); // imprime na tela os dados de um cliente cadastrado
 
 };
 
