@@ -1,41 +1,37 @@
 
-#ifndef VENDA_HPP
-#define VENDA_HPP
+#ifndef ALIMENTACAO_HPP
+#define ALIMENTACAO_HPP
 
+#include <iostream>
+#include <string>
 #include "Cuidador.hpp"
 
-using namespace std;
-
-class Alimentacao{
-
+class Alimentacao {
+    private:
+    
+        int _porcao;
+        std::string _comida;
+	    std::string _descricao;
+	    Cuidador _cuid;
+	    std::string _nomeAnimal;
+    
     public:
-    int porcao;
-    string comida;
-    string descricao;
-    Cuidador cuid;
-    string nomeAnimal;
-
+    
+        Alimentacao::Alimentacao(int porcao, std::string comida, std::string descricao, Cuidador cuid, std::string nomeAnimal)
+	: _porcao(porcao), _comida(comida), _descricao(descricao), _cuid(cuid), _nomeAnimal(nomeAnimal) {}
+    		
+	void setPorcao(int porcao) { this->_porcao = porcao; }
+       	void setComida(std::string comida) { this->_comida = comida; }
+       	void setDescricao(std::string descricao) { this->_descricao = descricao; }
+	void setCuid(Cuidador cuid) { this->_cuid = cuid; }
+        void setNomeAnimal(std::string nomeAnimal) { this->_nomeAnimal = nomeAnimal; 
 
     void print() {
 
-        std::cout << "Animal: ";
-        cout << nomeAnimal << "\n";
-
-        std::cout << " Cuidador: ";
-        cout << cuid.NOME << "\n";
-
-        //std::cout << " : ";
-        //cout << ursidae;
+        std::cout << "Animal: " << nomeAnimal << "\n";
+        std::cout << " Cuidador: " << cuid.nome << "\n";
+        
     }
-
-    /*void print() {
-
-        std::cout << "Cuidador: ";
-        cout << cuida;
-
-        std::cout << " Animal: ";
-        cout << alimentado;
-    }*/
 };
 
 #endif
