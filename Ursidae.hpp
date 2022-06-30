@@ -4,21 +4,17 @@
 #include <iostream>
 #include <iomanip>
 
-
-
 class Ursidae {
-    public:
-
+    private:
         int IDADE;
         std::string nome;
         std::string especie;
         double kgPeixePorDIA;
         int peixesPorPORCAO = 5;
 
+    public:
         void print();
-
         double calcula_PEIXES_CONSUMIDOS(int porcaoPeixes);
-
 };
 
 #endif

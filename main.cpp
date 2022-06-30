@@ -1,10 +1,10 @@
-#include <iostream>
-
 #include "Animal.hpp"
 #include "Herpestidae.hpp"
 #include "Ursidae.hpp"
 #include "Cuidador.hpp"
 #include "Alimentacao.hpp"
+
+#include <iostream>
 
 int main()
 {

@@ -5,15 +5,15 @@
 
 class Alimentacao{
 
+    private:
+        int porcao;
+        std::string comida;
+        std::string descricao;
+        std::string nomeAnimal;
+        Cuidador cuid;
+
     public:
-    int porcao;
-    std::string comida;
-    std::string descricao;
-    Cuidador cuid;
-    std::string nomeAnimal;
-
-
-    void print();
+        void print();
 
 };
 

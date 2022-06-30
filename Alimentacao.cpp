@@ -1,4 +1,5 @@
 #include "Alimentacao.hpp"
+
 #include "iostream"
 
 void Alimentacao::print() {
@@ -11,7 +12,7 @@ void Alimentacao::print() {
 
         //std::cout << " : ";
         //cout << ursidae;
-    }
+}
 
     /*void print() {
 

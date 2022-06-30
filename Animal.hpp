@@ -5,11 +5,12 @@
 #include <iomanip>
 
 class Animal {
-    public:
+    private:
         std::string IDADE;
         std::string family;
         std::string nome;
 
+    public:
         void print();
         void print_oi();
 };
