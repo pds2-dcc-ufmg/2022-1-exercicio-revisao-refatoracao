@@ -2,7 +2,7 @@
 #ifndef ALIMENTACAO_H
 #define ALIMENTACAO_H
 
-#include "Cuidador.hpp"
+#include "../include/Cuidador.hpp"
 
 class Alimentacao {
 
@@ -22,13 +22,11 @@ class Alimentacao {
 
         Alimentacao(int _porcao, std::string _comida, std::string _nome_animal, Cuidador& _cuidador);
     
-        void printAlimentacao();
+        void print();
 
         void setDescricao(std::string _descricao);
 
         int getPorcao();
-
-        void setPorcao(int _porcao);
 
 };
 

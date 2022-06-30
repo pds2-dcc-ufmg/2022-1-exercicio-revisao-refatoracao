@@ -1,4 +1,4 @@
-#include "Cuidador.hpp"
+#include "../include/Cuidador.hpp"
 
 Cuidador::Cuidador(std::string _nome, unsigned long _cpf, std::string _nascimento, std::string _telefone, double _salario) :
 	nome(_nome), cpf(_cpf), nascimento(_nascimento), telefone(_telefone), salario(_salario) {}

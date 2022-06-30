@@ -1,4 +1,4 @@
-#include "Ursidae.hpp"
+#include "../include/Ursidae.hpp"
 
 const int PEIXE_POR_PORCAO = 5;
 
@@ -13,8 +13,8 @@ void Ursidae::print() {
 
 }
 
-double Ursidae::getConsumoDePeixe(int porcao) {
+double Ursidae::getConsumoDePeixe(int consumo) {
             
-    return porcao * PEIXE_POR_PORCAO;
+    return consumo * PEIXE_POR_PORCAO;
 
 }

@@ -1,7 +1,7 @@
 #ifndef HERPESTIDAE_H
 #define HERPESTIDAE_H
 
-#include "Animal.hpp"
+#include "../include/Animal.hpp"
 
 class Herpestidae : public Animal {
     

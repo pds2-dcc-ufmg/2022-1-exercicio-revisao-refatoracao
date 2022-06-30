@@ -20,8 +20,6 @@ class Animal {
         Animal(std::string _nome, int _idade, std::string _familia);
 
         virtual void print();
-
-        void print_oi(); ///
         
 };
 

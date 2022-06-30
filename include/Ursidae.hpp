@@ -1,7 +1,7 @@
 #ifndef URSIDAE_H
 #define URSIDAE_H
 
-#include "Animal.hpp"
+#include "../include/Animal.hpp"
 
 class Ursidae : public Animal {
     

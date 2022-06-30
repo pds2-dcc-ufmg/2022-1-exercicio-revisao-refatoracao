@@ -1,4 +1,4 @@
-#include "Herpestidae.hpp"
+#include "../include/Herpestidae.hpp"
 
 const double QUANTIDADE_PORCAO = 1;
 
@@ -9,7 +9,7 @@ void Herpestidae::print() {
 
     Animal::print();
 
-    std::cout << "  Especie: " << especie << std::endl;
+    std::cout << "  Especie: " << this->especie << std::endl;
 
 }
 
