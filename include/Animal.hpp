@@ -2,7 +2,6 @@
 #define ANIMAL_H
 
 #include <iostream>
-#include <iomanip>
 
 class Animal {
     
