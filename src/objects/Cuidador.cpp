@@ -1,15 +1,14 @@
 #include "Cuidador.hpp"
 
-Cuidador(string NOME){
-	this->NOME = NOME;
+Cuidador(string nome){
+	this->nome = nome;
 }
 
 ~Cuidador(){}
 
 void Cuidador::print(){
 
-	cout << "[Cuidador]" << endl
-         << "  Nome: " << this->NOME << endl;
+	cout << "[Cuidador]" << "  Nome: " << this->nome << endl;
 
 }
 

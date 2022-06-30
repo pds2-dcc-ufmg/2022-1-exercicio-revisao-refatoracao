@@ -5,7 +5,7 @@
 
 using namespace std;
 
-double quantPORCAO = 1;
+double quantPorcao = 1;
 
 
 class Herpestidae : public Animal {

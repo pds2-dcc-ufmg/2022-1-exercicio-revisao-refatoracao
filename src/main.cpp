@@ -13,25 +13,25 @@ int main()
     Animal animal1;
     animal1.family = "Ursidae";
     animal1.nome ="Bobby";
-	  animal1.IDADE = "13";
+	  animal1.idade = "13";
     animal1.print();
     double kgPeixeConsumidos01 = 0;
     Animal animal2;
     animal2.family = "Ursidae";
     animal2.nome ="Jorge";
-	  animal2.IDADE = "1";
+	  animal2.idade = "1";
     animal2.print();
 
     Animal animal3;
     animal3.family = "Herpestidae";
     animal3.nome ="Bonina";
-	  animal3.IDADE = "7";
+	  animal3.idade = "7";
     animal3.print();
 
     Animal animal4;
     animal4.family = "Ursidae";
     animal4.nome ="Felício";
-	  animal4.IDADE = "3";
+	  animal4.idade = "3";
     animal4.print();
 
 
@@ -40,7 +40,7 @@ int main()
     int numAtendimentos02 = 0;
     double comissao02 = 0;
     e02.nome = "Tony";
-    e02.IDADE = 9;
+    e02.idade = 9;
     e02.especie = "Urso Pardo";
     e02.kgPeixePorDIA = 10.5;
     e02.print();
@@ -50,7 +50,7 @@ int main()
     int numAtendimentos03 = 0;
     double comissao03 = 0;
     e03.nome = "Wanda";
-    e03.IDADE = 10;
+    e03.idade = 10;
     e03.especie = "Urso Polar";
     e03.kgPeixePorDIA = 7;
     e03.print();
@@ -59,14 +59,14 @@ int main()
     Herpestidae g01;
     g01.family = "Herpestidae";
     g01.nome ="Catita";
-	  g01.IDADE = "2";
+	  g01.idade = "2";
     g01.species = "Suricato";
     g01.print();
     Herpestidae g02;
     double bonificacao01 = 0;
     g02.family = "Herpestidae";
     g02.nome ="Carolina";
-	  g02.IDADE = "2";
+	  g02.idade = "2";
     g02.species = "Suricato";
 
     double kgPeixeConsumidos02 = 0;
@@ -91,6 +91,7 @@ int main()
     v01.cuid = cuid01;
     v01.nomeAnimal = "Bobby";
     kgPeixeConsumidos01 = 5*2;
+
     Alimentacao v02;
     v02.porcao= 1;
     v02.comida = "Ração especial";
@@ -116,7 +117,7 @@ int main()
     v02.porcao = 2;
     v03.comida = "Ração";
     kgPeixeConsumidos03 = 
-    e02.calcula_PEIXES_CONSUMIDOS(10);
+    e02.calculaPeixesConsumidos(10);
 
 
 

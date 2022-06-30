@@ -6,20 +6,20 @@
 
 using namespace std;
 
-int peixesPorPORCAO = 5;
+int peixesPorPorcao = 5;
 
 class Ursidae {
     private:
 
-        int IDADE;
+        int idade;
         string nome;
         string especie;
-        double kgPeixePorDIA;
+        double kgPeixePorDia;
 
     public:
         void print();
 
-        double calcula_PEIXES_CONSUMIDOS(int porcaoPeixes);
+        double calculaPeixesConsumidos(int porcaoPeixes);
 
 };
 

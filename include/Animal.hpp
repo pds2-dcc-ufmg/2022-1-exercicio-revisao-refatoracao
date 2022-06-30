@@ -8,7 +8,7 @@ using namespace std;
 
 class Animal {
     private:
-        string IDADE;
+        string idade;
         string family;
         string nome;
 

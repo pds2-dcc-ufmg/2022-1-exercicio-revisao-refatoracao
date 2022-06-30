@@ -12,10 +12,10 @@ using std::endl;
 class Cuidador{
 
 	private:
-		string NOME;
+		string nome;
 
 	public:
-		Cuidador(string NOME);
+		Cuidador(string nome);
 		~Cuidador();
 		void print(); // imprime na tela os dados de um cliente cadastrado
 
