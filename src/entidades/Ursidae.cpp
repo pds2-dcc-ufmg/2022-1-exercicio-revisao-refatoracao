@@ -2,7 +2,6 @@
 
 Animal::Ursidae::Ursidae(std::string _nome, int _idade){
     this->familia = "Ursidae";
-    this->especie = "Espécie não informada!";
     this->nome = _nome;
     this->idade = _idade;
 

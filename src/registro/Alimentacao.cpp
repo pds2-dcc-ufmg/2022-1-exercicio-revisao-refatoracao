@@ -19,9 +19,6 @@ std::string Alimentacao::Alimentacao::getDescricao(){
 
 void Alimentacao::Alimentacao::print(){
     std::cout << "\nAnimal: " << animal->getNome() << std::endl 
-    << "Idade: " << animal->getIdade() << std::endl
-    << "Familia: " << animal->getFamilia() << std::endl
-    << "Especie: " << animal->getEspecie() << std::endl
     << "Cuidador: " << cuidador->getNome() << std::endl
     << "Descrição: " << this->descricao << std::endl;
 }

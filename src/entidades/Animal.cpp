@@ -9,6 +9,7 @@ Animal::Animal::Animal(){
 Animal::Animal::Animal(std::string _nome, int _idade){
     this->nome = nome;
     this->idade = idade;
+    this->especie = "";
 }
 
 void Animal::Animal::print() {
@@ -16,6 +17,9 @@ void Animal::Animal::print() {
     << "  Nome: " << nome << std::endl
     << "  Idade: " << idade << std::endl
     << "  Familia: " << familia << std::endl;
+    if(this->especie != ""){
+        std::cout << "  Especie: " << especie << std::endl;
+    }
 }
 
 int Animal::Animal::getIdade(){
@@ -43,6 +47,7 @@ void Animal::Animal::setNome(std::string _nome){
 }
 
 void Animal::Animal::setEspecie(std::string _especie){
+
     this->especie = _especie;
 }
 

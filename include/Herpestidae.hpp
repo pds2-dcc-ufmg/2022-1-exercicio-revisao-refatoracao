@@ -13,7 +13,6 @@ namespace Animal{
 
             //A função calcula a quantidade de alimento consumida por um Herpestidae utilizando kg de ração como unidade de medida 
             double quantidadeDeAlimentoConsumida(int porcoesConsumidas);
-
     };
 } //Herpestidae se relaciona de forma intrinseca com Animal
 #endif

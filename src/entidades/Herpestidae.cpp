@@ -4,6 +4,7 @@ Animal::Herpestidae::Herpestidae(std::string _nome, int _idade){
     this->familia = "Herpestidae";
     this->nome = _nome;
     this->idade = _idade;
+    this->especie = "";
 
 }
 
