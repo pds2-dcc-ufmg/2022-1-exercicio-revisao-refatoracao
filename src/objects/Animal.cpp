@@ -1,8 +1,7 @@
 #include "Animal.hpp"
 
-Animal::Animal(string nome, string especie, string familia, int idade, float quantidadePorcao, float pesoPorcao, string tipoComida){
+Animal::Animal(string nome, string familia, int idade, float quantidadePorcao, float pesoPorcao, string tipoComida){
     this->nome = nome;
-    this->especie = especie;
     this->familia = familia;
     this->idade = idade;
     this->alimentacao = Alimentacao(quantidadePorcao, pesoPorcao, tipoComida);
@@ -11,10 +10,6 @@ Animal::Animal(string nome, string especie, string familia, int idade, float qua
         
 string Animal::getNome(){
     return this->nome; 
-}
-
-string Animal::getEspecie(){
-    return this->especie; 
 }
 
 string Animal::getFamilia(){
@@ -27,4 +22,8 @@ int Animal::getIdade(){
 
 float Animal::getQuantidadeConsumida(){ 
     return (this->alimentacao.getQuantPorcao() * this->alimentacao.getPesoPorcao()); 
+}
+
+void Animal::print(){
+    cout << "\n[Animal]\n" << "  Nome: " << this->nome << "  Idade: " << this->idade << "  Familia: " << this->familia << endl;
 }

@@ -1,10 +1,14 @@
 #include "Ursidae.hpp"
 
-void Ursidae::print() {
-    cout << "\n[Animal]" << "  Nome: " << this->nome << "  Idade: " << this->idade << "  Família: Ursidae" << "  Especie: " << this->especie << endl;
+Ursidae::Ursidae(string nome, string especie, int idade, float quantidadePorcao, float pesoPorcao, string tipoComida){
+    this->nome = nome;
+    this->familia = "Ursidae";
+    this->idade = idade;
+    this->especie = especie;
+    this->alimentacao = Alimentacao(quantidadePorcao, pesoPorcao, tipoComida);
 }
 
-double Ursidae::calculaPeixesConsumidos(int porcaoPeixes){
-    double x;
-    return peixesPorPorcao*porcaoPeixes;
+void Ursidae::print() {
+    Animal::print();
+    cout << "  Especie: " << this->especie <<endl;
 }

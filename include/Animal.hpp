@@ -6,19 +6,21 @@
 using namespace std;
 
 class Animal {
-    private:
-        string nome, especie, familia;
+    protected:
+        string nome, familia;
         int idade;
         Alimentacao alimentacao;
 
     public:
-        Animal(string nome, string especie, string familia, int idade, float quantidadePorcao, float pesoPorcao, string tipoComida); 
-        
+        Animal(string nome, string familia, int idade, float quantidadePorcao, float pesoPorcao, string tipoComida); 
+        Animal() = default;
+
         string getNome();
-        string getEspecie();
         string getFamilia();
         int getIdade();
         float getQuantidadeConsumida();
+
+        virtual void print();
 };
 
 #endif
