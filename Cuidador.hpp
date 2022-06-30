@@ -15,7 +15,7 @@ class Cuidador {
 	
     public:
 		
-	Cuidador(std::string nome, std::string salario, std::string cpf, std::string telefone, std::string aniversario)
+	Cuidador::Cuidador(std::string nome, std::string salario, std::string cpf, std::string telefone, std::string aniversario)
 	: _nome(nome), _salario(salario), _cpf(cpf), _telefone(telefone), _aniversario(aniversario) {}
     		
 	void setNome(std::string nome) { this->_nome = nome; }
