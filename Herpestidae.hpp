@@ -11,6 +11,10 @@ class Herpestidae : public Animal {
 
     public:
     
+        Herpestidae():Animal(std::string nome, int idade, std::string familia, std::string especie) {
+            familia = 'Herpestidae';
+        }
+    
         Animal::print();
         
         Herpestidae::kgConsumidosDeRacao(int porcoesConsumidas) {
