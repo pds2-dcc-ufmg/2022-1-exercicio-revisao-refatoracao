@@ -13,7 +13,7 @@ class Animal {
         
     public:
         
-        Animal(std::string nome, int idade, std::string familia, std::string _especie) 
+        Animal::Animal(std::string nome, int idade, std::string familia, std::string _especie) 
         : _nome(nome), _idade(idade), _familia(familia), _especie(especie) {}
     
         void setNome(std::string nome) { this->_nome = nome; }
