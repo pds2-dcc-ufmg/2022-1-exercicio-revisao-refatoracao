@@ -6,10 +6,11 @@
 
 class Animal {
     
-    private:
+    protected:
+        std::string nome;
         std::string idade;
         std::string familia;
-        std::string nome;
+        std::string especie;
 
     public:
         void print();

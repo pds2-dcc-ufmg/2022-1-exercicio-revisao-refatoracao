@@ -7,9 +7,6 @@
 
 class Herpestidae : public Animal {
 
-    private:
-        std::string especie;
-
     public:
         void print();
         double calcularKgConsumidosDeRacao(int porcoesConsumidas);

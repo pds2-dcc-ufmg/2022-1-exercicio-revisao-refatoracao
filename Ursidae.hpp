@@ -1,16 +1,16 @@
 #ifndef URSIDAE_H
 #define URSIDAE_H
 
+#include "Animal.hpp"
+
 #include <iostream>
 #include <iomanip>
 
 #define PEIXESPORPORCAO 5
 
-class Ursidae {
+class Ursidae : public Animal {
+    
     private:
-        int idade;
-        std::string nome;
-        std::string especie;
         double kgPeixePorDia;
 
     public:
