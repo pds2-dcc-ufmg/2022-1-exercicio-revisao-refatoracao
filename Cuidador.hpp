@@ -24,7 +24,7 @@ class Cuidador{
 		}
 		void print(){
 			std::cout << "[Cuidador]" << endl
-        	<< "  Nome: " << nome << endl
+			<< "  Nome: " << nome << endl
 		 	<< "  CPF: " << cpf << endl
 			<< "  Telefone: " << telefone << endl
 		 	<< "  Nascimento: " << dataNascimento << endl;			
