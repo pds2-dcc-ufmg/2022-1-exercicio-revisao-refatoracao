@@ -1,6 +1,7 @@
 #ifndef CUIDADOR_HPP
 #define CUIDADOR_HPP
 
+#include <iostream>
 #include <string>
 
 class Cuidador {
