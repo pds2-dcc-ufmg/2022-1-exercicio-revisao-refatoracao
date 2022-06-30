@@ -15,7 +15,7 @@ class Herpestidae : public Animal {
         
         Herpestidae::kgConsumidosDeRacao(int porcoesConsumidas) {
         double kgDeRacao = QUANTPORCAO * porcoesConsumidas;
-                  return kgDeRacao;
+        return kgDeRacao;
     }
 };
 
