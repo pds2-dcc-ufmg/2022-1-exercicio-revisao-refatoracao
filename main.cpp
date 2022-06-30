@@ -5,7 +5,6 @@
 #include "Ursidae.hpp"
 #include "Cuidador.hpp"
 #include "Alimentacao.hpp"
-using namespace std;
 
 int main()
 {
@@ -128,31 +127,31 @@ kgPeixeConsumidos03 =
 
 
 
-    cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << endl;
+    std::cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << std::endl;
 
     v01.print();
-    cout << " Descricao: " << v01.descricao << endl << endl;
+    std::cout << " Descricao: " << v01.descricao << std::endl << std::endl;
 
     v02.print();
-    cout << " Descricao: " << v02.descricao << endl<<endl;
+    std::cout << " Descricao: " << v02.descricao << std::endl<<std::endl;
 
     v03.print();
-    cout << " Descricao: " << v03.descricao << endl<< endl;
+    std::cout << " Descricao: " << v03.descricao << std::endl<< std::endl;
 
     v04.print();
-    cout << " Descricao: " << v04.descricao << endl << "\n";
+    std::cout << " Descricao: " << v04.descricao << std::endl << "\n";
 
 
 
 
 
 
-    cout <<" \n \n--------------------------------\n\nRelatorio de kg de comida gastos \n" << endl;
-    cout << "Tipo de comida: " << "Ração" << endl;
-    cout << "Kg consumidos: " << kgRacaoConsumidos01+kgRacaoConsumidos02<<endl;
+    std::cout <<" \n \n--------------------------------\n\nRelatorio de kg de comida gastos \n" << std::endl;
+    std::cout << "Tipo de comida: " << "Ração" << std::endl;
+    std::cout << "Kg consumidos: " << kgRacaoConsumidos01+kgRacaoConsumidos02<<std::endl;
 
-    cout << "\nTipo de comida: " << "Peixe" << endl;
-    cout << "Kg consumidos: " << kgPeixeConsumidos01+kgPeixeConsumidos03<<endl;
+    std::cout << "\nTipo de comida: " << "Peixe" << std::endl;
+    std::cout << "Kg consumidos: " << kgPeixeConsumidos01+kgPeixeConsumidos03<<std::endl;
 
     return 0;
 }

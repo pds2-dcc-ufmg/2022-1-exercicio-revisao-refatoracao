@@ -4,11 +4,11 @@
 
 void Cuidador::print(){
 
-	std::cout << "[Cuidador]" << endl
-         << "  Nome: " << NOME << endl
-		 << "  CPF: " << cpf << endl
-		<< "  Telefone: " << Telefone << endl
-		 << "  Nascimento: " << BIRTH << endl;
+	std::cout << "[Cuidador]" << std::endl
+         << "  Nome: " << NOME << std::endl
+		 << "  CPF: " << cpf << std::endl
+		<< "  Telefone: " << Telefone << std::endl
+		 << "  Nascimento: " << BIRTH << std::endl;
 
 }
 

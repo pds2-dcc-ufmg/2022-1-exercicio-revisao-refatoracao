@@ -1,12 +1,13 @@
 #include "Alimentacao.hpp"
+#include "iostream"
 
 void Alimentacao::print() {
 
         std::cout << "Animal: ";
-        cout << nomeAnimal << "\n";
+        std::cout << nomeAnimal << "\n";
 
         std::cout << " Cuidador: ";
-        cout << cuid.NOME << "\n";
+        std::cout << cuid.NOME << "\n";
 
         //std::cout << " : ";
         //cout << ursidae;
