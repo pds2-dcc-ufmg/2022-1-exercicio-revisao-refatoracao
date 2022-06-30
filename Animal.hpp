@@ -2,7 +2,7 @@
 #define ANIMAL_HPP
 
 #include <iostream>
-#include <iomanip>
+#include <string>
 
 class Animal {
     private:
