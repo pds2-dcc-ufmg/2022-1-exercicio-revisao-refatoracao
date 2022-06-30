@@ -17,7 +17,7 @@ class Alimentacao {
     
     public:
     
-        Alimentacao(int porcao, std::string comida, std::string descricao, Cuidador cuid, std::string nomeAnimal)
+        Alimentacao::Alimentacao(int porcao, std::string comida, std::string descricao, Cuidador cuid, std::string nomeAnimal)
 	: _porcao(porcao), _comida(comida), _descricao(descricao), _cuid(cuid), _nomeAnimal(nomeAnimal) {}
     		
 	void setPorcao(int porcao) { this->_porcao = porcao; }
