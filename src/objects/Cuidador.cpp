@@ -1,14 +1,15 @@
-#include <iostream>
-#include <string>
 #include "Cuidador.hpp"
+
+Cuidador(string NOME){
+	this->NOME = NOME;
+}
+
+~Cuidador(){}
 
 void Cuidador::print(){
 
-	std::cout << "[Cuidador]" << endl
-         << "  Nome: " << NOME << endl
-		 << "  CPF: " << cpf << endl
-		<< "  Telefone: " << Telefone << endl
-		 << "  Nascimento: " << BIRTH << endl;
+	cout << "[Cuidador]" << endl
+         << "  Nome: " << this->NOME << endl;
 
 }
 
