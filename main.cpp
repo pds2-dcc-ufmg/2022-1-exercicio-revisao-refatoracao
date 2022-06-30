@@ -32,7 +32,6 @@ int main()
   Herpestidae Suricato_01 = Herpestidae(2,"Catita","Suricato");
   Herpestidae Suricato_02 = Herpestidae(2,"Carolina","Suricato");
   Suricato_01.print();
-  Suricato_02.print();  
 
   Cuidador Cuidador_01 = Cuidador("Ana Maria Rodrigues Lopes","1234567799","(31) 99876-6923","10/10/2000","R$ 3000");
   Cuidador Cuidador_02 = Cuidador("Fernanda Silva Santos","9472567121","(31) 99123-8970","08/02/1995","R$ 4000");
@@ -42,14 +41,14 @@ int main()
   Alimentacao Alimentacao_03 = Alimentacao(3,"Ração","Carolina estava com um apetite e tanto",Cuidador_02,Suricato_02);
   Alimentacao Alimentacao_04 = Alimentacao(10,"Peixes","Tony comeu um pouco da comida do Bobby",Cuidador_01,Urso_01);
 
-  Alimentacao_02.porcao = 2;
-  Alimentacao_03.comida = "Ração";
+
   
   Alimentacao_01.kgComidaConsumida = (5.0*Alimentacao_01.porcao);
   Alimentacao_02.kgComidaConsumida = (Suricato_01.kgConsumidosDeRacao(Alimentacao_02.porcao));
   Alimentacao_03.kgComidaConsumida = (Suricato_02.kgConsumidosDeRacao(Alimentacao_03.porcao));
   Alimentacao_04.kgComidaConsumida = (Urso_01.calculaPeixesConsumidos(Alimentacao_04.porcao));
-
+  Alimentacao_02.porcao = 2;
+  Alimentacao_03.comida = "Ração";
 
   cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << endl;
 
