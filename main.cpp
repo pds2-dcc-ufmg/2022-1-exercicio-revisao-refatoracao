@@ -22,11 +22,6 @@ int main()
   Ursidae Urso_01 = Ursidae(9,"Tony","Urso Pardo",10.5);
   Ursidae Urso_02 = Ursidae(10,"Wanda","Urso Polar",7.0);
 
-  int numAtendimentos02 = 0;
-  double comissao02 = 0;
-  int numAtendimentos03 = 0;
-  double comissao03 = 0;
-
   Urso_01.print();
   Urso_02.print();
   Herpestidae Suricato_01 = Herpestidae(2,"Catita","Suricato");
