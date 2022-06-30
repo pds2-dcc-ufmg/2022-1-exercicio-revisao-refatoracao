@@ -11,14 +11,11 @@ class Ursidae: public Animal {
   
     public:
     
-        Ursidae():Animal(std::string nome, int idade, std::string familia, std::string especie) {
-            familia = 'Ursidae';
-        }
-    
        Animal::print();
 
        Ursidae::calculaPeixesConsumidos(int porcaoPeixes) {
-            return PEIXESPORPORCAO * porcaoPeixes;
+            double kgDePeixe = PEIXESPORPORCAO * porcaoPeixes;
+            return kgDePeixe;
         }
 
 };
