@@ -6,17 +6,17 @@
 
 class Animal {
     private:
-        string _nome;
+        std::string _nome;
         int _idade;
-        string _familia;
+        std::string _familia;
         
     public:
         
-        Animal(string nome, int idade, string familia) : _nome(nome), _idade(idade), _familia(familia) {}
+        Animal(std::string nome, int idade, std::string familia) : _nome(nome), _idade(idade), _familia(familia) {}
     
-        void setNome(string nome) { this->_nome = nome; }
+        void setNome(std::string nome) { this->_nome = nome; }
         void setIdade(int idade) { this->_idade = idade; }
-        void setFamilia(string familia) { this->_familia = familia; }
+        void setFamilia(std::string familia) { this->_familia = familia; }
     
         void print() {
             std::cout << "/n" << "[Animal]  " << std::endl;
