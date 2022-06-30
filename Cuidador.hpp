@@ -24,14 +24,7 @@ class Cuidador {
         void setAniversario(std::string aniversario) { this->_aniversario = aniversario; }
        
 
-	void print() {
-	    std::cout << "/n" << "[Cuidador]  " << std::endl;
-            std::cout << "  Nome: " << nome << std::endl;
-            std::cout << "  Salário: " << salario << std::endl;
-            std::cout << "  CPF: " << cpf << std::endl;
-	    std::cout << "  Telefone: " << telefone << std::endl;
-            std::cout << "  Aniversário: " << aniversario << std::endl;
-	}
+	void print();
 }
 
 #endif
