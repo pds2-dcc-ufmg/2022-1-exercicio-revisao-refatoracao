@@ -14,9 +14,9 @@ class Animal {
         
         Animal(string nome, int idade, string familia) : _nome(nome), _idade(idade), _familia(familia) {}
     
-        void set_nome(string nome) { this->_nome = nome; }
-        void set_idade(int idade) { this->_idade = idade; }
-        void set_familia(string familia) { this->_familia = familia; }
+        void setNome(string nome) { this->_nome = nome; }
+        void setIdade(int idade) { this->_idade = idade; }
+        void setFamilia(string familia) { this->_familia = familia; }
     
         void print() {
             std::cout << "/n" << "[Animal]  " << std::endl;
@@ -25,7 +25,7 @@ class Animal {
             std::cout << "  Família: " << familia << std::endl;
         }
 
-        void print_oi(){
+        void printOi(){
             std::cout << "Oi" << std::endl;
         }
 }
