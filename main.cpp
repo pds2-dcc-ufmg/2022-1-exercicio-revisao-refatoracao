@@ -5,16 +5,15 @@
 #include "Alimentacao.hpp"
 #include "ReservaAnimal.hpp"
 
-int main()
-{
-	ReservaAnimal reserva;
-
+void adicionarCuidadores(ReservaAnimal& reserva){
 	Cuidador* ana = new Cuidador("Ana Maria Rodrigues Lopes");
 	Cuidador* fernanda = new Cuidador("Fernanda Silva Santos");
-	
+
 	reserva.addCuidador(ana);
 	reserva.addCuidador(fernanda);
-	
+}
+
+void adicionarAnimais(ReservaAnimal& reserva){
 	Animal* bobby = new Ursidae("Bobby", 13);
 	Animal* jorge = new Ursidae("Jorge", 1);
 	Animal* bonina = new Herpestidae("Bonina", 7);
@@ -23,7 +22,7 @@ int main()
 	Animal* wanda = new Ursidae("Wanda", 10, "Urso Polar");
 	Animal* catita = new Herpestidae("Catita", 2, "Suricato");
 	Animal* carolina = new Herpestidae("Carolina", 2, "Suricato");
-	
+
 	reserva.addAnimal("Ana Maria Rodrigues Lopes", bobby);
 	reserva.addAnimal("Ana Maria Rodrigues Lopes", jorge);
 	reserva.addAnimal("Fernanda Silva Santos", bonina);
@@ -32,7 +31,9 @@ int main()
 	reserva.addAnimal("Ana Maria Rodrigues Lopes", wanda);
 	reserva.addAnimal("Fernanda Silva Santos", catita);
 	reserva.addAnimal("Fernanda Silva Santos", carolina);
+}
 
+void listAnimais(ReservaAnimal& reserva){
 	vector<string> nomeAnimaisListar;
 	nomeAnimaisListar.push_back("Bobby");
 	nomeAnimaisListar.push_back("Jorge");
@@ -43,12 +44,17 @@ int main()
 	nomeAnimaisListar.push_back("Catita");
 
 	reserva.listarAnimais(nomeAnimaisListar);
+}
 
+void alimentacao(ReservaAnimal& reserva){
 	reserva.alimentar("Bobby", 2, "só quis comer 2 porções de peixes hoje");
 	reserva.alimentar("Catita", 1, "comeu direitinho");
 	reserva.alimentar("Carolina", 3, "estava com um apetite e tanto");
 	reserva.alimentar("Tony", 10, "comeu um pouco da comida do Bobby");
 
+}
+
+void relatorioAlim(ReservaAnimal& reserva){
 	vector<string> animaisRelatorioAlimentacao;
 	animaisRelatorioAlimentacao.push_back("Bobby");
 	animaisRelatorioAlimentacao.push_back("Catita");
@@ -56,12 +62,26 @@ int main()
 	animaisRelatorioAlimentacao.push_back("Tony");
 
 	reserva.relatorioAlimentacao(animaisRelatorioAlimentacao);
+}
 
+void relatorioPeso(ReservaAnimal& reserva){
 	vector<string> tipoComidas;
 	tipoComidas.push_back("Ração");
 	tipoComidas.push_back("Peixe");
 
 	reserva.relatorioKgComida(tipoComidas);
+}
+
+int main()
+{
+	ReservaAnimal reserva;
+
+	adicionarCuidadores(reserva);
+	adicionarAnimais(reserva);
+	listAnimais(reserva);
+	alimentacao(reserva);
+	relatorioAlim(reserva);
+	relatorioPeso(reserva);
 
 	return 0;
 }
