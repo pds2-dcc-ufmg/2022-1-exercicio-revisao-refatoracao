@@ -4,11 +4,11 @@ Herpestidae::Herpestidae(std::string _nome, int _idade, std::string _especie) : 
     this->especie = _especie;
 }
 
-void Herpestidae::imprimirDadosAnimal(){
-    Animal::imprimirDadosAnimal();
+void Herpestidae::imprimir_dados_animal(){
+    Animal::imprimir_dados_animal();
     std::cout << "  Especie: " << this->especie << std::endl;
 }
 
-double Herpestidae::calculaConsumo(int porcoesConsumidas){
+double Herpestidae::calcula_consumo(int porcoesConsumidas){
     return Herpestidae::QUANTIDADE_PORCAO * (double)porcoesConsumidas;
 }

@@ -6,15 +6,15 @@
 
 class Ursidae : public Animal{
     private:    
-        static const double PEIXES_POR_PORCAO = 5.0;
+        static double constexpr PEIXES_POR_PORCAO = 5.0;
 
         std::string especie;
-        double kgPeixePorDia;
+        double kg_peixe_por_dia;
 
     public:
         Ursidae(std::string _nome, int _idade, std::string _especie, double _kgDePeixe);
-        virtual void imprimirDadosAnimal() override;
-        virtual double calculaConsumo(int porcao) override;
+        virtual void imprimir_dados_animal() override;
+        virtual double calcula_consumo(int porcao) override;
 
 };
 

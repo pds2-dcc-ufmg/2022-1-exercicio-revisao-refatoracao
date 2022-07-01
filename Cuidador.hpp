@@ -9,14 +9,14 @@ class Cuidador{
         std::string nome;
         std::string cpf;
         std::string telefone;
-        std::string dataAniversario;
+        std::string data_aniversario;
         std::string salario;
 
 	public:
         Cuidador();
         Cuidador(std::string _nome, std::string _cpf, std::string _telefone, std::string _dataAniversario, std::string _salario);
-        void imprimeDadosCuidador();
-        std::string getNome();
+        void imprime_dados_cuidador();
+        std::string get_nome();
 };
 
 #endif

@@ -12,9 +12,9 @@ class Animal {
 
     public:
         Animal(std::string _nome, int _idade, std::string _famillia);
-        virtual double calculaConsumo(int porcao);
-        void imprimirTchau();
-        virtual void imprimirDadosAnimal();
+        virtual ~Animal();
+        virtual double calcula_consumo(int porcao);
+        virtual void imprimir_dados_animal();
 };
 
 #endif

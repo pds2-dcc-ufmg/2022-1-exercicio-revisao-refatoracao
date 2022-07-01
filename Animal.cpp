@@ -1,12 +1,14 @@
 #include "Animal.hpp"
 
-Animal::Animal(std::string _nome, int _idade, std::string _famillia){
-    this->nome = nome;
-    this->idade = idade;
-    this->familia = familia;
+Animal::Animal(std::string _nome, int _idade, std::string _familia){
+    this->nome = _nome;
+    this->idade = _idade;
+    this->familia = _familia;
 }
 
-void Animal::imprimirDadosAnimal(){
+Animal::~Animal(){}
+
+void Animal::imprimir_dados_animal(){
     std::cout << std::endl 
     << "[Animal]" << std::endl
     << "  Nome: " << this->nome << std::endl
@@ -14,10 +16,6 @@ void Animal::imprimirDadosAnimal(){
     << "  Familia: " << this->familia << std::endl;
 }
 
-void Animal::imprimirTchau(){
-    std::cout << "Tchau" << std::endl;
-}
-
-double Animal::calculaConsumo(int porcao){
+double Animal::calcula_consumo(int porcao){
     return 0;
 }

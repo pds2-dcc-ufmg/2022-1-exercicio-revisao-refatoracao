@@ -5,23 +5,23 @@ Alimentacao::Alimentacao(int _porcao, std::string _comida, std::string _descrica
     this->porcao = _porcao;
     this->comida = _comida;
     this->descricao = _descricao;
-    this->nomeAnimal = _nomeAnimal;
+    this->nome_animal = _nomeAnimal;
     this->cuidador = _cuidador;
 };
 
-void Alimentacao::imprimirNomeAnimalCuidador(){
-    std::cout << "Animal: " << nomeAnimal << std::endl;
-    std::cout << " Cuidador: " << this->cuidador.getNome() << std::endl;
+void Alimentacao::imprimir_nome_animal_cuidador(){
+    std::cout << "Animal: " << this->nome_animal << std::endl;
+    std::cout << " Cuidador: " << this->cuidador.get_nome() << std::endl;
 }
 
-int Alimentacao::getPorcao(){
+int Alimentacao::get_porcao(){
     return this->porcao;
 }
 
-void Alimentacao::setPorcao(int _porcao){
+void Alimentacao::set_porcao(int _porcao){
     this->porcao = _porcao;
 }
 
-std::string Alimentacao::getDescricao(){
+std::string Alimentacao::get_descricao(){
     return this->descricao;
 }
