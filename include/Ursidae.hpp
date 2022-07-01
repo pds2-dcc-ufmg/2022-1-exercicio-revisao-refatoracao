@@ -10,6 +10,7 @@ class Ursidae : public Animal {
 
     public:
         Ursidae();
+        Ursidae(string nome, string especie, int idade);
         Ursidae(string nome, string especie, int idade, float quantidadePorcao, float pesoPorcao, string tipoComida);
         
         virtual void print() override;

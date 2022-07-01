@@ -5,9 +5,6 @@
 #include <iostream>
 
 using std::string;
-using std::cout;
-using std::cin;
-using std::endl;
 
 class Cuidador{
 
@@ -16,6 +13,7 @@ class Cuidador{
 
 	public:
 		Cuidador(string nome);
+		string getNome();
 
 };
 

@@ -1,7 +1,14 @@
 #ifndef ALIMENTACAO_HPP
 #define ALIMENTACAO_HPP
 
+#include <string>
+#include <iostream>
 #include "Cuidador.hpp"
+
+using std::string;
+using std::cout;
+using std::cin;
+using std::endl;
 
 class Alimentacao{
 

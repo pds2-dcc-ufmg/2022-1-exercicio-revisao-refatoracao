@@ -7,6 +7,14 @@ Animal::Animal(string nome, string familia, int idade, float quantidadePorcao, f
     this->alimentacao = Alimentacao(quantidadePorcao, pesoPorcao, tipoComida);
 
 } 
+
+Animal::Animal(string nome, string familia, int idade){
+    this->nome = nome;
+    this->familia = familia;
+    this->idade = idade;
+    this->alimentacao = Alimentacao(0, 0, "");
+
+} 
         
 string Animal::getNome(){
     return this->nome; 

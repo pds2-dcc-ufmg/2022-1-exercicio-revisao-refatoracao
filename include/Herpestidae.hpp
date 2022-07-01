@@ -10,6 +10,7 @@ class Herpestidae : public Animal {
 
     public:
         Herpestidae();
+        Herpestidae(string nome, string especie, int idade);
         Herpestidae(string nome, string especie, int idade, float quantidadePorcao, float pesoPorcao, string tipoComida);
         
         virtual void print() override;

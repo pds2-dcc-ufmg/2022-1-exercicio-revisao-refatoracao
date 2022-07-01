@@ -12,7 +12,8 @@ class Animal {
         Alimentacao alimentacao;
 
     public:
-        Animal(string nome, string familia, int idade, float quantidadePorcao, float pesoPorcao, string tipoComida); 
+        Animal(string nome, string familia, int idade, float quantidadePorcao, float pesoPorcao, string tipoComida);
+        Animal(string nome, string familia, int idade); 
         Animal() = default;
 
         string getNome();
