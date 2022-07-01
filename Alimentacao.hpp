@@ -4,38 +4,22 @@
 
 #include "Cuidador.hpp"
 
-using namespace std;
+class Alimentacao {
 
-class Alimentacao{
+    private:
+
+         std::string _porcao ;
+         std::string _comida ;
+         std::string _descricao ;
+         Cuidador* _cuidador ;
+         std::string _nomeAnimal ;
 
     public:
-    int porcao;
-    string comida;
-    string descricao;
-    Cuidador cuid;
-    string nomeAnimal;
 
+          Alimentacao( std::string porcao, std::string comida, std::string descricao,Cuidador* cuidador, std::string nomeAnimal ) ;
+          void print () ;
+          std::string GetAtributo ( std::string chave ) ;
 
-    void print() {
-
-        std::cout << "Animal: ";
-        cout << nomeAnimal << "\n";
-
-        std::cout << " Cuidador: ";
-        cout << cuid.NOME << "\n";
-
-        //std::cout << " : ";
-        //cout << ursidae;
-    }
-
-    /*void print() {
-
-        std::cout << "Cuidador: ";
-        cout << cuida;
-
-        std::cout << " Animal: ";
-        cout << alimentado;
-    }*/
 };
 
 #endif
