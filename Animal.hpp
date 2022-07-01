@@ -1,28 +1,31 @@
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef ANIMAL_H
+#define ANIMAL_H
 
 #include <iostream>
-#include <iomanip>
-
-using namespace std;
+#include <vector>
+#include "Alimentacao.hpp"
+#include "Cuidador.hpp"
 
 class Animal {
+    
+    protected:
+        int idade;
+        std::string familia;
+        std::string especie;
+        std::string nome;
+        Alimentacao* hoje;
+
     public:
-        string IDADE;
-        string family;
-        string nome;
-
-        void print() {
-            cout << "\n[Animal]" << endl
-            << "  Nome: " << nome << endl
-
-              << "  Idade: " << IDADE << endl
-            << "  Familia: " << family << endl;
-        }
-
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+        Animal(); 
+        virtual ~Animal();
+        std::string getNomeAnimal();
+        std::string getFamilia();
+        int getIdade();
+        Alimentacao* getAlimentacao();
+        virtual void alimentar(std::string _descricao, int _qtd, Cuidador& _cuid);
+        //aumenta qtd total dos estaticos em alimentacao^
+        
+        void printDados();
 };
 
 #endif

@@ -1,35 +1,21 @@
-#ifndef Herpestidae_HPP
-#define Herpestidae_HPP
+#ifndef HERPESTIDAE_H
+#define HERPESTIDAE_H
 
+#include <iostream>
 #include "Animal.hpp"
-
-using namespace std;
-
-double quantPORCAO = 1;
-
+const int RACAO = 1;     //as porcoes sao dadas em kg
 
 class Herpestidae : public Animal {
 
-    public:
+    private:
+        std::string comida;
 
     public:
-  string species;
+        Herpestidae(std::string _nome, int _idade, std::string _especie, std::string _comida);
+        ~Herpestidae();
+        void alimentar(std::string _descricao, int _qtd, Cuidador& _cuid) override;
+        //só comem ração
 
-    double kgConsumidosDeRacao(int porcoesConsumidas) {
-        double c = quantPORCAO*porcoesConsumidas;
-                  return c;
-    }
-
-
-    void print() {
-
-        Animal::print();
-
-
-
-        std::cout << "  Especie: " << species <<endl;
-
-    }
 };
 
 #endif
