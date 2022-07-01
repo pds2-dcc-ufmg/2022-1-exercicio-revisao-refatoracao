@@ -6,7 +6,6 @@
 #include <iostream>
 #include <iomanip>
 
-#define PEIXESPORPORCAO 5
 
 class Ursidae : public Animal {
     
@@ -18,7 +17,6 @@ class Ursidae : public Animal {
         Ursidae(std::string _nome, int _idade);
 
         void setKgPeixePorDia(double _kgPeixePorDia);
-        double calcularPeixesConsumidos(int porcaoPeixes);
 };
 
 #endif

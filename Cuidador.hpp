@@ -18,7 +18,7 @@ class Cuidador{
 
 		std::string getNome();
 
-		void print(); // imprime na tela os dados de um cliente cadastrado
+		void print(); // imprime na tela os dados de um cliente cadastrado com excecao do salario
 
 };
 

@@ -11,6 +11,10 @@ std::string Animal::getNome() {
     return this->nome;
 }
 
+std::string Animal::getFamilia() {
+    return this->familia;
+}
+
 void Animal::print() {
     std::cout << "\n[Animal]"  << std::endl 
               << "  Nome: "    << this->nome << std::endl 
@@ -19,8 +23,4 @@ void Animal::print() {
     if(this->especie != "") {
         std::cout << "  Especie: " << this->especie << std::endl;
     }
-}
-
-void Animal::printTchau() {
-    std::cout << "Tchau" << std::endl;
 }

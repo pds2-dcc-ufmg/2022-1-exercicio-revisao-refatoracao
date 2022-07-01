@@ -11,7 +11,3 @@ Ursidae::Ursidae(std::string _nome, int _idade) : Animal(_nome, _idade, "Ursidae
 void Ursidae::setKgPeixePorDia(double _kgPeixePorDia) {
     this->kgPeixePorDia = _kgPeixePorDia;
 }
-
-double Ursidae::calcularPeixesConsumidos(int porcaoPeixes) {
-    return PEIXESPORPORCAO*porcaoPeixes;
-}

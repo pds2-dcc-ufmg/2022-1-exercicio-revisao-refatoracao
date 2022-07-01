@@ -16,9 +16,10 @@ class Animal {
         Animal(std::string _nome, int idade, std::string familia, std::string especie);
 
         std::string getNome();
+        std::string getFamilia();
 
+        //Imprime nome, idade, familia e especie se essa tiver sido informada
         void print();
-        void printTchau();
 };
 
 #endif
