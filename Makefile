@@ -20,4 +20,4 @@ build/Alimentacao.o: src/registro/Alimentacao.cpp
 	g++ -c src/registro/Alimentacao.cpp -I include/ -o build/Alimentacao.o
 
 clean:
-	rm* .o main
+	rm* .o refatoracao
