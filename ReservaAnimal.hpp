@@ -8,15 +8,11 @@
 class ReservaAnimal{
 	private:
 	vector<Cuidador*> cuidadores;
-	// vector<Animal*> animais;
 	map<string, Animal*> animais;
 	map<string, int> kgComidaGasto;
-	int kgRacao;
-	int kgPeixe;
 
 	public:
 	~ReservaAnimal();
-	// ReservaAnimal();
 	void alimentar(string nomeAnimal, double porcoes, string _descricao);
 	void addCuidador(Cuidador* &cuidador);
 	void addAnimal(string nomeCuidador, Animal* &animal);

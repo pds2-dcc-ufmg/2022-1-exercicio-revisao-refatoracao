@@ -6,8 +6,6 @@ ReservaAnimal::~ReservaAnimal(){
 	}
 }
 
-// ReservaAnimal::ReservaAnimal() : kgRacao(0), kgPeixe(0){}
-
 void ReservaAnimal::alimentar(string nomeAnimal, double porcoes, string descricao){
 	Animal* a = getAnimal(nomeAnimal);
 	if(kgComidaGasto.count(a->getComida()) == 0){
@@ -43,7 +41,7 @@ void ReservaAnimal::relatorioAlimentacao(vector<string> nomeAnimais){
 		Cuidador* c = getCuidador(nomeAnimal);
 		cout << "Animal: " << nomeAnimal << endl;
 		cout << " Cuidador: " << c->getNome() << endl;
-		cout << " Descricao: "; //<< nomeAnimal << " " endl << endl;
+		cout << " Descricao: ";
 		c->descreverRefeicao(nomeAnimal);
 	}
 }

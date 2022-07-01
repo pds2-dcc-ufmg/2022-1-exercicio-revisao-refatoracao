@@ -10,27 +10,14 @@ class Alimentacao{
 	double pesoPorcao;
 	string comida;
 	string descricao;
-	// double kgComido;
-	bool alimentado;
 
 	public:
 	Alimentacao();
 	Alimentacao(int _pesoPorcao, string _comida);
 	string getTipo();
 	double pesoRefeicao(double numPorcoes);
-	void setAlimentado(string _descricao);
+	void setDescricao(string _descricao);
 	string getDescricao();
-
-	// public:
-	// int porcao;
-	// string comida;
-	// string descricao;
-	// Cuidador cuid;
-	// string nomeAnimal;
-
-	// void print(){
-	// 	cout << "Animal: " << nomeAnimal << "\n" << " Cuidador: " << cuid.NOME << "\n";
-	// }
 };
 
 #endif

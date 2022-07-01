@@ -12,8 +12,7 @@ double Alimentacao::pesoRefeicao(double numPorcoes){
 	return numPorcoes * pesoPorcao;
 }
 
-void Alimentacao::setAlimentado(string _descricao){
-	alimentado = true;
+void Alimentacao::setDescricao(string _descricao){
 	descricao = _descricao;
 }
 

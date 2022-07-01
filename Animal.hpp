@@ -1,11 +1,7 @@
 #ifndef ANIMAL_H
 #define ANIMAL_H
 
-#include <iostream>
-#include <iomanip>
 #include "Alimentacao.hpp"
-
-using namespace std;
 
 class Animal{
 	protected:

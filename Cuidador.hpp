@@ -1,11 +1,8 @@
 #ifndef CUIDADOR_H
 #define CUIDADOR_H
 
-#include <string>
 #include <vector>
 #include "Animal.hpp"
-
-using namespace std;
 
 class Cuidador{
 	private:
@@ -20,16 +17,6 @@ class Cuidador{
 	void listAnimais();
 	bool cuidaAnimal(string nomeAnimal);
 	void descreverRefeicao(string nomeAnimal);
-
-	// public:
-	// string salario;
-	// string NOME;
-	// string cpf;
-	// string Telefone;
-	// string BIRTH;
-
-	// void print(); // imprime na tela os dados de um cliente cadastrado
-
 };
 
 #endif

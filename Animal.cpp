@@ -25,7 +25,7 @@ string Animal::getNome(){
 }
 
 double Animal::comer(double numPorcoes, string descricao){
-	alimentacao.setAlimentado(descricao);
+	alimentacao.setDescricao(descricao);
 	return alimentacao.pesoRefeicao(numPorcoes);
 }
 
