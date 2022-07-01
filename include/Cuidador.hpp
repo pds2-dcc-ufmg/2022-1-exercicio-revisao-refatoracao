@@ -18,7 +18,7 @@ class Cuidador{
 	void listAnimais();
 	void descreverRefeicao(string nomeAnimal);
 	
-	bool cuidaAnimal(string nomeAnimal);
+	bool encarregadoAnimal(string nomeAnimal);
 	
 	string getNome();
 };

@@ -1,15 +1,18 @@
 #include "ReservaAnimal.hpp"
 
+// Destrutor de reservaanimal
 ReservaAnimal::~ReservaAnimal(){
 	for(Cuidador* c : cuidadores){
 		delete c;
 	}
 }
 
+// Adiciona cuidador
 void ReservaAnimal::addCuidador(Cuidador* &cuidador){
 	cuidadores.push_back(cuidador);
 }
 
+// Adiciona animal e coloca um cuidador encarregado do animal
 void ReservaAnimal::addAnimal(string nomeCuidador, Animal* &animal){
 	animais[animal->getNome()] = animal;
 	for(Cuidador* c : cuidadores){
@@ -19,6 +22,7 @@ void ReservaAnimal::addAnimal(string nomeCuidador, Animal* &animal){
 	}
 }
 
+// Alimenta animais passados
 void ReservaAnimal::alimentar(string nomeAnimal, double numPorcoes, string descricao){
 	Animal* a = getAnimal(nomeAnimal);
 	if(kgComidaGasto.count(a->getComida()) == 0){
@@ -27,6 +31,7 @@ void ReservaAnimal::alimentar(string nomeAnimal, double numPorcoes, string descr
 	kgComidaGasto[a->getComida()] += a->comer(numPorcoes, descricao);
 }
 
+// Lista animais passados
 void ReservaAnimal::listarAnimais(vector<string> nomeAnimais){
 	for(string nomeAnimal : nomeAnimais){
 		Animal* a = getAnimal(nomeAnimal);
@@ -34,6 +39,7 @@ void ReservaAnimal::listarAnimais(vector<string> nomeAnimais){
 	}
 }
 
+// Imprime o relatório de alimentação dos animais passados
 void ReservaAnimal::relatorioAlimentacao(vector<string> nomeAnimais){
 	cout << " " << endl << " " << endl << "--------------------------------";
 	cout << endl << endl << "Relatorio das alimentações "<< endl << endl;
@@ -46,6 +52,7 @@ void ReservaAnimal::relatorioAlimentacao(vector<string> nomeAnimais){
 	}
 }
 
+// Imprime o relatório do Kg consumido dos tipos de comida passados
 void ReservaAnimal::relatorioKgComida(vector<string> tipoComidas){
 	cout << " " << endl << " " << endl << "--------------------------------";
 	cout << endl << endl << "Relatorio de kg de comida gastos " << endl;
@@ -57,15 +64,17 @@ void ReservaAnimal::relatorioKgComida(vector<string> tipoComidas){
 	}
 }
 
+// Retorna o animal por nome
 Animal* ReservaAnimal::getAnimal(string nomeAnimal){
 	map<string, Animal*>::iterator it;
 	it = animais.find(nomeAnimal);
 	return it->second;
 }
 
+// Retorna o cuidador pelo nome de um animal
 Cuidador* ReservaAnimal::getCuidador(string nomeAnimal){
 	for(Cuidador* c : cuidadores){
-		if(c->cuidaAnimal(nomeAnimal)){
+		if(c->encarregadoAnimal(nomeAnimal)){
 			return c;
 		}
 	}

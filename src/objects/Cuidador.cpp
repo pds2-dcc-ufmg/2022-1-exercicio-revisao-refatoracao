@@ -1,23 +1,21 @@
 #include "Cuidador.hpp"
 
+// Destrutor de cuidador
 Cuidador::~Cuidador(){
 	for(Animal* a : animaisCuidados){
 		delete a;
 	}
 }
 
+// Construtor para o cuidador
 Cuidador::Cuidador(string _nome) : nome(_nome){};
 
+// Coloca o cuidador a encargo do animal passado
 void Cuidador::addAnimal(Animal* &_animal){
 	animaisCuidados.push_back(_animal);
 }
 
-void Cuidador::listAnimais(){
-	for(Animal* a : animaisCuidados){
-		a->print();
-	}
-}
-
+// Descreve a refeição do animal passado
 void Cuidador::descreverRefeicao(string nomeAnimal){
 	for(Animal* a : animaisCuidados){
 		if(a->getNome() == nomeAnimal){
@@ -26,7 +24,8 @@ void Cuidador::descreverRefeicao(string nomeAnimal){
 	}
 }
 
-bool Cuidador::cuidaAnimal(string nomeAnimal){
+// Retorna true se cuidador estiver encarregado do animal passado
+bool Cuidador::encarregadoAnimal(string nomeAnimal){
 	for(Animal* a : animaisCuidados){
 		if(a->getNome() == nomeAnimal){
 			return true;
@@ -35,6 +34,7 @@ bool Cuidador::cuidaAnimal(string nomeAnimal){
 	return false;
 }
 
+// Retorna nome do cuidador
 string Cuidador::getNome(){
 	return nome;
 }
