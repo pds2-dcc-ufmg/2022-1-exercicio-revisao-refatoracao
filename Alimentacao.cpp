@@ -17,8 +17,6 @@ Alimentacao::Alimentacao(int _unPeixes, int _unRacao, int _unRacaoEspecial, Cuid
 
 Alimentacao::~Alimentacao(){
 
-    //verificar depois se vou deixar os cuidadores como ponteiros ou não
-    //se sim, delete this->cuid; mas por enquanto não
 }
 
 void Alimentacao::escreverDescricao(std::string _descricao){

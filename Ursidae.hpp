@@ -17,6 +17,3 @@ class Ursidae : public Animal {
 
 #endif
 
-
-//              DECIDIR OS PARAMETROS DE ALIMENTAR()
- 
