@@ -6,6 +6,7 @@
 
 #include "Animal.hpp"
 
+//subclasse de Animal
 class Ursidae : public Animal {
     private:
         int peixesPorPORCAO = 5;

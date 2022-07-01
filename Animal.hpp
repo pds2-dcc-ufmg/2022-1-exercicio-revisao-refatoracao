@@ -4,6 +4,7 @@
 #include <iostream>
 #include <iomanip>
 
+//Superclasse de Herpestidae,Ursidae
 class Animal {
     protected:
         int idade;

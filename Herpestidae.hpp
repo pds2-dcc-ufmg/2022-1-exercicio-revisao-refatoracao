@@ -3,6 +3,7 @@
 
 #include "Animal.hpp"
 
+//subclasse de Animal
 class Herpestidae : public Animal {
     private:
         std::string especie;
