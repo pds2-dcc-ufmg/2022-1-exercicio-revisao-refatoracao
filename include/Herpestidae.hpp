@@ -8,7 +8,7 @@
 class Herpestidae : public Animal {
 
     public:
-        Herpestidae(int _idade, std::string _nome, std::string _especie);
+        Herpestidae(int _idade, std::string _nome, std::string _familia, std::string _especie);
         double kgConsumidosDeRacao(int totalPorcoes, double kgPorPorcao);
 };
 

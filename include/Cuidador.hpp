@@ -12,6 +12,7 @@ class Cuidador{
 	public:
 		Cuidador(std::string _nome, std::string _telefone);
 		void print(); 
+		std::string getNome();
 
 };
 

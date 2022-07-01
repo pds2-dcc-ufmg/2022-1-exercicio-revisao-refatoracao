@@ -9,7 +9,7 @@
 class Ursidae : public Animal{
 
     public:
-        Ursidae(int _idade, std::string _nome, std::string _especie);
+        Ursidae(int _idade, std::string _nome, std::string _familia, std::string _especie);
         int calculaPeixesConsumidos(int totalPorcoes, int peixesPorPorcao);
 };
 

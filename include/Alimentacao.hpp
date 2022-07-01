@@ -14,11 +14,11 @@ class Alimentacao{
         int porcao;
         std::string comida;
         std::string descricao;
-        Cuidador* cuidador;
-        Animal* animal;
+        Cuidador cuidador;
+        Animal animal;
 
     public:
-        Alimentacao(int _porcao, std::string _comida, std::string _descricao, Cuidador* _cuidador, Animal* _animal);
+        Alimentacao(int _porcao, std::string _comida, std::string _descricao, Cuidador _cuidador, Animal _animal);
         
         void print();
 
