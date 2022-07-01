@@ -17,19 +17,4 @@ void Animal::print() {
           
 }
 
-void Animal::SetAtributos ( std::string chave, std::string valor ) {
-
-   if( chave == "familia" ){
-      this->_familia = valor ;
-    
-  }else if( chave == "nome"){
-      this->_nome = valor ;
-    
-  }else if( chave == "idade"){
-      this->_idade = valor ;
-    
-  }
-  
-}
-
 double Animal::PorcaoConsumida ( double porcao ) {}

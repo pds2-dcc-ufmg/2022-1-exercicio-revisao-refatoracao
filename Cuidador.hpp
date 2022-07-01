@@ -16,7 +16,7 @@ class Cuidador{
 
   public:
 
-    void SetAtributos ( std::string chave, std::string valor ) ;
+    Cuidador(std::string salario ,std::string nome,std::string cpf, std::string telefone, std::string dataNascimento );
     std::string GetNome () ;
 
 };

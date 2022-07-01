@@ -1,27 +1,15 @@
 #include "Cuidador.hpp"
 
-void Cuidador::SetAtributos ( std::string chave, std::string valor ) {
-
-  if( chave == "salario" ){
-      this->_salario = valor ;
-    
-  }else if( chave == "nome"){
-      this->_nome = valor ;
-    
-  }else if( chave == "cpf"){
-      this->_cpf = valor ;
-    
-  }else if( chave == "telefone" ){
-      this->_telefone = valor ;
-     
-  }else if( chave == "dataNascimento"){
-      this->_dataNascimento = valor ;
-    
-  }
-  
+Cuidador::Cuidador(std::string salario ,std::string nome,std::string cpf, std::string telefone, std::string dataNascimento ){
+      this->_salario = salario ;
+      this->_nome = nome ;
+      this->_cpf = cpf ;
+      this->_telefone = telefone ;
+      this->_dataNascimento = dataNascimento ;
 }
 
 std::string Cuidador::GetNome () {
    return this->_nome;
-  
 }
+
+

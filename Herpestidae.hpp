@@ -2,7 +2,7 @@
 #define Herpestidae_HPP
 
 #include "Animal.hpp"
-
+#include <iomanip>
 
 class Herpestidae : public Animal {
 
@@ -15,7 +15,7 @@ class Herpestidae : public Animal {
 
         Herpestidae( Animal Herpestidae, std::string especie) ;
         virtual void print() override ;
-        virtual double PorcaoConsumida ( double porcao ) override ;
+        virtual double PorcaoConsumida ( double porcao ) override;
 
 };
 

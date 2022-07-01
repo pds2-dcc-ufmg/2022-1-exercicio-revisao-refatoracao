@@ -6,7 +6,7 @@
 
 class Animal {
 
-    protected:
+    private:
 
         std::string _idade ;
         std::string _familia ;
@@ -16,9 +16,7 @@ class Animal {
 
         Animal ( std::string idade, std::string familia, std::string nome ) ; 
         virtual void print () ;
-        virtual void SetAtributos ( std::string chave, std::string valor ) ;
         virtual double PorcaoConsumida ( double porcao ) ;
-
 
 };
 

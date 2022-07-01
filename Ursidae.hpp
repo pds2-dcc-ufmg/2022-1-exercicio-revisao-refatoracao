@@ -16,7 +16,7 @@ class Ursidae : public Animal {
 
         Ursidae( Animal Ursidae, std::string especie, double KgPeixePorDiA) ;
         virtual void print() override ;
-        virtual double PorcaoConsumida ( double porcao ) override ;
+        virtual double PorcaoConsumida ( double porcao ) override;
 
 };
 

@@ -1,19 +1,19 @@
 #include "Alimentacao.hpp"
 
-Alimentacao::Alimentacao( std::string porcao, std::string comida, std::string descricao, Cuidador cuidador, std::string nomeAnimal ) {
+Alimentacao::Alimentacao( std::string porcao, std::string comida, std::string descricao,Cuidador* cuidador,  std::string nomeAnimal )  {
 
   this->_porcao = porcao;
   this->_comida = comida;
   this->_descricao = descricao;
-  this->_cuidador =  cuidador;
+  this->_cuidador = cuidador;
   this->_nomeAnimal = nomeAnimal;
   
 }
 
 void Alimentacao::print () {
    
-     std::cout << "Animal: " << _nomeAnimal << std::endl ;
-     std::cout << " Cuidador: " << _cuidador.GetNome() << std::endl ;
+     std::cout << "Animal: " << this->_nomeAnimal << std::endl ;
+     std::cout << " Cuidador: " << this->_cuidador->GetNome() << std::endl ;
      std::cout << " Descricao: " << this->_descricao << std::endl << std::endl;
 }
 

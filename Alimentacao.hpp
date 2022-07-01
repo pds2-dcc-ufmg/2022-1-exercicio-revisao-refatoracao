@@ -11,12 +11,12 @@ class Alimentacao {
          std::string _porcao ;
          std::string _comida ;
          std::string _descricao ;
-         Cuidador _cuidador ;
+         Cuidador* _cuidador ;
          std::string _nomeAnimal ;
 
     public:
 
-          Alimentacao( std::string porcao, std::string comida, std::string descricao, Cuidador cuidador, std::string nomeAnimal );
+          Alimentacao( std::string porcao, std::string comida, std::string descricao,Cuidador* cuidador, std::string nomeAnimal ) ;
           void print () ;
           std::string GetAtributo ( std::string chave ) ;
 

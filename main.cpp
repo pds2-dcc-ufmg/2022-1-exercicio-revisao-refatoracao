@@ -5,7 +5,7 @@
 #include "Cuidador.hpp"
 #include "Alimentacao.hpp"
 
-
+// g++ -std=c++11 main.cpp Alimentacao.cpp Alimentacao.hpp Animal.cpp Animal.hpp Cuidador.hpp Cuidador.cpp Herpestidae.hpp Herpestidae.cpp Ursidae.hpp Ursidae.cpp -o main
 int main(){
 
     Animal animal1( "13" , "Ursidae" , "Bobby" ) ;
@@ -18,48 +18,35 @@ int main(){
     animal3.print();
     animal4.print();
   
-    Animal ursidae ( "9" , "Ursidae" , "Tony") ;
-    Ursidae ursidae1 ( ursidae , "Urso Pardo" , 10.5 ) ;
+    Animal animalUrsidae1 ( "9" , "Ursidae" , "Tony") ;
+    Ursidae ursidae1 (animalUrsidae1 , "Urso Pardo" , 10.5 ) ;
 
-  
-    ursidae.SetAtributos ("nome" , "Wanda") ;
-    ursidae.SetAtributos ("idade" , "10") ;
-    Ursidae ursidae2 ( ursidae , "Urso Polar" , 7.0 ) ;
+    Animal animalUrsidae2( "10" , "Ursidae" , "Wanda" )  ;
+    Ursidae ursidae2 ( animalUrsidae2, "Urso Polar" , 7.0 ) ;
   
     ursidae1.print();
     ursidae2.print();
 
   
-    Animal herpestidae ( "2" , "Herpestidae" , "Catita");
-    Herpestidae herpestidae1 ( herpestidae , "Suricato" );
+    Animal animalHerpestidae1 ( "2" , "Herpestidae" , "Catita");
+    Herpestidae herpestidae1 (  animalHerpestidae1 , "Suricato" );
 
 
-    herpestidae.SetAtributos("nome", "Carolina") ;
-    herpestidae.SetAtributos( "idade", "2") ;
-    Herpestidae herpestidae2 ( herpestidae , "Suricato") ;
+    Animal animalHerpestidae2 ("2" , "Herpestidae" , "Carolina") ;
+    Herpestidae herpestidae2 ( animalHerpestidae2, "Suricato") ;
   
     herpestidae1.print();
-    herpestidae2.print();
+  
 
-  Cuidador cuidador1;
-  cuidador1.SetAtributos("salario", "R$ 3000" );
-  cuidador1.SetAtributos("nome","Ana Maria Rodrigues Lopes" );
-  cuidador1.SetAtributos("cpf",  "1234567799" );
-  cuidador1.SetAtributos("telefone", "(31) 99876-6923" );
-  cuidador1.SetAtributos("dataNascimento", "10/10/2000" );
+  Cuidador cuidador1 ("R$ 3000","Ana Maria Rodrigues Lopes","1234567799", "(31) 99876-6923","10/10/2000");
 
-  Cuidador cuidador2 ;
-  cuidador2.SetAtributos("salario", "R$ 4000" );
-  cuidador2.SetAtributos("nome", "Fernanda Silva Santos");
-  cuidador2.SetAtributos("cpf", "9472567121"  );
-  cuidador2.SetAtributos("telefone","(31) 99123-8970" );
-  cuidador2.SetAtributos("dataNascimento", "08/02/1995"  );
+  Cuidador cuidador2 ("R$ 4000","Fernanda Silva Santos", "9472567121", "(31) 99123-8970","08/02/1995");
 
 
-    Alimentacao Bobby ( "2","Peixes ","Bobby só quis comer 2 porções de peixes hoje", cuidador1, "Bobby ") ;
-    Alimentacao Catita ( "1","Ração especial","Catita comeu direitinho" ,cuidador2 , "Catita" ) ;
-    Alimentacao Carolina ( "3" ,"Ração" ,"Carolina estava com um apetite e tanto" , cuidador2 , "Carolina" );
-    Alimentacao Tony ("10", "Peixes","Tony comeu um pouco da comida do Bobby" , cuidador1 , "Tony" );
+    Alimentacao Bobby ( "2","Peixes ","Bobby só quis comer 2 porções de peixes hoje", &cuidador1, "Bobby ") ;
+    Alimentacao Catita ( "1","Ração especial","Catita comeu direitinho" ,&cuidador2 , "Catita" ) ;
+    Alimentacao Carolina ( "3" ,"Ração" ,"Carolina estava com um apetite e tanto" , &cuidador2 , "Carolina" );
+    Alimentacao Tony ("10", "Peixes","Tony comeu um pouco da comida do Bobby" , &cuidador1 , "Tony" );
 
 
    double kgPeixeConsumidos = 0;
