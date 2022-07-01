@@ -14,27 +14,17 @@ class Cuidador{
 		std::string BIRTH;
 	
 	public:
-		void print(); // imprime na tela os dados de um cliente cadastrado
+		void print();
 		
-		std::string get_salario(){
-			return salario;
-		}
+		std::string get_salario();
 		
-		std::string get_nome_func(){
-			return Nome_funcionario;
-		}
+		std::string get_nome_func();
 
-		std::string get_cpf(){
-			return cpf;
-		}
+		std::string get_cpf();
 
-		std::string get_telefone(){
-			return Telefone;
-		}
+		std::string get_telefone();
 
-		std::string get_Birth(){
-			return BIRTH;
-		}
+		std::string get_Birth();
 
 };
 

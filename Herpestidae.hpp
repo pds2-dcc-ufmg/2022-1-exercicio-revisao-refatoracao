@@ -11,22 +11,9 @@ class Herpestidae : public Animal {
         double quantPORCAO = 1;
     
     public:
-        std::string getSpecies(){
-            return species;
-        }
-        double kgConsumidosDeRacao(int porcoesConsumidas){
-            double c = quantPORCAO*porcoesConsumidas;
-            return c;
-        }
-
-
-    void print() {
-
-        Animal::print();
-        
-        std::cout<<"Especie: " << species <<std::endl;
-
-    }
+        std::string getSpecies();
+        double kgConsumidosDeRacao(int porcoesConsumidas);
+        void print();
 };
 
 #endif

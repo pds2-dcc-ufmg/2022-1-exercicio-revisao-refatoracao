@@ -17,33 +17,19 @@ class Alimentacao{
 
     public:
         int porcao;
-        void print() {
+        
+        void print();
 
-            std::cout << "Animal: "<<std::endl;
-            std::cout << nomeAnimal <<std::endl;
-            std::cout << " Cuidador: "<<std::endl;
-            std::cout << nomeAnimal <<std::endl;
-        }
+        int get_porcao();
 
-        int get_porcao(){
-            return porcao;
-        }
+        std::string get_comida();
 
-        std::string get_comida(){
-            return comida;
-        }
+        std::string get_descricao();
 
-        std::string get_descricao(){
-            return descricao;
-        }
+        Cuidador get_cuid();
 
-        Cuidador get_cuid(){
-            return cuid;
-        }
-
-        std::string get_nome_animal(){
-            return nomeAnimal;
-        }
+        std::string get_nome_animal();
 };
+
 
 #endif
