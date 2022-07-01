@@ -10,10 +10,10 @@
 
 class Alimentacao{
     private:
-        string comida;
-        string descricao;
+        std::string comida;
+        std::string descricao;
         Cuidador cuid;
-        string nomeAnimal;
+        std::string nomeAnimal;
 
     public:
         int porcao;
