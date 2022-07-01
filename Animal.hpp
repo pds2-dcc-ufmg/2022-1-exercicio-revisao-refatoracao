@@ -20,7 +20,11 @@ class Animal{
 	Animal();
 	Animal(string _nome, int _idade, string _familia, int _porcao, string _comida);
 	Animal(string _nome, int _idade, string _familia, int _porcao, string _comida, string _especie);
+	string getNome();
 	void print();
+	double comer(double numPorcoes, string _descricao);
+	string getComida();
+	Alimentacao* getAlimentacao();
 };
 
 #endif

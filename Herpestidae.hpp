@@ -1,8 +1,8 @@
 #ifndef HERPESTIDAE_H
 #define HERPESTIDAE_H
 
-#define F_HERPESTIDAE "Herpestidae"
-#define PORCAO_HERPESTIDAE 1
+#define FAMILIA_HERPESTIDAE "Herpestidae"
+#define PESO_PORCAO_HERPESTIDAE 1
 #define COMIDA_HERPESTIDAE "Ração"
 
 #include "Animal.hpp"

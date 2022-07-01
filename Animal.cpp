@@ -19,3 +19,20 @@ void Animal::print(){
 		cout << "  Especie: " << especie << endl;
 	}
 }
+
+string Animal::getNome(){
+	return nome;
+}
+
+double Animal::comer(double numPorcoes, string descricao){
+	alimentacao.setAlimentado(descricao);
+	return alimentacao.pesoRefeicao(numPorcoes);
+}
+
+string Animal::getComida(){
+	return alimentacao.getTipo();
+}
+
+Alimentacao* Animal::getAlimentacao(){
+	return &alimentacao;
+}

@@ -7,13 +7,19 @@ using namespace std;
 
 class Alimentacao{
 	private:
-	int porcao;
+	double pesoPorcao;
 	string comida;
 	string descricao;
+	// double kgComido;
+	bool alimentado;
 
 	public:
 	Alimentacao();
-	Alimentacao(int _porcao, string _comida);
+	Alimentacao(int _pesoPorcao, string _comida);
+	string getTipo();
+	double pesoRefeicao(double numPorcoes);
+	void setAlimentado(string _descricao);
+	string getDescricao();
 
 	// public:
 	// int porcao;

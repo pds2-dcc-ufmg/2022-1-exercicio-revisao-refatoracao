@@ -10,10 +10,16 @@ using namespace std;
 class Cuidador{
 	private:
 	string nome;
-	vector<Animal> animais;
+	vector<Animal*> animaisCuidados;
 
 	public:
-	void add_animal(Animal& _animal);
+	~Cuidador();
+	Cuidador(string _nome);
+	void addAnimal(Animal* &_animal);
+	string getNome();
+	void listAnimais();
+	bool cuidaAnimal(string nomeAnimal);
+	void descreverRefeicao(string nomeAnimal);
 
 	// public:
 	// string salario;

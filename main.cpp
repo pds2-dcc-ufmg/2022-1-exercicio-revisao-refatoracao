@@ -3,14 +3,54 @@
 #include "Animal.hpp"
 #include "Herpestidae.hpp"
 #include "Ursidae.hpp"
-// #include "Cuidador.hpp"
+#include "Cuidador.hpp"
 #include "Alimentacao.hpp"
+#include "ReservaAnimal.hpp"
+
 using namespace std;
 
 int main()
 {
+	ReservaAnimal reserva;
+
+	Cuidador* ana = new Cuidador("Ana Maria Rodrigues Lopes");
+	Cuidador* fernanda = new Cuidador("Fernanda Silva Santos");
+	
+	reserva.addCuidador(ana);
+	reserva.addCuidador(fernanda);
+	
 	Animal* bobby = new Ursidae("Bobby", 13);
-	bobby->print();
+	Animal* jorge = new Ursidae("Jorge", 1);
+	Animal* bonina = new Herpestidae("Bonina", 7);
+	Animal* felicio = new Ursidae("Felício", 3);
+	Animal* tony = new Ursidae("Tony", 9, "Urso Pardo");
+	Animal* wanda = new Ursidae("Wanda", 10, "Urso Polar");
+	Animal* catita = new Herpestidae("Catita", 2, "Suricato");
+	Animal* carolina = new Herpestidae("Carolina", 2, "Suricato");
+	
+	reserva.addAnimal("Ana Maria Rodrigues Lopes", bobby);
+	reserva.addAnimal("Ana Maria Rodrigues Lopes", jorge);
+	reserva.addAnimal("Fernanda Silva Santos", bonina);
+	reserva.addAnimal("Ana Maria Rodrigues Lopes", felicio);
+	reserva.addAnimal("Ana Maria Rodrigues Lopes", tony);
+	reserva.addAnimal("Ana Maria Rodrigues Lopes", wanda);
+	reserva.addAnimal("Fernanda Silva Santos", catita);
+	reserva.addAnimal("Fernanda Silva Santos", carolina);
+
+	// reserva.getCuidador("Ana Maria Rodrigues Lopes")->addAnimal(bobby);
+	// reserva.getCuidador("Ana Maria Rodrigues Lopes")->addAnimal(tony);
+	
+	vector<string> nomeAnimaisListar;
+	nomeAnimaisListar.push_back("Bobby");
+	nomeAnimaisListar.push_back("Jorge");
+	nomeAnimaisListar.push_back("Bonina");
+	nomeAnimaisListar.push_back("Felício");
+	nomeAnimaisListar.push_back("Tony");
+	nomeAnimaisListar.push_back("Wanda");
+	nomeAnimaisListar.push_back("Catita");
+
+	reserva.listarAnimais(nomeAnimaisListar);
+
 	// Animal animal1;
 	// animal1.family = "Ursidae";
 	// animal1.nome = "Bobby";
@@ -19,32 +59,24 @@ int main()
 
 	// double kgPeixeConsumidos01 = 0;
 
-	Animal* jorge = new Ursidae("Jorge", 1);
-	jorge->print();
 	// Animal animal2;
 	// animal2.family = "Ursidae";
 	// animal2.nome = "Jorge";
 	// animal2.IDADE = "1";
 	// animal2.print();
 
-	Animal* bonina = new Herpestidae("Bonina", 7);
-	bonina->print();
 	// Animal animal3;
 	// animal3.family = "Herpestidae";
 	// animal3.nome = "Bonina";
 	// animal3.IDADE = "7";
 	// animal3.print();
 
-	Animal* felicio = new Ursidae("Felício", 3);
-	felicio->print();
 	// Animal animal4;
 	// animal4.family = "Ursidae";
 	// animal4.nome = "Felício";
 	// animal4.IDADE = "3";
 	// animal4.print();
 
-	Animal* tony = new Ursidae("Tony", 9, "Urso Pardo");
-	tony->print();
 	// Ursidae e02;
 	// int numAtendimentos02 = 0;
 	// double comissao02 = 0;
@@ -54,8 +86,6 @@ int main()
 	// e02.kgPeixePorDIA = 10.5;
 	// e02.print();
 
-	Animal* wanda = new Ursidae("Wanda", 10, "Urso Polar");
-	wanda->print();
 	// Ursidae e03;
 	// int numAtendimentos03 = 0;
 	// double comissao03 = 0;
@@ -65,14 +95,31 @@ int main()
 	// e03.kgPeixePorDIA = 7;
 	// e03.print();
 
-	Animal* catita = new Herpestidae("Catita", 2, "Suricato");
-	catita->print();
 	// Herpestidae g01;
 	// g01.family = "Herpestidae";
 	// g01.nome ="Catita";
 	// g01.IDADE = "2";
 	// g01.species = "Suricato";
 	// g01.print();
+
+	reserva.alimentar("Bobby", 2, "só quis comer 2 porções de peixes hoje");
+	reserva.alimentar("Catita", 1, "comeu direitinho");
+	reserva.alimentar("Carolina", 3, "estava com um apetite e tanto");
+	reserva.alimentar("Tony", 10, "comeu um pouco da comida do Bobby");
+
+	vector<string> animaisRelatorioAlimentacao;
+	animaisRelatorioAlimentacao.push_back("Bobby");
+	animaisRelatorioAlimentacao.push_back("Catita");
+	animaisRelatorioAlimentacao.push_back("Carolina");
+	animaisRelatorioAlimentacao.push_back("Tony");
+
+	reserva.relatorioAlimentacao(animaisRelatorioAlimentacao);
+
+	vector<string> tipoComidas;
+	tipoComidas.push_back("Ração");
+	tipoComidas.push_back("Peixe");
+
+	reserva.relatorioKgComida(tipoComidas);
 
 	// Herpestidae g02;
 	// double bonificacao01 = 0;
@@ -89,6 +136,13 @@ int main()
 	// double kgRacaoConsumidos01 = 0;
 	// double kgRacaoConsumidos02 = 0;
 	// double kgRacaoConsumidos03 = 0;
+
+
+	// ana->addAnimal(bobby);
+	// ana->addAnimal(tony);
+	// cout << endl << ana->getNome() << endl;
+	// ana->listAnimais();
+
 
 	// Cuidador cuid01;
 	// cuid01.NOME = "Ana Maria Rodrigues Lopes";
