@@ -1,6 +1,8 @@
 #ifndef COMIDA_H
 #define COMIDA_H
 
+#include <iostream>
+
 class Comida{
     private:
         int kg_racao_total;
@@ -13,6 +15,8 @@ class Comida{
         //Retorna comida total gasta
         int racao_total();
         int peixe_total();
+
+        void print();
 };
 
 #endif

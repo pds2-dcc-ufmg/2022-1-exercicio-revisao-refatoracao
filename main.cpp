@@ -105,11 +105,7 @@ int main()
 
     std::cout <<" \n \n--------------------------------\n\nRelatorio de kg de comida gastos \n\n";
 
-    std::cout << "Tipo de comida: " << "Ração" << "\n"
-              << "Kg consumidos: " << total.racao_total() << "\n";
-
-    std::cout << "\nTipo de comida: " << "Peixe" << "\n"
-              << "Kg consumidos: " << total.peixe_total() << "\n";
+    total.print();
 
     return 0;
 }

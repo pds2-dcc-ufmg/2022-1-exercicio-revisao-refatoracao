@@ -20,3 +20,11 @@ int Comida::racao_total(){
 int Comida::peixe_total(){
     return kg_peixe_total;
 }
+
+void Comida::print(){
+    std::cout << "Tipo de comida: " << "Ração" << "\n"
+              << "Kg consumidos: " << kg_racao_total << "\n";
+
+    std::cout << "\nTipo de comida: " << "Peixe" << "\n"
+              << "Kg consumidos: " << kg_peixe_total << "\n";
+}
