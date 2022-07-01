@@ -8,9 +8,6 @@
 namespace Animal{
 
     class Ursidae : public Animal::Animal{
-        private:
-
-            double kgPeixePorDia;
 
         public:
         
@@ -19,13 +16,6 @@ namespace Animal{
 
             //A função calcula a quantidade de alimento consumida por um Ursidae
             double quantidadeDeAlimentoConsumida(int porcaoPeixes);
-
-            //Permite que valores privados da classe sejam acessados fora dela
-            double getKgPeixe();
-            std::string getEspecie();
-
-            //Permite modificar os atributos privados fora da classe
-            void setkgPeixePorDia(int _kgPeixePorDia);
 
     };
 } //Ursidae se relaciona de forma intrinseca com Animal

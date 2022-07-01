@@ -22,35 +22,11 @@ void Animal::Animal::print() {
     }
 }
 
-int Animal::Animal::getIdade(){
-    return this->idade;
-}
-
-std::string Animal::Animal::getFamilia(){
-    return this->familia;
-}
-
 std::string Animal::Animal::getNome(){
     return this->nome;
-}
-
-void Animal::Animal::setIdade(int _idade){
-    this->idade = _idade;
-}
-
-void Animal::Animal::setFamilia(std::string _familia){
-    this->familia = _familia;
-}
-
-void Animal::Animal::setNome(std::string _nome){
-    this->nome = _nome;
 }
 
 void Animal::Animal::setEspecie(std::string _especie){
 
     this->especie = _especie;
-}
-
-std::string Animal::Animal::getEspecie(){
-    return this->especie;
 }

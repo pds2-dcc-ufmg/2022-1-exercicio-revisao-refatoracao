@@ -24,16 +24,10 @@ namespace Animal{
             double quantidadeDeAlimentoConsumida();
 
             //Permite acessar os valores das variaveis fora do escopo da classe
-            int getIdade();
-            std::string getFamilia();
             std::string getNome(); 
-            std::string getEspecie();
-
+    
             //Permite alterar os valores das variaveis fora do escopo da classe
             void setEspecie(std::string _especie);
-            void setIdade(int _idade);
-            void setFamilia(std::string _familia);
-            void setNome(std::string _nome);
 
     };
 } //Namespace Animal

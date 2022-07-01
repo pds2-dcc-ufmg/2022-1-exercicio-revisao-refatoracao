@@ -13,10 +13,6 @@ int Alimentacao::Alimentacao::getPorcao(){
     return this->porcao;
 }
 
-std::string Alimentacao::Alimentacao::getDescricao(){
-    return this->descricao;
-}
-
 void Alimentacao::Alimentacao::print(){
     std::cout << "\nAnimal: " << animal->getNome() << std::endl 
     << "Cuidador: " << cuidador->getNome() << std::endl

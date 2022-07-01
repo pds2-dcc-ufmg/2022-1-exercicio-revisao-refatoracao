@@ -12,12 +12,3 @@ double Animal::Ursidae::quantidadeDeAlimentoConsumida(int porcaoPeixes){
     double x = peixesPorPorcao*porcaoPeixes;
     return x;
 }
-
-double Animal::Ursidae::getKgPeixe(){
-    return this->kgPeixePorDia;
-}
-
-void Animal::Ursidae::setkgPeixePorDia(int _kgPeixePorDia){
-    this->kgPeixePorDia = _kgPeixePorDia;
-}
- 
