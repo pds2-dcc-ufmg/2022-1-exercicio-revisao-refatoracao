@@ -47,7 +47,7 @@ void printarRelatorioGastos(vector<Animal*>& animais, map<string, double>& tipoA
 
 // Printa as informações dos animais no terminal
 void printarAnimais(vector<Animal*>& animais){
-    for(int i = 0; i < animais.size() - 1; i++){
+    for(long unsigned int i = 0; i < animais.size() - 1; i++){
         animais[i]->print();
     }
 }

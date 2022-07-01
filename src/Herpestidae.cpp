@@ -1,5 +1,7 @@
 #include "Herpestidae.hpp"
 
+Herpestidae::~Herpestidae() {}
+
 Herpestidae::Herpestidae() {}
 
 Herpestidae::Herpestidae(string _nome, int _idade, string _especie) {

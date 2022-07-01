@@ -16,6 +16,7 @@ class Animal {
         double kgAlimentoConsumido = 0;
 
     public:
+        virtual ~Animal();
         Animal();
         Animal(string _nome, int _idade, string _familia);
         virtual void print();

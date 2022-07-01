@@ -1,5 +1,7 @@
 #include "Animal.hpp"
 
+Animal::~Animal() {}
+
 Animal::Animal() {}
 
 Animal::Animal(string _nome, int _idade, string _familia) : nome(_nome), idade(_idade), familia(_familia) {

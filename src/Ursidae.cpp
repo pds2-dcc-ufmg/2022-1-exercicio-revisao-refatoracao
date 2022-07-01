@@ -1,5 +1,7 @@
 #include "Ursidae.hpp"
 
+Ursidae::~Ursidae() {}
+
 Ursidae::Ursidae() {}
 
 Ursidae::Ursidae(string _nome, int _idade, string _especie) {
