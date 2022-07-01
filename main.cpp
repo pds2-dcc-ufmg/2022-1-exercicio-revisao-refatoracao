@@ -29,6 +29,7 @@ int main(){
         i.print();
     }
 
+    //Inserção de herpestidaes (com espécie)
     int numHerpestidae = 2;
     Herpestidae herpestidaes [numHerpestidae];
     herpestidaes[0] = Herpestidae ("Catita", 2, "Suricato");
