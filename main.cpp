@@ -30,14 +30,12 @@ void imprimir_comida_consumida(double kg_racao_consumidos, double kg_peixe_consu
   std::cout << "Relatorio de kg de comida gastos";
   quebrar_linhas(2);
 
-  std::cout << "Tipo de comida: "
-            << "Ração" << std::endl;
+  std::cout << "Tipo de comida: " << "Ração" << std::endl;
   std::cout << "Kg consumidos: " << kg_racao_consumidos;
 
   quebrar_linhas(2);
 
-  std::cout << "Tipo de comida: "
-            << "Peixe" << std::endl;
+  std::cout << "Tipo de comida: " << "Peixe" << std::endl;
   std::cout << "Kg consumidos: " << kg_peixe_consumidos << std::endl;
 }
 
