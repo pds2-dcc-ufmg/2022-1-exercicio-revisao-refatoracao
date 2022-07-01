@@ -5,17 +5,14 @@
 using namespace std;
 
 class Cuidador{
+public:
+	string salario;
+	string nome;
+	string cpf;
+	string telefone;
+	string dataDeNascimemto;
 
-	public:
-
-    string salario;
-		string NOME;
-		string cpf;
-		string Telefone;
-		string BIRTH;
-
-		void print(); // imprime na tela os dados de um cliente cadastrado
-
+	void print(); // imprime na tela os dados de um cliente cadastrado
 };
 
 #endif
