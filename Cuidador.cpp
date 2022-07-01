@@ -1,14 +1,13 @@
-#include <iostream>
-#include <string>
 #include "Cuidador.hpp"
 
-void Cuidador::print(){
+Cuidador::Cuidador(std::string nome) :_nome(nome) {}
 
-	std::cout << "[Cuidador]" << endl
-         << "  Nome: " << NOME << endl
-		 << "  CPF: " << cpf << endl
-		<< "  Telefone: " << Telefone << endl
-		 << "  Nascimento: " << BIRTH << endl;
+Cuidador::Cuidador() {}
 
+std::string Cuidador::getNome(){
+    return this->_nome;
+}       
+
+void Cuidador::setNome(std::string nome){
+    this->_nome = nome;
 }
-
