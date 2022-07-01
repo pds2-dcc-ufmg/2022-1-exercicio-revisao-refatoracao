@@ -61,7 +61,8 @@ int main(){
     std::cout << "Kg consumidos: " << herpestidaes[0].calcularRacaoConsumida(alimentacoes[1].getPorcao()) + herpestidaes[1].calcularRacaoConsumida(alimentacoes[2].getPorcao()) << std::endl;
 
     std::cout << std::endl << "Tipo de comida: " << "Peixe" << std::endl;
-    std::cout << "Kg consumidos: " << 5*2 +ursidaes[0].calcularPeixesConsumidos(alimentacoes[3].getPorcao())<< std::endl;
+    int kgConsumidosAnimal = 5*2;
+    std::cout << "Kg consumidos: " << kgConsumidosAnimal +ursidaes[0].calcularPeixesConsumidos(alimentacoes[3].getPorcao())<< std::endl;
 
     return 0;
 }
