@@ -24,7 +24,6 @@ namespace Alimentacao{
 
             //Permite o acesso as variaveis privadas da classe fora dela
             int getPorcao();
-            std::string getDescricao();
     };
 } //Namespace Alimentacao
 
