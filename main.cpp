@@ -5,154 +5,93 @@
 #include "Ursidae.hpp"
 #include "Cuidador.hpp"
 #include "Alimentacao.hpp"
-using namespace std;
+#include "Comida.hpp"
+
+Comida total;
 
 int main()
 {
+    Comida total;
 
-    Animal animal1;
-    animal1.family = "Ursidae";
-    animal1.nome ="Bobby";
-	animal1.IDADE = "13";
-    animal1.print();
-double kgPeixeConsumidos01 = 0;
-    Animal animal2;
-    animal2.family = "Ursidae";
-    animal2.nome ="Jorge";
-	animal2.IDADE = "1";
-    animal2.print();
+    //Lista de cuidadores
 
-    Animal animal3;
-    animal3.family = "Herpestidae";
-    animal3.nome ="Bonina";
-	animal3.IDADE = "7";
-    animal3.print();
+    Cuidador Ana(3000.0, "Ana Maria Rodrigues Lopes", "1234567799",
+    "(31) 99876-6923", "10/10/2000");
 
-    Animal animal4;
-    animal4.family = "Ursidae";
-    animal4.nome ="Felício";
-	animal4.IDADE = "3";
-    animal4.print();
+    Cuidador Fernanda(4000.0, "Fernanda Silva Santos", "9472567121",
+    "(31) 99123-8970", "08/02/1995");
 
+    //Lista de Animais
 
+    Ursidae Bobby(13, "Ursidae", "Bobby", "");
 
-    Ursidae e02;
-    int numAtendimentos02 = 0;
-    double comissao02 = 0;
-    e02.nome = "Tony";
-    e02.IDADE = 9;
-    e02.especie = "Urso Pardo";
-    e02.kgPeixePorDIA = 10.5;
-  e02.print();
+    Ursidae Jorge(1, "Ursidae", "Jorge", "");
 
+    Herpestidae Bonina(7, "Herpestidae", "Bonina", "");
 
-    Ursidae e03;
-    int numAtendimentos03 = 0;
-    double comissao03 = 0;
-    e03.nome = "Wanda";
-    e03.IDADE = 10;
-    e03.especie = "Urso Polar";
-    e03.kgPeixePorDIA = 7;
-  e03.print();
+    Ursidae Felicio(3, "Ursidae", "Felício", "");
 
+    Ursidae Tony(9, "Ursidae", "Tony", "Urso Pardo");
 
-    Herpestidae g01;
-    g01.family = "Herpestidae";
-    g01.nome ="Catita";
-	g01.IDADE = "2";
-  g01.species = "Suricato";
-g01.print();
-    Herpestidae g02;
-    double bonificacao01 = 0;
-    g02.family = "Herpestidae";
-    g02.nome ="Carolina";
-	g02.IDADE = "2";
-  g02.species = "Suricato";
+    Ursidae Wanda(10, "Ursidae", "Wanda", "Urso Polar");
 
-double kgPeixeConsumidos02 = 0;
-double kgPeixeConsumidos03 = 0;
-double kgPeixeConsumidos04 = 0;
-double kgPeixeConsumidos05 = 0;
+    Herpestidae Catita(2, "Herpestidae", "Catita", "Suricato");
 
-double kgRacaoConsumidos01 = 0;
-double kgRacaoConsumidos02 = 0;
-double kgRacaoConsumidos03 = 0;
-  
-  Cuidador cuid01;
-  cuid01.NOME = "Ana Maria Rodrigues Lopes";
-	cuid01.cpf = "1234567799";
-	cuid01.Telefone = "(31) 99876-6923";
-	cuid01.BIRTH = "10/10/2000";
-  cuid01.salario = "R$ 3000";
+    Herpestidae Carolina(7, "Herpestidae", "Carolina", "Suricato");
 
-  Cuidador cuid2;
-  cuid2.NOME = "Fernanda Silva Santos";
-	cuid2.cpf = "9472567121";
-	cuid2.Telefone = "(31) 99123-8970";
-	cuid2.BIRTH = "08/02/1995";
+    //Set peixes por dia
 
-cuid2.salario = "R$ 4000";
-    Alimentacao v01;
-    v01.porcao= 2;
-    v01.comida = "Peixes";
-    v01.descricao = "Bobby só quis comer 2 porções de peixes hoje";
-    v01.cuid = cuid01;
-    v01.nomeAnimal = "Bobby";
-    kgPeixeConsumidos01 = 5*2;
-    Alimentacao v02;
-    v02.porcao= 1;
-    v02.comida = "Ração especial";
-    v02.descricao = "Catita comeu direitinho";
-    v02.cuid = cuid2;
-    v02.nomeAnimal = "Catita";
-  kgRacaoConsumidos01 += g01.kgConsumidosDeRacao(v02.porcao);
+    Tony.peixes_por_dia(10.5);
 
- Alimentacao v03;
-    v03.porcao= 3;
-    v03.comida = "Ração";
-    v03.descricao = "Carolina estava com um apetite e tanto";
-    v03.cuid = cuid2;
-    v03.nomeAnimal = "Carolina";
-  kgRacaoConsumidos02 += g02.kgConsumidosDeRacao(v03.porcao);
+    Wanda.peixes_por_dia(7.0);
 
-  Alimentacao v04;
-    v04.porcao= 10;
-    v04.comida = "Peixes";
-    v04.descricao = "Tony comeu um pouco da comida do Bobby";
-    v04.cuid = cuid01;
-    v04.nomeAnimal = "Tony";
-    v02.porcao = 2;
-    v03.comida = "Ração";
-kgPeixeConsumidos03 = 
-  e02.calcula_PEIXES_CONSUMIDOS(10);
+    //Lista Alimentacao
+
+    Alimentacao Bobby_alimentacao("Peixes", "Bobby só quis comer 2 porções de peixes hoje",
+    Ana, "Bobby");
+    total.adicionar_peixe_total(2);
+
+    Alimentacao Catita_alimentacao("Ração especial", "Catita comeu direitinho",
+    Fernanda, "Catita");
+    total.adicionar_racao_total(1);
+
+    Alimentacao Carolina_alimentacao("Ração", "Carolina estava com um apetite e tanto",
+    Fernanda, "Carolina");
+    total.adicionar_racao_total(3);
+
+    Alimentacao Tony_alimentacao("Peixes", "Tony comeu um pouco da comida do Bobby",
+    Ana, "Tony");
+    total.adicionar_peixe_total(10);
 
 
+    //Relatorio das alimentaçoes
 
-    cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << endl;
+    /*Prints (Como a saída tem que ser a mesma ordem não fiz uma funcao que imprime todos os
+    animais)
+    */
 
-    v01.print();
-    cout << " Descricao: " << v01.descricao << endl << endl;
+    Bobby.print();
+    Jorge.print();
+    Bonina.print();
+    Felicio.print();
+    Tony.print();
+    Wanda.print();
+    Catita.print();
 
-    v02.print();
-    cout << " Descricao: " << v02.descricao << endl<<endl;
+    std::cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n\n";
 
-    v03.print();
-    cout << " Descricao: " << v03.descricao << endl<< endl;
+    Bobby_alimentacao.print();
+    Catita_alimentacao.print();
+    Carolina_alimentacao.print();
+    Tony_alimentacao.print();
 
-    v04.print();
-    cout << " Descricao: " << v04.descricao << endl << "\n";
+    std::cout <<" \n \n--------------------------------\n\nRelatorio de kg de comida gastos \n\n";
 
+    std::cout << "Tipo de comida: " << "Ração" << "\n"
+              << "Kg consumidos: " << total.racao_total() << "\n";
 
-
-
-
-
-    cout <<" \n \n--------------------------------\n\nRelatorio de kg de comida gastos \n" << endl;
-    cout << "Tipo de comida: " << "Ração" << endl;
-    cout << "Kg consumidos: " << kgRacaoConsumidos01+kgRacaoConsumidos02<<endl;
-
-    cout << "\nTipo de comida: " << "Peixe" << endl;
-    cout << "Kg consumidos: " << kgPeixeConsumidos01+kgPeixeConsumidos03<<endl;
+    std::cout << "\nTipo de comida: " << "Peixe" << "\n"
+              << "Kg consumidos: " << total.peixe_total() << "\n";
 
     return 0;
 }
