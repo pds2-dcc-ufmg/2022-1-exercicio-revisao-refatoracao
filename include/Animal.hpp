@@ -14,12 +14,15 @@ class Animal{
 	public:
 	~Animal();
 	Animal(string _nome, int _idade, string _familia, int _porcao, string _comida);
-	void setEspecie(string _especie);
-	string getNome();
-	void print();
+
 	double comer(double numPorcoes, string _descricao);
+	void print();
+	
+	void setEspecie(string _especie);
+	
+	string getNome();
 	string getComida();
-	Alimentacao* getAlimentacao();
+	string getDescAlimentacao();
 };
 
 #endif

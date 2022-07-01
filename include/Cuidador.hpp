@@ -12,11 +12,15 @@ class Cuidador{
 	public:
 	~Cuidador();
 	Cuidador(string _nome);
+
 	void addAnimal(Animal* &_animal);
-	string getNome();
+	
 	void listAnimais();
-	bool cuidaAnimal(string nomeAnimal);
 	void descreverRefeicao(string nomeAnimal);
+	
+	bool cuidaAnimal(string nomeAnimal);
+	
+	string getNome();
 };
 
 #endif

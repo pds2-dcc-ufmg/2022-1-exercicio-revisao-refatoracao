@@ -6,12 +6,9 @@ Animal::Animal(string _nome, int _idade, string _familia, int _porcao, string _c
 	alimentacao = Alimentacao(_porcao, _comida);
 }
 
-// Animal::Animal(string _nome, int _idade, string _familia, int _porcao, string _comida, string _especie) : Animal(_nome, _idade, _familia, _porcao, _comida){
-// 	especie = _especie;
-// }
-
-void Animal::setEspecie(string _especie){
-	especie = _especie;
+double Animal::comer(double numPorcoes, string descricao){
+	alimentacao.setDescricao(descricao);
+	return alimentacao.pesoRefeicao(numPorcoes);
 }
 
 void Animal::print(){
@@ -24,19 +21,18 @@ void Animal::print(){
 	}
 }
 
-string Animal::getNome(){
-	return nome;
+void Animal::setEspecie(string _especie){
+	especie = _especie;
 }
 
-double Animal::comer(double numPorcoes, string descricao){
-	alimentacao.setDescricao(descricao);
-	return alimentacao.pesoRefeicao(numPorcoes);
+string Animal::getNome(){
+	return nome;
 }
 
 string Animal::getComida(){
 	return alimentacao.getTipo();
 }
 
-Alimentacao* Animal::getAlimentacao(){
-	return &alimentacao;
+string Animal::getDescAlimentacao(){
+	return alimentacao.getDescricao();
 }

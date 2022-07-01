@@ -14,9 +14,12 @@ class Alimentacao{
 	public:
 	Alimentacao();
 	Alimentacao(int _pesoPorcao, string _comida);
-	string getTipo();
+
 	double pesoRefeicao(double numPorcoes);
+	
 	void setDescricao(string _descricao);
+
+	string getTipo();
 	string getDescricao();
 };
 

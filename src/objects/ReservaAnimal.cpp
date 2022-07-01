@@ -6,14 +6,6 @@ ReservaAnimal::~ReservaAnimal(){
 	}
 }
 
-void ReservaAnimal::alimentar(string nomeAnimal, double numPorcoes, string descricao){
-	Animal* a = getAnimal(nomeAnimal);
-	if(kgComidaGasto.count(a->getComida()) == 0){
-		kgComidaGasto[a->getComida()] = 0;
-	}
-	kgComidaGasto[a->getComida()] += a->comer(numPorcoes, descricao);
-}
-
 void ReservaAnimal::addCuidador(Cuidador* &cuidador){
 	cuidadores.push_back(cuidador);
 }
@@ -25,6 +17,14 @@ void ReservaAnimal::addAnimal(string nomeCuidador, Animal* &animal){
 			c->addAnimal(animal);
 		}
 	}
+}
+
+void ReservaAnimal::alimentar(string nomeAnimal, double numPorcoes, string descricao){
+	Animal* a = getAnimal(nomeAnimal);
+	if(kgComidaGasto.count(a->getComida()) == 0){
+		kgComidaGasto[a->getComida()] = 0;
+	}
+	kgComidaGasto[a->getComida()] += a->comer(numPorcoes, descricao);
 }
 
 void ReservaAnimal::listarAnimais(vector<string> nomeAnimais){

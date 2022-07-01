@@ -12,13 +12,17 @@ void Cuidador::addAnimal(Animal* &_animal){
 	animaisCuidados.push_back(_animal);
 }
 
-string Cuidador::getNome(){
-	return nome;
-}
-
 void Cuidador::listAnimais(){
 	for(Animal* a : animaisCuidados){
 		a->print();
+	}
+}
+
+void Cuidador::descreverRefeicao(string nomeAnimal){
+	for(Animal* a : animaisCuidados){
+		if(a->getNome() == nomeAnimal){
+			cout << nomeAnimal << " " << a->getDescAlimentacao() << endl << endl;
+		}
 	}
 }
 
@@ -31,10 +35,6 @@ bool Cuidador::cuidaAnimal(string nomeAnimal){
 	return false;
 }
 
-void Cuidador::descreverRefeicao(string nomeAnimal){
-	for(Animal* a : animaisCuidados){
-		if(a->getNome() == nomeAnimal){
-			cout << nomeAnimal << " " << a->getAlimentacao()->getDescricao() << endl << endl;
-		}
-	}
+string Cuidador::getNome(){
+	return nome;
 }
