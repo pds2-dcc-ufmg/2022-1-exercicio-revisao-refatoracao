@@ -4,15 +4,14 @@
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
-
 class Animal {
     protected:
         int idade;
-        string family;
-        string nome;
+        std::string family;
+        std::string nome;
     public:
-        Animal(int _idade, string _familia, string _nome);
+        Animal(int _idade, std::string _familia, std::string _nome);
+        std::string Get_nome();
         virtual void print();
 };
 

@@ -6,10 +6,9 @@
 
 #include "Animal.hpp"
 
-int peixesPorPORCAO = 5;
-
 class Ursidae : public Animal {
     private:
+        int peixesPorPORCAO = 5;
         double kgPeixePorDIA;
         std::string especie;
     public:

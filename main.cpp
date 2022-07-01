@@ -10,62 +10,57 @@ using namespace std;
 
 int main()
 {
-  Animal animal1 = Animal(13,"Ursidae","Bobby");
-  animal1.print();
+  //Criando Classe animal
+  Animal Bobby = Animal(13,"Ursidae","Bobby");
+  Bobby.print();
+  Animal Jorge = Animal(1,"Ursidae","Jorge");
+  Jorge.print();
+  Animal Bonina = Animal(7,"Herpestidae","Bonina");
+  Bonina.print();
+  Animal Felicio = Animal(3,"Ursidae","Felício");
+  Felicio.print();
 
-  Animal animal2 = Animal(1,"Ursidae","Jorge");
-  animal2.print();
+  //Criando Classe ursos
+  Ursidae Tony_urso = Ursidae(10.5,"Urso Pardo",Animal(9,"Ursidae","Tony"));
+  Tony_urso.print();
+  Ursidae Wanda_urso = Ursidae(7,"Urso Polar",Animal(10,"Ursidae","Wanda"));
+  Wanda_urso.print();
+  Ursidae Bobby_urso = Ursidae(2,"Bobby o urso curioso",Bobby);
 
-  Animal animal3 = Animal(7,"Herpestidae","Bonina");
-  animal3.print();
+  //Criando Classe Herpestidae
+  Herpestidae Catita_suricato = Herpestidae("Suricato",Animal(2,"Herpestidae","Catita"));
+  Catita_suricato.print();
+  Herpestidae Carolina_suricato = Herpestidae("Suricato",Animal(2,"Herpestidae","Carolina"));
 
-  Animal animal4 = Animal(3,"Ursidae","Felício");
-  animal4.print();
-
-  Ursidae e02 = Ursidae(10.5,"Urso Pardo",Animal(9,"Ursidae","Tony"));
-  e02.print();
-
-  Ursidae e03 = Ursidae(7,"Urso Polar",Animal(10,"Ursidae","Wanda"));
-  e03.print();
-
-  Herpestidae g01 = Herpestidae("Suricato",Animal(2,"Herpestidae","Catita"));
-  g01.print();
-
-  Herpestidae g02 = Herpestidae("Suricato",Animal(2,"Herpestidae","Carolina"));
+  //Criando Classe Cuidador
+  Cuidador Ana_cuidadora = Cuidador("Ana Maria Rodrigues Lopes","1234567799","(31) 99876-6923","10/10/2000","R$ 3000");
+  Cuidador Fernanda_cuidadora = Cuidador("Fernanda Silva Santos","9472567121","(31) 99123-8970","08/02/1995","R$ 4000");
   
-  Cuidador cuid01 = Cuidador("Ana Maria Rodrigues Lopes","1234567799","(31) 99876-6923","10/10/2000","R$ 3000");
+  //Criando CLasse Alimentacao
+  Alimentacao Alimentacao_Bobby_urso = Alimentacao(2,"Peixes","Bobby só quis comer 2 porções de peixes hoje",Ana_cuidadora, &Bobby_urso);
+  Alimentacao Alimentacao_Catita_suricato = Alimentacao(1,"Ração especial","Catita comeu direitinho",Fernanda_cuidadora,&Catita_suricato);
+  Alimentacao Alimentacao_Carolina_suricato = Alimentacao(3,"Ração","Carolina estava com um apetite e tanto",Fernanda_cuidadora,&Carolina_suricato);
+  Alimentacao Alimentacao_Tony_urso = Alimentacao(10,"Peixes","Tony comeu um pouco da comida do Bobby",Ana_cuidadora,&Tony_urso);
 
-  Cuidador cuid2 = Cuidador("Fernanda Silva Santos","9472567121","(31) 99123-8970","08/02/1995","R$ 4000");
-    
-  Alimentacao v01 = Alimentacao(2,"Peixes","Bobby só quis comer 2 porções de peixes hoje",cuid01,"Bobby");
-
-  Alimentacao v02 = Alimentacao(1,"Ração especial","Catita comeu direitinho",cuid2,"Catita");
-
-  Alimentacao v03 = Alimentacao(3,"Ração","Carolina estava com um apetite e tanto",cuid2,"Carolina");
-
-  Alimentacao v04 = Alimentacao(10,"Peixes","Tony comeu um pouco da comida do Bobby",cuid01,"Tony");
-    
-  v02.Set_porcao(2);
-  v03.Set_comida("Ração");
-
-  int kgPeixeConsumidos01 = 5*2;
-  int kgRacaoConsumidos01 = g01.kgConsumidosDeRacao(v02.Get_porcao());
-  int kgRacaoConsumidos02 = g02.kgConsumidosDeRacao(v03.Get_porcao());
-  int kgPeixeConsumidos03 = e02.calcula_PEIXES_CONSUMIDOS(10);
+  //Calculando consumo de comida
+  int PeixesConsumidos_Bobby = Bobby_urso.calcula_PEIXES_CONSUMIDOS(Alimentacao_Bobby_urso.Get_porcao());
+  int RacaoConsumida_Catita = Catita_suricato.kgConsumidosDeRacao(Alimentacao_Catita_suricato.Get_porcao());
+  int RacaoConsumida_Carolina = Carolina_suricato.kgConsumidosDeRacao(Alimentacao_Carolina_suricato.Get_porcao());
+  int PexesConsumidos_Tony = Tony_urso.calcula_PEIXES_CONSUMIDOS(Alimentacao_Tony_urso.Get_porcao());
 
   cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << endl;
-  v01.print();
-  cout << " Descricao: " << v01.Get_descricao() << endl << endl;
-  v02.print();
-  cout << " Descricao: " << v02.Get_descricao() << endl<<endl;
-  v03.print();
-  cout << " Descricao: " << v03.Get_descricao() << endl<< endl;
-  v04.print();
-  cout << " Descricao: " << v04.Get_descricao() << endl << "\n";
+  Alimentacao_Bobby_urso.print();
+  cout << " Descricao: " << Alimentacao_Bobby_urso.Get_descricao() << endl << endl;
+  Alimentacao_Catita_suricato.print();
+  cout << " Descricao: " << Alimentacao_Catita_suricato.Get_descricao() << endl<<endl;
+  Alimentacao_Carolina_suricato.print();
+  cout << " Descricao: " << Alimentacao_Carolina_suricato.Get_descricao() << endl<< endl;
+  Alimentacao_Tony_urso.print();
+  cout << " Descricao: " << Alimentacao_Tony_urso.Get_descricao() << endl << "\n";
   cout <<" \n \n--------------------------------\n\nRelatorio de kg de comida gastos \n" << endl;
   cout << "Tipo de comida: " << "Ração" << endl;
-  cout << "Kg consumidos: " << kgRacaoConsumidos01+kgRacaoConsumidos02<<endl;
+  cout << "Kg consumidos: " << RacaoConsumida_Catita+RacaoConsumida_Carolina<<endl;
   cout << "\nTipo de comida: " << "Peixe" << endl;
-  cout << "Kg consumidos: " << kgPeixeConsumidos01+kgPeixeConsumidos03<<endl;
+  cout << "Kg consumidos: " << PeixesConsumidos_Bobby + PexesConsumidos_Tony<<endl;
   return 0;
 }

@@ -6,11 +6,11 @@ Ursidae::Ursidae(double peixe_por_dia,std::string _especie,Animal animal):Animal
 }
 
 void Ursidae::print(){
-    cout << "\n[Animal]" << endl
-    << "  Nome: " << nome << endl
-    << "  Idade: " << idade << endl
-    << "  Família: Ursidae" << endl
-    << "  Especie: " << especie << endl;
+    std::cout << "\n[Animal]" << std::endl
+    << "  Nome: " << nome << std::endl
+    << "  Idade: " << idade << std::endl
+    << "  Família: Ursidae" << std::endl
+    << "  Especie: " << especie << std::endl;
 }
 
 double Ursidae::calcula_PEIXES_CONSUMIDOS(int porcaoPeixes){

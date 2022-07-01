@@ -2,18 +2,18 @@
 #define ALIMENTACAO_H
 
 #include "Cuidador.hpp"
-
+#include "Animal.hpp"
 #include <iostream>
 
 class Alimentacao{
     private:
         int porcao;
-        string comida;
-        string descricao;
+        std::string comida;
+        std::string descricao;
         Cuidador cuid;
-        string nomeAnimal;
+        Animal* animal;
     public:
-        Alimentacao(int _porcao,std::string _comida, std::string _descricao, Cuidador _cuid, std::string _nomeAnimal);
+        Alimentacao(int _porcao,std::string _comida, std::string _descricao, Cuidador _cuid, Animal* _animal);
         std::string Get_descricao();
         int Get_porcao();
         void Set_porcao(int _porcao);

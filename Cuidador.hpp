@@ -5,11 +5,11 @@
 
 class Cuidador{
 	private:
-		string salario;
-		string nome;
-		string cpf;
-		string telefone;
-		string aniversario;
+		std::string salario;
+		std::string nome;
+		std::string cpf;
+		std::string telefone;
+		std::string aniversario;
 
 	public:
 		Cuidador(){}

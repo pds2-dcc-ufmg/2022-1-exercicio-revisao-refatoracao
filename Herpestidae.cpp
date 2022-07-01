@@ -9,5 +9,5 @@ double Herpestidae::kgConsumidosDeRacao(int porcoesConsumidas) {
 }
 
 void Herpestidae::print(){
-    cout << "\n[Animal]" << endl << "  Nome: " << nome << endl << "  Idade: " << idade << endl << "  Familia: " << family << endl << "  Especie: " << especie <<endl;
+    std::cout << "\n[Animal]" << std::endl << "  Nome: " << nome << std::endl << "  Idade: " << idade << std::endl << "  Familia: " << family << std::endl << "  Especie: " << especie <<std::endl;
 }

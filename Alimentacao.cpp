@@ -1,11 +1,11 @@
 #include "Alimentacao.hpp"
 
-Alimentacao::Alimentacao(int _porcao,std::string _comida, std::string _descricao, Cuidador _cuid, std::string _nomeAnimal){
+Alimentacao::Alimentacao(int _porcao,std::string _comida, std::string _descricao, Cuidador _cuid,Animal* _animal){
     this->porcao = _porcao;
     this->comida = _comida;
     this->descricao = _descricao;
     this->cuid = _cuid;
-    this->nomeAnimal = _nomeAnimal;
+    this->animal = _animal;
 }
 
 std::string Alimentacao::Get_descricao(){
@@ -26,7 +26,7 @@ void Alimentacao::Set_comida(std::string _comida){
 
 void Alimentacao::print(){
     std::cout << "Animal: ";
-    std::cout << nomeAnimal << "\n";
+    std::cout << animal->Get_nome() << "\n";
     std::cout << " Cuidador: ";
     std::cout << cuid.Get_nome() << "\n";
 }
