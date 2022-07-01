@@ -14,7 +14,10 @@ class Ursidae : public Animal {
         double kgPeixePorDia;
 
     public:
-        void print();
+        Ursidae(std::string _nome, int _idade, std::string _especie);
+        Ursidae(std::string _nome, int _idade);
+
+        void setKgPeixePorDia(double _kgPeixePorDia);
         double calcularPeixesConsumidos(int porcaoPeixes);
 };
 

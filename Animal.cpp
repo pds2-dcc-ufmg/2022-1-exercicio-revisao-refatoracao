@@ -1,12 +1,26 @@
 #include "Animal.hpp"
 
-void Animal::print() {
-    std::cout << "\n[Animal]"  << std::endl 
-              << "  Nome: "    << nome << std::endl 
-              << "  Idade: "   << idade << std::endl 
-              << "  Familia: " << familia << std::endl;
+Animal::Animal(std::string _nome, int _idade, std::string _familia, std::string _especie) {
+    this->nome = _nome;
+    this->idade = _idade;
+    this->familia = _familia;
+    this->especie = _especie;
 }
 
-void Animal::print_oi(){
+std::string Animal::getNome() {
+    return this->nome;
+}
+
+void Animal::print() {
+    std::cout << "\n[Animal]"  << std::endl 
+              << "  Nome: "    << this->nome << std::endl 
+              << "  Idade: "   << this->idade << std::endl 
+              << "  Familia: " << this->familia << std::endl;
+    if(this->especie != "") {
+        std::cout << "  Especie: " << this->especie << std::endl;
+    }
+}
+
+void Animal::printTchau() {
     std::cout << "Tchau" << std::endl;
 }

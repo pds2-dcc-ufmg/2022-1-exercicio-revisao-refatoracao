@@ -8,13 +8,17 @@ class Animal {
     
     protected:
         std::string nome;
-        std::string idade;
+        int idade;
         std::string familia;
         std::string especie;
 
     public:
+        Animal(std::string _nome, int idade, std::string familia, std::string especie);
+
+        std::string getNome();
+
         void print();
-        void print_oi();
+        void printTchau();
 };
 
 #endif

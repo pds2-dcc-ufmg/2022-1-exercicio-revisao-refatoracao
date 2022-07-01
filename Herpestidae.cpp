@@ -1,11 +1,13 @@
 #include "Herpestidae.hpp"
 
-void Herpestidae::print() {
-    Animal::print();
-    std::cout << "  Especie: " << especie << std::endl;
+Herpestidae::Herpestidae(std::string _nome, int _idade, std::string _especie) : Animal(_nome, _idade, "Herpestidae", _especie) {
+
+}
+
+Herpestidae::Herpestidae(std::string _nome, int _idade) : Animal(_nome, _idade, "Herpestidae", "") {
+
 }
 
 double Herpestidae::calcularKgConsumidosDeRacao(int porcoesConsumidas) {
-    double c = KGPORPORCAO*porcoesConsumidas;
-    return c;
+    return KGPORPORCAO*porcoesConsumidas;
 }

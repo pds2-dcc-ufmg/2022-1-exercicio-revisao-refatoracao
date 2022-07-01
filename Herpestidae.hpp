@@ -8,7 +8,9 @@
 class Herpestidae : public Animal {
 
     public:
-        void print();
+        Herpestidae(std::string _nome, int _idade, std::string _especie);
+        Herpestidae(std::string _nome, int _idade);
+
         double calcularKgConsumidosDeRacao(int porcoesConsumidas);
         
 };
