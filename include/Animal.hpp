@@ -13,20 +13,25 @@ class Animal {
         Alimentacao alimentacao;
 
     public:
+        //construtores
         Animal(string nome, string familia, int idade); 
         Animal() = default;
 
+        //gets
         string getNome();
         string getFamilia();
         int getIdade();
         float getQuantidadeConsumida();
         string getDescricao();
 
+        //sets
         void setQuantidadeConsumida(float quantidadeConsumida);
-        float calcularQuantidadeConsumida();
-        virtual void print();
         void setTipoDescricao(string tipoComida, string descricao);
         void setPorcaoQuantidadePorcao(float quantidadePorcao, float pesoPorcao);
+
+        //funcoes
+        float calcularQuantidadeConsumida(); //calcula a quantidade de comida consumida com base na quantidadePorcao e pesoPorcao
+        virtual void print();
 };
 
 #endif

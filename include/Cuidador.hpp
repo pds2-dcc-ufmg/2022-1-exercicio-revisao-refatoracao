@@ -12,7 +12,10 @@ class Cuidador{
 		string nome;
 
 	public:
+		//construtores
 		Cuidador(string nome);
+
+		//gets
 		string getNome();
 
 };

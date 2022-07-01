@@ -9,8 +9,11 @@ class Ursidae : public Animal {
         string especie;
 
     public:
+        //construtores
         Ursidae();
         Ursidae(string nome, string especie, int idade);
+
+        //funcoes
         virtual void print() override;
 };
 
