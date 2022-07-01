@@ -11,23 +11,28 @@ int peixesPorPORCAO = 5;
 class Ursidae {
     public:
 
-        int IDADE;
-        string nome;
-        string especie;
+        int Ursi_Idade;
+        std::string Ursi_nome;
+        std::string Ursi_especie;
         double kgPeixePorDIA;
+    
+    public:
 
-        void print() {
-            cout << "\n[Animal]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  Família: Ursidae" << endl
-              << "  Especie: " << especie << endl;
-        }
+        void print();
 
-        double calcula_PEIXES_CONSUMIDOS(int porcaoPeixes){
-            double x;
-            return peixesPorPORCAO*porcaoPeixes;
-        }
+        double calcula_PEIXES_CONSUMIDOS(int porcaoPeixes);
+
+        int get_ursi_Idade();
+
+        int get_ursi_idade(int _Ursi_Idade);
+        
+        std::string get_ursi_nome();
+        
+        std::string get_ursi_especie();
+
+        double get_ursi_kgpeixe();
+        
+        double set_ursi_kgpeixe(double _KgpeixePorDia);
 
 };
 
