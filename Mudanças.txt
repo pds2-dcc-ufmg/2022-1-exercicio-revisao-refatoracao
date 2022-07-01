@@ -1,0 +1,10 @@
+1 - Padronizei o nome das variáveis para lowerCamelCase e de nomes em portugues
+2 - Separei o contrato da implementação
+3 - Remoção de métodos e variáveis inutilizadas (print oi, tchau)
+4 - Coloquei os nomes dos include guards todos em CAPSLOCK]
+6 - Atributos colocados como private
+7 - Utilização dos conceitos de herança entre a classe animal com as classes herpestidae, ursidae
+8 - Quantidades por porção virou uma constante
+9 - Remoção de comentários desnecessários
+10 - Remoção do namespace std
+11 - Separação em pastas e criação de um makefile
