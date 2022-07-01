@@ -2,6 +2,7 @@
 #ifndef VENDA_HPP
 #define VENDA_HPP
 
+#include <iostream> //Tava sem?
 #include "Cuidador.hpp"
 
 using namespace std;
@@ -9,33 +10,17 @@ using namespace std;
 class Alimentacao{
 
     public:
-    int porcao;
-    string comida;
-    string descricao;
-    Cuidador cuid;
-    string nomeAnimal;
+        int porcao;
+        string comida;
+        string descricao;
+        Cuidador *cuid = nullptr;
+        string nomeAnimal;
 
 
-    void print() {
+    Alimentacao(int _porcao, string _comida, string _descricao, 
+        Cuidador* _cuid, string _nomeAnimal);
+    void print();
 
-        std::cout << "Animal: ";
-        cout << nomeAnimal << "\n";
-
-        std::cout << " Cuidador: ";
-        cout << cuid.NOME << "\n";
-
-        //std::cout << " : ";
-        //cout << ursidae;
-    }
-
-    /*void print() {
-
-        std::cout << "Cuidador: ";
-        cout << cuida;
-
-        std::cout << " Animal: ";
-        cout << alimentado;
-    }*/
 };
 
 #endif

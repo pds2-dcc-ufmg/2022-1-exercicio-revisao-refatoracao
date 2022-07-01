@@ -6,15 +6,18 @@ using namespace std;
 
 class Cuidador{
 
-	public:
-
-    string salario;
-		string NOME;
+	private:
+    	string salario;
+		string nome;
 		string cpf;
-		string Telefone;
-		string BIRTH;
-
-		void print(); // imprime na tela os dados de um cliente cadastrado
+		string telefone;
+		string nascimento;
+	
+	public:
+		Cuidador(string _nome, string _cpf, string _telefone, string _nascimento, string _salario);
+		void print(); // imprime na tela os dados do cuidador
+		
+		string getNome();
 
 };
 
