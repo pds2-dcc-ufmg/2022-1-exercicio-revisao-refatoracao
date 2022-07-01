@@ -6,23 +6,24 @@
 
 using namespace std;
 
-class Animal {
-    public:
-        string IDADE;
-        string family;
-        string nome;
+class Animal
+{
+public:
+    void print();
+    void setIdade(int);
+    int getIdade();
+    void setFamilia(std::string);
+    void setEspecie(std::string);
+    std::string getEspecie();
+    std::string getFamilia();
+    void setNome(std::string);
+    std::string getNome();
 
-        void print() {
-            cout << "\n[Animal]" << endl
-            << "  Nome: " << nome << endl
-
-              << "  Idade: " << IDADE << endl
-            << "  Familia: " << family << endl;
-        }
-
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+private:
+    int idade;
+    std::string especie;
+    std::string familia;
+    std::string nome;
 };
 
 #endif
