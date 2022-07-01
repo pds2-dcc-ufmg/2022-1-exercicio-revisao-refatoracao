@@ -10,6 +10,7 @@ class Comida{
         void adicionar_racao_total(int racao);
         void adicionar_peixe_total(int peixe);
 
+        //Retorna comida total gasta
         int racao_total();
         int peixe_total();
 };
