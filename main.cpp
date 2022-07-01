@@ -5,11 +5,10 @@
 #include "Ursidae.hpp"
 #include "Cuidador.hpp"
 #include "Alimentacao.hpp"
+
 using namespace std;
 
-int main()
-{
-
+int main() {
     Animal animal1;
     animal1.familia = "Ursidae";
     animal1.nome ="Bobby";
