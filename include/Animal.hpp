@@ -9,10 +9,10 @@ class Animal {
     protected:
         string nome, familia;
         int idade;
+        float quantidadeConsumida;
         Alimentacao alimentacao;
 
     public:
-        Animal(string nome, string familia, int idade, float quantidadePorcao, float pesoPorcao, string tipoComida);
         Animal(string nome, string familia, int idade); 
         Animal() = default;
 
@@ -20,8 +20,13 @@ class Animal {
         string getFamilia();
         int getIdade();
         float getQuantidadeConsumida();
+        string getDescricao();
 
+        void setQuantidadeConsumida(float quantidadeConsumida);
+        float calcularQuantidadeConsumida();
         virtual void print();
+        void setTipoDescricao(string tipoComida, string descricao);
+        void setPorcaoQuantidadePorcao(float quantidadePorcao, float pesoPorcao);
 };
 
 #endif
