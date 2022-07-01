@@ -1,41 +1,39 @@
-
-#ifndef VENDA_HPP
-#define VENDA_HPP
-
+#ifndef ALIMENTACAO_HPP
+#define ALIMENTACAO_HPP
+// padronizei o #define
 #include "Cuidador.hpp"
 
 using namespace std;
 
 class Alimentacao{
+    private:
+        // alterei o operador de acesso
+        string _nomeAnimal;
+
+    protected:
+        // alterei o operador de acesso
+        string _descricao;
+        string _comida;
+        // cada alimentacao >"tem"< (composicao) um cuidador responsavel
+        Cuidador _cuid;
 
     public:
-    int porcao;
-    string comida;
-    string descricao;
-    Cuidador cuid;
-    string nomeAnimal;
+        // adicionei um construtor especifico
+        Alimentacao(string, string, string, int, Cuidador);
+        Alimentacao();
+        
+        int _porcao;
+    
+        string getDescricao(void);
+        // implementacao deve ser no arquivo cpp
+        void print(void); /*{
 
+            std::cout << "Animal: ";
+            cout << nomeAnimal << "\n";
 
-    void print() {
-
-        std::cout << "Animal: ";
-        cout << nomeAnimal << "\n";
-
-        std::cout << " Cuidador: ";
-        cout << cuid.NOME << "\n";
-
-        //std::cout << " : ";
-        //cout << ursidae;
-    }
-
-    /*void print() {
-
-        std::cout << "Cuidador: ";
-        cout << cuida;
-
-        std::cout << " Animal: ";
-        cout << alimentado;
-    }*/
+            std::cout << " Cuidador: ";
+            cout << cuid._nome << "\n";
+        }*/ // o que está comentado foi o que eu tirei ::::::::::::::::::
 };
 
 #endif
