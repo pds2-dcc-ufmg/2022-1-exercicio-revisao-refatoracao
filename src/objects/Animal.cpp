@@ -6,7 +6,11 @@ Animal::Animal(string _nome, int _idade, string _familia, int _porcao, string _c
 	alimentacao = Alimentacao(_porcao, _comida);
 }
 
-Animal::Animal(string _nome, int _idade, string _familia, int _porcao, string _comida, string _especie) : Animal(_nome, _idade, _familia, _porcao, _comida){
+// Animal::Animal(string _nome, int _idade, string _familia, int _porcao, string _comida, string _especie) : Animal(_nome, _idade, _familia, _porcao, _comida){
+// 	especie = _especie;
+// }
+
+void Animal::setEspecie(string _especie){
 	especie = _especie;
 }
 

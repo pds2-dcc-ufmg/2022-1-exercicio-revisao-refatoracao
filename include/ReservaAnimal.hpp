@@ -13,7 +13,7 @@ class ReservaAnimal{
 
 	public:
 	~ReservaAnimal();
-	void alimentar(string nomeAnimal, double porcoes, string _descricao);
+	void alimentar(string nomeAnimal, double numPorcoes, string _descricao);
 	void addCuidador(Cuidador* &cuidador);
 	void addAnimal(string nomeCuidador, Animal* &animal);
 	void listarAnimais(vector<string> nomeAnimais);

@@ -6,12 +6,12 @@ ReservaAnimal::~ReservaAnimal(){
 	}
 }
 
-void ReservaAnimal::alimentar(string nomeAnimal, double porcoes, string descricao){
+void ReservaAnimal::alimentar(string nomeAnimal, double numPorcoes, string descricao){
 	Animal* a = getAnimal(nomeAnimal);
 	if(kgComidaGasto.count(a->getComida()) == 0){
 		kgComidaGasto[a->getComida()] = 0;
 	}
-	kgComidaGasto[a->getComida()] += a->comer(porcoes, descricao);
+	kgComidaGasto[a->getComida()] += a->comer(numPorcoes, descricao);
 }
 
 void ReservaAnimal::addCuidador(Cuidador* &cuidador){
