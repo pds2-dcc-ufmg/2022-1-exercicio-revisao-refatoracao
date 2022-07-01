@@ -1,0 +1,56 @@
+4
+Bobby
+13
+Ursidae
+Jorge
+1
+Ursidae
+Bonina
+7
+Herpestidae
+Felício
+3
+Ursidae
+2
+Urso Pardo
+Tony
+9
+10.5
+Urso Polar
+Wanda
+10
+7
+2
+Catita
+2
+Suricato
+Carolina
+2
+Suricato
+2
+Ana Maria Rodrigues Lopes
+1234567799
+(31) 99876-6923
+10/10/2000
+R$ 3000
+Fernanda Silva Santos
+9472567121
+(31) 99123-8970
+08/02/1995
+R$ 4000
+Peixes
+Bobby só quis comer 2 porções de peixes hoje
+Bobby
+2
+Ração especial
+Catita comeu direitinho
+Catita
+2
+Ração
+Carolina estava com um apetite e tanto
+Carolina
+3
+Peixes
+Tony comeu um pouco da comida do Bobby
+Tony
+10

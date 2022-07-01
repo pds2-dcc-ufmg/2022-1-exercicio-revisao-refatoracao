@@ -1,21 +1,32 @@
-#ifndef Cuidador_H
-#define Cuidador_H
-
+#ifndef CUIDADOR_HPP
+#define CUIDADOR_HPP
+// padronizei o #define
 #include <string>
+#include <iostream>
+// inclui o iostream
 using namespace std;
 
 class Cuidador{
+	private:
+		// alterei operador de acesso
+		string _nome;
+		string _telefone;
+		string _cpf;
+		string _dataAniversario;
+	protected:
+		// alterei o operador de acesso e tipo do salario
+		string _salario;
 
 	public:
+		Cuidador(string, string, string, string, string);
+		Cuidador();
 
-    string salario;
-		string NOME;
-		string cpf;
-		string Telefone;
-		string BIRTH;
-
-		void print(); // imprime na tela os dados de um cliente cadastrado
-
+		void print(void); // removi o comentario redundante sobre a funcao
+		string getSalario(void);
+		string getNome(void);
+		string getDataAniversario(void);
+		string getCpf(void);
+		string getTelefone(void);
 };
 
 #endif

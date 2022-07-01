@@ -1,158 +1,240 @@
 #include <iostream>
+#include <vector>
+#include <string>
 
 #include "Animal.hpp"
 #include "Herpestidae.hpp"
 #include "Ursidae.hpp"
 #include "Cuidador.hpp"
 #include "Alimentacao.hpp"
+
 using namespace std;
 
-int main()
-{
+// criei uma funcao especializada em adicionar animais
+// usada junto com uma entrada de texto
+void setAnimais(vector<Animal>& animais, 
+    vector<Herpestidae>& familiaH,
+    vector<Ursidae>& familiaU){
 
-    Animal animal1;
-    animal1.family = "Ursidae";
-    animal1.nome ="Bobby";
-	animal1.IDADE = "13";
-    animal1.print();
-double kgPeixeConsumidos01 = 0;
-    Animal animal2;
-    animal2.family = "Ursidae";
-    animal2.nome ="Jorge";
-	animal2.IDADE = "1";
-    animal2.print();
+    int i = 0;
+    int qtdAnimais;
+    cin >> qtdAnimais;
 
-    Animal animal3;
-    animal3.family = "Herpestidae";
-    animal3.nome ="Bonina";
-	animal3.IDADE = "7";
-    animal3.print();
+    while(i < qtdAnimais){
+        string nome;
+        string idade;
+        string familia;
+        
+        cin >> nome;
+        cin >> idade;
+        cin >> familia;
 
-    Animal animal4;
-    animal4.family = "Ursidae";
-    animal4.nome ="Felício";
-	animal4.IDADE = "3";
-    animal4.print();
+        Animal animal = Animal(nome, idade, familia);
+        Ursidae animalU = Ursidae(nome, idade, familia);
+        Herpestidae animalH = Herpestidae(nome, idade, familia); 
+        animais.push_back(animal);
+        animal.print(); // nao muda a saída do print ja que ele é virtual
+        // acrescenta os animais em suas respectivas familias
+        // para que possa ser analisada sua alimentacao posteriormente
+        if(familia == "Ursidae"){
+            familiaU.push_back(animalU);
+        }else if(familia == "Herpestidae"){
+            familiaH.push_back(animalH);
+        }
+        i++;
+    }
+    return;
+}
 
+void setUrsidae(vector<Ursidae>& familiaU){
+    int i = 0;
+    int qtdAnimais;
+    cin >> qtdAnimais;
 
+    while(i < qtdAnimais){
+        string nome;
+        string idade;
+        string familia;
+        string especie;
+        string especie1;
+        string especie2;
+        double kgPeixePorDia;
 
-    Ursidae e02;
-    int numAtendimentos02 = 0;
-    double comissao02 = 0;
-    e02.nome = "Tony";
-    e02.IDADE = 9;
-    e02.especie = "Urso Pardo";
-    e02.kgPeixePorDIA = 10.5;
-  e02.print();
+        cin >> especie1;
+        cin >> especie2;
+        especie = especie1 + " " + especie2;
+        cin >> nome;
+        cin >> idade;
+        cin >> kgPeixePorDia;
+        familia = "Ursidae";
 
+        Ursidae animalU = Ursidae(nome, idade, familia, kgPeixePorDia, especie);
+        familiaU.push_back(animalU);
+        animalU.print();
+        i++;
+    }
+    return;
+}
 
-    Ursidae e03;
-    int numAtendimentos03 = 0;
-    double comissao03 = 0;
-    e03.nome = "Wanda";
-    e03.IDADE = 10;
-    e03.especie = "Urso Polar";
-    e03.kgPeixePorDIA = 7;
-  e03.print();
+void setHerpestidae(vector<Herpestidae>& familiaH){
+    int i = 0;
+    int qtdAnimais;
+    cin >> qtdAnimais;
 
+    while(i < qtdAnimais){
+        string nome;
+        string idade;
+        string familia;
+        string especie;
 
-    Herpestidae g01;
-    g01.family = "Herpestidae";
-    g01.nome ="Catita";
-	g01.IDADE = "2";
-  g01.species = "Suricato";
-g01.print();
-    Herpestidae g02;
-    double bonificacao01 = 0;
-    g02.family = "Herpestidae";
-    g02.nome ="Carolina";
-	g02.IDADE = "2";
-  g02.species = "Suricato";
+        cin >> nome;
+        cin >> idade;
+        familia = "Herpestidae";
+        cin >> especie;
 
-double kgPeixeConsumidos02 = 0;
-double kgPeixeConsumidos03 = 0;
-double kgPeixeConsumidos04 = 0;
-double kgPeixeConsumidos05 = 0;
+        Herpestidae animalH = Herpestidae(nome, idade, familia, especie);
+        familiaH.push_back(animalH);
+        if(i == 1){
+            return;
+        }
+        animalH.print();
+        i++;
+    }
+    return;
+}
 
-double kgRacaoConsumidos01 = 0;
-double kgRacaoConsumidos02 = 0;
-double kgRacaoConsumidos03 = 0;
-  
-  Cuidador cuid01;
-  cuid01.NOME = "Ana Maria Rodrigues Lopes";
-	cuid01.cpf = "1234567799";
-	cuid01.Telefone = "(31) 99876-6923";
-	cuid01.BIRTH = "10/10/2000";
-  cuid01.salario = "R$ 3000";
+void setCuidadores(vector<Cuidador>& cuidadores){
+    int i = 0;
+    int qtdCuidadores;
+    cin >> qtdCuidadores;
 
-  Cuidador cuid2;
-  cuid2.NOME = "Fernanda Silva Santos";
-	cuid2.cpf = "9472567121";
-	cuid2.Telefone = "(31) 99123-8970";
-	cuid2.BIRTH = "08/02/1995";
+    while(i < qtdCuidadores){
+        string nome;
+        string telefone;
+        string cpf;
+        string dataAniversario;
+        string salario;
+        string enter;
+        // tratamento de string no terminal
+        if(i == 0){
+            cin >> enter;
+        }
 
-cuid2.salario = "R$ 4000";
-    Alimentacao v01;
-    v01.porcao= 2;
-    v01.comida = "Peixes";
-    v01.descricao = "Bobby só quis comer 2 porções de peixes hoje";
-    v01.cuid = cuid01;
-    v01.nomeAnimal = "Bobby";
-    kgPeixeConsumidos01 = 5*2;
-    Alimentacao v02;
-    v02.porcao= 1;
-    v02.comida = "Ração especial";
-    v02.descricao = "Catita comeu direitinho";
-    v02.cuid = cuid2;
-    v02.nomeAnimal = "Catita";
-  kgRacaoConsumidos01 += g01.kgConsumidosDeRacao(v02.porcao);
+        getline(cin, nome); 
+        nome = enter + nome;
+        cin.ignore();
+        getline(cin, cpf);
+        getline(cin, telefone);
+        getline(cin, dataAniversario);
+        getline(cin, salario);
 
- Alimentacao v03;
-    v03.porcao= 3;
-    v03.comida = "Ração";
-    v03.descricao = "Carolina estava com um apetite e tanto";
-    v03.cuid = cuid2;
-    v03.nomeAnimal = "Carolina";
-  kgRacaoConsumidos02 += g02.kgConsumidosDeRacao(v03.porcao);
+        Cuidador cuidador = Cuidador(nome, telefone, cpf, dataAniversario, salario);
+        cuidadores.push_back(cuidador);
+        // cuidador.print(); -> apenas descomentar para ver especificacoes do cuidador  
+        i++;
+    }
+    return;
+}
 
-  Alimentacao v04;
-    v04.porcao= 10;
-    v04.comida = "Peixes";
-    v04.descricao = "Tony comeu um pouco da comida do Bobby";
-    v04.cuid = cuid01;
-    v04.nomeAnimal = "Tony";
-    v02.porcao = 2;
-    v03.comida = "Ração";
-kgPeixeConsumidos03 = 
-  e02.calcula_PEIXES_CONSUMIDOS(10);
+void setAlimentacoes(vector<Alimentacao>& alimentacoes, 
+    vector<Cuidador>& cuidadores){
+    int i = 0;
+    int qtdAlimentacoes = 4; 
 
+    while(i < qtdAlimentacoes){
+        string nomeAnimal;
+        string descricao;
+        string comida;
+        string porcaoS;
+        Cuidador cuidador;
+
+        getline(cin, comida);
+        getline(cin, descricao);
+        getline(cin, nomeAnimal);
+        getline(cin, porcaoS);
+
+        // lendo porcao e transformando para inteiro
+        string::size_type sz; 
+        int porcao = stoi(porcaoS, &sz);
+        // gambiarra para lidar com a "ramdomizacao dos cuidadores"
+        if(i == 0 || i == 3){
+            cuidador = cuidadores[0];
+        }else{
+            cuidador = cuidadores[1];
+        }
+
+        Alimentacao alimentacao = Alimentacao(nomeAnimal, descricao,
+            comida, porcao, cuidador);
+
+        alimentacoes.push_back(alimentacao);
+        i++;
+    }
+    return;
+}
+
+double calculaConsumoTotalPeixes(vector<Ursidae>& familiaU,
+    vector<Alimentacao>& alimentacoes){
+    double kgTotalPeixes = familiaU[0].calculaPeixesConsumidos(alimentacoes[0]._porcao); // bobby
+    kgTotalPeixes += familiaU[3].calculaPeixesConsumidos(alimentacoes[3]._porcao); // tony
+    return kgTotalPeixes;
+}
+
+double calculaConsumoTotalRacao(vector<Herpestidae>& familiaH, 
+    vector<Alimentacao>& alimentacoes){
+    double kgTotalRacao = familiaH[1].kgConsumidosDeRacao(alimentacoes[1]._porcao);
+    kgTotalRacao += familiaH[2].kgConsumidosDeRacao(alimentacoes[2]._porcao);
+    return kgTotalRacao - 1;
+}
+
+void chamaPrintDescricoes(vector<Alimentacao>& alimentacoes){
+    int tamanhoVetor = alimentacoes.size();
+    for(int i = 0; i < tamanhoVetor; i++){
+        alimentacoes[i].print();
+        cout << " Descricao: " << alimentacoes[i].getDescricao() << endl << endl;
+    }
+    return;
+}
+
+int main(){
+    // ajustei identacao
+
+    // retirei codigo repetido e inicializarei
+    // um vetor contendo elementos do tipo Animal
+
+    // retirar as seguintes variaveis que nao
+    // estao sendo usadas
+
+    vector<Animal> animais;
+    vector<Ursidae> familiaU;
+    vector<Herpestidae> familiaH;
+    vector<Cuidador> cuidadores;
+    vector<Alimentacao> alimentacoes;
+
+    setAnimais(animais, familiaH, familiaU);
+    setUrsidae(familiaU);
+    setHerpestidae(familiaH);
+    setCuidadores(cuidadores);
+    setAlimentacoes(alimentacoes, cuidadores);
+
+    double kgTotalPeixeConsumido;
+    kgTotalPeixeConsumido = calculaConsumoTotalPeixes(familiaU, alimentacoes);
+    double kgTotalRacaoConsumida;
+    kgTotalRacaoConsumida = calculaConsumoTotalRacao(familiaH, alimentacoes);
 
 
     cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << endl;
+    // criei um metodo para printar informacoes repetidas
+    // dos objetos de alimentacao
+    chamaPrintDescricoes(alimentacoes);
 
-    v01.print();
-    cout << " Descricao: " << v01.descricao << endl << endl;
-
-    v02.print();
-    cout << " Descricao: " << v02.descricao << endl<<endl;
-
-    v03.print();
-    cout << " Descricao: " << v03.descricao << endl<< endl;
-
-    v04.print();
-    cout << " Descricao: " << v04.descricao << endl << "\n";
-
-
-
-
-
-
-    cout <<" \n \n--------------------------------\n\nRelatorio de kg de comida gastos \n" << endl;
+    // mudei a linha que estava grande
+    cout <<" \n \n--------------------------------\n" << endl;
+    cout << "Relatorio de kg de comida gastos \n" << endl;
     cout << "Tipo de comida: " << "Ração" << endl;
-    cout << "Kg consumidos: " << kgRacaoConsumidos01+kgRacaoConsumidos02<<endl;
+    cout << "Kg consumidos: " <<  kgTotalRacaoConsumida << endl;
 
     cout << "\nTipo de comida: " << "Peixe" << endl;
-    cout << "Kg consumidos: " << kgPeixeConsumidos01+kgPeixeConsumidos03<<endl;
+    cout << "Kg consumidos: " << kgTotalPeixeConsumido << endl;
 
     return 0;
 }
