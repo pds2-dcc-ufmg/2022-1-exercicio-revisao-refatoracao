@@ -16,7 +16,6 @@ class Ursidae : public Animal {
         Ursidae(double peixe_por_dia,std::string _especie,Animal animal);
         virtual void print()override;
         double calcula_PEIXES_CONSUMIDOS(int porcaoPeixes);
-
 };
 
 #endif

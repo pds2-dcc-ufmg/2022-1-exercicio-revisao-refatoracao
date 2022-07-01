@@ -8,27 +8,22 @@ Alimentacao::Alimentacao(int _porcao,std::string _comida, std::string _descricao
     this->cuid = _cuid;
     this->animal = _animal;
 }
-
 //metodo retorna descricao
 std::string Alimentacao::Get_descricao(){
     return descricao;
 }
-
 //metodo retorna tamanho porcao
 int Alimentacao::Get_porcao(){
     return porcao;
 }
-
 //metodo modificador de valor da variavel porcao
 void Alimentacao::Set_porcao(int _porcao){
     this->porcao = _porcao;
 }
-
 //metodo modificador de comida
 void Alimentacao::Set_comida(std::string _comida){
     this->comida = _comida;
 }
-
 //metodo que informa cuidador e animal pertencente a classe
 void Alimentacao::print(){
     std::cout << "Animal: ";

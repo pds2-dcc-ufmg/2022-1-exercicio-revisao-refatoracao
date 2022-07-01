@@ -11,7 +11,6 @@ Cuidador::Cuidador(std::string _nome, std::string _cpf, std::string _telefone, s
 	this->aniversario = _aniversario;
 	this->salario = _salario;
 }
-
 //metodo informa sobre cuidador
 void Cuidador::print(){
 	std::cout << "[Cuidador]" << std::endl
@@ -20,7 +19,6 @@ void Cuidador::print(){
 		<< "  Telefone: " << telefone << std::endl
 		<< "  Nascimento: " << aniversario << std::endl;
 }
-
 //metodo retorna nome do cuidador
 std::string Cuidador::Get_nome(){
 	return nome;
