@@ -1,0 +1,39 @@
+
+* Em todos os arquivos, o código não foi modularizado em arquivos HPP e CPP.
+
+* Comentários inúteis (possivelmente utilizados numa versão anterior ou para debug)
+também foram removidos
+
+* Os atributos devem ser preferencialmente privados e acessados através de métodos.
+Isso permite que os métodos possam fazer tratamento de entradas, lançamento de exceções, etc.
+Apenas métodos de acesso devem ser públicos a depender do caso.
+** Por isso, em todos os TADs, foram implementados getters e setters para acesso aos atributos
+(nesse caso, todos privados)
+
+* Melhorias de identação para melhorar a leitura.
+* A nomenclatura de variáveis não é coesa:
+** há variáveis com nome em inglês e português. Foi padronizado o português.
+** a escrita é irregular. Foi adotado como padrão o camelCase.
+
+* Código inútil (não surte efeito)
+** Havia um método print_oi() inútil no TAD Animal, então ele foi removido.
+** Havia um "double x" inútil em um método no TAD Ursidae, então ele foi removido.
+
+* Alimentação estava com o cabeçalho definido incorretamente:
+"DEFINE VENDA_HPP". Corrigido para ficar de acordo.
+* Ursidae, Herpestidae e Cuidador estavam com nomes em case incorreta.
+Alterado para UPPERCASE.
+
+* Para o TAD Ursidae:
+** Agora é subclasse de Animal.
+
+* Import desnecessário:
+** A biblioteca iomanip é importada mas não é utilizada, então foi removida
+para os TADs Ursidae e Animal
+
+* Na função main, percebi que é utilizado uma variável de "kgPeixesConsumidos".
+Porém, na implementação original, é utilizado número de peixes. Foi padronizado
+o uso de "kg de comida", e isso foi implementado na classe Animal, pois é comum
+a todos os subtipos de animais presentes.
+
+* Nome do arquivo escrito errado: "Ursidade.cpp" corrigido para "Ursidae.cpp"
