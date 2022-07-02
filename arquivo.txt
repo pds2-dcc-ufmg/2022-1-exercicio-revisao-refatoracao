@@ -1,0 +1,37 @@
+----------VPL REFATORAÇÃO----------
+cbb6121e394f53c3088da6d639ea494a
+
+- Padronizar todas as Variaveis
+- excluindo namespaces como boa pratica
+- encapsulando variaveis nas classes
+- foi utilizado o conceito de POO herança entre as classes que possuem relação.
+- foi utilizado o conceito de polimorfismo e metodos virtuais.
+- retornando valores privados com Get
+- criando arquivo .cpp para separar a implementação do contrato.
+- instanciar classe animal no Tad Alimentacao
+- constantes com letras maiusculas.
+- criando metodos para operar valores que estão soltos pelo codigo.
+- makefile criado
+- colocar a função que calcula a quantidade de ração no TAD alimentação
+- criar atributos estaticos para calcular o total de ração e peixes consumidos
+- criando metodos para facilitar as operações e prints das classes 
+- encapsular elementos nas classes
+- criar um vector para armazenar todas as declarações de objetos no main
+- criar vector para imprimir no main e organizar as declarações das impressões
+
+Classe Animal:
+	No .hpp foi organizado os atributos públicos e privados e também foram criados métodos gets para retornar os valores privados da classe, com intuito de preservar o encapsulamento. Também foi criada uma classe virtual que será utilizada pelas classes filhas.
+Foi retirado o “dead code”, métodos que não possuem nenhuma utilidade no código.
+Foi criado também uma arquivo Animal.cpp para declaração do construtor e do seu método print, uma vez que todas as suas chamadas estavam sendo feitas em seu arquivo .hpp
+Classe Ursidae:
+	Foi utilizado o conceito de herança na classe ursidae, fazendo ela herdar a classe animal, seus métodos foram separados em arquivos .hpp e .cpp. Em seu arquivo .cpp foi feito o override do método print para exibir o print proveniente de animal adicionando o print de espécie.
+Classe Herpestidae:
+	Assim como na classe Ursidae, esta classe herda de animal e também foi especializar de forma a possuir seu próprio sistema de alimentação e que também passou responsabilidades da alimentação para o TAD Alimentação. Ela possui comportamento parecido com a sua classe irmã que são herdadas de animal, possuindo um cálculo para o alimento consumido e um print proveniente da classe pai.
+Classe cuidador:
+	Foi feito o encapsulamento da classe e implementação do método print, assim como um Get que será usado na classe alimentação.
+Classe alimentacao:
+	Foi criado atributos estáticos para calcular o total de alimentos consumidos por cada categoria de animal. Além disso, foi criado um método para descrição que é recebido no construtor de alimentação e também foi criado um método que alimenta cada animal conforme seu contrato foi estabelecido.
+MAIN:
+	O main foi reformulado de forma que mantivesse a organização e a legibilidade, dessa forma todos os objetos criados, foram armazenados em um vector correspondente, de forma que no final, todos eles fossem impressos mantendo a saída esperada inicialmente pelo enunciado.
+
+
