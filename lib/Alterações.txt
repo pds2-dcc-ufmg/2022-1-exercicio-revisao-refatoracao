@@ -1,0 +1,37 @@
+Animal
+  Separação do contrato da classe animal
+  Privatizar os atributos de Animal
+  Alteração do metodo print_oi para print_tchau, adequar função do metodo
+  Renomeando metodos e atributos das funções para obedecer a nomeclatura em camel
+  Remoção do include de iamanip, desnecessario
+  Criado construtor da classe
+
+Herpestidae
+  Separação do contrato da implementação
+  Organização dos membros privados e publicos
+  Manter identação constante
+  Adicionado iostream no arquivo
+  Definição de quantPorcao como atributo da classe
+  Criação do construtor
+
+Main
+  alteração dos contratos incluidas
+  remodelação das funções de criação das classes
+  Remodelação da declaracao das classes para usar o construtor
+  Criação de vetores para armazenar classes criadas
+  Apagado variaveis desnecessarias
+
+Alimentação
+  Separação do contrato e implementação
+  Alteração do nome definido
+  Mudança do atributo cuidador para ponteiro
+  Mudanca do atributo nomeAnimal para ponteiro do Animal
+
+Cuidador
+  Criação do construtor
+  Renomeação das variaveis
+  Identação do codigo
+
+Ursidae
+  Criação do construtor
+  Transforma-la em classe derivada de animal
