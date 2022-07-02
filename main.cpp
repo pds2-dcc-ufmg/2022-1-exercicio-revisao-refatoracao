@@ -3,7 +3,6 @@
 #include "Ursidae.hpp"
 #include "Cuidador.hpp"
 #include "Alimentacao.hpp"
-
 #include <iostream>
 #include <vector>
 
