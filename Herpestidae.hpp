@@ -3,8 +3,6 @@
 
 #include "Animal.hpp"
 
-static const double QUANTIDADEPORCAO = 1;
-
 class Herpestidae : public Animal {
 
     public:

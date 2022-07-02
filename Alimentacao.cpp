@@ -9,11 +9,14 @@ Alimentacao::Alimentacao(int porcao, std::string comida, std::string descricao,
 
 void Alimentacao::print() {
 
+    std::cout << std::endl << std::endl;
     std::cout << "Animal: ";
-    std::cout << nomeAnimal << "\n";
+    std::cout << nomeAnimal;
+    std::cout << std::endl;
 
     std::cout << " Cuidador: ";
-    std::cout << cuidador.nome << "\n";
+    std::cout << cuidador.nome;
+    std::cout << std::endl;
 }
 
 void Alimentacao::setPorcao(uint porcao){

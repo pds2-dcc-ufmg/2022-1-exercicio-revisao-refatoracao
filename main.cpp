@@ -7,31 +7,12 @@
 #include <iostream>
 #include <vector>
 
-
 int main(){
-  
   std::vector<Animal> animais;
   std::vector<Ursidae> ursidaes;
   std::vector<Herpestidae> herpestidaes;
   std::vector<Cuidador> cuidadores;
   std::vector<Alimentacao> alimentacoes;
-
-  double kgPeixeConsumidos01 = 0;
-  int numAtendimentos02 = 0;
-  double comissao02 = 0;
-  int numAtendimentos03 = 0;
-  double comissao03 = 0;
-  double bonificacao01 = 0;
-  double kgPeixeConsumidos02 = 0;
-  double kgPeixeConsumidos03 = 0;
-  double kgPeixeConsumidos04 = 0;
-  double kgPeixeConsumidos05 = 0;
-
-  double kgRacaoConsumidos01 = 0;
-  double kgRacaoConsumidos02 = 0;
-  double kgRacaoConsumidos03 = 0;
-  kgPeixeConsumidos01 = 5*2;
-  kgPeixeConsumidos03 = ursidaes.at(0).calcularPeixesConsumidos(10);
 
 //CONTRUCAO DOS OBJETOS DE ANIMAL ---------------------------------------
   animais.push_back(Animal("Ursidae", "Bobby", 13));
@@ -64,36 +45,52 @@ int main(){
     "Tony comeu um pouco da comida do Bobby", "Tony", cuidadores.at(0))); //alimentacoes.at(3)
 //FINAL DAS CONSTRUCOES ---------------------------------------
 
-  kgRacaoConsumidos01 += herpestidaes.at(0).calcularConsumoRacao(alimentacoes.at(1).getPorcao());
-  kgRacaoConsumidos01 += herpestidaes.at(0).calcularConsumoRacao(alimentacoes.at(2).getPorcao());
+  double totalPeixeConsumido = 0;
+  totalPeixeConsumido += 5*2 + ursidaes.at(0).calcularPeixesConsumidos(10);
+
+  double totalRacaoConsumida = 0;
+  totalRacaoConsumida += alimentacoes.at(1).getPorcao();
+  totalRacaoConsumida += alimentacoes.at(2).getPorcao();
+
   alimentacoes.at(1).setPorcao(2);
   alimentacoes.at(2).setComida("Ração");
 
 //ESCRITA NA TELA-----------------------------------------------
-  std::cout << std::endl << std::endl;
+
   std::cout << "--------------------------------";
   std::cout << std::endl << std::endl;
   std::cout << "Relatorio das alimentações";
-  std::cout << std::endl << std::endl;
+  std::cout << std::endl;
 
   alimentacoes.at(0).print();
-  std::cout << " Descricao: " << alimentacoes.at(0).getDescricao() << std::endl << std::endl;
+  std::cout << "Descricao: " << alimentacoes.at(0).getDescricao();
+  std::cout << std::endl;
 
   alimentacoes.at(1).print();
-  std::cout << " Descricao: " << alimentacoes.at(1).getDescricao() << std::endl << std::endl;
+  std::cout << "Descricao: " << alimentacoes.at(1).getDescricao();
+  std::cout << std::endl;
 
   alimentacoes.at(2).print();
-  std::cout << " Descricao: " << alimentacoes.at(2).getDescricao() << std::endl << std::endl;
+  std::cout << "Descricao: " << alimentacoes.at(2).getDescricao();
+  std::cout << std::endl;
 
   alimentacoes.at(3).print();
-  std::cout << " Descricao: " << alimentacoes.at(3).getDescricao() << std::endl << std::endl;
+  std::cout << "Descricao: " << alimentacoes.at(3).getDescricao();
+  std::cout << std::endl;
 
-  std::cout <<" \n \n--------------------------------\n\nRelatorio de kg de comida gastos \n" << std::endl;
-  std::cout << "Tipo de comida: " << "Ração" << std::endl;
-  std::cout << "Kg consumidos: " << kgRacaoConsumidos01+kgRacaoConsumidos02 << std::endl;
-
-  std::cout << "\nTipo de comida: " << "Peixe" << std::endl;
-  std::cout << "Kg consumidos: " << kgPeixeConsumidos01+kgPeixeConsumidos03 << std::endl;
+  std::cout << std::endl << std::endl;
+  std::cout << "--------------------------------";
+  std::cout << std::endl << std::endl;
+  std::cout << "Relatorio de kg de comida gastos";
+  std::cout << std::endl << std::endl;
+  std::cout << "Tipo de comida: Ração";
+  std::cout << std::endl;
+  std::cout << "Kg consumidos: " << totalRacaoConsumida;
+  std::cout << std::endl << std::endl;
+  std::cout << "Tipo de comida: Peixe";
+  std::cout << std::endl;
+  std::cout << "Kg consumidos: " << totalPeixeConsumido;
+  std::cout << std::endl << std::endl;
 
   return 0;
 }

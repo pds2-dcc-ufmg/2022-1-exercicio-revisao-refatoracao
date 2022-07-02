@@ -9,6 +9,7 @@ Cuidador::Cuidador(std::string nome, std::string cpf, std::string telefone,
 				}
 
 void Cuidador::print(){
+    std::cout << std::endl << std::endl;
 	std::cout << "[Cuidador]" << std::endl
     << "  Nome: " << nome << std::endl
 	<< "  CPF: " << cpf << std::endl

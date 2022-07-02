@@ -6,7 +6,8 @@ Animal::Animal(std::string familia, std::string nome, uint idade) :
 }
 
 void Animal::print() {
-    std::cout << "\n[Animal]" << std::endl
+    std::cout << std::endl << std::endl;
+    std::cout << "[Animal]" << std::endl
     << "  Nome: " << nome << std::endl
     << "  Idade: " << idade << std::endl
     << "  Familia: " << familia << std::endl;

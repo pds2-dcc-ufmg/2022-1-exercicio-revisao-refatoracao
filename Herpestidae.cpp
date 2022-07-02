@@ -6,12 +6,6 @@ Herpestidae::Herpestidae(std::string familia, std::string nome, uint idade, std:
         this->print();
 }
 
-double Herpestidae::calcularConsumoRacao(const int porcoesConsumidas) {
-    double quantidadeTotalConsumida = QUANTIDADEPORCAO*porcoesConsumidas;
-    return quantidadeTotalConsumida;
-}
-
-
 void Herpestidae::print() {
     Animal::print();
     std::cout << "  Especie: " << especie << std::endl;
