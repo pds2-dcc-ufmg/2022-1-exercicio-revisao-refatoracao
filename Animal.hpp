@@ -1,28 +1,26 @@
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef ANIMAL_H
+#define ANIMAL_H
 
 #include <iostream>
 #include <iomanip>
+#include <string>
+#include <vector>
 
-using namespace std;
+class Animal 
+{
+    protected:
+        std::string nome;
+        std::string idade;
+        std::string familia;
+        int kgPorcao;
 
-class Animal {
     public:
-        string IDADE;
-        string family;
-        string nome;
-
-        void print() {
-            cout << "\n[Animal]" << endl
-            << "  Nome: " << nome << endl
-
-              << "  Idade: " << IDADE << endl
-            << "  Familia: " << family << endl;
-        }
-
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+        Animal(std::string _nome, std::string _idade, std::string _familia);
+        virtual ~Animal();
+        std::string getNome();
+        std::string getFamilia();
+        virtual double kgConsumidos(int _qntPorcoes);
+        virtual void print();
 };
 
 #endif
