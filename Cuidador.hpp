@@ -1,21 +1,16 @@
-#ifndef Cuidador_H
-#define Cuidador_H
+#include <iostream>
 
-#include <string>
-using namespace std;
+#ifndef CUIDADOR_H
+#define CUIDADOR_H
 
 class Cuidador{
+  private:
+    std::string _nome;
 
-	public:
-
-    string salario;
-		string NOME;
-		string cpf;
-		string Telefone;
-		string BIRTH;
-
-		void print(); // imprime na tela os dados de um cliente cadastrado
-
+  public:
+    Cuidador(std::string nome): _nome(nome) {}
+	 ~Cuidador() {}
+   std::string getNome();
 };
 
 #endif
