@@ -8,14 +8,13 @@ class Cuidador{
 
 	public:
 
-    string salario;
-		string NOME;
+    	string salario;
+		string nome;
 		string cpf;
-		string Telefone;
-		string BIRTH;
-
-		void print(); // imprime na tela os dados de um cliente cadastrado
-
+		string telefone;
+		string nascimento;
+		void imprimirDados(); 
+		Cuidador(string _nome,string _cpf,string _telefone, string _nascimento,string _salario);
 };
 
 #endif
