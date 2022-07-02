@@ -111,6 +111,7 @@ int main () {
   cadastraCuidadores(cuidadores);
   
   // imprime a lista de animais
+  std::cout << "\n";
   for (auto animal : animais) {
     animal->imprimir();
     std::cout << std::endl;
@@ -124,7 +125,7 @@ int main () {
 
   // imprime relatório de alimentações
   std::cout << "\n--------------------------------\n" << std::endl;
-  std::cout << "Relatório das alimentações\n" << std::endl;
+  std::cout << "Relatorio das alimentações\n" << std::endl;
 
   for (auto alimentacao : alimentacoes) {
     alimentacao->imprimir();
@@ -134,8 +135,9 @@ int main () {
   // imprime relatorio de comida gastos
   std::vector<int> relatorioComida = geraRelatorioComida(alimentacoes);
 
-  std::cout << "\n\n--------------------------------\n" << std::endl;
-  std::cout << "Relatorio de kg de comida gastos" << std::endl;
+  std::cout << "\n\n";
+  std::cout << "--------------------------------" << std::endl;
+  std::cout << "\nRelatorio de kg de comida gastos\n" << std::endl;
 
   std::cout << "Tipo de comida: Ração" << std::endl;
   std::cout << "Kg consumidos: " << relatorioComida[0] << "\n" << std::endl;
