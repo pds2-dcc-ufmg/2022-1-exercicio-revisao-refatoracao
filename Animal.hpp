@@ -1,28 +1,33 @@
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef ANIMAL_H
+#define ANIMAL_H
 
-#include <iostream>
-#include <iomanip>
+#include "Alimentacao.hpp"
 
-using namespace std;
+#include <string>
+#include <memory>
 
-class Animal {
-    public:
-        string IDADE;
-        string family;
-        string nome;
+class Animal
+{
 
-        void print() {
-            cout << "\n[Animal]" << endl
-            << "  Nome: " << nome << endl
+protected:
+  std::string _nome;
+  std::string _idade;
+  std::string _nomeFamilia;
+  std::string _nomeEspecie;
+  std::shared_ptr<Alimentacao> _alimentacao = nullptr;
 
-              << "  Idade: " << IDADE << endl
-            << "  Familia: " << family << endl;
-        }
+protected:
+  Animal(const std::string nome, const std::string idade,
+         const std::string nomeFamilia);
+  Animal(const std::string nome, const std::string idade,
+         const std::string nomeFamilia, const std::string nomeEspecie);
 
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+public:
+  virtual void setAlimentacao(const int porcoesConsumidas,
+                              const std::string &cuidador,
+                              const std::string &descricaoAlimentacao) = 0;
+  virtual int getComidaConsumida() = 0;
+  virtual void print();
 };
 
 #endif
