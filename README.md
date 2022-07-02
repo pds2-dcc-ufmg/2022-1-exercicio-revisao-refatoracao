@@ -1,4 +1,4 @@
-# 7f24551363602651a932f8ada1f18708
+# Lista de problemas e soluções
 
 1. **Problema**: Nomes de atributos e métodos não seguem um padrão e/ou não têm significado. 
 **Solução**: Renomear atributos e métodos de maneira que eles sigam o padrão camelCase e tenham nomes representativos. 
