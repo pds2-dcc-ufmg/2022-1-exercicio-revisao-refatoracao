@@ -2,7 +2,8 @@
 #define Cuidador_H
 
 #include <string>
-using namespace std;
+
+using std::string;
 
 class Cuidador{
 

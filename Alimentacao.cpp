@@ -1,5 +1,7 @@
 #include "Alimentacao.hpp"
 
+using std::string;
+using std::cout;
 
 Alimentacao::Alimentacao(int _porcao, string _comida, string _descricao, 
     Cuidador* _cuid, string _nomeAnimal){

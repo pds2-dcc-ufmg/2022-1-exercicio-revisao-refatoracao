@@ -5,8 +5,7 @@
 #include <iomanip>
 #include "Animal.hpp"
 
-using namespace std;
-
+using std::string;
 
 class Ursidae : public Animal{
 

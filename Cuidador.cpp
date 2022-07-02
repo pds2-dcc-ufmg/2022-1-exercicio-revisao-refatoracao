@@ -2,6 +2,11 @@
 #include <string>
 #include "Cuidador.hpp"
 
+using std::string;
+using std::cout;
+using std::endl;
+
+
 Cuidador::Cuidador(string _nome, string _cpf, string _telefone, string _nascimento, 
 		string _salario){
 

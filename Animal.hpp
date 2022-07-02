@@ -4,7 +4,7 @@
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
+using std::string;
 
 class Animal {
     protected:

@@ -7,10 +7,17 @@
 #include "Cuidador.hpp"
 #include "Alimentacao.hpp"
 
-using namespace std;
+
+using std::cout;
+using std::endl;
+using std::string;
+
 
 int main()
 {
+
+  /* Criando Animais */
+
   std::vector<Animal*> Animais;
 
   Animais.push_back(new Animal("Ursidae", "Bobby", "13"));
@@ -25,10 +32,7 @@ int main()
   Animais.push_back(new Animal("Ursidade", "Felício", "3"));
   Animais.back()->print();
 
-  //Talves um pair com Alimentação
-  //Uma Hierarquia entre Animal e Ursidade e Herpestidae
-  
-
+  /* Criando Ursidaes */
 
   std::vector<Ursidae*> Ursidaes;
 
@@ -38,8 +42,7 @@ int main()
   Ursidaes.push_back(new Ursidae("Wanda", "10", "Urso Polar" , 7));
   Ursidaes.back()->print();
 
-  //?
-    
+  /* Criando Herpestidaes */
     
   std::vector<Herpestidae*> Herpestidaes;
 
@@ -47,15 +50,8 @@ int main()
   Herpestidaes.back()->print();
 
   Herpestidaes.push_back(new Herpestidae ("Carolina", "2" , "Suricato"));
-//  Herpestidaes.back()->print();
-  
 
-  double kgPeixeConsumidos01 = 0;
-  double kgPeixeConsumidos03 = 0;
-
-  double kgRacaoConsumidos01 = 0;
-  double kgRacaoConsumidos02 = 0;
-  
+  /* Criando Cuidadores*/
 
   std::vector<Cuidador*> Cuidadores;
 
@@ -65,6 +61,8 @@ int main()
   Cuidadores.push_back(new Cuidador("Fernanda Silva Santos","9472567121", 
       "(31) 99123-8970" , "08/02/1995", "R$ 4000" ));
 
+  
+  /* Criando Alimentação*/
 
   std::vector<Alimentacao*> Alimentacoes;
   string auxDescricao;
@@ -81,6 +79,14 @@ int main()
   auxDescricao = "Tony comeu um pouco da comida do Bobby";
   Alimentacoes.push_back(new Alimentacao(10,"Ração" , auxDescricao, Cuidadores[0], "Bobby"));
 
+  /* Alimento Consumido */
+
+  double kgPeixeConsumidos01 = 0;
+  double kgPeixeConsumidos03 = 0;
+
+  double kgRacaoConsumidos01 = 0;
+  double kgRacaoConsumidos02 = 0;
+  
 
   kgPeixeConsumidos01 = 5*2;
   kgRacaoConsumidos01 += Herpestidaes[0]->kgConsumidosDeRacao(Alimentacoes[1]->porcao);
@@ -89,7 +95,7 @@ int main()
   kgPeixeConsumidos03 = Ursidaes[0]->calcula_peixes_consumidos(10);
 
 
-
+  /* Relatório */
   cout <<" \n \n--------------------------------\n\nRelatorio das alimentações \n" << endl;
 
   for(Alimentacao* Al : Alimentacoes){
@@ -106,7 +112,8 @@ int main()
   cout << "\nTipo de comida: " << "Peixe" << endl;
   cout << "Kg consumidos: " << kgPeixeConsumidos01+kgPeixeConsumidos03<<endl;
 
-
+  /* Desalocando Memória */
+  
   for(Animal* An : Animais){
 
     delete An;

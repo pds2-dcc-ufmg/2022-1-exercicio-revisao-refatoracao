@@ -5,7 +5,7 @@
 #include <iostream> //Tava sem?
 #include "Cuidador.hpp"
 
-using namespace std;
+using std::string;
 
 class Alimentacao{
 

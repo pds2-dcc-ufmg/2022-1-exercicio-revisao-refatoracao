@@ -1,5 +1,9 @@
 #include "Animal.hpp"
 
+using std::string;
+using std::cout;
+using std::endl;
+
 Animal::Animal(string familia, string nome, string idade){
             this->familia = familia;
             this->nome = nome;

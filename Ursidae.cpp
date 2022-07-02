@@ -1,5 +1,8 @@
 #include "Ursidae.hpp"
 
+using std::cout;
+using std::endl;
+
 Ursidae::Ursidae(string _nome, string _idade, string _especie, double _kgPeixePorDia)
     : Animal("Ursidae", _nome ,_idade ) , especie(_especie), kgPeixePorDia(_kgPeixePorDia){} 
 
