@@ -2,27 +2,18 @@
 #define ANIMAL_HPP
 
 #include <iostream>
-#include <iomanip>
 
-using namespace std;
 
 class Animal {
+    private:
+        std::string family, nome;
+        int idade;
     public:
-        string IDADE;
-        string family;
-        string nome;
-
-        void print() {
-            cout << "\n[Animal]" << endl
-            << "  Nome: " << nome << endl
-
-              << "  Idade: " << IDADE << endl
-            << "  Familia: " << family << endl;
-        }
-
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+        Animal(std::string nome,  int idade, std::string familia);
+        Animal(std::string nome, int idade);
+        virtual void print();
+        std::string getNome();
+        int getIdade();
 };
 
 #endif

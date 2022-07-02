@@ -1,41 +1,28 @@
 
-#ifndef VENDA_HPP
-#define VENDA_HPP
+#ifndef ALIMENTACAO_HPP
+#define ALIMENTACAO_HPP
 
 #include "Cuidador.hpp"
 
-using namespace std;
-
 class Alimentacao{
 
+    private:
+    
+        static double peixes_consumidos;
+        static double racao_consumida;
+        int porcao;
+        std::string comida, descricao;
+        Cuidador cuid;
+        std::string animalNome;
+        
+    
     public:
-    int porcao;
-    string comida;
-    string descricao;
-    Cuidador cuid;
-    string nomeAnimal;
-
-
-    void print() {
-
-        std::cout << "Animal: ";
-        cout << nomeAnimal << "\n";
-
-        std::cout << " Cuidador: ";
-        cout << cuid.NOME << "\n";
-
-        //std::cout << " : ";
-        //cout << ursidae;
-    }
-
-    /*void print() {
-
-        std::cout << "Cuidador: ";
-        cout << cuida;
-
-        std::cout << " Animal: ";
-        cout << alimentado;
-    }*/
+    
+        Alimentacao(int porcao, std::string comida, std::string descricao, Cuidador cuid, std::string animalNome);
+        void print();
+        std::string getDescricao();
+        double calcula_peixes_consumidos(int porcao_peixes);
+        double kg_consumidos_de_racao(int porcoesConsumidas);
 };
 
 #endif
