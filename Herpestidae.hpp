@@ -5,31 +5,26 @@
 
 using namespace std;
 
-double quantPORCAO = 1;
+double quantidadePorcao = 1;
 
+//Classe que representa a família Hespestidae
+class Herpestidae : public Animal
+{
+private:
+    //Variavel string que armazena o nome da especie
+    string especie;
 
-class Herpestidae : public Animal {
+public:
+    //Funcao Get para a especie
+    string getEspecie() {return especie;};
+    //Funcao Set para a especie
+    void setEspecie(string especie_) {especie = especie_;};
 
-    public:
+    //Funcao que retorna o peso de racao consumida
+    double kgConsumidosDeRacao(int porcoesConsumidas);
 
-    public:
-  string species;
-
-    double kgConsumidosDeRacao(int porcoesConsumidas) {
-        double c = quantPORCAO*porcoesConsumidas;
-                  return c;
-    }
-
-
-    void print() {
-
-        Animal::print();
-
-
-
-        std::cout << "  Especie: " << species <<endl;
-
-    }
+    //Funcao que imprime as informações do Animal, especie
+    void print();
 };
 
 #endif
