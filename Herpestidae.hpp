@@ -3,33 +3,13 @@
 
 #include "Animal.hpp"
 
-using namespace std;
-
-double quantPORCAO = 1;
-
-
 class Herpestidae : public Animal {
 
     public:
+        std::string especie;
 
-    public:
-  string species;
-
-    double kgConsumidosDeRacao(int porcoesConsumidas) {
-        double c = quantPORCAO*porcoesConsumidas;
-                  return c;
-    }
-
-
-    void print() {
-
-        Animal::print();
-
-
-
-        std::cout << "  Especie: " << species <<endl;
-
-    }
+        Herpestidae(std::string familia, std::string nome, uint idade, std::string especie);
+        double calcularConsumoRacao(const int porcoesConsumidas);
+        void print();
 };
-
-#endif
+#endif // HERPESTIDAE_HPP
